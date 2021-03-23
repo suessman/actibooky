@@ -111,6 +111,12 @@
         td{
           position: relative;
           font-size: 14px;
+
+          &.active{
+            background-color:$primary;
+            color:$white;
+            border-radius: 50%;
+          }
           // background: $white;
           // &.active {
           //   background: #000;

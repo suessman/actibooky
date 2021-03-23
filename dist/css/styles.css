@@ -7882,6 +7882,7 @@ button.bg-dark:focus {
   position: fixed !important; }
 
 .position-sticky {
+  position: -webkit-sticky !important;
   position: sticky !important; }
 
 .fixed-top {
@@ -7898,8 +7899,9 @@ button.bg-dark:focus {
   left: 0;
   z-index: 1030; }
 
-@supports (position: sticky) {
+@supports ((position: -webkit-sticky) or (position: sticky)) {
   .sticky-top {
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020; } }
@@ -9801,6 +9803,10 @@ main.main-nav {
   .daterangepicker .drp-calendar .calendar-table table td {
     position: relative;
     font-size: 14px; }
+    .daterangepicker .drp-calendar .calendar-table table td.active {
+      background-color: #9334ff;
+      color: #ffffff;
+      border-radius: 50%; }
   .daterangepicker .drp-calendar .calendar-table .prev {
     background-image: url(../images/icon-left-black@3x.png) !important;
     padding: 0;
