@@ -18,11 +18,28 @@ body.menu-open{
 
 }
 
-.header {
+
+header{
+   &.header-title{
+    position: relative;
+    padding: 16px 0;
+    h1{
+      font-size: 14px;
+      color:$main-grey;
+      margin-bottom: 0;
+      position: absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%, -50%);
+    }
+  }
+
+  &.header {
   color: $light;
   background-color: $white;
   border-bottom: 1px solid $light;
 
+ 
   .header-top{
     .nav-item{
       .nav-link{
@@ -99,7 +116,7 @@ body.menu-open{
       button.navbar-toggler{
         padding:0;
         z-index: 1600;
-
+        
       }
       a.login{
         color:$white;
@@ -161,7 +178,7 @@ body.menu-open{
         }
 
         @include fontSize(18px);
-        padding:1.143rem 20px; 
+        padding:1.5rem 20px; 
 
         @include  media-breakpoint-down(md) {
           @include fontSize(14px);
@@ -174,6 +191,11 @@ body.menu-open{
       border:none;
       z-index: 1600;
       padding:0 16px;
+
+      //nav icon
+      &.collapsed .icon-bar{
+        background-color:$main-grey;
+      }
     }
 
     .nav-right{      
@@ -194,48 +216,51 @@ body.menu-open{
       }
     }
   }
-}
+  } 
 
-.navbar-toggler {
-  border: none;
-  background: transparent !important;
-  margin-top: 16px;
-  &:hover {
+  
+  .navbar-toggler {
+    border: none;
     background: transparent !important;
-  }
-
-  .icon-bar {
-    width: 22px;
-    height:2px;
-    background-color:$light;
-    transition: all 0.2s;
-    display: block;
-    margin-top: 4px;
-  }
-  .line-1{
-    transform: rotate(45deg);
-    transform-origin: 10% 10%;
-  }
-  .line-2{
-    opacity: 0;
-  }
-  .line-3{
-    transform: rotate(-45deg);
-    transform-origin: 10% 90%;
-  }
-
-  &.collapsed {
-    .icon-bar{
-      background-color:$main-grey;
+    margin-top: 16px;
+    &:hover {
+      background: transparent !important;
     }
-    .line-1 {
-      transform: rotate(0);      
+
+    .icon-bar {
+      width: 22px;
+      height:2px;
+      background-color:$light;
+      transition: all 0.2s;
+      display: block;
+      margin-top: 4px;
+    }
+    .line-1{
+      transform: rotate(45deg);
+      transform-origin: 10% 10%;
     }
     .line-2{
-      opacity: 1;
+      opacity: 0;
     }
-    .line-3  {
-      transform: rotate(0);
+    .line-3{
+      transform: rotate(-45deg);
+      transform-origin: 10% 90%;
+    }
+
+    &.collapsed {
+      .icon-bar{
+        background-color:$main-grey;
+      }
+      .line-1 {
+        transform: rotate(0);      
+      }
+      .line-2{
+        opacity: 1;
+      }
+      .line-3  {
+        transform: rotate(0);
+      }
     }
   }
 }
+

@@ -47,18 +47,29 @@ main{
 }
 
 //section media query
-      @include media-breakpoint-down(sm) {
-        .m-m-t3{
-          margin-top: 1.5rem !important;
-        }
-        .m-m-t5{
-          margin-top: 2.5rem !important;
-        }
-      } 
+@include media-breakpoint-down(sm) {
+  .m-d-none{
+    visibility: hidden;
+  }
 
-// .title-overflow{
-//   overflow: hidden;
-//   width: 100%;
-//   text-overflow: ellipsis;
-//   white-space: nowrap;
-// }
+  .m-p0{
+    padding:0;
+  }
+  
+  .m-m-t3{
+    margin-top: 1.5rem !important;
+  }
+  .m-m-t5{
+    margin-top: 2.5rem !important;
+  }
+} 
+  
+
+//ellipsis    
+.title-overflow{
+  overflow: hidden;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all;
+}

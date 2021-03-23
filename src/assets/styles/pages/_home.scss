@@ -129,7 +129,7 @@ main {
       }
     }
 
-  .section-body.card-ui {
+  .section-body.card-ui{
     &-bg {
       background-color: #f9f5ff;
       padding: 60px 0;
@@ -138,6 +138,13 @@ main {
        padding:20px 0;
       }
     }
+
+    &.mobile{
+      @include media-breakpoint-down(lg) {
+       margin-top: 0 !important;
+      }
+    }
+
     .top-title {
       a.more {
         color: $dark;
@@ -162,11 +169,11 @@ main {
           font-family: "Black Han Sans", sans-serif;
           font-size: 36px;
           font-weight: 400;
-          color: $primary;
+          color: $secondary;
           margin-bottom: 0;
         
           @include media-breakpoint-only(xs) {
-            @include fontSize(18px);
+            @include fontSize(24px);
           }
         }
 
@@ -174,6 +181,9 @@ main {
           @include fontSize(18px);
           margin-top: 8px;
           font-weight: 700;
+          @include media-breakpoint-only(xs) {
+            @include fontSize(14px);
+          }
         }
       }
     }
@@ -184,7 +194,7 @@ main {
       display: flex;
       flex-wrap: wrap;
       @include media-breakpoint-only(xs) {
-        margin-top: 0;
+        margin-top: -8px;
       }
       li.category-card {
         width: calc(25% - 20px);
@@ -292,6 +302,29 @@ main {
         display: inline-block;
         min-height: 337px;
         vertical-align: top;
+        position: relative;
+        
+        //list page
+        &.h-auto{
+          min-height:auto;
+          margin-top: 40px;
+
+          &:first-of-type{
+            margin-top: 8px;
+          }
+        }
+
+        .title-bg{
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            background-color:rgba(33, 37, 41, 0.4);
+            padding: 16px;
+            color: $white;
+            font-size: 18px;
+            font-weight: 700;
+            word-break: break-all;
+        }
         //추천체험농가 card
         &-ui {
 
@@ -320,13 +353,23 @@ main {
               }
             }
           }
+
+          //세로 나열형식
+          &.vertical{
+            @include media-breakpoint-only(xs) {
+              margin-top: 30px;
+              &:first-of-type{
+                margin-top: 8px;
+              }
+            }
+          }
         }
 
         // end 추천체험농가 card
 
         @include media-breakpoint-only(xs) {
           width: calc(90% - 20px);
-          margin-top: 16px;
+          margin-top: 8px;
           min-height: 337px;
         }
         @include media-breakpoint-only(sm) {
@@ -363,6 +406,13 @@ main {
             color: $dark;
             font-weight: 400;
             @include fontSize(14px);
+          }
+
+          &+span.percent{
+            color:$primary;
+            font-size: 18px;
+            font-weight: 700;
+            margin-top: 8px;
           }
         }
         .content {
@@ -467,12 +517,21 @@ main {
       }
 
       .list{
-        display: flex;
-        span{
-          color:$primary;
-          margin-right: 4px;
-          font-size: 20px;
+        position: relative;
+        div{
+          padding-left: 8px;
         }
+        &:before{
+          content: "";
+          position:absolute;
+          top: 0.7rem;         
+          background-color:$primary;
+
+          display:inline-block;
+          width:4px;
+          height:4px;
+          border-radius: 50%;
+          }
       }
 
       .area{

@@ -8,7 +8,7 @@ body {
   color:$main-grey;
   font-size: 14px;
   background-color: $white;
-  word-break: break-word;
+  word-break: keep-all;
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
@@ -158,3 +158,4 @@ margin-top: 0.571rem;
 .m-t6{
   margin-top: 3.75rem;
 }
+
