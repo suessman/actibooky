@@ -47,7 +47,7 @@ main{
 }
 
 //section media query
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-down(md) {
   .m-d-none{
     visibility: hidden;
   }

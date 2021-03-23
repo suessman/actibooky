@@ -140,7 +140,7 @@ main {
     }
 
     &.mobile{
-      @include media-breakpoint-down(lg) {
+      @include media-breakpoint-down(md) {
        margin-top: 0 !important;
       }
     }
@@ -308,10 +308,19 @@ main {
         &.h-auto{
           min-height:auto;
           margin-top: 40px;
-
-          &:first-of-type{
-            margin-top: 8px;
-          }
+          @include media-breakpoint-down(xs) {
+            &:first-of-type{
+              margin-top: 8px;
+            }
+           }
+           
+           //추천 체험농가 content 
+           .content{
+             min-height: 200px;
+             .title-bg{
+               padding: 8px;
+             }
+           }          
         }
 
         .title-bg{
@@ -397,7 +406,7 @@ main {
 
         p {
           margin-top: 8px;
-
+          word-break:break-word;
           span.price {
             @include fontSize(18px);
             font-weight: 700;
