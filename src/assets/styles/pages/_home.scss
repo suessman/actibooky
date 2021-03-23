@@ -94,9 +94,12 @@ main {
         background-size: cover;
 
         .container{
-          margin-top: 4.75rem;
+          margin-top: 7.5rem;
+          @include media-breakpoint-down(sm) {
+           margin-top: 5.429rem;
+          }
         }
-        @include flex(center, normal, column);
+        @include flex(normal, normal, column);
 
         @include media-breakpoint-down(sm) {
           height: 360px;
@@ -104,14 +107,13 @@ main {
 
 
         h1 {
-          @include fontSize(52px);
+          @include fontSize(63px);
           color: $white;
           font-weight: 400;
           font-family: "Black Han Sans", sans-serif;
 
           @include media-breakpoint-only(xs) {
-            @include fontSize(36px);
-            word-break: keep-all;
+            @include fontSize(24px);            
           }
         }
 
@@ -120,8 +122,7 @@ main {
           color: $white;
           font-weight: 700;
           @include media-breakpoint-only(xs) {
-            @include fontSize(18px);
-            text-align: center;
+            @include fontSize(14px);      
             word-break: keep-all;
           }
         }
@@ -158,16 +159,15 @@ main {
 
       &.font {
         h3 {
-          // font-family: "Black Han Sans", sans-serif;
-          font-size: 30px;
-          font-weight: 700;
-          color: $main-grey;
+          font-family: "Black Han Sans", sans-serif;
+          font-size: 36px;
+          font-weight: 400;
+          color: $primary;
           margin-bottom: 0;
         
           @include media-breakpoint-only(xs) {
             @include fontSize(18px);
           }
-
         }
 
         p {
