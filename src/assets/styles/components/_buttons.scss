@@ -1,3 +1,55 @@
 // -----------------------------------------------------------------------------
 // Button component
 // -----------------------------------------------------------------------------
+.btn-outline-secondary:not(:disabled):not(.disabled):active, .btn-outline-secondary:not(:disabled):not(.disabled).active, .show > .btn-outline-secondary.dropdown-toggle{
+    background-color:$white;
+    color:inherit;
+    box-shadow: none !important;
+    border: none;
+}
+
+.btn:hover, .btn-outline-secondary:hover{
+    background-color:$white;
+    color:inherit;
+    box-shadow: none !important;
+    border: none;
+}
+
+.btn{
+    height:40px;
+    font-size: 1rem;
+    font-weight:700;
+    border:none;
+    box-shadow: none;
+    border-radius: 0;
+    width:100%;
+
+    &-primary{
+        background-color:$primary;
+        color:$white;
+        border:none;
+    }
+
+
+    &:focus{
+        border:none;
+        outline:none;
+        box-shadow:none;
+    }
+
+    &-outline{
+        border:1px solid #e9ecef;
+        background-color: $white;
+
+        &-primary{
+            background-color: $white;
+            border:1px solid $primary;            
+        }
+
+         &-secondary{
+            background-color: $white;
+            border:1px solid $light;
+            color:$main-grey; 
+        }
+    }
+}

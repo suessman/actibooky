@@ -1,7 +1,241 @@
 // -----------------------------------------------------------------------------
 // Header of the site/application
 // -----------------------------------------------------------------------------
+body.menu-open{
+  overflow: hidden;
+}
+
+.backdrop-ui.show{
+  position:fixed;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  width:100vw;
+  height: 100vh;
+  background-color:rgba(0,0,0,.5);
+  z-index: 998;
+
+}
+
 .header {
   color: $light;
-  background-color: $dark;
+  background-color: $white;
+  border-bottom: 1px solid $light;
+
+  .header-top{
+    .nav-item{
+      .nav-link{
+        font-size: 12px;
+        padding:8px 6px 0;
+      }
+    }
+
+    @include media-breakpoint-down(md){
+      display: none;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    position:absolute;
+    width:100%;
+    background: transparent;
+    top:0;
+    left:0;
+    height:0;
+    .container{
+      padding:0;
+
+      .navbar{
+        padding:0;       
+
+        .navbar-brand{
+          display:none;
+        }
+
+        .navbar-collapse{
+          background: $white;
+          z-index: 1500;
+          position: absolute;
+          width: 100%;
+          top:0;
+          left:0;
+        }
+
+        .dropdown-menu{
+          border:none;
+        }
+      }
+
+      .web-header-ui{
+        display:none;
+      }
+    }
+  }    
+
+  nav{
+    &.navbar{
+      padding:0;
+
+      .navbar-brand{
+        margin-right: 0;
+      }
+
+      .navbar-nav{
+         @include media-breakpoint-up(lg) {
+           margin-left: 10vw;;
+        }
+      }
+    }
+
+     @include media-breakpoint-up(lg) {
+       .navbar-collapse{
+         margin-top: -6px;
+       }
+     }
+    .app-header-ui{
+      background-color:$primary;
+      padding:16px; 
+      
+      button.navbar-toggler{
+        padding:0;
+        z-index: 1600;
+
+      }
+      a.login{
+        color:$white;
+        display: inline-block;
+        margin-top: 48px;
+      }
+
+      .list{
+        display:flex;
+        margin-top: 24px;
+        a{       
+          width:calc(33.33%);
+          color:$white;
+          @include flex(center, center, column);
+
+          img{
+            margin-bottom:4px;
+          }
+        }
+      }
+
+      .sm-icon{
+        width:24px;
+      }
+
+      @include media-breakpoint-up(lg) {
+        display:none;
+       }
+    }
+
+    ul.navbar-nav li.nav-item{      
+      
+      @include  media-breakpoint-down(md) {
+        border-bottom: 1px solid #e9ecef;
+        &:nth-last-of-type(1){
+          border:none;
+        } 
+      }       
+
+      a.nav-link{
+        color:$main-grey;
+        font-weight: 700;
+        position: relative;        
+        &.dropdown-toggle::after{
+          border:none;
+          content: "";
+          width: 24px;
+          height: 24px;
+          background-image: url('/src/assets/images/icon-down-gray-@3x.png');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size:cover; 
+          position:absolute;
+          right:16px;
+          @include media-breakpoint-up(lg) {
+            display:none;
+          }
+
+        }
+
+        @include fontSize(18px);
+        padding:1.143rem 20px; 
+
+        @include  media-breakpoint-down(md) {
+          @include fontSize(14px);
+          padding:16px;       
+        } 
+      }
+    }
+
+    .navbar-toggler{
+      border:none;
+      z-index: 1600;
+      padding:0 16px;
+    }
+
+    .nav-right{      
+      color:$main-grey;
+      font-weight: 600;
+
+      &-login{
+        color:$primary;
+      }
+
+      &-icon{
+        width: 24px;
+        height: 24px;
+        margin-left: 16px;
+        img{
+          width:32px;          
+        }
+      }
+    }
+  }
+}
+
+.navbar-toggler {
+  border: none;
+  background: transparent !important;
+  margin-top: 16px;
+  &:hover {
+    background: transparent !important;
+  }
+
+  .icon-bar {
+    width: 22px;
+    height:2px;
+    background-color:$light;
+    transition: all 0.2s;
+    display: block;
+    margin-top: 4px;
+  }
+  .line-1{
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+  }
+  .line-2{
+    opacity: 0;
+  }
+  .line-3{
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+  }
+
+  &.collapsed {
+    .icon-bar{
+      background-color:$main-grey;
+    }
+    .line-1 {
+      transform: rotate(0);      
+    }
+    .line-2{
+      opacity: 1;
+    }
+    .line-3  {
+      transform: rotate(0);
+    }
+  }
 }

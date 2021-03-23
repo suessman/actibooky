@@ -4,3 +4,43 @@
 
 // example:
 // https://github.com/HugoGiraudel/sass-boilerplate/blob/master/stylesheets/abstracts/_mixins.scss
+
+
+@mixin box-default($padding, $margin, $border, $rounded:0){
+    padding:$padding;
+    margin:$margin;
+    border:1px solid $border;
+    border-radius: $rounded;
+}
+
+@mixin rounded($radius:8px){
+    border-radius: $radius;
+}
+
+//reset box
+@mixin reset-box{
+    margin:0;
+    padding:0;
+}
+
+//font-size
+@mixin fontSize($size){
+    @if $size == 'sm' {
+        font-size:12px;
+    }
+    @else if $size == 'lg'{
+        font-size: 18px;
+    }
+    @else{
+        font-size: $size;
+    }
+}
+
+
+@mixin flex($justify-content:normal, $align-items:normal, $flex-direction:row){
+    display:flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-direction: $flex-direction;
+}
+

@@ -1,3 +1,160 @@
 // -----------------------------------------------------------------------------
 // Default theme
 // -----------------------------------------------------------------------------
+
+html,
+body {
+  height: 100%;
+  color:$main-grey;
+  font-size: 14px;
+  background-color: $white;
+  word-break: break-word;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+  font-weight: 700;
+  margin-bottom: 0.571rem;
+}
+
+a{
+  cursor:pointer;
+  color:#343a40;
+}
+
+a:hover{
+  text-decoration: none;
+  color:#343a40;
+}
+
+ul{
+  padding:0;
+  margin-bottom: 0;
+  li{
+    list-style: none;
+  }
+} 
+
+.primary-color{
+  color:$primary !important;
+}
+
+.secondary-color{
+  color:$secondary !important;
+}
+
+.main-color{
+  color:$main-grey !important;
+}
+
+p{margin-bottom:0;}
+
+footer{
+  margin-top: 40px;
+}
+
+//section margin
+.mt-10{
+  margin-top:7.5rem
+}
+
+.navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active{
+  outline:none;
+}
+
+
+.form-control{
+  border-radius: 0;
+}
+
+select{
+  &.form-control{
+    box-shadow:none;
+    border-radius:0;
+    -webkit-appearance: none !important;
+    -moz-appearance: none;
+    appearance: none;
+    background-image:url('/src/assets/images/triangl@3x.png');
+    background-repeat:no-repeat;
+    background-position:105px 55%;
+    background-size:10px 8px;       
+    height:40px;   
+    display:inline-block !important;	
+    font-size:14px;
+    border: 1px solid $light;	
+    width:auto;
+    padding:8px; 
+  }
+}
+input{
+  
+  &.form-control:disabled, &.form-control[readonly]{
+    background-color:transparent;
+  }
+  
+  &.form-control{
+      border-top:none;
+      border-left:none;
+      border-right: none;
+      border-bottom:1px solid #e9ecef;
+      border-radius: 0;
+      padding-left: 0;
+  }
+
+  &.form-control:focus{
+      border-top:none;
+      border-left:none;
+      border-right: none;
+      border-bottom:1px solid #9334ff;
+      box-shadow: none;
+
+  }
+  
+  &.form-control::-webkit-input-placeholder {
+    color:#868e96;
+  }
+
+  &.form-control:-ms-input-placeholder {
+    color:#868e96;
+  }
+
+  &.pick-calendar.form-control[readonly]{
+    background-color:#fff;
+  }
+}
+
+//icon
+.sm-icon{
+  width: 24px;
+}
+
+.md-icon{
+  width: 40px;
+}
+
+.m-th{
+  margin-top: 0.286rem;
+}
+
+.m-t1{
+margin-top: 0.571rem;
+}
+
+.m-t2{
+  margin-top: 1.143rem;
+}
+
+.m-t3{
+  margin-top: 1.714rem;
+}
+
+.m-t4{
+  margin-top: 2.286rem;
+}
+
+.m-t5{
+  margin-top: 2.857rem;
+}
+
+.m-t6{
+  margin-top: 3.75rem;
+}

@@ -95,7 +95,7 @@ module.exports = function (env, args) {
               options: {
                 name: "[name].[ext]",
                 outputPath: "images",
-                esModule: false,
+                esModule: true,
               },
             },
             {
@@ -146,7 +146,7 @@ module.exports = function (env, args) {
         },
         injectChanges: true,
         logFileChanges: true,
-        notify: true,
+        notify: false,
         reloadDelay: 0,
       }),
       new MiniCssExtractPlugin({

@@ -1,0 +1,29 @@
+.modal{
+
+
+  .modal-dialog{
+  // @include media-breakpoint-up(lg) { 
+   
+  // }
+    margin-top: 16vh;
+  }
+  .modal-content{
+    border-radius: 0;
+    border: none;
+    .modal-header{
+      border-bottom: none;
+      align-items: center;
+      .modal-title{
+        color:$main-grey;
+      }
+
+      .close{opacity: 1;}
+    }
+
+    .modal-footer{
+      border:none;
+      padding:1rem 2rem;
+    }
+  }
+  
+}

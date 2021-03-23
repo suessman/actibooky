@@ -2,6 +2,20 @@
 // Footer of the site/application
 // -----------------------------------------------------------------------------
 .footer {
-  color: $light;
+  color: $dark;
   background-color: $dark;
+  padding:40px 0;
+  h5{
+    font-size:14px;
+  }
+
+  .sns-group{
+    .sns-list{
+      display:inline-block;
+      margin-right: 16px;
+    }
+  }
+  @include media-breakpoint-down(md){
+   display: none;
+  }
 }

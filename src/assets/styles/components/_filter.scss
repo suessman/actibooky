@@ -1,0 +1,485 @@
+.click-el{
+  cursor: pointer;
+}
+
+.filter-picker-ui{
+
+  .pick-filter-body{
+    padding:8px 0;
+    background-color: $white;
+    flex-wrap: wrap;
+    border:1px solid #e9ecef;
+
+    @include media-breakpoint-down(sm){
+      background-color: transparent;
+      border:none;
+      padding:0;
+    } 
+
+    //people number dropdown
+    div.pick-filter{  
+      position: relative;
+
+      &.br-0{
+        border-right: none;
+      }
+      input{
+        height: 22px;
+        border-bottom:none;
+        padding:0;
+        color:$dark;
+      }
+
+      @include media-breakpoint-down(sm){
+        height: 40px;
+        display: flex;
+        align-items: center;
+      } 
+
+      //인원 modal
+      .modal{
+        position: absolute; 
+        height: auto; 
+        top: 40px;
+        width: 100%;
+        right:0;
+        left: auto;
+        padding-right: 0 !important;
+                  
+       
+        &.left{
+          left:0;
+          right:auto;
+        }
+        @include media-breakpoint-down(md){
+         width: auto;
+        }
+
+        .activity-counter{
+          &:first-of-type{
+            margin-top: 0;
+          }
+          display: flex;
+          justify-content: space-between;
+          margin-top: 24px;
+
+          //상세설명
+          .detail{
+            color:$dark;
+            font-size: 12px;
+          }
+          //counter num
+          .counter-num{
+            padding:0 20px;
+          }
+          //counter btn
+          button{
+            border:none;
+            box-shadow: none;
+            background: transparent;
+            padding:0;
+            vertical-align: middle;
+
+            &.add-btn{
+              background-image: url('/src/assets/images/icon-add-gray@3x.png');
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size:cover;
+              width: 24px;  
+              height: 24px;
+            }
+
+            &.minus-btn{
+              background-image: url('/src/assets/images/icon-minus-gray@3x.png');
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size:cover;
+              width: 24px;
+              height: 24px;
+            }
+          }  
+        }
+
+        
+
+        .modal-dialog{
+          display: inline-block; 
+          margin-top:8px; 
+          min-width: 220px;
+          border:1px solid $light;
+          border-radius: 0;
+
+          @include media-breakpoint-up(md){
+            width: 100%;
+          }
+
+          .modal-content{
+            border:none;
+            border-radius: 0;
+
+            .modal-header{
+              border-bottom:none;
+              color:$main-grey;
+            }
+
+            .modal-body{
+                ul li:nth-last-of-type(1) .input-container{
+                  margin-bottom: -8px;
+                }
+              }
+       
+            .modal-footer{
+              border-top:none;
+              button{
+                width: 100%;
+                margin: auto;
+              }
+            }
+          }
+
+          //X BUTTON
+            .close{
+              font-size: 24px;
+              font-weight: normal;
+            }
+        }
+      }  
+    }
+
+    .pick-filter{
+      width: 25%;
+      height:22px; 
+      padding:0 0 0 42px; 
+      border: none;
+      position:relative;     
+      background-color: $white;
+
+
+      @include media-breakpoint-up(lg) {
+        border-right: 1px solid #e9ecef;           
+
+      }
+
+      @include media-breakpoint-down(sm){
+        width:50%;
+        height: 40px;
+        margin-top: 8px;
+
+        //mobile input divider
+        input.divider{
+          border-right: 1px solid $light;
+        }
+      } 
+
+      &:focus{
+        border-bottom:none;
+      }
+
+      &.start-d, &.end-d{     
+        background-image: url('/src/assets/images/icon-date-gray@3x.png');
+        background-position: 14px center;
+        background-repeat: no-repeat;
+        background-size:24px auto;  
+      }
+
+      &.place{     
+        background-image: url('/src/assets/images/icon-location-gray@3x.png');
+        background-position: 14px center;
+        background-repeat: no-repeat;
+        background-size:24px auto;  
+      }
+
+      &.people-n{
+        background-image: url('/src/assets/images/icon-user-gray@3x.png');
+        background-position: 14px center;
+        background-repeat: no-repeat;
+        background-size:24px auto;  
+      }
+
+      &.people-n.time{
+        background-image: url('/src/assets/images/icon-time-gray@3x.png');
+        background-position: 14px center;
+        background-repeat: no-repeat;
+        background-size:24px auto;  
+        border-right: none;
+      }
+    }
+  }
+  
+
+  .search{
+    height:56px; 
+    min-width:80px;
+  }
+
+  @include media-breakpoint-down(sm) { 
+    // margin-bottom:2rem !important;
+    display: block;
+    margin-top: 40px;
+    
+    input.pick-calendar{
+      height:40px; 
+      padding-left: 24px; 
+      border: none;
+      font-size: 12px;
+      border-bottom:none;
+
+
+      &:focus{
+        border-bottom:none;
+      }
+
+      &.date{     
+        background-image: url('/src/assets/images/icon-date-gray@3x.png');
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-size:24px auto;  
+      }
+
+      &.place{     
+        background-image: url('/src/assets/images/icon-location-gray@3x.png');
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-size:24px auto;  
+      }
+    }
+    
+    .search{
+      height:40px; 
+      min-width:100%;
+      margin-top: 8px;
+    }
+  }
+
+  .dropdown-ui{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 8px;
+    div.left{
+      display: flex;
+      flex-wrap: wrap;
+
+       @include media-breakpoint-down(md){
+         width:100%;
+       }
+       
+    }
+
+    button.search{
+      height: 40px;
+      min-width: 90px;
+
+      @include media-breakpoint-down(md){
+         width:100%;
+         margin-top: 8px;
+       }
+    }
+
+    .dropdown{
+      position:relative;
+      button.dropdown-modal{
+        width:220px;
+        text-align: left;
+        font-weight: 400;
+        box-shadow: none;
+        -webkit-appearance: none !important;
+        -moz-appearance: none;
+        appearance: none;
+        background-image: url(/src/assets/images/triangl@3x.png);
+        background-repeat: no-repeat;
+        background-position: 92% 55%;
+        background-size: 10px 8px; 
+        display: inline-block !important;
+        font-size: 14px;
+        border: 1px solid #e9ecef;  
+        padding: 8px;
+
+
+        &+.modal{
+          position: absolute; 
+          height: auto; 
+          top: 40px;
+          right:0;
+          left:auto;
+          width: 100%;
+          padding-right:0 !important;
+        
+          @include media-breakpoint-down(md){
+            width: auto;
+          }
+          //가격 dropdown ui
+          &.left{
+            left:0;
+            right:auto;
+          }
+
+          .modal-dialog{
+            display: inline-block; 
+            margin-top:8px; 
+            min-width: 220px;
+            border:1px solid $light;
+            border-radius: 0;
+
+            .modal-content{
+              border:none;
+              border-radius: 0;
+            
+              .modal-header{
+                border-bottom:none;
+              }
+
+              .modal-body{
+               ul li:nth-last-of-type(1) .input-container{
+                margin-bottom: -8px;
+               }
+              }
+
+            .modal-footer{
+              border-top:none;
+
+                button{
+                  width: 100%;
+                  margin: auto;
+                }
+              }
+            }
+            //X BUTTON
+            .close{
+              font-size: 24px;
+              font-weight: normal;
+            }
+          }
+        }
+      }
+    }
+
+    .category{
+      background-color: $white;
+      padding:8px; 
+      height: 40px;
+      border: 1px solid $light;
+      position:relative;
+      z-index: 1100;      
+      
+      ul{
+        display: flex;
+      }
+      
+      label{
+        margin-bottom:0;
+      } 
+
+      @include media-breakpoint-down(md){
+         width:100%;
+         margin-left: 0 !important;
+         margin-top: 8px;
+
+         ul{
+           justify-content: center;
+         }
+       }
+    }
+
+      @include media-breakpoint-down(sm) {
+        .dropdown{
+          &.price{
+            padding-right:8px;
+          }
+          
+          position:relative;
+          width: 50%;
+          margin-left:0 !important;
+          button.dropdown-modal{
+            width: 100%;
+            text-align: left;
+            font-weight: 400;
+            box-shadow: none;
+            -webkit-appearance: none !important;
+            -moz-appearance: none;
+            appearance: none;
+            background-image: url(/src/assets/images/triangl@3x.png);
+            background-repeat: no-repeat;
+            background-position: 92% 55%;
+            background-size: 10px 8px; 
+            display: inline-block !important;
+            font-size: 14px;
+            border: 1px solid #e9ecef;  
+            padding: 8px;
+
+
+            &+.modal{
+              position: absolute; 
+              height: auto; 
+              top: 40px;
+
+              .modal-dialog{
+                display: inline-block; 
+                margin-top:8px; 
+                min-width: 220px;
+                border:1px solid $light;
+                border-radius: 0;
+
+                .modal-content{
+                  border:none;
+                  border-radius: 0;
+                
+                  .modal-header{
+                    border-bottom:none;
+                  }
+
+                  .modal-body{
+                    ul li:nth-last-of-type(1) .input-container{
+                      margin-bottom: -8px;
+                    }
+                  }
+
+                  .modal-footer{
+                    border-top:none;
+                  }
+                }
+                //X BUTTON
+                .close{
+                  font-size: 24px;
+                  font-weight: normal;
+                }
+              }
+            }
+          }
+        }
+      }
+  }
+}
+
+
+.daterangepicker{
+  td.active, .daterangepicker td.active:hover{
+  background-color:$primary;
+  border-radius: 50% ;
+  }
+
+  @include media-breakpoint-down(xs) { 
+    left:0;
+    width:100%;
+  }
+
+
+  .drp-calendar{
+    &.left, &.right{
+      max-width: 100%;
+      table tbody tr td{
+        width:37px;
+        height:37px; 
+        
+        @include media-breakpoint-down(xs) { 
+          width:50px;
+          height:50px; 
+        }
+        &.today{
+          border-radius: 50% !important;
+        }
+      }
+    }
+  }
+}
+

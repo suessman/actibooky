@@ -1,0 +1,9 @@
+//max
+@include media-breakpoint-down(xs) {}
+@include media-breakpoint-down(sm) {}
+@include media-breakpoint-down(md) {
+  .max-md-p0{
+    padding:0;
+  }
+}
+@include media-breakpoint-down(lg) {}

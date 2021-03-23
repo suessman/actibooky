@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>검색결과</title>
+  <meta name="description" content="">
+  ${ require('./partials/head.html') }
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+</head>
+
+<body>
+  ${ require('./partials/browserupgrade.html') }
+  <div>
+    ${ require('./partials/header.html') }
+    <main class="d-flex flex-column h-100 main main-sub">
+      <section class="card_body grey">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 m-auto filter-picker-ui">
+              <div class="w-100">
+                <div class="d-flex pick-filter-body">
+                  <div class="pick-filter place">
+                    <input type="text" class="form-control divider main-color" value="전라도" />
+                  </div>
+
+
+                  <div class="pick-filter people-n dropdown filter-btn main-color">
+                    <input type="text" class="form-control main-color" value="" placeholder="인원" data-backdrop="false" data-toggle="modal" data-target="#peopleNum" />
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="peopleNum" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">인원</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <ul>
+                              <li class="activity-counter">
+                                <span>성인</span>
+                                <span>
+                                  <button type="button" class="add-btn">
+                                  </button>
+                                  <span class="counter-num">2</span>
+                                  <button type="button" class="minus-btn">
+                                  </button>
+                                </span>
+                              </li>
+
+                              <li class="activity-counter">
+                                <span>성인</span>
+                                <span>
+                                  <button type="button" class="add-btn">
+                                  </button>
+                                  <span class="counter-num">2</span>
+                                  <button type="button" class="minus-btn">
+                                  </button>
+                                </span>
+                              </li>
+
+                              <li class="activity-counter">
+                                <span>성인</span>
+                                <span>
+                                  <button type="button" class="add-btn">
+                                  </button>
+                                  <span class="counter-num">2</span>
+                                  <button type="button" class="minus-btn">
+                                  </button>
+                                </span>
+                              </li>
+
+                            </ul>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">적용하기</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="pick-filter start-d main-color">
+                    <input type="text" class="form-control date divider main-color" value="" placeholder="체크인" />
+                  </div>
+
+                  <div class="pick-filter end-d main-color">
+                    <input type="text" class="form-control date main-color" value="" placeholder="체크아웃" />
+                  </div>
+                </div>
+                <!-- Button trigger modal -->
+                <div class="dropdown-ui">
+                  <div class="left">
+                    <div class="dropdown price">
+                      <button type="button" class="btn btn-outline-secondary dropdown-modal filter-btn" data-backdrop="false" data-toggle="modal" data-target="#exampleModal">
+                        가격
+                      </button>
+
+                      <!-- Modal -->
+                      <div class="modal fade left" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">가격</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <ul>
+                                <li>
+                                  <div class="input-container">
+                                    <span>전체</span>
+                                    <label class="container-radio">
+                                      <input type="radio" name="price">
+                                      <span class="checkmark"></span>
+                                    </label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="input-container">
+                                    <span>5만원미만</span>
+                                    <label class="container-radio">
+                                      <input type="radio" name="price">
+                                      <span class="checkmark"></span>
+                                    </label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="input-container">
+                                    <span>5만원 ~ 10만원미만</span>
+                                    <label class="container-radio">
+                                      <input type="radio" name="price">
+                                      <span class="checkmark"></span>
+                                    </label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="input-container">
+                                    <span>10만원 ~ 15만원미만</span>
+                                    <label class="container-radio">
+                                      <input type="radio" name="price">
+                                      <span class="checkmark"></span>
+                                    </label>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-primary">적용하기</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="dropdown ml-3">
+                      <button type="button" class="btn btn-outline-secondary dropdown-modal filter-btn" data-backdrop="false" data-toggle="modal" data-target="#roomType">
+                        숙소유형
+                      </button>
+
+                      <!-- Modal -->
+                      <div class="modal fade" id="roomType" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">숙소유형</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <ul>
+                                <li>
+                                  <div class="input-container">
+                                    <span>전체</span>
+                                    <label class="container-check">
+                                      <input type="checkbox" name="price">
+                                      <span class="ch-checkmark"></span>
+                                    </label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="input-container">
+                                    <span>원룸</span>
+                                    <label class="container-check">
+                                      <input type="checkbox" name="price">
+                                      <span class="ch-checkmark"></span>
+                                    </label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="input-container">
+                                    <span>농촌민박</span>
+                                    <label class="container-check">
+                                      <input type="checkbox" name="price">
+                                      <span class="ch-checkmark"></span>
+                                    </label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="input-container">
+                                    <span>펜션</span>
+                                    <label class="container-check">
+                                      <input type="checkbox" name="price">
+                                      <span class="ch-checkmark"></span>
+                                    </label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="input-container">
+                                    <span>농촌호텔</span>
+                                    <label class="container-check">
+                                      <input type="checkbox" name="price">
+                                      <span class="ch-checkmark"></span>
+                                    </label>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-primary">적용하기</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="category ml-3">
+                      <ul>
+                        <li>
+                          <div class="">
+                            <!-- <span>전체</span> -->
+                            <label class="container-type">
+                              <input type="radio" name="searchType" checked="checked">
+                              <span class="checkmark">전체</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="">
+
+                            <label class="container-type">
+                              <input type="radio" name="searchType">
+                              <span class="checkmark">숙소</span>
+                            </label>
+                          </div>
+                        </li>
+
+                        <li>
+                          <div class="">
+
+                            <label class="container-type">
+                              <input type="radio" name="searchType">
+                              <span class="checkmark">체험</span>
+                            </label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+
+                  <button type="button" class="btn-primary search">검색</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="container">
+        <div class="row">
+          <section class="col-12 mt-5 section-body card-ui">
+            <div class="d-flex justify-content-between top-title">
+              <h3>검색결과</h3>
+              <select name="" id="" class="form-control" style="width:126px;">
+                <option value="">인기순</option>
+                <option value="">최신순</option>
+                <option value="">낮은가격순</option>
+              </select>
+            </div>
+            <ul class="popular-card-body list">
+              <li class="popular-card">
+                <a href="">
+                  <div class="content" style="background-image:url('/images/main_top.jpg')">
+                    <span class="address">전라/전주</span>
+                    <!-- <span class="percent">50%</span> -->
+                    <!-- 숙소 -->
+                    <span class="percent stay">50%</span>
+                  </div>
+                  <h1>제목</h1>
+                  <p>
+                    <span class="price">₩25000</span>
+                    <del class="sale-price">₩44000</del>
+                  </p>
+                </a>
+              </li>
+              <li class="popular-card">
+                <a href="">
+                  <div class="content" style="background-image:url('/images/crystal.jpg')">
+                    <span class="address">전라/전주</span>
+                    <span class="percent">50%</span>
+                  </div>
+                  <h1>제목</h1>
+                  <p>
+                    <span class="price">₩25000</span>
+                    <del class="sale-price">₩44000</del>
+                  </p>
+                </a>
+              </li>
+              <li class="popular-card">
+                <a href="">
+                  <div class="content" style="background-image:url('/images/daniel.jpg')">
+                    <span class="address">전라/전주</span>
+                    <span class="percent">50%</span>
+                  </div>
+                  <h1>제목</h1>
+                  <p>
+                    <span class="price">₩25000</span>
+                    <del class="sale-price">₩44000</del>
+                  </p>
+                </a>
+              </li>
+              <li class="popular-card">
+                <a href="">
+                  <div class="content" style="background-image:url('/images/bread.jpg')">
+                    <span class="address">전라/전주</span>
+                    <span class="percent">50%</span>
+                  </div>
+                  <h1>제목</h1>
+                  <p>
+                    <span class="price">₩25000</span>
+                    <del class="sale-price">₩44000</del>
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </section>
+
+          <nav aria-label="Page navigation example" class="col-12">
+            <ul class="pagination justify-content-center">
+              <li class="page-item">
+                <a class="page-link" href="#">
+                  <img class="sm-icon" srcset="/images/icon-left-gray.png 400w,
+                                                                                    /images/icon-left-gray@2x.png 700w,
+                                                                                    /images/icon-left-gray@3x.png 1000w" src="/images/icon-right-white@3x.png" alt="이전" />
+                </a>
+              </li>
+              <li class="page-item active number"><a class="page-link" href="#">1</a></li>
+              <li class="page-item number"><a class="page-link" href="#">2</a></li>
+              <li class="page-item number"><a class="page-link" href="#">3</a></li>
+              <li class="page-item number"><a class="page-link" href="#">4</a></li>
+              <li class="page-item number"><a class="page-link" href="#">5</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">
+                  <img class="sm-icon" srcset="/images/icon-right-gray.png 400w,
+                                                                                    /images/icon-right-gray@2x.png 700w,
+                                                                                    /images/icon-right-gray@3x.png 1000w" src="/images/icon-right-white@3x.png" alt="이전" />
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </main> ${ require('./partials/footer.html') }
+  </div>
+</body>
+
+<script>
+  $(function () {
+    var filterBtn = $('.filter-btn')
+    // $(".acetrnt-toggle").click(function () {
+    //   $(this).toggleClass("active");
+    // });
+
+    //date picker
+    $(".date").flatpickr({
+      dateFormat: "Y-m-d",
+      minDate: "today",
+      disableMobile: "true",
+      "locale": "ko"
+    });
+
+
+    filterBtn.click(function () {
+      $('.modal').css('z-index', '1200');
+    })
+
+
+  })
+
+
+
+</script>
+
+</html>

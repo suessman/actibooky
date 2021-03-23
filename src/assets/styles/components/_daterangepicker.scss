@@ -1,0 +1,194 @@
+.date-picker-ui{
+  display:flex; 
+  // margin-bottom:10rem !important;
+
+
+
+  input.pick-calendar{
+    height:56px; 
+    padding-left: 44px; 
+    border: none;
+    position:relative;
+    color:$dark;
+    
+    &:focus{
+      border-bottom:none;
+    }
+
+    &.date{     
+      background-image: url('/src/assets/images/icon-date-gray@3x.png');
+      background-position: 16px center;
+      background-repeat: no-repeat;
+      background-size:24px auto;  
+    }
+
+    &.place{     
+      background-image: url('/src/assets/images/icon-location-gray@3x.png');
+      background-position: 16px center;
+      background-repeat: no-repeat;
+      background-size:24px auto;  
+    }
+  }
+
+  .search{
+    height:56px; 
+    min-width:80px;
+  }
+
+  @include media-breakpoint-down(sm) { 
+    display: block;
+    margin-top: 40px;
+    
+    input.pick-calendar{
+      height:40px; 
+      padding-left: 30px; 
+      border: none;
+      font-size: 12px;
+      border-bottom:none;
+
+
+      &:focus{
+        border-bottom:none;
+      }
+
+      &.date{     
+        background-image: url('/src/assets/images/icon-date-gray@3x.png');
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-size:24px auto;  
+      }
+
+      &.place{     
+        background-image: url('/src/assets/images/icon-location-gray@3x.png');
+        background-position: 6px center;
+        background-repeat: no-repeat;
+        background-size:24px auto;  
+      }
+    }
+    
+    .search{
+      height:40px; 
+      min-width:100%;
+      margin-top: 8px;
+    }
+  }
+}
+
+
+.daterangepicker{
+  font-family: 'Noto Sans KR', sans-serif;
+  border-radius: 0;
+  .drp-calendar{
+    .calendar-table{
+      table{
+        thead{
+          tr{
+            &:first-of-type{
+              th{
+                color:$main-grey;
+                font-weight: 700;
+              }
+            }
+            th{              
+            font-size: 12px;
+            color: $dark;
+            font-weight: normal;
+            }            
+          }
+        }
+        td{
+          font-size: 14px;
+        }
+      }
+
+      .prev{
+        span{display:none;}
+        background-image: url('/src/assets/images/icon-left-black@3x.png') !important;
+        width: 24px;
+        height: 24px;
+        padding: 0;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;        
+      }
+      .next{
+        span{display:none;}
+        background-image: url('/src/assets/images/icon-right-black@3x.png') !important;
+        width: 24px;
+        height: 24px;
+        padding: 0;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;        
+      }
+
+    }
+  }
+  td.active, .daterangepicker td.active:hover{
+  background-color:$primary !important;
+  border-radius: 50% ;
+  }
+
+  td.in-range{
+    background-color: #f9f5ff;
+  }
+
+  @include media-breakpoint-down(xs) { 
+    left:0;
+    width:100%;
+  }
+
+
+  .drp-calendar{
+    &.left, &.right{
+      max-width: 100%;
+      table tbody tr{
+
+        td{
+          width:37px;
+          height:37px; 
+          
+          &.today{
+            border-radius: 50% !important;
+          }
+        }
+        
+        @include media-breakpoint-down(xs) { 
+        height:55px;
+        
+        td{
+          width:50px;
+          height:50px; 
+          }
+        } 
+      }
+    }
+  }
+}
+
+
+
+//flatpickr update
+.flatpickr-calendar{
+  border-radius: 0;
+}
+
+.flatpickr-day.selected, .flatpickr-day.startRange, 
+.flatpickr-day.endRange, .flatpickr-day.selected.inRange, 
+.flatpickr-day.startRange.inRange, .flatpickr-day.endRange.inRange, 
+.flatpickr-day.selected:focus, .flatpickr-day.startRange:focus, 
+.flatpickr-day.endRange:focus, .flatpickr-day.selected:hover, 
+.flatpickr-day.startRange:hover, .flatpickr-day.endRange:hover, 
+.flatpickr-day.selected.prevMonthDay, .flatpickr-day.startRange.prevMonthDay, 
+.flatpickr-day.endRange.prevMonthDay, .flatpickr-day.selected.nextMonthDay, 
+.flatpickr-day.startRange.nextMonthDay, .flatpickr-day.endRange.nextMonthDay{
+  color:$white;
+  background-color: $primary;
+  border:none;
+}
+
+.flatpickr-day.today{border: none;}
+
+.flatpickr-weekday{
+  font-weight:700;
+}

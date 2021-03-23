@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>로그인</title>
+  <meta name="description" content="">
+
+  ${ require('./partials/head.html') }
+
+</head>
+
+<body>
+
+  ${ require('./partials/browserupgrade.html') }
+
+  <div class="d-flex flex-column h-100">
+
+    <main class="d-flex h-100 main main-sub">
+      <!-- 메인 이미지 -->
+
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-5 m-auto">
+            <ul>
+              <li>첫번째</li>
+              <li>두번째</li>
+              <li class="boom active shoot">세번째</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    ${ require('./partials/footer.html') }
+
+  </div>
+
+  <script>
+
+    /*
+          var _hc = [];
+
+    _hc.listLi = document.getElementsByTagName('li');
+
+    console.log(_hc.listLi);
+
+    _hc.listFunction = function () {
+      console.log(this.classList);
+
+      //스위치 변수 하나 만들어줌
+      _hc.listCheck = false;
+      for (var i = 0; i < this.classList.length; i++) {
+        if (this.classList[i] == 'active') {
+          _hc.listCheck = false;
+        }
+      }
+
+      if (this.classList == 'active') {
+        console.log('activeclass 가지고 있습니다.')
+      } else {
+        console.log('active클래스가 없습니다.')
+      }
+    }
+
+    for (var i = 0; i < _hc.listLi.length; i++) {
+      _hc.listLi[i].addEventListener('click', _hc.listFunction);
+    }
+    */
+    var slideIndex = 1;
+    showSlides(slideIndex);
+  </script>
+</body>
+
+</html>

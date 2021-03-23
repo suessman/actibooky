@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>검색결과</title>
+  <meta name="description" content="">
+  ${ require('./partials/head.html') }
+
+</head>
+
+<body>
+  ${ require('./partials/browserupgrade.html') }
+  <div>
+    ${ require('./partials/header.html') }
+    <main class="d-flex flex-column h-100 main main-sub">
+      <section class="card_body grey">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 m-auto filter-picker-ui">
+              <div class="w-100">
+                <div class="d-flex pick-filter-body">
+                  <div class="pick-filter place">
+                    <input type="text" class="form-control divider" value="어디로 떠날까요?" />
+                  </div>
+                  <div class="pick-filter start-d">
+                    <!-- <input type="text" class="form-control date divider" value="" placeholder="체크인" /> -->
+                    <input type="text" class="form-control date divider" readonly value="" name="daterange" placeholder="체크인" />
+                  </div>
+
+                  <div class=" pick-filter end-d">
+                    <!-- <input type="text" class="form-control date divider" value="" placeholder="체크아웃" /> -->
+                    <input type="text" class="form-control date divider" readonly value="" name="daterange" placeholder="체크아웃" />
+                  </div>
+                  <div class="pick-filter people-n dropdown filter-btn br-0">
+
+                    <input type="text" class="form-control click-el" value="" placeholder="인원" data-backdrop="false" data-toggle="modal" data-target="#peopleNum" />
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="peopleNum" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">인원</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <img class="sm-icon" srcset="/images/icon-cancel-gray.png 400w,
+                                                          /images/icon-cancel-gray@2x.png 700w,
+                                                          /images/icon-cancel-gray@3x.png 1000w" src="/images/icon-cancel-gray@3x.png" alt="닫기" />
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <ul>
+                              <li class="activity-counter">
+                                <div>
+                                  <span>성인</span>
+                                </div>
+                                <span>
+                                  <button type="button" class="add-btn">
+                                  </button>
+                                  <span class="counter-num">2</span>
+                                  <button type="button" class="minus-btn">
+                                  </button>
+                                </span>
+                              </li>
+
+                              <li class="activity-counter">
+                                <div>
+                                  <span>소아</span>
+                                  <div class="detail">24개월~12세</div>
+                                </div>
+                                <span>
+                                  <button type="button" class="add-btn">
+                                  </button>
+                                  <span class="counter-num">2</span>
+                                  <button type="button" class="minus-btn">
+                                  </button>
+                                </span>
+                              </li>
+
+                              <li class="activity-counter">
+                                <div>
+                                  <span>유아</span>
+                                  <div class="detail">24개월 미만</div>
+                                </div>
+                                <span>
+                                  <button type="button" class="add-btn">
+                                  </button>
+                                  <span class="counter-num">2</span>
+                                  <button type="button" class="minus-btn">
+                                  </button>
+                                </span>
+                              </li>
+
+                            </ul>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">적용하기</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                </div>
+                <!-- Button trigger modal -->
+                <div class="dropdown-ui">
+                  <div class="left">
+                    <div class="dropdown price">
+                      <button type="button" class="btn btn-outline-secondary dropdown-modal filter-btn click-el" data-backdrop="false" data-toggle="modal" data-target="#exampleModal">
+                        가격
+                      </button>
+
+                      <!-- Modal -->
+                      <div class="modal fade left" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">가격</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <img class="sm-icon" srcset="/images/icon-cancel-gray.png 400w,
+                                                    /images/icon-cancel-gray@2x.png 700w,
+                                                    /images/icon-cancel-gray@3x.png 1000w" src="/images/icon-cancel-gray@3x.png" alt="닫기" />
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <ul>
+                                <li>
+                                  <div class="input-container">
+                                    <span>전체</span>
+                                    <label class="container-radio">
+                                      <input type="radio" name="price">
+                                      <span class="checkmark"></span>
+                                    </label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="input-container">
+                                    <span>5만원미만</span>
+                                    <label class="container-radio">
+                                      <input type="radio" name="price">
+                                      <span class="checkmark"></span>
+                                    </label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="input-container">
+                                    <span>5만원 ~ 10만원미만</span>
+                                    <label class="container-radio">
+                                      <input type="radio" name="price">
+                                      <span class="checkmark"></span>
+                                    </label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="input-container">
+                                    <span>10만원 ~ 15만원미만</span>
+                                    <label class="container-radio">
+                                      <input type="radio" name="price">
+                                      <span class="checkmark"></span>
+                                    </label>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-primary">적용하기</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="dropdown ml-3">
+                      <button type="button" class="btn btn-outline-secondary dropdown-modal filter-btn click-el" data-backdrop="false" data-toggle="modal" data-target="#roomType">
+                        숙소유형
+                      </button>
+
+                      <!-- Modal -->
+                      <div class="modal fade" id="roomType" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">숙소유형</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <img class="sm-icon" srcset="/images/icon-cancel-gray.png 400w,
+                                                            /images/icon-cancel-gray@2x.png 700w,
+                                                            /images/icon-cancel-gray@3x.png 1000w" src="/images/icon-cancel-gray@3x.png" alt="닫기" />
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <ul>
+                                <li>
+                                  <div class="input-container">
+                                    <span>전체</span>
+                                    <label class="container-check">
+                                      <input type="checkbox" name="price">
+                                      <span class="ch-checkmark"></span>
+                                    </label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="input-container">
+                                    <span>원룸</span>
+                                    <label class="container-check">
+                                      <input type="checkbox" name="price">
+                                      <span class="ch-checkmark"></span>
+                                    </label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="input-container">
+                                    <span>농촌민박</span>
+                                    <label class="container-check">
+                                      <input type="checkbox" name="price">
+                                      <span class="ch-checkmark"></span>
+                                    </label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="input-container">
+                                    <span>펜션</span>
+                                    <label class="container-check">
+                                      <input type="checkbox" name="price">
+                                      <span class="ch-checkmark"></span>
+                                    </label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="input-container">
+                                    <span>농촌호텔</span>
+                                    <label class="container-check">
+                                      <input type="checkbox" name="price">
+                                      <span class="ch-checkmark"></span>
+                                    </label>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-primary">적용하기</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button type="button" class="btn-primary search">검색</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="container">
+        <div class="row">
+          <section class="col-12 mt-5 section-body card-ui">
+            <div class="d-flex justify-content-between top-title">
+              <h3>팜스테이</h3>
+              <select name="" id="" class="form-control" style="width:126px;">
+                <option value="">인기순</option>
+                <option value="">최신순</option>
+                <option value="">낮은가격순</option>
+              </select>
+            </div>
+            <ul class="popular-card-body list">
+              <li class="popular-card">
+                <a href="">
+                  <div class="content" style="background-image:url('/images/main_top.jpg')">
+                    <span class="address">전라/전주</span>
+                    <!-- <span class="percent">50%</span> -->
+                    <!-- 숙소 -->
+                    <span class="percent stay">50%</span>
+                  </div>
+                  <h1 class="title-overflow">제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목</h1>
+                  <p>
+                    <span class="price">₩25000</span>
+                    <del class="sale-price">₩44000</del>
+                  </p>
+                </a>
+              </li>
+              <li class="popular-card">
+                <a href="">
+                  <div class="content" style="background-image:url('/images/crystal.jpg')">
+                    <span class="address">전라/전주</span>
+                    <span class="percent">50%</span>
+                  </div>
+                  <h1 class="title-overflow">제목</h1>
+                  <p>
+                    <span class="price">₩25000</span>
+                    <del class="sale-price">₩44000</del>
+                  </p>
+                </a>
+              </li>
+              <li class="popular-card">
+                <a href="">
+                  <div class="content" style="background-image:url('/images/daniel.jpg')">
+                    <span class="address">전라/전주</span>
+                    <span class="percent">50%</span>
+                  </div>
+                  <h1 class="title-overflow">제목</h1>
+                  <p>
+                    <span class="price">₩25000</span>
+                    <del class="sale-price">₩44000</del>
+                  </p>
+                </a>
+              </li>
+              <li class="popular-card">
+                <a href="">
+                  <div class="content" style="background-image:url('/images/bread.jpg')">
+                    <span class="address">전라/전주</span>
+                    <span class="percent">50%</span>
+                  </div>
+                  <h1 class="title-overflow">제목</h1>
+                  <p>
+                    <span class="price">₩25000</span>
+                    <del class="sale-price">₩44000</del>
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </section>
+
+          <nav aria-label="Page navigation example" class="col-12">
+            <ul class="pagination justify-content-center">
+              <li class="page-item">
+                <a class="page-link" href="#">
+                  <img class="sm-icon" srcset="/images/icon-left-gray.png 400w,
+                                                                /images/icon-left-gray@2x.png 700w,
+                                                                /images/icon-left-gray@3x.png 1000w" src="/images/icon-right-white@3x.png" alt="이전" />
+                </a>
+              </li>
+              <li class="page-item active number"><a class="page-link" href="#">1</a></li>
+              <li class="page-item number"><a class="page-link" href="#">2</a></li>
+              <li class="page-item number"><a class="page-link" href="#">3</a></li>
+              <li class="page-item number"><a class="page-link" href="#">4</a></li>
+              <li class="page-item number"><a class="page-link" href="#">5</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">
+                  <img class="sm-icon" srcset="/images/icon-right-gray.png 400w,
+                                                                /images/icon-right-gray@2x.png 700w,
+                                                                /images/icon-right-gray@3x.png 1000w" src="/images/icon-right-white@3x.png" alt="이전" />
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </main> ${ require('./partials/footer.html') }
+  </div>
+</body>
+
+<script>
+  $(function () {
+    var filterBtn = $('.filter-btn')
+
+    $('.click-el').blur();
+    //date picker
+    // $(".date").flatpickr({
+    //   dateFormat: "Y-m-d",
+    //   minDate: "today",
+    //   disableMobile: "true",
+    //   "locale": "ko"
+    // });
+
+
+    $('input[name="daterange"]').daterangepicker({
+      defaultDate: "",
+      opens: 'center',
+      // autoUpdateInput: false,
+      autoApply: true,
+      singleDatePicker: true,
+      "locale": {
+        "format": "YYYY/MM/DD",
+        "separator": " - ",
+        "applyLabel": "적용",
+        "cancelLabel": "취소",
+        "fromLabel": "From",
+        "toLabel": "To",
+        "customRangeLabel": "Custom",
+        "daysOfWeek": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "monthNames": [
+          "1월",
+          "2월",
+          "3월",
+          "4월",
+          "5월",
+          "6월",
+          "7월",
+          "8월",
+          "9월",
+          "10월",
+          "11월",
+          "12월"
+        ]
+      }
+    }, function (start, end, label) {
+      console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+    });
+
+
+    filterBtn.click(function () {
+      $('.modal').css('z-index', '1200');
+    })
+
+    function setDotDotDot() {
+      $(".title-overflow").dotdotdot({
+        ellipsis: '...',//말줄임 뭘로 할지
+        watch: true, //윈도우 창에따라서 업데이트 할건지, 윈도우가 리사이즈될 때 업데이트할 건지
+        wrap: 'letter',//word(단어단위), letter(글 단위), children(자식단위) 자르기
+        height: 40,
+        tolerance: 20
+        //글이 넘치면 얼만큼 height 늘릴건
+      });
+    }
+
+    setDotDotDot();
+
+
+    $('.click-el').click(function (e) {
+      $('.modal').css('display', 'none');
+      $(this).find('.modal').css('display', 'block');
+    })
+
+    //value값 초기화
+    $('input[name="daterange"]').val('');
+  })
+
+
+
+</script>
+
+</html>

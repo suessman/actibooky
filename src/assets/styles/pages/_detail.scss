@@ -1,0 +1,473 @@
+.detail-info-sec{
+  .acti-info{
+    margin-top: 24px;
+    .top{
+      .address{
+        min-width: 24px;
+        background-color: $primary;
+        color:$white;
+        padding:2px 8px; 
+      }
+
+      .category{
+        color:$dark;
+        font-weight: 700;
+        font-size: 18px;
+        margin-left:8px;
+        @include media-breakpoint-down(md) { 
+          font-size: 14px;
+        }
+      }
+
+      .rating{
+        margin-left: 8px;
+        img{
+          width: 24px;
+        }
+      }
+
+      .price{
+        color:$primary;
+        font-size: 18px;
+        font-weight: 700;
+        @include media-breakpoint-down(md) { 
+          display: none;
+        }
+      }
+
+
+
+      .top-title{
+        h3{
+          font-size: 30px;
+          font-weight: 700;
+          line-height: 1.6;
+          margin-top: 8px;
+
+          @include media-breakpoint-down(md) { 
+           font-size: 18px;
+          }
+        }
+        
+      }
+
+      .tag{
+        a{
+          color:$dark;
+        }      
+      }
+
+      .detail{
+        h5{
+          font-size: 18px;
+          font-weight: 700;
+        }
+
+        .content{
+          min-height: 162px;
+        }
+
+        .facility{
+          display: flex;
+          flex-wrap: wrap;
+          div{
+            margin-right:40px;
+            margin-top: 16px;
+
+          @include media-breakpoint-down(md) { 
+            width:50%;
+            margin-right: 0;
+            display:inline-block;
+          }
+          }
+          img{
+            width:32px;
+          }
+        }
+      }
+    }
+  }
+
+    //middle-nav
+
+    .middle-nav-parent{
+        .middle-nav{
+          background-color:$light;
+          white-space: nowrap;
+          overflow: hidden;
+          overflow-x: auto;     
+        .list{
+          background-color:$light;
+          padding:0 20px;
+          height: 60px;
+          line-height: 60px;
+          display: inline-block;
+          &.active{
+            color:$primary;
+            font-weight: $font-weight-bold;
+            border-bottom:2px solid $primary;
+          }
+
+          .num{
+            color:$dark;
+          }
+        }
+
+        //scroll fixed
+        &.fixed{
+          position:fixed;
+          top:0;
+          z-index: 999;
+
+        }      
+      }
+
+      //객실정보,상세정보,위치,리뷰,문의
+      .content-list{
+        //scroll 내렸을 때 paddingtop 추가
+        &.top-area{
+         padding-top: 64px;
+        }
+        section{
+          padding:24px 0;
+          border-bottom: 1px solid $light;
+          &.list-detail.top-area{
+             padding-top: 64px;
+          }
+       
+          h3{
+            font-size: 18px;
+            font-weight: $font-weight-bold;
+          }
+
+          &.review{
+            .review-list{
+              margin-top: 40px;
+              @include media-breakpoint-down(md) { 
+               margin-top: 24px;
+              }
+
+              .user{
+                font-weight: $font-weight-bold;
+              }
+              .date{
+                color:$dark;
+              }
+
+              .content{
+                margin-top: 8px;
+              }
+            }
+          }
+
+          &.inquiry{
+            .inquiry-btn{
+              width: 90px;
+              height: 32px;
+            }
+
+            .modal{
+              .modal-title{
+                font-size:18px;
+              }
+
+              .modal-body{
+                textarea{
+                  border: 1px solid $light;
+                };
+                p{
+                  color:$dark;
+                  font-size: 12px;
+                  margin-top: 16px;
+                }
+              }
+
+              .modal-footer{
+                border:none;
+              }
+            }
+            .inquiry-list{
+              margin-top: 40px;
+              @include media-breakpoint-down(md) { 
+               margin-top: 24px;
+              }
+
+              .user{
+                .id{
+                  font-weight: $font-weight-bold;
+                  margin-left: 8px;
+                }
+                .state{
+                  min-width: 80px;
+                  display: inline-block;
+                  text-align: center;
+                  border-radius: 14px;
+                  padding:4px 0;
+
+                  &.ing{
+                    background: $light;
+                  }
+
+                  &.complete{
+                    background: $primary;
+                    color:$white;
+                  }
+                }
+              }
+              .date{
+                color:$dark;
+              }
+
+              .content{
+                margin-top: 8px;
+                .answer{
+                  margin-top: 12px;
+                }
+                .qa{
+                  color: $primary;
+                  font-weight: $font-weight-bold;
+                  margin-right: 8px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+  .company-info{
+    margin-top: 24px;
+
+    img.company-thumbnail{
+      width: 100%;
+      height: auto;
+
+      @include media-breakpoint-down(md) { 
+        display: none;
+      }
+    }
+    .name{
+      font-size: 18px;
+      color:$dark;
+      font-weight: 700;
+      margin-top: 16px;
+
+      @include media-breakpoint-down(md) { 
+        margin-top:0;
+      }
+    }
+    .detail{
+      
+      img{
+        width: 24px;
+      }
+    }
+  }
+  
+}
+
+
+
+//예약하기 카드
+.book-ui {
+
+  &-modal{
+    position:fixed;
+    left: 0;
+    bottom:0;
+    background: $white;
+    min-height: 420px;
+    z-index: 2100;
+    // overflow: hidden;
+    // overflow-y: auto;
+  }
+
+  
+
+  @include media-breakpoint-only(xl) { 
+      position: absolute;
+      top: 680px;
+      left: calc(50% + 570px);
+      width: 218px;
+      height: 200px;
+      border:1px solid $light;  
+      padding:16px;
+  }
+
+  @include media-breakpoint-down(md) { 
+    display: none;
+  }
+
+  @include media-breakpoint-up(lg) { 
+    .close-book-ui{
+      display:none;
+    }
+  }
+  
+  width: 100%;
+  // border:1px solid $light;
+  min-height: 413px;
+  padding:0 16px;
+
+  .book-ui-content{
+    padding:16px;
+    border:1px solid $light;
+    @include media-breakpoint-down(md) { 
+      margin-top:24px;
+      border:none;
+      padding:0;
+    }
+    @include media-breakpoint-only(xl) { 
+      border:none;
+      padding:0; 
+    }
+  }
+
+  input.form-control{
+    border:1px solid $light;
+    height: 40px;
+  }
+
+  .book-filter{
+    border:1px solid $light;
+    padding-left: 42px;
+    margin-top: 8px;
+    position: relative;
+    input{border:none;}
+
+       //인원 modal
+      .modal{
+        position: absolute; 
+        height: auto; 
+        top: 40px;
+        width: auto;
+        right:0;
+        left: auto;
+        padding-right: 0 !important;
+                  
+       
+        &.left{
+          left:0;
+          right:auto;
+        }
+        @include media-breakpoint-up(md){
+          //width: 100%;
+        }
+
+        .activity-counter{
+          display: flex;
+          justify-content: space-between;
+          margin-top: 24px;
+          //counter num
+          .counter-num{
+            padding:0 20px;
+          }
+          //counter btn
+          button{
+            border:none;
+            box-shadow: none;
+            background: transparent;
+            padding:0;
+            vertical-align: middle;
+
+            &.add-btn{
+              background-image: url('/src/assets/images/icon-add-gray@3x.png');
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size:cover;
+              width: 24px;  
+              height: 24px;
+            }
+
+            &.minus-btn{
+              background-image: url('/src/assets/images/icon-minus-gray@3x.png');
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size:cover;
+              width: 24px;
+              height: 24px;
+            }
+          }  
+        }
+
+        
+
+        .modal-dialog{
+          display: inline-block; 
+          margin-top:8px; 
+          min-width: 220px;
+          border:1px solid $light;
+          border-radius: 0;
+
+          @include media-breakpoint-up(md){
+            width: 100%;
+          }
+
+          .modal-content{
+            border:none;
+            border-radius: 0;
+
+            .modal-header{
+              border-bottom:none;
+            }
+
+          .modal-footer{
+              border-top:none;
+
+              button{
+                width: 80%;
+                margin: auto;
+              }
+            }
+          }
+
+          //X BUTTON
+            .close{
+              font-size: 24px;
+              font-weight: normal;
+            }
+        }
+      }  
+ 
+  }
+  .date{     
+      background-image: url('/src/assets/images/icon-date-gray@3x.png');
+      background-position: 14px center;
+      background-repeat: no-repeat;
+      background-size:24px auto;  
+      padding-left:42px;
+    }
+
+    .people-n{
+      background-image: url('/src/assets/images/icon-user-gray@3x.png');
+      background-position: 14px center;
+      background-repeat: no-repeat;
+      background-size:24px auto;  
+    }
+}
+
+.mobile-book-ui{
+  position: fixed; 
+  left:0;
+  bottom:0;
+  width: 100%; 
+  background-color:$white; 
+  z-index: 2000; 
+  padding:16px;
+  box-shadow: 0 -4px 4px 0 rgba(33, 37, 41, 0.05);  
+
+  .price{
+    color:$primary;
+    font-size: 18px;
+    font-weight: $font-weight-bold;
+  }
+
+  .book-btn{
+    width:90px;
+    height:32px;
+  }
+
+  @include media-breakpoint-up(lg) { 
+    display: none;
+  }
+}

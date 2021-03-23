@@ -5,7 +5,60 @@
 // example:
 // https://github.com/HugoGiraudel/sass-boilerplate/blob/master/stylesheets/base/_base.scss
 
-html,
-body {
-  height: 100%;
+
+//flex
+.flex-column-between{
+ @include flex(space-between, center, column);
 }
+
+main{
+  .card_body{
+    &.grey{
+     background-color:#f8f9fa;
+     padding:16px 0;
+    }
+
+    &.white{
+      background-color:$white;
+      padding:16px;
+      &.border{
+        border:1px solid $light;
+      }
+    }
+  }
+
+  //mobile navigation fixed
+  &.main-nav{
+    padding-bottom:70px;
+  }
+}
+
+
+.more{
+  display: flex;
+  position: relative;
+  &:after{
+    content: '';
+    background-image: url('/src/assets/images/icon-right-gray.png');
+    width: 24px;
+    background-position: center; 
+    background-repeat: no-repeat;
+  }
+}
+
+//section media query
+      @include media-breakpoint-down(sm) {
+        .m-m-t3{
+          margin-top: 1.5rem !important;
+        }
+        .m-m-t5{
+          margin-top: 2.5rem !important;
+        }
+      } 
+
+// .title-overflow{
+//   overflow: hidden;
+//   width: 100%;
+//   text-overflow: ellipsis;
+//   white-space: nowrap;
+// }
