@@ -1,4 +1,24 @@
 .detail-info-sec{
+  h5{
+    @include media-breakpoint-down(xs) {
+      font-size: 14px !important;
+    }
+  }
+  .left-top{
+    width: calc(100% - 300px);
+    padding: 0 16px;
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+  }
+
+  .right-top{
+    width: 300px; 
+    padding:0 16px;
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+  }
   .acti-info{
     margin-top: 24px;
     .top{
@@ -62,7 +82,7 @@
 
 
 
-  
+  //더보기
   .detail{
     h5{
       font-size: 18px;
@@ -72,174 +92,188 @@
     .content{
       min-height: 162px;
     }
+  }
 
-    .facility{
+  .facility{
+    h5{
+     @include fontSize(18px);
+    }
+    .facility-group{
       display: flex;
-      flex-wrap: wrap;
-      div{
-        margin-right:40px;
-        margin-top: 16px;
+      flex-wrap:wrap;
 
-      @include media-breakpoint-down(md) { 
-        width:50%;
-        margin-right: 0;
-        display:inline-block;
+      .facility-list{
+        padding-right:40px;
+        margin-top: 16px;
+        @include media-breakpoint-down(sm) {
+          width: 50%;
+          margin-top: 8px;
+        }
       }
+    }   
+  }
+  //middle-nav
+  .middle-nav-parent{
+    .middle-nav{
+      background-color:$light;
+      white-space: nowrap;
+      overflow: hidden;
+      overflow-x: auto;     
+    .list{
+      background-color:$light;
+      padding:0 20px;
+      height: 60px;
+      line-height: 60px;
+      display: inline-block;
+
+      @include media-breakpoint-down(xs) {
+        padding:0 12px;
+        height:48px;
+        line-height: 48px;
       }
-      img{
-        width:32px;
+      &.active{
+        color:$primary;
+        font-weight: $font-weight-bold;
+        border-bottom:2px solid $primary;
+      }
+
+      .num{
+        color:$dark;
+      }
+    }
+
+    //scroll fixed
+    &.fixed{
+      position:fixed;
+      top:0;
+      z-index: 999;
+      text-align: center;
+
+    }      
+  }
+}
+
+
+  //객실정보,상세정보,위치,리뷰,문의
+  .tab-content-list{
+    //scroll 내렸을 때 paddingtop 추가
+    &.top-area{
+      padding-top: 64px;
+    }
+    section{
+      padding:24px 0;
+      border-bottom: 1px solid $light;
+      
+      &.list-detail.top-area{
+          padding-top: 64px;
+      }
+
+      &:nth-last-of-type(1){
+        border-bottom: none;
+      }
+    
+      h5{
+        font-size: 18px;
+        font-weight: $font-weight-bold;
+      }
+
+      &.review{
+        .review-list{
+          margin-top: 40px;
+          @include media-breakpoint-down(md) { 
+            margin-top: 24px;
+          }
+
+          .user{
+            font-weight: $font-weight-bold;
+          }
+          .date{
+            color:$dark;
+          }
+
+          .content{
+            margin-top: 8px;
+          }
+        }
+      }
+
+      &.inquiry{
+        .inquiry-btn{
+          width: 90px;
+          height: 32px;
+        }
+
+        .modal{
+          .modal-title{
+            font-size:18px;
+          }
+
+          .modal-body{
+            textarea{
+              border: 1px solid $light;
+            };
+            p{
+              color:$dark;
+              font-size: 12px;
+              margin-top: 16px;
+            }
+          }
+
+          .modal-footer{
+            border:none;
+          }
+        }
+        .inquiry-list{
+          margin-top: 40px;
+          @include media-breakpoint-down(md) { 
+            margin-top: 24px;
+          }
+
+          .user{
+            .id{
+              font-weight: $font-weight-bold;
+              margin-left: 8px;
+            }
+            .state{
+              min-width: 80px;
+              display: inline-block;
+              text-align: center;
+              border-radius: 14px;
+              padding:4px 0;
+
+              &.ing{
+                background: $light;
+              }
+
+              &.complete{
+                background: $primary;
+                color:$white;
+              }
+            }
+          }
+          .date{
+            color:$dark;
+          }
+
+          .content{
+            margin-top: 8px;
+            .answer{
+              margin-top: 12px;
+            }
+            .qa{
+              color: $primary;
+              font-weight: $font-weight-bold;
+              margin-right: 8px;
+            }
+          }
+        }
       }
     }
   }
-    //middle-nav
-    .middle-nav-parent{
-        .middle-nav{
-          background-color:$light;
-          white-space: nowrap;
-          overflow: hidden;
-          overflow-x: auto;     
-        .list{
-          background-color:$light;
-          padding:0 20px;
-          height: 60px;
-          line-height: 60px;
-          display: inline-block;
-          &.active{
-            color:$primary;
-            font-weight: $font-weight-bold;
-            border-bottom:2px solid $primary;
-          }
-
-          .num{
-            color:$dark;
-          }
-        }
-
-        //scroll fixed
-        &.fixed{
-          position:fixed;
-          top:0;
-          z-index: 999;
-
-        }      
-      }
-
-      //객실정보,상세정보,위치,리뷰,문의
-      .content-list{
-        //scroll 내렸을 때 paddingtop 추가
-        &.top-area{
-         padding-top: 64px;
-        }
-        section{
-          padding:24px 0;
-          border-bottom: 1px solid $light;
-          &.list-detail.top-area{
-             padding-top: 64px;
-          }
-       
-          h3{
-            font-size: 18px;
-            font-weight: $font-weight-bold;
-          }
-
-          &.review{
-            .review-list{
-              margin-top: 40px;
-              @include media-breakpoint-down(md) { 
-               margin-top: 24px;
-              }
-
-              .user{
-                font-weight: $font-weight-bold;
-              }
-              .date{
-                color:$dark;
-              }
-
-              .content{
-                margin-top: 8px;
-              }
-            }
-          }
-
-          &.inquiry{
-            .inquiry-btn{
-              width: 90px;
-              height: 32px;
-            }
-
-            .modal{
-              .modal-title{
-                font-size:18px;
-              }
-
-              .modal-body{
-                textarea{
-                  border: 1px solid $light;
-                };
-                p{
-                  color:$dark;
-                  font-size: 12px;
-                  margin-top: 16px;
-                }
-              }
-
-              .modal-footer{
-                border:none;
-              }
-            }
-            .inquiry-list{
-              margin-top: 40px;
-              @include media-breakpoint-down(md) { 
-               margin-top: 24px;
-              }
-
-              .user{
-                .id{
-                  font-weight: $font-weight-bold;
-                  margin-left: 8px;
-                }
-                .state{
-                  min-width: 80px;
-                  display: inline-block;
-                  text-align: center;
-                  border-radius: 14px;
-                  padding:4px 0;
-
-                  &.ing{
-                    background: $light;
-                  }
-
-                  &.complete{
-                    background: $primary;
-                    color:$white;
-                  }
-                }
-              }
-              .date{
-                color:$dark;
-              }
-
-              .content{
-                margin-top: 8px;
-                .answer{
-                  margin-top: 12px;
-                }
-                .qa{
-                  color: $primary;
-                  font-weight: $font-weight-bold;
-                  margin-right: 8px;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
 
   .company-info{
     margin-top: 24px;
-
+    
     img.company-thumbnail{
       width: 100%;
       height: auto;
@@ -256,12 +290,41 @@
 
       @include media-breakpoint-down(md) { 
         margin-top:0;
+        font-size: 14px;
       }
     }
     .detail{
-      
-      img{
-        width: 24px;
+      margin-top: 24px;
+
+      @include media-breakpoint-down(md) { 
+        margin-top: 8px;
+      }
+      li{
+
+        span{
+          padding-left: 4px;
+        }
+        img{
+          width: 24px;
+        }
+        
+        &.area{  
+          position: relative;
+          .company-content{
+            padding-left: 28px;
+          }
+          &:before{
+            content: "";
+            background-image: url('/src/assets/images/icon-location-gray@3x.png');
+            position: absolute;
+            top: 0;
+            display: inline-block;
+            background-size: cover;
+            width: 24px;
+            height: 24px; 
+          }     
+        }
+        
       }
     }
   }
@@ -280,8 +343,9 @@
     background: $white;
     min-height: 420px;
     z-index: 2100;
-    // overflow: hidden;
-    // overflow-y: auto;
+    padding-bottom: 2rem;
+    overflow: hidden;
+    overflow-y: auto;
   }
 
   
@@ -294,6 +358,7 @@
       height: 200px;
       border:1px solid $light;  
       padding:16px;
+      box-shadow: 0 4px 8px 0 rgba(33, 37, 41, 0.05);
   }
 
   @include media-breakpoint-down(md) { 
@@ -335,9 +400,9 @@
     padding-left: 42px;
     margin-top: 8px;
     position: relative;
+    color: $dark;
     input{border:none;}
-
-       //인원 modal
+       
       .modal{
         position: absolute; 
         height: auto; 
@@ -345,7 +410,7 @@
         width: auto;
         right:0;
         left: auto;
-        padding-right: 0 !important;
+        // padding-right: 0 !important;
                   
        
         &.left{
@@ -454,19 +519,19 @@
   bottom:0;
   width: 100%; 
   background-color:$white; 
-  z-index: 2000; 
-  padding:16px;
+  z-index: 2000;  
   box-shadow: 0 -4px 4px 0 rgba(33, 37, 41, 0.05);  
 
   .price{
     color:$primary;
     font-size: 18px;
     font-weight: $font-weight-bold;
+    padding:16px;
   }
 
   .book-btn{
     width:90px;
-    height:32px;
+    height:56px;
   }
 
   @include media-breakpoint-up(lg) { 

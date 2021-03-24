@@ -18,11 +18,23 @@ body.menu-open{
 
 }
 
+@media(min-width:992px) {
+  .header-title {
+    display: none;
+  }
+}
+
+@media(max-width:991px) {
+  .header {
+    display: none;
+  }
+}
 
 header{
    &.header-title{
     position: relative;
     padding: 16px 0;
+    width:100%;
     h1{
       font-size: 14px;
       color:$main-grey;

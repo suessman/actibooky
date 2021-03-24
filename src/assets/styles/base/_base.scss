@@ -5,6 +5,14 @@
 // example:
 // https://github.com/HugoGiraudel/sass-boilerplate/blob/master/stylesheets/base/_base.scss
 
+.container{
+  max-width: 940px;
+  @include media-breakpoint-up(lg) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+}
 
 //flex
 .flex-column-between{
