@@ -20,9 +20,10 @@
     div.pick-filter{  
       position: relative;
       
-      &.people-n-last{
+      &.last{
         border-right: none;
       }
+      
       @include media-breakpoint-down(sm){
         &.br-0{
           border-right: none;
@@ -77,6 +78,13 @@
             color:$dark;
             font-size: 12px;
           }
+
+          //right영역
+          .right{
+            display: flex;
+            align-items: center;
+          }
+          
           //counter num
           .counter-num{
             padding:0 20px;
@@ -113,7 +121,7 @@
 
         .modal-dialog{
           display: inline-block; 
-          margin-top:8px; 
+          margin-top:0; 
           min-width: 220px;
           border:1px solid $light;
           border-radius: 0;

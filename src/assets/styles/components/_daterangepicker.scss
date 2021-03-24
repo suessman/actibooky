@@ -115,7 +115,7 @@
           &.active{
             background-color:$primary;
             color:$white;
-            border-radius: 50%;
+            border-radius: 0;
           }
           // background: $white;
           // &.active {
@@ -159,10 +159,6 @@
     }
   }  
   
-  td.active, .daterangepicker td.active:hover{
-  border-radius: 50% ;
-  }
-
   @include media-breakpoint-down(xs) { 
     left:0;
     width:100%;

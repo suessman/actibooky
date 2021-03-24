@@ -9806,7 +9806,7 @@ main.main-nav {
     .daterangepicker .drp-calendar .calendar-table table td.active {
       background-color: #9334ff;
       color: #ffffff;
-      border-radius: 50%; }
+      border-radius: 0; }
   .daterangepicker .drp-calendar .calendar-table .prev {
     background-image: url(../images/icon-left-black@3x.png) !important;
     padding: 0;
@@ -9823,8 +9823,6 @@ main.main-nav {
     background-size: 24px 24px; }
     .daterangepicker .drp-calendar .calendar-table .next span {
       display: none; }
-  .daterangepicker td.active, .daterangepicker .daterangepicker td.active:hover {
-    border-radius: 50%; }
   @media (max-width: 575.98px) {
     .daterangepicker {
       left: 0;
@@ -9860,7 +9858,7 @@ main.main-nav {
       padding: 0; } }
   .filter-picker-ui .pick-filter-body div.pick-filter {
     position: relative; }
-    .filter-picker-ui .pick-filter-body div.pick-filter.people-n-last {
+    .filter-picker-ui .pick-filter-body div.pick-filter.last {
       border-right: none; }
     @media (max-width: 767.98px) {
       .filter-picker-ui .pick-filter-body div.pick-filter.br-0 {
@@ -9900,6 +9898,9 @@ main.main-nav {
         .filter-picker-ui .pick-filter-body div.pick-filter .modal .activity-counter .detail {
           color: #868e96;
           font-size: 12px; }
+        .filter-picker-ui .pick-filter-body div.pick-filter .modal .activity-counter .right {
+          display: flex;
+          align-items: center; }
         .filter-picker-ui .pick-filter-body div.pick-filter .modal .activity-counter .counter-num {
           padding: 0 20px; }
         .filter-picker-ui .pick-filter-body div.pick-filter .modal .activity-counter button {
@@ -9924,7 +9925,7 @@ main.main-nav {
             height: 24px; }
       .filter-picker-ui .pick-filter-body div.pick-filter .modal .modal-dialog {
         display: inline-block;
-        margin-top: 8px;
+        margin-top: 0;
         min-width: 220px;
         border: 1px solid #e9ecef;
         border-radius: 0; }
