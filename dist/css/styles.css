@@ -7882,6 +7882,7 @@ button.bg-dark:focus {
   position: fixed !important; }
 
 .position-sticky {
+  position: -webkit-sticky !important;
   position: sticky !important; }
 
 .fixed-top {
@@ -7898,8 +7899,9 @@ button.bg-dark:focus {
   left: 0;
   z-index: 1030; }
 
-@supports (position: sticky) {
+@supports ((position: -webkit-sticky) or (position: sticky)) {
   .sticky-top {
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020; } }
@@ -9858,8 +9860,13 @@ main.main-nav {
       padding: 0; } }
   .filter-picker-ui .pick-filter-body div.pick-filter {
     position: relative; }
-    .filter-picker-ui .pick-filter-body div.pick-filter.br-0 {
+    .filter-picker-ui .pick-filter-body div.pick-filter.people-n-last {
       border-right: none; }
+    @media (max-width: 767.98px) {
+      .filter-picker-ui .pick-filter-body div.pick-filter.br-0 {
+        border-right: none; }
+        .filter-picker-ui .pick-filter-body div.pick-filter.br-0input {
+          border-right: none; } }
     .filter-picker-ui .pick-filter-body div.pick-filter input {
       height: 22px;
       border-bottom: none;
@@ -9973,13 +9980,13 @@ main.main-nav {
       background-image: url(../images/icon-user-gray@3x.png);
       background-position: 14px center;
       background-repeat: no-repeat;
-      background-size: 24px auto; }
+      background-size: 24px auto;
+      border-radius: none; }
     .filter-picker-ui .pick-filter-body .pick-filter.people-n.time {
       background-image: url(../images/icon-time-gray@3x.png);
       background-position: 14px center;
       background-repeat: no-repeat;
-      background-size: 24px auto;
-      border-right: none; }
+      background-size: 24px auto; }
 
 .filter-picker-ui .search {
   height: 56px;
@@ -10976,15 +10983,6 @@ main .section-body.card-ui ul.popular-card-body {
         width: calc(100% - 20px);
         margin-top: 16px;
         min-height: 220px; } }
-    @media (min-width: 768px) and (max-width: 991.98px) {
-      main .section-body.card-ui ul.popular-card-body li.popular-card {
-        width: calc(33.33% - 20px);
-        margin-top: 16px;
-        min-height: 220px; } }
-    @media (min-width: 992px) and (max-width: 1199.98px) {
-      main .section-body.card-ui ul.popular-card-body li.popular-card {
-        width: calc(25% - 20px);
-        min-height: 220px; } }
     main .section-body.card-ui ul.popular-card-body li.popular-card h1 {
       font-size: 18px;
       font-weight: 700;
@@ -11195,24 +11193,27 @@ main .section-body.card-ui-video .area {
         font-size: 18px; } }
   .detail-info-sec .acti-info .top .tag a {
     color: #868e96; }
-  .detail-info-sec .acti-info .top .detail h5 {
-    font-size: 18px;
-    font-weight: 700; }
-  .detail-info-sec .acti-info .top .detail .content {
-    min-height: 162px; }
-  .detail-info-sec .acti-info .top .detail .facility {
-    display: flex;
-    flex-wrap: wrap; }
-    .detail-info-sec .acti-info .top .detail .facility div {
-      margin-right: 40px;
-      margin-top: 16px; }
-      @media (max-width: 991.98px) {
-        .detail-info-sec .acti-info .top .detail .facility div {
-          width: 50%;
-          margin-right: 0;
-          display: inline-block; } }
-    .detail-info-sec .acti-info .top .detail .facility img {
-      width: 32px; }
+
+.detail-info-sec .detail h5 {
+  font-size: 18px;
+  font-weight: 700; }
+
+.detail-info-sec .detail .content {
+  min-height: 162px; }
+
+.detail-info-sec .detail .facility {
+  display: flex;
+  flex-wrap: wrap; }
+  .detail-info-sec .detail .facility div {
+    margin-right: 40px;
+    margin-top: 16px; }
+    @media (max-width: 991.98px) {
+      .detail-info-sec .detail .facility div {
+        width: 50%;
+        margin-right: 0;
+        display: inline-block; } }
+  .detail-info-sec .detail .facility img {
+    width: 32px; }
 
 .detail-info-sec .middle-nav-parent .middle-nav {
   background-color: #e9ecef;
@@ -11521,7 +11522,7 @@ select.form-control {
   appearance: none;
   background-image: url(../images/triangl@3x.png);
   background-repeat: no-repeat;
-  background-position: 105px 55%;
+  background-position: 95% 55%;
   background-size: 10px 8px;
   height: 40px;
   display: inline-block !important;
