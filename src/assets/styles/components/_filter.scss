@@ -19,10 +19,19 @@
     //people number dropdown
     div.pick-filter{  
       position: relative;
-
-      &.br-0{
+      
+      &.people-n-last{
         border-right: none;
       }
+      @include media-breakpoint-down(sm){
+        &.br-0{
+          border-right: none;
+          &input{
+            border-right: none;
+          }
+        }
+      } 
+      
       input{
         height: 22px;
         border-bottom:none;
@@ -194,6 +203,7 @@
         background-position: 14px center;
         background-repeat: no-repeat;
         background-size:24px auto;  
+        border-radius: none;
       }
 
       &.people-n.time{
@@ -201,7 +211,7 @@
         background-position: 14px center;
         background-repeat: no-repeat;
         background-size:24px auto;  
-        border-right: none;
+        
       }
     }
   }

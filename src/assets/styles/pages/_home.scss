@@ -386,15 +386,6 @@ main {
           margin-top: 16px;
           min-height: 220px;
         }
-        @include media-breakpoint-only(md) {
-          width: calc(33.33% - 20px);
-          margin-top: 16px;
-          min-height: 220px;
-        }
-        @include media-breakpoint-only(lg) {
-          width: calc(25% - 20px);
-          min-height: 220px;
-        }
 
         h1 {
           @include fontSize(18px);
