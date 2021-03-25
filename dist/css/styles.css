@@ -11160,7 +11160,7 @@ main .section-body.card-ui ul.popular-card-body {
     margin-bottom: 1.25rem; } }
 
 main .section-body.card-ui-video h3 {
-  font-size: 30px;
+  font-size: 2.071rem;
   font-weight: 700;
   line-height: 1.6; }
   @media (max-width: 575.98px) {
@@ -11171,7 +11171,8 @@ main .section-body.card-ui-video h3 {
   main .section-body.card-ui-video .ui {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; } }
+    justify-content: space-between;
+    padding-right: 0; } }
 
 main .section-body.card-ui-video .ui li {
   font-size: 18px; }
@@ -11184,7 +11185,7 @@ main .section-body.card-ui-video .ui li {
 
 main .section-body.card-ui-video .video-body {
   width: 100%;
-  padding-top: 56.8%;
+  padding-top: 64.8%;
   position: relative; }
   main .section-body.card-ui-video .video-body iframe {
     position: absolute;
