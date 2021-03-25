@@ -5,8 +5,11 @@
   <meta charset="utf-8">
   <title>숙소 상세</title>
   <meta name="description" content="">
+  <link rel="stylesheet" href="/css/headertitle.css">
   <!-- include -->
   ${ require('../partials/head.html') }
+
+
 </head>
 
 <body>
@@ -14,26 +17,22 @@
   ${ require('../partials/browserupgrade.html') }
   <div class="position-relative">
     ${ require('../partials/header.html') }
-    <header class="header-title">
+    <header class="header-title top">
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <div class="d-flex justify-content-between">
-              <a href="">
-                <img src="/images/icon-left-black@3x.png" class="sm-icon" alt="뒤로가기">
-              </a>
-              <h1 class="title">농촌여행지</h1>
-              <a>
-                <img src="/images/icon-search-gray.png" class="sm-icon" alt="검색화면으로이동">
+            <div class="d-flex justify-content-left">
+              <a href="#">
+                <img src="/images/icon-left-white@3x.png" class="sm-icon" alt="뒤로가기">
               </a>
             </div>
           </div>
         </div>
       </div>
     </header>
-    <main class="d-flex flex-column h-100 main main-sub main-nav">
+    <main class="d-flex flex-column h-100 main main-sub main-nav main-top">
 
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <div id="carouselExampleIndicators" class="carousel slide top" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -217,7 +216,7 @@
         </div>
         <hr>
         <div class="row">
-          <div class="col px-0">
+          <div class="col detail-tab">
             <div class="middle-nav-parent">
               <div class="middle-nav">
                 <a class="md-nav-list list active" href="#roomInfo">객실정보</a>
@@ -237,71 +236,74 @@
                 <h5>객실정보</h5>
                 <div class="mt-3">
                   <!-- Thumbnail images -->
-                  <div class="owl-carousel owl-theme">
-                    <div class="column item stay-list">
-                      <img class="demo cursor w-100" src="/images/sheep.jpg" onclick="currentSlide(1)" alt="객실사진">
-                      <div class="list">
-                        <p class="text-light">객실이름</p>
-                        <p class="text-light m-d-none">복층형</p>
+                  <div class="owl-px">
+                    <div class="owl-carousel owl-theme">
+                      <div class="column item stay-list">
+                        <img class="demo cursor w-100" src="/images/sheep.jpg" onclick="currentSlide(1)" alt="객실사진">
+                        <div class="list">
+                          <p class="text-light">객실이름</p>
+                          <p class="text-light m-d-none">복층형</p>
+                        </div>
                       </div>
-                    </div>
-                    <div class="column item stay-list">
-                      <img class="demo cursor" src="/images/stay1.jpg" style="width:100%" onclick="currentSlide(2)" alt="객실사진">
-                      <div class="list">
-                        <p class="text-light">객실이름</p>
-                        <p class="text-light m-d-none">복층형</p>
+                      <div class="column item stay-list">
+                        <img class="demo cursor" src="/images/stay1.jpg" style="width:100%" onclick="currentSlide(2)" alt="객실사진">
+                        <div class="list">
+                          <p class="text-light">객실이름</p>
+                          <p class="text-light m-d-none">복층형</p>
+                        </div>
                       </div>
-                    </div>
-                    <div class="column item stay-list">
-                      <img class="demo cursor" src="/images/sheep.jpg" style="width:100%" onclick="currentSlide(3)" alt="객실사진">
-                      <div class="list">
-                        <p class="text-light">객실이름</p>
-                        <p class="text-light m-d-none">복층형</p>
+                      <div class="column item stay-list">
+                        <img class="demo cursor" src="/images/sheep.jpg" style="width:100%" onclick="currentSlide(3)" alt="객실사진">
+                        <div class="list">
+                          <p class="text-light">객실이름</p>
+                          <p class="text-light m-d-none">복층형</p>
+                        </div>
                       </div>
-                    </div>
-                    <div class="column item stay-list">
-                      <img class="demo cursor" src="/images/sheep.jpg" style="width:100%" onclick="currentSlide(4)" alt="객실사진">
-                      <div class="list">
-                        <p class="text-light">객실이름</p>
-                        <p class="text-light m-d-none">복층형</p>
+                      <div class="column item stay-list">
+                        <img class="demo cursor" src="/images/sheep.jpg" style="width:100%" onclick="currentSlide(4)" alt="객실사진">
+                        <div class="list">
+                          <p class="text-light">객실이름</p>
+                          <p class="text-light m-d-none">복층형</p>
+                        </div>
                       </div>
-                    </div>
-                    <div class="column item stay-list">
-                      <img class="demo cursor" src="/images/sheep.jpg" style="width:100%" onclick="currentSlide(5)" alt="객실사진">
-                      <div class="list">
-                        <p class="text-light">객실이름</p>
-                        <p class="text-light m-d-none">복층형</p>
+                      <div class="column item stay-list">
+                        <img class="demo cursor" src="/images/sheep.jpg" style="width:100%" onclick="currentSlide(5)" alt="객실사진">
+                        <div class="list">
+                          <p class="text-light">객실이름</p>
+                          <p class="text-light m-d-none">복층형</p>
+                        </div>
                       </div>
-                    </div>
-                    <div class="column item stay-list">
-                      <img class="demo cursor" src="/images/sheep.jpg" style="width:100%" onclick="currentSlide(6)" alt="객실사진">
-                      <div class="list">
-                        <p class="text-light">객실이름</p>
-                        <p class="text-light m-d-none">복층형</p>
+                      <div class="column item stay-list">
+                        <img class="demo cursor" src="/images/sheep.jpg" style="width:100%" onclick="currentSlide(6)" alt="객실사진">
+                        <div class="list">
+                          <p class="text-light">객실이름</p>
+                          <p class="text-light m-d-none">복층형</p>
+                        </div>
                       </div>
-                    </div>
-                    <div class="column item stay-list">
-                      <img class="demo cursor" src="/images/sheep.jpg" style="width:100%" onclick="currentSlide(6)" alt="객실사진">
-                      <div class="list">
-                        <p class="text-light">객실이름</p>
-                        <p class="text-light m-d-none">복층형</p>
+                      <div class="column item stay-list">
+                        <img class="demo cursor" src="/images/sheep.jpg" style="width:100%" onclick="currentSlide(6)" alt="객실사진">
+                        <div class="list">
+                          <p class="text-light">객실이름</p>
+                          <p class="text-light m-d-none">복층형</p>
+                        </div>
                       </div>
-                    </div>
-                    <div class="column item stay-list">
-                      <img class="demo cursor" src="/images/sheep.jpg" style="width:100%" onclick="currentSlide(6)" alt="객실사진">
-                      <div class="list">
-                        <p class="text-light">객실이름</p>
-                        <p class="text-light m-d-none">복층형</p>
+                      <div class="column item stay-list">
+                        <img class="demo cursor" src="/images/sheep.jpg" style="width:100%" onclick="currentSlide(6)" alt="객실사진">
+                        <div class="list">
+                          <p class="text-light">객실이름</p>
+                          <p class="text-light m-d-none">복층형</p>
+                        </div>
                       </div>
-                    </div>
-                    <div class="column item stay-list">
-                      <img class="demo cursor" src="/images/sheep.jpg" style="width:100%" onclick="currentSlide(6)" alt="객실사진">
-                      <div class="list">
-                        <p class="text-light">객실이름</p>
-                        <p class="text-light m-d-none">복층형</p>
+                      <div class="column item stay-list">
+                        <img class="demo cursor" src="/images/sheep.jpg" style="width:100%" onclick="currentSlide(6)" alt="객실사진">
+                        <div class="list">
+                          <p class="text-light">객실이름</p>
+                          <p class="text-light m-d-none">복층형</p>
+                        </div>
                       </div>
                     </div>
                   </div>
+
 
                   <!-- Full-width images with number text -->
                   <div class="mt-4 d-flex slides-group">
@@ -505,7 +507,7 @@
                 </div>
 
                 <nav aria-label="Page navigation example" class="col-12">
-                  <ul class="pagination justify-content-center">
+                  <ul class="pagination justify-content-center mb-0">
                     <li class="page-item">
                       <a class="page-link" href="#">
                         <img class="sm-icon" srcset="/images/icon-left-black.png 400w,
@@ -538,12 +540,14 @@
 
                   <!-- Modal -->
                   <div class="modal fade" id="inquiryModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
+                    <div class="modal-dialog popup">
                       <div class="modal-content">
-                        <div class="modal-header">
+                        <div class="modal-header ">
                           <h5 class="modal-title" id="exampleModalLabel">문의하기</h5>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
+                            <img class="sm-icon" srcset="/images/icon-cancel-gray.png 400w,
+                                                                                  /images/icon-cancel-gray@2x.png 700w,
+                                                                                  /images/icon-cancel-gray@3x.png 1000w" src="/images/icon-cancel-gray@3x.png" alt="닫기" />
                           </button>
                         </div>
                         <div class="modal-body">
@@ -686,6 +690,7 @@
 
           <div class="book-ui-content">
             <div>
+              <h5>예약정보</h5>
               <input type="text" class="form-control book-filter date" readonly value="" name="daterange" placeholder="체크인" />
               <input type="text" class="form-control book-filter date" readonly value="" name="daterange" placeholder="체크아웃" />
               <div class="mt-2 book-filter people-n">
@@ -770,9 +775,66 @@
           </div>
         </section>
       </div>
-  </div>
-  </main>
+      <!--CONTAINER-->
+      <div class="detail-info-sec near-exp-list">
+        <div class="container">
+          <div class="row">
+            <section class="col-12 section-body card-ui">
+              <div class="d-flex justify-content-between top-title">
+                <h3 class="near-exp-title">근처 체험</h3>
+              </div>
+              <ul class="popular-card-body">
+                <li class="popular-card">
+                  <a href="">
+                    <div class="content" style="background-image:url('/images/bread.jpg')">
+                      <span class="address">전북/군산</span>
+                      <!-- <span class="percent">50%</span> -->
+                      <!-- 숙소 -->
+                      <span class="percent stay">50%</span>
+                    </div>
+                    <h1 class="title-overflow strcut strcut-twoline"> 제목길이테스트제목길이테스트제목길이테스트제목길이테스트제목길이테스트제목길이테스트제목길이테스트제목길이테스트</h1>
+                    <p>
+                      <span class="price">₩25,000</span>
+                      <del class="sale-price">₩44,000</del>
+                    </p>
+                  </a>
+                </li>
+                <li class="popular-card">
+                  <a href="">
+                    <div class="content" style="background-image:url('/images/bread.jpg')">
+                      <span class="address">전라/전주</span>
+                      <span class="percent">50%</span>
+                    </div>
+                    <h1 class="title-overflow">제목</h1>
+                    <p>
+                      <span class="price">₩25,000</span>
+                      <del class="sale-price">₩44,000</del>
+                    </p>
+                  </a>
+                </li>
+                <li class="popular-card">
+                  <a href="">
+                    <div class="content" style="background-image:url('/images/bread.jpg')">
+                      <span class="address">전라/전주</span>
+                      <span class="percent">50%</span>
+                    </div>
+                    <h1 class="title-overflow">제목</h1>
+                    <p>
+                      <span class="price">₩25,000</span>
+                      <del class="sale-price">₩44,000</del>
+                    </p>
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </div>
 
+  </div>
+
+
+  </main>
 
 
   ${ require('../partials/footer.html') }
@@ -791,7 +853,7 @@
       var $sidebar = $(".book-ui"),
         $window = $(window),
         offset = $sidebar.offset(),
-        topPadding = 10;
+        topPadding = 60;
 
       //1200px up style 
       if (window.matchMedia("(min-width: 1200px)").matches) {
@@ -811,9 +873,9 @@
       //middle nav
       $window.scroll(function () {
         if ($window.scrollTop() > middleNavOffset.top) {
-          var middleNavWidth = middleNavParent.width() + 'px';
+          // var middleNavWidth = middleNavParent.width() + 'px';
           middleNav.addClass('fixed');
-          middleNav.width(middleNavWidth);
+          middleNav.width('100%');
         } else {
           middleNav.removeClass('fixed');
           middleNav.width('100%');
@@ -826,8 +888,20 @@
         $('.book-ui').addClass('book-ui-modal')
       })
 
-      //date picker
+      function setDotDotDot() {
+        $(".title-overflow").dotdotdot({
+          ellipsis: '...',//말줄임 뭘로 할지
+          watch: true, //윈도우 창에따라서 업데이트 할건지, 윈도우가 리사이즈될 때 업데이트할 건지
+          wrap: 'letter',//word(단어단위), letter(글 단위), children(자식단위) 자르기
+          height: 40,
+          tolerance: 20
+          //글이 넘치면 얼만큼 height 늘릴건
+        });
+      }
 
+      setDotDotDot();
+
+      //date picker
       $('input[name="daterange"]').daterangepicker({
         defaultDate: "",
         opens: 'center',
@@ -875,24 +949,26 @@
 
       $('.owl-carousel').owlCarousel({
         loop: true,
-        margin: 10,
         responsiveClass: true,
         nav: true,
+        autoWidth: true,
         navText: ["<img src='/images/icon-left-black@3x.png'>", "<img src='/images/icon-right-black@3x.png'>"],
         responsive: {
           0: {
             items: 3,
-            nav: true
+            nav: true,
+            margin: 8
           },
           600: {
             items: 3,
-            nav: false
+            nav: false,
+            margin: 8,
           },
           1000: {
             items: 5,
             nav: true,
             loop: false,
-            margin: 20
+            margin: 16
           }
         }
       })

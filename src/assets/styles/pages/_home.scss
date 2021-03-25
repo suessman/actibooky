@@ -80,13 +80,7 @@ main {
         
       }
     }
-      &-sub{
-        @include media-breakpoint-down(md) {
-           padding-top:60px;
-        }
-       
-        min-height: 100vh;
-      }
+
       .main-top-body {
         height: 640px;
         width: 100%;
@@ -159,6 +153,13 @@ main {
         line-height: 1.6;
         margin-bottom: 0;
 
+        &.near-exp-title{
+          @include fontSize(18px);
+
+          @include media-breakpoint-only(xs) {
+            @include fontSize(18px);
+          }
+        }
         @include media-breakpoint-only(xs) {
           @include fontSize(18px);
         }
@@ -304,6 +305,7 @@ main {
         vertical-align: top;
         position: relative;
         
+
         //list page
         &.h-auto{
           min-height:auto;
@@ -320,7 +322,23 @@ main {
              .title-bg{
                padding: 8px;
              }
-           }          
+           }
+
+           //promotion card
+           &.promotion{
+             @include media-breakpoint-up(md) {
+                width: calc(50% - 20px);
+              }
+              
+              .content{               
+
+                @include media-breakpoint-down(xs) {
+                 min-height: 188px;
+                }
+
+                min-height: 300px;
+              }
+            }           
         }
 
         .title-bg{

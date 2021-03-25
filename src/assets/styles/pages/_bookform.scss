@@ -1,0 +1,144 @@
+.book-form{
+
+  .book-form-card{
+    border: 1px solid $light;
+    width: 380px;
+
+    @include media-breakpoint-down(md) { 
+      width: 100%;
+    }  
+    .activity-img{
+      min-height: 264px;
+      width: 100%;
+      position: relative;
+      background-image: url('/src/assets/images/stay1.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+
+       .area{
+          text-align: center;
+            background-color: #5a00cb;
+            color: #ffffff;
+            min-width: 70px;
+            padding: 2px 8px;
+            position: absolute;
+            left: 0;
+        }
+
+      @include media-breakpoint-down(xs) { 
+        display: none;
+      } 
+    }
+
+    .activity-info{
+      padding: 16px;
+      hr{
+        margin: 16px 0;
+      }
+      h3{
+        font-size: 24px;
+        margin-top: 8px;
+
+        @include media-breakpoint-down(md) { 
+          @include fontSize(18px);
+        } 
+      }
+      .company-name{
+        color: $dark;
+        font-weight: 700;       
+      }
+
+      .list{
+        margin-top: 10px;
+
+        &:first-of-type{
+          margin-top: 0;
+        }
+
+        span{vertical-align: middle;}
+      }
+    }
+  }
+  .book-form-title{
+    margin:40px 0 24px 0;
+    font-size: 30px;
+
+    @include media-breakpoint-down(md) { 
+      display: none;
+    }  
+  }
+
+  .book-form-content{
+
+    @include media-breakpoint-down(md) { 
+      margin-top: 40px;
+    } 
+    .title{
+      font-size: 18px;
+      @include media-breakpoint-down(xs) { 
+        font-size: 14px;
+      }
+    }
+
+    .user-info{
+      li{
+        &:first-of-type{
+          margin-top: 16px;
+        }
+        margin-top: 24px;
+      }
+    }
+    
+    .pay-type{     
+      display: flex;
+      li.pay-list{ 
+        width: calc(455px / 3);
+        // @include media-breakpoint-down(md) { 
+        //   width: 33.3333%;
+        // }
+        button{                  
+
+          min-height: 92px;          
+          border: 1px solid $light;
+          padding:16px 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;      
+          font-weight: 500;
+          span{
+            margin-top: 12px;
+          }    
+
+          &.active{
+            border: 1px solid $primary;
+          }
+
+        }
+         
+        &:nth-last-of-type(2){
+          margin: 0 20px;
+
+          @include media-breakpoint-down(md) { 
+              margin: 0 8px;
+          }
+        }
+      }
+
+      + button.book-btn{
+          margin-top: 24px;
+        }
+    }
+  }
+}
+
+
+@include media-breakpoint-down(xs) {  }
+@include media-breakpoint-down(sm) {  }
+@include media-breakpoint-down(md) {  }
+@include media-breakpoint-down(lg) {  }
+
+@include media-breakpoint-up(sm) {  }
+@include media-breakpoint-up(md) {  }
+@include media-breakpoint-up(lg) {  }
+@include media-breakpoint-up(xl) {  }

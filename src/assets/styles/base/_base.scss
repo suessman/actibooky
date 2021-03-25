@@ -37,7 +37,27 @@ main{
 
   //mobile navigation fixed
   &.main-nav{
-    padding-bottom:70px;
+     @include media-breakpoint-down(md) {
+        padding-bottom:70px;
+    }
+  }
+
+
+  //슬라이드 이미지 크기에 따라서 padding change
+  &.main-sub{
+    @include media-breakpoint-down(md) {
+        padding-top:60px;
+        &.main-top{
+          @include media-breakpoint-down(md) {
+              padding-top:460px;
+          }
+          @include media-breakpoint-down(sm) {
+              padding-top:180px;
+          }          
+        }
+    }
+    
+    min-height: 100vh;
   }
 }
 

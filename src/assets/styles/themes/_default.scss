@@ -29,6 +29,10 @@ a:hover{
 ul{
   padding:0;
   margin-bottom: 0;
+
+  &::-webkit-scrollbar{
+    display: none;
+  }
   li{
     list-style: none;
   }
@@ -52,7 +56,7 @@ hr{
 
 p{margin-bottom:0;}
 
-footer{
+.fm footer{
   margin-top: 40px;
 }
 

@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>프로모션</title>
   <meta name="description" content="">
+  <link rel="stylesheet" href="/css/headertitle.css">
   <!-- include -->
   ${ require('../partials/head.html') }
 </head>
@@ -12,22 +13,174 @@
 <body>
   <!-- 브라우저 권장 -->
   ${ require('../partials/browserupgrade.html') }
-  <div>
-    <!-- 헤더 -->
+  <div class="position-relative">
     ${ require('../partials/header.html') }
-    <main class="d-flex flex-column h-100 main">
-      <!-- Content Here -->
-    </main>
-    <!-- 푸터 -->
-    ${ require('../partials/footer.html') }
+    <header class="header-title">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="d-flex justify-content-between">
+              <a href="">
+                <img src="/images/icon-left-black@3x.png" class="sm-icon" alt="뒤로가기">
+              </a>
+              <h1 class="title">프로모션</h1>
+              <a>
+                <img src="/images/icon-search-gray.png" class="sm-icon" alt="검색화면으로이동">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="d-flex flex-column h-100 main main-nav">
+      <div id="carouselExampleIndicators" class="carousel slide promotion" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="/images/promotion.png" alt="First slide">
+          </div>
+          <!-- <div class="carousel-item">
+            <img class="d-block w-100" src="/images/stay2.jpg" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="/images/stay1.jpg" alt="Third slide">
+          </div> -->
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <img srcset="/images/icon-left-white.png 400w,
+                          /images/icon-left-white@2x.png 700w,
+                          /images/icon-left-white@3x.png 1000w" src="/images/icon-left-white@3x.png" alt="이전이미지" />
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <img srcset="/images/icon-right-white.png 400w,
+                          /images/icon-right-white@2x.png 700w,
+                          /images/icon-right-white@3x.png 1000w" src="/images/icon-right-white@3x.png" alt="다음이미지" />
+        </a>
+      </div>
+      <div class="container">
+        <div class="row">
+          <section class="col-12 mt-5 section-body card-ui">
+            <div class="d-flex justify-content-between top-title">
+              <h3 class="invisible">농촌 여행지</h3>
+              <select name="" id="" class="form-control" style="width:126px;">
+                <option value="">전라북도</option>
+              </select>
+            </div>
+            <ul class="popular-card-body list">
+              <li class="popular-card h-auto promotion">
+                <a href="">
+                  <div class="content" style="background-image:url('https://images.unsplash.com/photo-1594913785111-0c95bf86bd65?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80')">
+                    <span class="address">전라/전주</span>
+                    <div class="title-bg">
+                      내 삶에서 잃어버린 기억을 향기로 찾아보는 나만의 향수만들기
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <p>
+                      <span class="price">₩25,000</span>
+                      <del class="sale-price">₩44,000</del>
+                    </p>
+                    <span class="percent">50%</span>
+                  </div>
+                </a>
+              </li>
+              <li class="popular-card h-auto promotion">
+                <a href="">
+                  <div class="content" style="background-image:url('/images/crystal.jpg')">
+                    <span class="address">전라/전주</span>
+                    <div class="title-bg">
+                      나만의 특별한 돌목걸이 만들기 체험
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <p>
+                      <span class="price">₩25,000000</span>
+                      <del class="sale-price">₩44,000</del>
+                    </p>
+                    <span class="percent">50%</span>
+                  </div>
+
+                </a>
+              </li>
+              <li class="popular-card h-auto promotion">
+                <a href="">
+                  <div class="content" style="background-image:url('/images/daniel.jpg')">
+                    <span class="address">전라/전주</span>
+                    <div class="title-bg">
+                      나만의 특별한 돌목걸이 만들기 체험
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <p>
+                      <span class="price">₩25,000</span>
+                      <del class="sale-price">₩44,000</del>
+                    </p>
+                    <span class="percent">50%</span>
+                  </div>
+                </a>
+              </li>
+
+              <li class="popular-card h-auto promotion">
+                <a href="">
+                  <div class="content" style="background-image:url('https://images.unsplash.com/photo-1607082333475-51c2938c9bfc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')">
+                    <span class="address">전라/전주</span>
+                    <div class="title-bg">
+                      나만의 특별한 돌목걸이 만들기 체험
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <p>
+                      <span class="price">₩25,000</span>
+                      <del class="sale-price">₩44,000</del>
+                    </p>
+                    <span class="percent">50%</span>
+                  </div>
+
+                </a>
+              </li>
+
+
+            </ul>
+          </section>
+
+          <nav aria-label="Page navigation example" class="col-12">
+            <ul class="pagination justify-content-center">
+              <li class="page-item">
+                <a class="page-link" href="#">
+                  <img class="sm-icon" srcset="/images/icon-left-black.png 400w,
+                                                                      /images/icon-left-black@2x.png 700w,
+                                                                      /images/icon-left-black@3x.png 1000w" src="/images/icon-left-black@3x.png" alt="이전" />
+                </a>
+              </li>
+              <li class="page-item active number"><a class="page-link" href="#">1</a></li>
+              <li class="page-item number"><a class="page-link" href="#">2</a></li>
+              <li class="page-item number"><a class="page-link" href="#">3</a></li>
+              <li class="page-item number"><a class="page-link" href="#">4</a></li>
+              <li class="page-item number"><a class="page-link" href="#">5</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">
+                  <img class="sm-icon" srcset="/images/icon-right-black.png 400w,
+                                                                      /images/icon-right-black@2x.png 700w,
+                                                                      /images/icon-right-black@3x.png 1000w" src="/images/icon-right-black@3x.png" alt="다음" />
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
   </div>
 
-  <!-- JS -->
-  <script>
-    $(function () {
 
-    })
-  </script>
+  </main>
+
+
+  ${ require('../partials/footer.html') }
+  </div>
 </body>
 
 </html>

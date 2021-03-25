@@ -113,6 +113,13 @@
     }   
   }
   //middle-nav
+
+  .detail-tab{
+    @include media-breakpoint-down(xs) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
   .middle-nav-parent{
     .middle-nav{
       background-color:$light;
@@ -156,6 +163,13 @@
 
   //객실정보,상세정보,위치,리뷰,문의
   .tab-content-list{
+
+    .owl-px{
+      @include media-breakpoint-up(lg){
+        padding:0 32px;
+      }
+    }
+
     //scroll 내렸을 때 paddingtop 추가
     &.top-area{
       padding-top: 64px;
@@ -328,7 +342,43 @@
       }
     }
   }
-  
+  //근처체험
+  &.near-exp-list{
+    background-color:$pale-gray;
+    padding:40px 0;
+    .card-ui{
+      .popular-card-body{
+        li.popular-card{
+          @include media-breakpoint-down(xs) {
+            min-height: 205px;
+          
+            width: 160px;
+            margin-left: 8px;
+            &:first-of-type{
+              margin-left: 20px;
+            }
+            .content{
+              min-height: 120px;
+
+              span.percent{
+                width: 40px;
+                height: 40px;
+                @include fontSize(14px);
+              }
+            }
+
+            h1{
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }  
+    
+     @include media-breakpoint-down(xs) {
+       padding: 16px 0;
+     }
+  }
 }
 
 
@@ -348,14 +398,17 @@
     overflow-y: auto;
   }
 
-  
+  hr{
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
 
   @include media-breakpoint-only(xl) { 
       position: absolute;
       top: 680px;
-      left: calc(50% + 570px);
+      left: calc(50% + 486px);
       width: 218px;
-      height: 200px;
+      // height: 200px;
       border:1px solid $light;  
       padding:16px;
       box-shadow: 0 4px 8px 0 rgba(33, 37, 41, 0.05);
@@ -379,6 +432,11 @@
   .book-ui-content{
     padding:16px;
     border:1px solid $light;
+
+    h5{
+      font-size: 14px;
+      font-weight: $font-weight-bold;
+    }
     @include media-breakpoint-down(md) { 
       margin-top:24px;
       border:none;
@@ -401,7 +459,14 @@
     margin-top: 8px;
     position: relative;
     color: $dark;
-    input{border:none;}
+    input{
+      border:none;
+    }
+
+    &:first-of-type{
+      margin-top: 16px;
+    }
+
        
       .modal{
         position: absolute; 

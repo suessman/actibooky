@@ -1,10 +1,29 @@
 .modal{
-
-
   .modal-dialog{
-  // @include media-breakpoint-up(lg) { 
-   
-  // }
+    @include media-breakpoint-up(md) { 
+      &.popup{
+      
+        max-width: 460px;
+
+        .modal-content{
+          padding: 40px 66px;
+          .modal-header{
+            padding:0;
+            margin-bottom: 16px;
+          }
+
+          .modal-body{
+            padding:0;
+          }
+
+          .modal-footer{
+            padding: 0;
+            margin-top: 24px;
+          }
+        }
+      }
+    }    
+  
     margin-top: 16vh;
   }
   .modal-content{
