@@ -124,12 +124,14 @@ main {
     }
 
   .section-body.card-ui{
+
     &-bg {
       background-color: #f9f5ff;
       padding: 60px 0;
 
       @include media-breakpoint-down(xs) {
        padding:20px 0;
+       margin-top: 20px !important;
       }
     }
 
@@ -163,6 +165,10 @@ main {
         @include media-breakpoint-only(xs) {
           @include fontSize(18px);
         }
+
+        ~ select{
+          width: 126px;
+        }
       }
 
       &.font {
@@ -184,6 +190,7 @@ main {
           font-weight: 700;
           @include media-breakpoint-only(xs) {
             @include fontSize(14px);
+            margin-top: 0;
           }
         }
       }
@@ -298,10 +305,26 @@ main {
       
       li.popular-card {
         width: calc(33.33% - 20px);
+        //company main popular card
+        @include media-breakpoint-up(md){
+          &.four{
+            width: calc(25% - 20px);
+            .content{
+              min-height: 160px;
+            }
+          }
+        }
         margin-left: 20px;
         margin-top: 40px;
+        @include media-breakpoint-down(xs){
+           &.slide{
+            margin-top: 8px;
+          }
+        }
+       
+
         display: inline-block;
-        min-height: 337px;
+        min-height: 304px;
         vertical-align: top;
         position: relative;
         
@@ -321,6 +344,48 @@ main {
              min-height: 200px;
              .title-bg{
                padding: 8px;
+               width: 100%;
+               overflow: hidden;
+               text-overflow: ellipsis;
+               white-space: nowrap;
+
+               h3{
+                 font-size: 24px;
+                 width: 100%;
+                 overflow: hidden;
+                 text-overflow: ellipsis;
+                 white-space: nowrap;
+
+                 @include media-breakpoint-down(xs){
+                  @include fontSize(18px);
+                }
+               }
+             }
+
+             .pm{
+               margin-bottom: 5px;
+               .pm-category{
+                @include fontSize(18px);
+
+                @include media-breakpoint-down(xs){
+                  @include fontSize(14px);
+                }
+               }
+
+               .pm-icon{
+                 width: 32px;
+                 height: 32px;
+                 background-color: #212529;
+                 border-radius: 50%;
+               }
+
+               .pm-title{
+                 @include fontSize(14px);
+
+                 @include media-breakpoint-down(xs){
+                  @include fontSize(12px);
+                }
+               }
              }
            }
 
@@ -354,15 +419,34 @@ main {
         }
         //추천체험농가 card
         &-ui {
+          
+          //메인 추천 체험농가 카드 높이
+          &.lg-h{
+            .content{
+              min-height: 320px;
+              @include media-breakpoint-down(xs){
+                min-height: 200px;
+              }
+            }
+          }
 
           &-list{
             width:calc(33.33% - 20px);
+
+            .content{
+              min-height: 208px !important;
+            }
           }
 
           width: calc(50% - 20px);
 
-          .content {
-            height: 320px;
+      
+          .content {            
+            min-height: 320px;
+
+            @include media-breakpoint-down(xs){
+              height: 200px;
+            }
           }
 
           .detail {
@@ -395,14 +479,16 @@ main {
         // end 추천체험농가 card
 
         @include media-breakpoint-only(xs) {
+          &:first-of-type{
+            margin-top: 8px;
+          }
           width: calc(90% - 20px);
-          margin-top: 8px;
-          min-height: 337px;
+          min-height: 304px;
         }
         @include media-breakpoint-only(sm) {
           width: calc(100% - 20px);
           margin-top: 16px;
-          min-height: 220px;
+          min-height: 304px;
         }
 
         h1 {
@@ -436,7 +522,7 @@ main {
         .content {
           position: relative;
           background-size: cover;
-          min-height: 240px;
+          min-height: 200px;
           background-position: center;
           background-repeat: no-repeat;
 
@@ -477,6 +563,10 @@ main {
             color: $white;
             font-size: 24px;
             font-weight: 700;
+
+            @include media-breakpoint-down(xs){
+              padding: 8px;
+            }
           }
         }
       }

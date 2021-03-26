@@ -2,10 +2,10 @@
   height: 560px;
 
   &.promotion{
-    height: 400px;
+    height: auto;
 
     @include media-breakpoint-down(sm) { 
-      height:320px;
+      height:auto;
     }
   }
   
@@ -13,6 +13,8 @@
     &.top{
       position: absolute; 
       top:0; 
+      left: 0;
+      width: 100%;
       z-index: 999;
     }
     height:460px;
@@ -24,7 +26,32 @@
  
   .carousel-inner{
     height:100%;
+    &.promotion{
+      position:relative;
+      padding-top: 28.2%;
+      @include media-breakpoint-down(xs){
+        padding-top: 100%;
+      }
+      .carousel-item{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
 
+        @include media-breakpoint-down(xs){
+          img.xs-up-promotion{
+            display: none !important;
+          }
+        }
+
+        @include media-breakpoint-up(sm){
+          img.xs-down-promotion{
+            display: none !important;
+          }
+        }
+      }
+    }
     .carousel-item{
       height:100%;
 

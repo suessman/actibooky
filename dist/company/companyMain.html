@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>생산자 프로필</title>
+  <meta name="description" content="">
+  <!-- include -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no,maximum-scale=1">
+<!-- favicon.ico in the root directory -->
+<link rel="apple-touch-icon" href="favicon.ico">
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css">
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.9/l10n/ko.min.js" crossorigin="anonymous"></script> -->
+<script src="/js/dotdotdot.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+<script type="text/javascript" defer src="/js/moment.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/daterangepicker.css" />
+<script type="text/javascript" defer src="/js/daterangepicker.js"></script>
+
+<link href=".././css/styles.css?8972ba21be7b853dd5dd" rel="stylesheet"></head>
+
+<body>
+  <!-- 브라우저 권장 --> <!--[if IE]>
+<div class="p-3 bg-light">
+  <div class="container">
+    <p class="mb-0 browserupgrade">
+      You are using an <strong>outdated</strong> browser.
+      Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.
+    </p>
+  </div>
+</div>
+<![endif]-->
+
+  <div class="fm">
+    <!-- 헤더 --> <header class="header">
+
+  <div class="container">
+    <div class="header-top">
+      <!-- 로그인 전 -->
+      <ul class="d-flex justify-content-end">
+        <li class="nav-item active">
+          <a class="nav-link" href="/login.html">로그인<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">고객지원</a>
+        </li>
+      </ul>
+      <!-- 로그인 후 -->
+      <!-- <ul class="d-flex justify-content-end">
+        <li class="nav-item active">
+          <a class="nav-link" href="/farmStay.html">로그아웃<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/farmPlay.html">고객지원</a>
+        </li>
+      </ul> -->
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="/index.html">
+        <img src="/images/logo@3x.png" alt="로고" style="width:120px;">
+      </a>
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-controls="navbarSupportedContent backdropUi" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="acetrnt-toggle" data-click-state="1">
+          <span class="icon-bar line-1"></span>
+          <span class="icon-bar line-2"></span>
+          <span class="icon-bar line-3"></span>
+        </div>
+      </button>
+
+
+      <div class="navbar-collapse collapse multi-collapse" id="navbarSupportedContent">
+        <!-- app header ui -->
+        <div class="app-header-ui">
+          <a href="/login.html" class="login">로그인 해주세요
+            <img class="sm-icon" srcset="/images/icon-right-white.png 400w,
+                    /images/icon-right-white@2x.png 700w,
+                    /images/icon-right-white@3x.png 1000w" src="/images/icon-right-white@3x.png" alt="로그인페이지로이동" />
+          </a>
+          <div class="list">
+            <a href="">
+              <img class="sm-icon" srcset="/images/icon-home-white.png 400w,
+                      /images/icon-home-white@2x.png 700w,
+                      /images/icon-home-white@3x.png 1000w" src="/images/icon-home-white@3x" alt="홈" />
+              홈
+            </a>
+            <a href="">
+              <img class="sm-icon" srcset="/images/icon-mypage-white.png 400w,
+                      /images/icon-mypage-white@2x.png 700w,
+                      /images/icon-mypage-white@3x.png 1000w" src="/images/icon-mypage-white@3x" alt="마이페이지" />
+              마이페이지
+            </a>
+            <a href="">
+              <img class="sm-icon" srcset="/images/icon-date-white.png 400w,
+                      /images/icon-date-white@2x.png 700w,
+                      /images/icon-date-white@3x.png 1000w" src="/images/icon-date-white@3x.png" alt="예약확인" />
+              예약확인
+            </a>
+          </div>
+        </div>
+
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/stay/stayMain.html">숙소<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/exp/expMain.html">체험</a>
+          </li>
+          <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              dropdown
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="/promotions/promoMain.html">프로모션</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">상품구매</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">우수체험관</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0 web-header-ui">
+          <div>
+            <a href="" class="nav-right primary-color">예약확인&nbsp;</a>
+            <!-- <a href="/login.html" class="nav-right">|&nbsp; 마이페이지</a> -->
+          </div>
+        </form>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div id="backdropUi" class="backdrop-ui multi-collapse" aria-hidden="true">
+</div>
+    <main class="d-flex flex-column h-100 main">
+      <div class="company-top">
+        <div class="company-main-bg" style="background-image:url('https://images.unsplash.com/photo-1546385040-d48180ede560?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OXx8YnVzYW58ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');">
+
+        </div>
+        <div class="bg-opacity">
+          <div class="container h-100 d-flex align-items-center">
+            <div class="row">
+              <div class="col-12">
+                <div class="company-info">
+                  <h1>조선의꽁치</h1>
+                  <ul class="detail">
+                    <li>
+                      <img class="sm-icon" srcset="/images/icon-user-white.png 400w,
+                                                                                          /images/icon-user-white@2x.png 700w,
+                                                                                          /images/icon-user-white@3x.png 1000w" src="/images/icon-user-white@3x.png" alt="담당자이름">
+                      <span class="align-middle content">최성진</span>
+                    </li>
+                    <li class="m-t1">
+                      <img class="sm-icon" srcset="/images/icon-call-white.png 400w,
+                                                                                          /images/icon-call-white@2x.png 700w,
+                                                                                          /images/icon-call-white@3x.png 1000w" src="/images/icon-call-white@3x.png" alt="번호">
+                      <span class="align-middle content">031-775-7775</span>
+                    </li>
+                    <li class="m-t1 area">
+                      <div class="align-middle company-content">경기 양평군 단월면 수마길 42번길 3-1</div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="company-intro">
+                  조선의 꽁치는 매일매일 바다에서 신선한 수산물을 수확해서 먹거리를 제공합니다.<br>
+                  제작공정과 수확과정은 동영상을 통해 확인해보세요!
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="company-tab-nav text-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <ul class="nav nav-tabs">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">홈</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">새소식</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">체험</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">숙소</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">상품</a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="container">
+        <div class="row">
+          <section class="col-12 mt-10 m-m-t5 section-body card-ui">
+            <div class="d-flex justify-content-between top-title">
+              <h3>대표 동영상</h3>
+            </div>
+            <div class="video-body">
+              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/FAe_JvYcal8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </section>
+          <section class="col-12 mt-10 m-m-t5 section-body card-ui">
+            <div class="d-flex justify-content-between top-title">
+              <h3>체험</h3>
+            </div>
+            <ul class="popular-card-body">
+              <li class="popular-card slide">
+                <a href="/exp/expDetail.html">
+                  <div class="content" style="background-image:url('/images/bread.jpg')">
+                    <span class="address">전북/군산</span>
+                    <!-- <span class="percent">50%</span> -->
+                    <!-- 숙소 -->
+                    <span class="percent">50%</span>
+                  </div>
+                  <h1 class="title-overflow strcut strcut-twoline"> 제목길이테스트제목길이테스트제목길이테스트제목길이테스트제목길이테스트제목길이테스트제목길이테스트제목길이테스트</h1>
+                  <p>
+                    <span class="price">₩25000</span>
+                    <del class="sale-price">₩44000</del>
+                  </p>
+                </a>
+              </li>
+              <li class="popular-card slide">
+                <a href="/exp/expDetail.html">
+                  <div class="content" style="background-image:url('/images/bread.jpg')">
+                    <span class="address">전라/전주</span>
+                    <span class="percent">50%</span>
+                  </div>
+                  <h1 class="title-overflow">제목</h1>
+                  <p>
+                    <span class="price">₩25000</span>
+                    <del class="sale-price">₩44000</del>
+                  </p>
+                </a>
+              </li>
+              <li class="popular-card slide">
+                <a href="/exp/expDetail.html">
+                  <div class="content" style="background-image:url('/images/bread.jpg')">
+                    <span class="address">전라/전주</span>
+                    <span class="percent">50%</span>
+                  </div>
+                  <h1 class="title-overflow">제목</h1>
+                  <p>
+                    <span class="price">₩25000</span>
+                    <del class="sale-price">₩44000</del>
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </section>
+
+          <section class="col-12 mt-10 m-m-t5 section-body card-ui">
+            <div class="d-flex justify-content-between top-title">
+              <h3>숙박</h3>
+            </div>
+            <ul class="popular-card-body">
+              <li class="popular-card slide">
+                <a href="/stay/stayDetail.html">
+                  <div class="content" style="background-image:url('/images/bread.jpg')">
+                    <span class="address">전북/군산</span>
+                    <!-- <span class="percent">50%</span> -->
+                    <!-- 숙소 -->
+                    <span class="percent stay">50%</span>
+                  </div>
+                  <h1 class="title-overflow strcut strcut-twoline"> 제목길이테스트제목길이테스트제목길이테스트제목길이테스트제목길이테스트제목길이테스트제목길이테스트제목길이테스트</h1>
+                  <p>
+                    <span class="price">₩25000</span>
+                    <del class="sale-price">₩44000</del>
+                  </p>
+                </a>
+              </li>
+              <li class="popular-card slide">
+                <a href="/stay/stayDetail.html">
+                  <div class="content" style="background-image:url('/images/bread.jpg')">
+                    <span class="address">전라/전주</span>
+                    <span class="percent stay">50%</span>
+                  </div>
+                  <h1 class="title-overflow">제목</h1>
+                  <p>
+                    <span class="price">₩25000</span>
+                    <del class="sale-price">₩44000</del>
+                  </p>
+                </a>
+              </li>
+              <li class="popular-card slide">
+                <a href="/stay/stayDetail.html">
+                  <div class="content" style="background-image:url('/images/bread.jpg')">
+                    <span class="address">전라/전주</span>
+                    <span class="percent stay">50%</span>
+                  </div>
+                  <h1 class="title-overflow">제목</h1>
+                  <p>
+                    <span class="price">₩25000</span>
+                    <del class="sale-price">₩44000</del>
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </section>
+
+          <section class="col-12 mt-10 m-m-t5 section-body card-ui">
+            <div class="d-flex justify-content-between top-title">
+              <h3>인기추천</h3>
+            </div>
+            <ul class="popular-card-body">
+              <li class="popular-card slide four">
+                <a href="/stay/stayDetail.html">
+                  <div class="content" style="background-image:url('https://images.unsplash.com/photo-1584436138541-4a1d0c9deace?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OXx8amVqdSUyMGZvb2R8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')">
+                    <span class="address">전북/군산</span>
+                    <!-- <span class="percent">50%</span> -->
+                    <!-- 숙소 -->
+                    <span class="percent stay">50%</span>
+                  </div>
+                  <h1 class="title-overflow strcut strcut-twoline">제주도한라봉!_!</h1>
+                  <p>
+                    <span class="price">₩25000</span>
+                    <del class="sale-price">₩44000</del>
+                  </p>
+                </a>
+              </li>
+              <li class="popular-card slide four">
+                <a href="/stay/stayDetail.html">
+                  <div class="content" style="background-image:url('/images/bread.jpg')">
+                    <span class="address">전라/전주</span>
+                    <span class="percent stay">50%</span>
+                  </div>
+                  <h1 class="title-overflow">제목</h1>
+                  <p>
+                    <span class="price">₩25000</span>
+                    <del class="sale-price">₩44000</del>
+                  </p>
+                </a>
+              </li>
+              <li class="popular-card slide four">
+                <a href="/stay/stayDetail.html">
+                  <div class="content" style="background-image:url('https://images.unsplash.com/photo-1598943392629-19ddae99855c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjB8fGplanUlMjBmb29kfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')">
+                    <span class="address">전라/전주</span>
+                    <span class="percent stay">50%</span>
+                  </div>
+                  <h1 class="title-overflow">없는게 없는 국진철물 철물점.!.</h1>
+                  <p>
+                    <span class="price">₩25000</span>
+                    <del class="sale-price">₩44000</del>
+                  </p>
+                </a>
+              </li>
+              <li class="popular-card slide four">
+                <a href="/stay/stayDetail.html">
+                  <div class="content" style="background-image:url('https://images.unsplash.com/photo-1579169825453-8d4b4653cc2c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTN8fGplanUlMjBmb29kfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')">
+                    <span class="address">제주/서귀포</span>
+                    <span class="percent stay">50%</span>
+                  </div>
+                  <h1 class="title-overflow">제주도 서귀포로 와서 , 함께 따는 귤체험을 즐겨보세요ㅇ_ㅇ</h1>
+                  <p>
+                    <span class="price">₩25000</span>
+                    <del class="sale-price">₩44000</del>
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+
+
+    </main> <!-- Footer -->
+<footer class="footer bg-light text-lg-start">
+  <!-- Grid container -->
+  <div class="container">
+    <!--Grid row-->
+    <div class="row">
+
+      <!--Grid column-->
+      <div class="col-lg-12 mb-4">
+        <ul class="list-unstyled mb-0 d-flex">
+          <li>
+            <a href="#!" class="text-dark">이용약관&nbsp;&nbsp;|</a>
+          </li>
+          <li>
+            <a href="#!" class="text-dark">&nbsp;&nbsp;개인정보처리방침&nbsp;&nbsp;|</a>
+          </li>
+          <li>
+            <a href="#!" class="text-dark">&nbsp;&nbsp;고객지원</a>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-12 mb-4 m-t5">
+        <h5 class="text-uppercase mb-0">액티부키</h5>
+        <div class="d-flex justify-content-between align-items-end">
+          <div>
+            <div class="m-t1">
+              <span>사업자 등록번호 : 123-56-789</span>
+              <span>대표 : 이동원</span>
+            </div>
+            <div class="m-th">전라북도 전주시 완산구 효자동2가 바우배기2길 18, 2층 202호</div>
+          </div>
+          <!-- sns -->
+          <ul class="sns-group">
+            <li class="sns-list">
+              <a href="">
+                <img class="md-icon" srcset="/images/naver-footer.png 400w,
+                                                /images/naver-footer@2x.png 700w,
+                                                /images/naver-footer@3x.png 1000w" src="/images/icon-right-white@3x.png" alt="네이버" />
+              </a>
+            </li>
+            <li class="sns-list">
+              <a href="">
+                <img class="md-icon" srcset="/images/facebook.png 400w,
+                                                /images/facebook@2x.png 700w,
+                                                /images/facebook@3x.png 1000w" src="/images/icon-right-white@3x.png" alt="카카오" />
+              </a>
+            </li>
+            <li class="sns-list">
+              <a href="">
+                <img class="md-icon" srcset="/images/instagram.png 400w,
+                                                /images/instagram@2x.png 700w,
+                                                /images/instagram@3x.png 1000w" src="/images/icon-right-white@3x.png" alt="인스타그램" />
+              </a>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+      <!--Grid column-->
+    </div>
+    <!--Grid row-->
+  </div>
+  <!-- Grid container -->
+
+</footer>
+<!-- Footer -->
+  </div>
+
+  <script>
+    $(function () {
+      //dotdotdot
+      function setDotDotDot() {
+        $(".title-overflow").dotdotdot({
+          ellipsis: '...',//말줄임 뭘로 할지
+          watch: true, //윈도우 창에따라서 업데이트 할건지, 윈도우가 리사이즈될 때 업데이트할 건지
+          wrap: 'letter',//word(단어단위), letter(글 단위), children(자식단위) 자르기
+          height: 40,
+          tolerance: 20
+          //글이 넘치면 얼만큼 height 늘릴건
+        });
+      }
+
+      setDotDotDot();
+    })
+  </script>
+<script src=".././js/index.bundle.js?8972ba21be7b853dd5dd"></script></body>
+
+
+</html>

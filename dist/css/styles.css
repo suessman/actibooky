@@ -9615,7 +9615,7 @@ main.main-sub {
   min-height: 100vh; }
   @media (max-width: 991.98px) {
     main.main-sub {
-      padding-top: 60px; } }
+      padding-top: 48px; } }
   @media (max-width: 991.98px) and (max-width: 991.98px) {
     main.main-sub.main-top {
       padding-top: 460px; } }
@@ -9803,7 +9803,8 @@ button.btn.filter-btn:hover {
 
 .daterangepicker {
   font-family: 'Noto Sans KR', sans-serif;
-  border-radius: 0; }
+  border-radius: 0;
+  left: auto; }
   .daterangepicker .drp-calendar .calendar-table table thead tr:first-of-type {
     margin-bottom: 20px; }
     .daterangepicker .drp-calendar .calendar-table table thead tr:first-of-type th {
@@ -9841,7 +9842,7 @@ button.btn.filter-btn:hover {
       display: none; }
   @media (max-width: 575.98px) {
     .daterangepicker {
-      left: 0;
+      left: 0 !important;
       width: 100%; } }
   .daterangepicker .drp-calendar.left, .daterangepicker .drp-calendar.right {
     max-width: 100%; }
@@ -10432,22 +10433,42 @@ label {
 .carousel {
   height: 560px; }
   .carousel.promotion {
-    height: 400px; }
+    height: auto; }
     @media (max-width: 767.98px) {
       .carousel.promotion {
-        height: 320px; } }
+        height: auto; } }
   @media (max-width: 991.98px) {
     .carousel {
       height: 460px; }
       .carousel.top {
         position: absolute;
         top: 0;
+        left: 0;
+        width: 100%;
         z-index: 999; } }
   @media (max-width: 767.98px) {
     .carousel {
       height: 180px; } }
   .carousel .carousel-inner {
     height: 100%; }
+    .carousel .carousel-inner.promotion {
+      position: relative;
+      padding-top: 28.2%; }
+      @media (max-width: 575.98px) {
+        .carousel .carousel-inner.promotion {
+          padding-top: 100%; } }
+      .carousel .carousel-inner.promotion .carousel-item {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%; }
+        @media (max-width: 575.98px) {
+          .carousel .carousel-inner.promotion .carousel-item img.xs-up-promotion {
+            display: none !important; } }
+        @media (min-width: 576px) {
+          .carousel .carousel-inner.promotion .carousel-item img.xs-down-promotion {
+            display: none !important; } }
     .carousel .carousel-inner .carousel-item {
       height: 100%; }
       .carousel .carousel-inner .carousel-item img {
@@ -10685,6 +10706,10 @@ label {
 .pagination {
   margin-top: 40px;
   margin-bottom: 40px; }
+  @media (max-width: 991.98px) {
+    .pagination {
+      margin-top: 24px;
+      margin-bottom: 24px; } }
   .pagination .page-item {
     display: flex;
     align-items: center;
@@ -10736,7 +10761,8 @@ header.header-title {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%);
+    font-weight: 400; }
   header.header-title.top {
     position: absolute;
     top: 0;
@@ -10765,7 +10791,8 @@ header.header {
       header.header .container {
         padding: 0; }
         header.header .container .navbar {
-          padding: 0; }
+          padding: 0;
+          height: 48px; }
           header.header .container .navbar .navbar-brand {
             display: none; }
           header.header .container .navbar .navbar-collapse {
@@ -10865,8 +10892,7 @@ header.header {
 
 header .navbar-toggler {
   border: none;
-  background: transparent !important;
-  margin-top: 16px; }
+  background: transparent !important; }
   header .navbar-toggler:hover {
     background: transparent !important; }
   header .navbar-toggler .icon-bar {
@@ -11004,7 +11030,8 @@ main .section-body.card-ui-bg {
   padding: 60px 0; }
   @media (max-width: 575.98px) {
     main .section-body.card-ui-bg {
-      padding: 20px 0; } }
+      padding: 20px 0;
+      margin-top: 20px !important; } }
 
 @media (max-width: 991.98px) {
   main .section-body.card-ui.mobile {
@@ -11029,6 +11056,8 @@ main .section-body.card-ui .top-title h3 {
   @media (max-width: 575.98px) {
     main .section-body.card-ui .top-title h3 {
       font-size: 18px; } }
+  main .section-body.card-ui .top-title h3 ~ select {
+    width: 126px; }
 
 main .section-body.card-ui .top-title.font h3 {
   font-family: "Black Han Sans", sans-serif;
@@ -11046,7 +11075,8 @@ main .section-body.card-ui .top-title.font p {
   font-weight: 700; }
   @media (max-width: 575.98px) {
     main .section-body.card-ui .top-title.font p {
-      font-size: 14px; } }
+      font-size: 14px;
+      margin-top: 0; } }
 
 main .section-body.card-ui ul.category-card-body {
   margin: 24px 0 0 -20px;
@@ -11129,9 +11159,17 @@ main .section-body.card-ui ul.popular-card-body {
     margin-left: 20px;
     margin-top: 40px;
     display: inline-block;
-    min-height: 337px;
+    min-height: 304px;
     vertical-align: top;
     position: relative; }
+    @media (min-width: 768px) {
+      main .section-body.card-ui ul.popular-card-body li.popular-card.four {
+        width: calc(25% - 20px); }
+        main .section-body.card-ui ul.popular-card-body li.popular-card.four .content {
+          min-height: 160px; } }
+    @media (max-width: 575.98px) {
+      main .section-body.card-ui ul.popular-card-body li.popular-card.slide {
+        margin-top: 8px; } }
     main .section-body.card-ui ul.popular-card-body li.popular-card.h-auto {
       min-height: auto;
       margin-top: 40px; }
@@ -11141,7 +11179,37 @@ main .section-body.card-ui ul.popular-card-body {
       main .section-body.card-ui ul.popular-card-body li.popular-card.h-auto .content {
         min-height: 200px; }
         main .section-body.card-ui ul.popular-card-body li.popular-card.h-auto .content .title-bg {
-          padding: 8px; }
+          padding: 8px;
+          width: 100%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap; }
+          main .section-body.card-ui ul.popular-card-body li.popular-card.h-auto .content .title-bg h3 {
+            font-size: 24px;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap; }
+            @media (max-width: 575.98px) {
+              main .section-body.card-ui ul.popular-card-body li.popular-card.h-auto .content .title-bg h3 {
+                font-size: 18px; } }
+        main .section-body.card-ui ul.popular-card-body li.popular-card.h-auto .content .pm {
+          margin-bottom: 5px; }
+          main .section-body.card-ui ul.popular-card-body li.popular-card.h-auto .content .pm .pm-category {
+            font-size: 18px; }
+            @media (max-width: 575.98px) {
+              main .section-body.card-ui ul.popular-card-body li.popular-card.h-auto .content .pm .pm-category {
+                font-size: 14px; } }
+          main .section-body.card-ui ul.popular-card-body li.popular-card.h-auto .content .pm .pm-icon {
+            width: 32px;
+            height: 32px;
+            background-color: #212529;
+            border-radius: 50%; }
+          main .section-body.card-ui ul.popular-card-body li.popular-card.h-auto .content .pm .pm-title {
+            font-size: 14px; }
+            @media (max-width: 575.98px) {
+              main .section-body.card-ui ul.popular-card-body li.popular-card.h-auto .content .pm .pm-title {
+                font-size: 12px; } }
       @media (min-width: 768px) {
         main .section-body.card-ui ul.popular-card-body li.popular-card.h-auto.promotion {
           width: calc(50% - 20px); } }
@@ -11162,10 +11230,20 @@ main .section-body.card-ui ul.popular-card-body {
       word-break: break-all; }
     main .section-body.card-ui ul.popular-card-body li.popular-card-ui {
       width: calc(50% - 20px); }
+      main .section-body.card-ui ul.popular-card-body li.popular-card-ui.lg-h .content {
+        min-height: 320px; }
+        @media (max-width: 575.98px) {
+          main .section-body.card-ui ul.popular-card-body li.popular-card-ui.lg-h .content {
+            min-height: 200px; } }
       main .section-body.card-ui ul.popular-card-body li.popular-card-ui-list {
         width: calc(33.33% - 20px); }
+        main .section-body.card-ui ul.popular-card-body li.popular-card-ui-list .content {
+          min-height: 208px !important; }
       main .section-body.card-ui ul.popular-card-body li.popular-card-ui .content {
-        height: 320px; }
+        min-height: 320px; }
+        @media (max-width: 575.98px) {
+          main .section-body.card-ui ul.popular-card-body li.popular-card-ui .content {
+            height: 200px; } }
       main .section-body.card-ui ul.popular-card-body li.popular-card-ui .detail {
         background-color: #ffffff;
         padding: 10px 16px;
@@ -11185,13 +11263,14 @@ main .section-body.card-ui ul.popular-card-body {
     @media (max-width: 575.98px) {
       main .section-body.card-ui ul.popular-card-body li.popular-card {
         width: calc(90% - 20px);
-        margin-top: 8px;
-        min-height: 337px; } }
+        min-height: 304px; }
+        main .section-body.card-ui ul.popular-card-body li.popular-card:first-of-type {
+          margin-top: 8px; } }
     @media (min-width: 576px) and (max-width: 767.98px) {
       main .section-body.card-ui ul.popular-card-body li.popular-card {
         width: calc(100% - 20px);
         margin-top: 16px;
-        min-height: 220px; } }
+        min-height: 304px; } }
     main .section-body.card-ui ul.popular-card-body li.popular-card h1 {
       font-size: 18px;
       font-weight: 700;
@@ -11216,7 +11295,7 @@ main .section-body.card-ui ul.popular-card-body {
     main .section-body.card-ui ul.popular-card-body li.popular-card .content {
       position: relative;
       background-size: cover;
-      min-height: 240px;
+      min-height: 200px;
       background-position: center;
       background-repeat: no-repeat; }
       main .section-body.card-ui ul.popular-card-body li.popular-card .content span.address {
@@ -11253,6 +11332,9 @@ main .section-body.card-ui ul.popular-card-body {
         color: #ffffff;
         font-size: 24px;
         font-weight: 700; }
+        @media (max-width: 575.98px) {
+          main .section-body.card-ui ul.popular-card-body li.popular-card .content .town {
+            padding: 8px; } }
 
 @media (max-width: 575.98px) {
   main .section-body.card-ui-video {
@@ -11367,6 +11449,10 @@ main .section-body.card-ui-video .area {
       .account-form .form-box .sns .apple img {
         width: 24px; }
 
+@media (max-width: 991.98px) {
+  .detail-info-sec hr {
+    display: none; } }
+
 @media (max-width: 575.98px) {
   .detail-info-sec h5 {
     font-size: 14px !important; } }
@@ -11383,10 +11469,21 @@ main .section-body.card-ui-video .area {
   padding: 0 16px; }
   @media (max-width: 991.98px) {
     .detail-info-sec .right-top {
-      width: 100%; } }
+      width: 100%;
+      padding: 0; } }
 
 .detail-info-sec .acti-info {
   margin-top: 24px; }
+  .detail-info-sec .acti-info.promotion .top-promotion .category {
+    color: #868e96;
+    margin-left: 0;
+    font-size: 18px; }
+    @media (max-width: 575.98px) {
+      .detail-info-sec .acti-info.promotion .top-promotion .category {
+        font-size: 12px; } }
+  @media (max-width: 575.98px) {
+    .detail-info-sec .acti-info.promotion .top-promotion .title {
+      font-size: 12px; } }
   .detail-info-sec .acti-info .top .address {
     min-width: 24px;
     background-color: #9334ff;
@@ -11613,6 +11710,10 @@ main .section-body.card-ui-video .area {
   width: 100%;
   min-height: 413px;
   padding: 0 16px; }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    .book-ui {
+      margin-top: 24px;
+      padding: 0; } }
   .book-ui-modal {
     position: fixed;
     left: 0;
@@ -11850,6 +11951,82 @@ main .section-body.card-ui-video .area {
   .book-form .book-form-content .pay-type + button.book-btn {
     margin-top: 24px; }
 
+.company-top {
+  padding-top: 21%;
+  width: 100%;
+  position: relative;
+  color: #ffffff; }
+  .company-top .bg-opacity {
+    background-color: rgba(33, 37, 41, 0.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 200; }
+  .company-top .company-main-bg {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: 200;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
+  .company-top .company-info h1 {
+    font-size: 36px; }
+    @media (max-width: 575.98px) {
+      .company-top .company-info h1 {
+        font-size: 24px; } }
+  .company-top .company-info .detail li {
+    position: relative; }
+    .company-top .company-info .detail li.area:before {
+      content: "";
+      background-image: url(../images/icon-location-white@3x.png);
+      position: absolute;
+      top: 0;
+      display: inline-block;
+      background-size: cover;
+      width: 24px;
+      height: 24px; }
+    .company-top .company-info .detail li.area .company-content {
+      padding-left: 24px; }
+  .company-top .company-intro {
+    margin-top: 40px; }
+
+.company-tab-nav {
+  width: 100%;
+  background-color: #f9f5ff; }
+  .company-tab-nav ul {
+    display: block;
+    border-bottom: none; }
+    .company-tab-nav ul li {
+      display: inline-block;
+      min-width: 97px; }
+      .company-tab-nav ul li a {
+        padding: 16px; }
+      .company-tab-nav ul li.nav-item .nav-link.active {
+        background-color: none;
+        border: none;
+        border-color: #9334ff;
+        border-bottom: 2px solid #9334ff;
+        background: none; }
+
+.video-body {
+  width: 100%;
+  padding-top: 34%;
+  position: relative;
+  margin-top: 24px; }
+  .video-body iframe {
+    position: absolute;
+    top: 0;
+    left: 0; }
+    @media (max-width: 1199.98px) {
+      .video-body iframe {
+        padding-top: 24px; } }
+
 html,
 body {
   height: 100%;
@@ -11924,7 +12101,7 @@ select.form-control {
   font-size: 14px;
   border: 1px solid #e9ecef;
   width: auto;
-  padding: 8px; }
+  padding: 8px 16px; }
 
 input.form-control:disabled, input.form-control[readonly] {
   background-color: transparent; }
@@ -11979,6 +12156,10 @@ input.pick-calendar.form-control[readonly] {
 
 .m-t6 {
   margin-top: 3.75rem; }
+
+@media (max-width: 575.98px) {
+  .m-mt {
+    margin-top: 16px !important; } }
 
 @media (max-width: 575.98px) {
   .m-p0 {

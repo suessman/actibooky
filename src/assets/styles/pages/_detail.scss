@@ -1,4 +1,11 @@
 .detail-info-sec{
+
+  @include media-breakpoint-down(md) {
+      hr{
+        display: none;
+      } 
+  }
+
   h5{
     @include media-breakpoint-down(xs) {
       font-size: 14px !important;
@@ -17,11 +24,30 @@
     padding:0 16px;
     @include media-breakpoint-down(md) {
       width: 100%;
+      padding: 0;      
     }
   }
   .acti-info{
     margin-top: 24px;
-    .top{
+
+    &.promotion{
+      .top-promotion{
+        .category{
+          color:$dark;
+          margin-left: 0;
+          @include fontSize(18px);
+          @include media-breakpoint-down(xs){
+            @include fontSize(12px);
+          }
+        }
+        .title{
+          @include media-breakpoint-down(xs){
+            @include fontSize(12px);
+          }
+        }
+      }
+    }
+    .top{      
       .address{
         min-width: 24px;
         background-color: $primary;
@@ -385,7 +411,10 @@
 
 //예약하기 카드
 .book-ui {
-
+  @include media-breakpoint-only(lg){
+    margin-top: 24px;
+    padding:0;
+  }
   &-modal{
     position:fixed;
     left: 0;

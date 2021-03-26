@@ -78,6 +78,7 @@
 .daterangepicker{
   font-family: 'Noto Sans KR', sans-serif;
   border-radius: 0;
+  left: auto;
 
   .drp-calendar{
     .calendar-table{
@@ -160,7 +161,7 @@
   }  
   
   @include media-breakpoint-down(xs) { 
-    left:0;
+    left:0 !important;
     width:100%;
   }
 

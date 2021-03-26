@@ -22,7 +22,7 @@
         <div class="row">
           <div class="col-12">
             <div class="d-flex justify-content-left">
-              <a href="#">
+              <a href="#" class="prev">
                 <img src="/images/icon-left-white@3x.png" class="sm-icon" alt="뒤로가기">
               </a>
             </div>
@@ -784,8 +784,8 @@
                 <h3 class="near-exp-title">근처 체험</h3>
               </div>
               <ul class="popular-card-body">
-                <li class="popular-card">
-                  <a href="">
+                <li class="popular-card slide">
+                  <a href="/stay/stayDetail.html">
                     <div class="content" style="background-image:url('/images/bread.jpg')">
                       <span class="address">전북/군산</span>
                       <!-- <span class="percent">50%</span> -->
@@ -799,8 +799,8 @@
                     </p>
                   </a>
                 </li>
-                <li class="popular-card">
-                  <a href="">
+                <li class="popular-card slide">
+                  <a href="/stay/stayDetail.html">
                     <div class="content" style="background-image:url('/images/bread.jpg')">
                       <span class="address">전라/전주</span>
                       <span class="percent">50%</span>
@@ -812,8 +812,8 @@
                     </p>
                   </a>
                 </li>
-                <li class="popular-card">
-                  <a href="">
+                <li class="popular-card slide">
+                  <a href="/stay/stayDetail.html">
                     <div class="content" style="background-image:url('/images/bread.jpg')">
                       <span class="address">전라/전주</span>
                       <span class="percent">50%</span>
@@ -854,7 +854,8 @@
         $window = $(window),
         offset = $sidebar.offset(),
         topPadding = 60;
-
+      var rightTop = $('.right-top')
+      var tagEl = $('.tag');
       //1200px up style 
       if (window.matchMedia("(min-width: 1200px)").matches) {
         $window.scroll(function () {
@@ -882,6 +883,11 @@
           middleNav.css('left', 0);
         }
       })
+
+      //mobile position change
+      if (window.matchMedia("(max-width: 991px)").matches) {
+        rightTop.insertAfter(tagEl);
+      }
 
       //modal
       bookBtn.click(function () {

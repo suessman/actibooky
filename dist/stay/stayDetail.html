@@ -23,7 +23,7 @@
 <script type="text/javascript" defer src="/js/daterangepicker.js"></script>
 
 
-<link href=".././css/styles.css?76834a52ee4f3e40d467" rel="stylesheet"></head>
+<link href=".././css/styles.css?8972ba21be7b853dd5dd" rel="stylesheet"></head>
 
 <body>
   <!-- 브라우저 권장 -->
@@ -123,7 +123,7 @@
             </div>
           </li> -->
           <li class="nav-item">
-            <a class="nav-link" href="#">프로모션</a>
+            <a class="nav-link" href="/promotions/promoMain.html">프로모션</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">상품구매</a>
@@ -150,7 +150,7 @@
         <div class="row">
           <div class="col-12">
             <div class="d-flex justify-content-left">
-              <a href="#">
+              <a href="#" class="prev">
                 <img src="/images/icon-left-white@3x.png" class="sm-icon" alt="뒤로가기">
               </a>
             </div>
@@ -912,8 +912,8 @@
                 <h3 class="near-exp-title">근처 체험</h3>
               </div>
               <ul class="popular-card-body">
-                <li class="popular-card">
-                  <a href="">
+                <li class="popular-card slide">
+                  <a href="/stay/stayDetail.html">
                     <div class="content" style="background-image:url('/images/bread.jpg')">
                       <span class="address">전북/군산</span>
                       <!-- <span class="percent">50%</span> -->
@@ -927,8 +927,8 @@
                     </p>
                   </a>
                 </li>
-                <li class="popular-card">
-                  <a href="">
+                <li class="popular-card slide">
+                  <a href="/stay/stayDetail.html">
                     <div class="content" style="background-image:url('/images/bread.jpg')">
                       <span class="address">전라/전주</span>
                       <span class="percent">50%</span>
@@ -940,8 +940,8 @@
                     </p>
                   </a>
                 </li>
-                <li class="popular-card">
-                  <a href="">
+                <li class="popular-card slide">
+                  <a href="/stay/stayDetail.html">
                     <div class="content" style="background-image:url('/images/bread.jpg')">
                       <span class="address">전라/전주</span>
                       <span class="percent">50%</span>
@@ -1051,7 +1051,8 @@
         $window = $(window),
         offset = $sidebar.offset(),
         topPadding = 60;
-
+      var rightTop = $('.right-top')
+      var tagEl = $('.tag');
       //1200px up style 
       if (window.matchMedia("(min-width: 1200px)").matches) {
         $window.scroll(function () {
@@ -1079,6 +1080,11 @@
           middleNav.css('left', 0);
         }
       })
+
+      //mobile position change
+      if (window.matchMedia("(max-width: 991px)").matches) {
+        rightTop.insertAfter(tagEl);
+      }
 
       //modal
       bookBtn.click(function () {
@@ -1204,6 +1210,6 @@
 
 
   </script>
-<script src=".././js/index.bundle.js?76834a52ee4f3e40d467"></script></body>
+<script src=".././js/index.bundle.js?8972ba21be7b853dd5dd"></script></body>
 
 </html>
