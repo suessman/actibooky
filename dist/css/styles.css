@@ -9722,11 +9722,6 @@ main.main-sub {
   box-shadow: none !important;
   border: none; }
 
-.btn:hover, .btn-outline-secondary:hover {
-  color: inherit;
-  box-shadow: none !important;
-  border: none; }
-
 .btn {
   height: 40px;
   font-size: 1rem;
