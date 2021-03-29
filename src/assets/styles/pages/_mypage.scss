@@ -17,10 +17,8 @@
     display: block;
     border-bottom: none;
      @include media-breakpoint-down(md){
-       text-align: left;
-       white-space: nowrap;
-       overflow:hidden;
-       overflow-x: auto;
+      display: flex;
+      flex-wrap: wrap;     
     }
     li{
       display: inline-block;
@@ -37,7 +35,7 @@
         padding:16px;
         @include fontSize(18px);
         @include media-breakpoint-down(md){
-          padding:12px 20px;
+          padding:12px 2px;
           @include fontSize(14px);
         }
 
@@ -61,6 +59,10 @@
   width: 100%;
   margin-top: 40px;
   // background-color: #f9f5ff;
+  @include media-breakpoint-down(xs){
+    margin-top: 16px;
+  }
+
   &.fixed{
     position: fixed;
     width: 100%;
@@ -90,8 +92,8 @@
         font-weight: 700;
         @include fontSize(24px);
         @include media-breakpoint-down(md){
-          padding:12px 20px;
-          @include fontSize(14px);
+          padding:0;
+          @include fontSize(18px);
         }
 
       }
@@ -107,15 +109,49 @@
       }
     }
   }
+
+  // .scheduled-book{
+
+  // }
+  .prev-book{
+    padding-left: 40px;
+    @include media-breakpoint-down(xs){
+      padding-left:24px;
+    }
+  }
+
+  hr{
+    margin-top: 12px;
+    margin-bottom: 0;
+    @include media-breakpoint-down(xs){
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }   
+  }  
 }
 
 //card
 .book-card{ 
   margin-top: 40px;
+  position:relative;
 
+  //canceled book
+  .canceled-book{
+
+    position: absolute; 
+    z-index: 999; 
+    top:0; left:0; 
+    width:100%;
+    height: 100%; 
+    background-color: rgba(255, 255, 255, 0.85);
+  }
   @include media-breakpoint-down(sm){
       .md-block{
         display: block !important;
+      }
+
+      &:first-of-type{
+        margin-top: 0;
       }
     }
   .content{
@@ -126,6 +162,7 @@
     min-height: 200px;
     background-position: center;
     background-repeat: no-repeat;
+    position: relative;
 
     .address{
       text-align: center;
@@ -135,6 +172,17 @@
       padding: 2px 8px;
       position: absolute;
       left: 0;
+    }
+
+    .canceled{
+      color:$dark;
+      position:absolute;
+      left:50%;
+      top:50%;
+      transform: translate(-50%, -50%);
+      font-weight: 700;
+      z-index: 999;
+      @include fontSize(18px);
     }
 
     @include media-breakpoint-down(sm){
@@ -171,6 +219,7 @@
     .cancel-request{
       width: 90px;
       height: 32px;
+      display: inline-block;
     }
 
 
