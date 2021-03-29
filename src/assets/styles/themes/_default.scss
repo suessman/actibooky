@@ -130,6 +130,18 @@ input{
   }
 }
 
+//navbar
+.nav-item{
+  .nav-link{
+    &:focus, &:hover{
+      border:none;
+      box-shadow: none;
+      outline:none;
+    }
+  }
+}
+
+
 //icon
 .sm-icon{
   width: 24px;
@@ -138,6 +150,14 @@ input{
 .md-icon{
   width: 40px;
 }
+
+//border
+.border-bottom{
+  border-bottom:1px solid $light !important;
+  padding-bottom:12px;
+}
+
+//margin
 
 .m-th{
   margin-top: 0.286rem;
@@ -164,8 +184,15 @@ margin-top: 0.571rem;
 }
 
 .m-t6{
-  margin-top: 3.75rem;
+  margin-top: 3.429rem;
 }
+
+//bootstrap add margin
+.mt-6{
+  margin-top: 4.286rem;
+}
+
+
 
 //mobile margin
 @include media-breakpoint-down(xs){
@@ -173,8 +200,6 @@ margin-top: 0.571rem;
     margin-top: 16px !important;
   }
 }
-
-
 
 .m-p0{
   @include media-breakpoint-down(xs) {

@@ -1,0 +1,223 @@
+//company tab nav
+.mypage-tab-nav{
+  width: 100%;
+  background-color: $pale-gray;
+
+  @include media-breakpoint-up(lg){
+    height: 61px;
+  }
+  &.fixed{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left:0;
+    z-index: 2000;
+  }
+  ul{
+    display: block;
+    border-bottom: none;
+     @include media-breakpoint-down(md){
+       text-align: left;
+       white-space: nowrap;
+       overflow:hidden;
+       overflow-x: auto;
+    }
+    li{
+      display: inline-block;
+      min-width: 97px;
+      @include media-breakpoint-down(md){
+        min-width: 53px;
+      }
+
+      @include media-breakpoint-down(xs){
+       width: 25%;
+      }
+
+      a{
+        padding:16px;
+        @include fontSize(18px);
+        @include media-breakpoint-down(md){
+          padding:12px 20px;
+          @include fontSize(14px);
+        }
+
+      }
+
+      
+      &.nav-item .nav-link.active{        
+        border: none;
+        border-color: $primary;
+        border-bottom: 2px solid $primary;
+        background:none;
+        color:$primary;
+        font-weight: 700;       
+      }
+    }
+  }
+}
+
+//company tab nav
+.book-tab{
+  width: 100%;
+  margin-top: 40px;
+  // background-color: #f9f5ff;
+  &.fixed{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left:0;
+    z-index: 2000;
+  }
+  ul{
+    display: block;
+    border-bottom: none;
+     @include media-breakpoint-down(md){
+       text-align: left;
+       white-space: nowrap;
+       overflow:hidden;
+       overflow-x: auto;
+    }
+    li{
+      display: inline-block;
+      min-width: 97px;
+      @include media-breakpoint-down(md){
+        min-width: 53px;
+      }
+
+      a{
+        padding:0;
+        color:$dark;
+        font-weight: 700;
+        @include fontSize(24px);
+        @include media-breakpoint-down(md){
+          padding:12px 20px;
+          @include fontSize(14px);
+        }
+
+      }
+
+      
+      &.nav-item .nav-link.active{        
+        border: none;
+        border-color: $primary;
+        // border-bottom: 2px solid $primary;
+        background:none;
+        color:$primary;
+        font-weight: 700;       
+      }
+    }
+  }
+}
+
+//card
+.book-card{ 
+  margin-top: 40px;
+
+  @include media-breakpoint-down(sm){
+      .md-block{
+        display: block !important;
+      }
+    }
+  .content{
+    width: 300px;
+    display: inline-block;
+    position: relative;
+    background-size: cover;
+    min-height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .address{
+      text-align: center;
+      background-color: #5a00cb;
+      color: #ffffff;
+      min-width: 70px;
+      padding: 2px 8px;
+      position: absolute;
+      left: 0;
+    }
+
+    @include media-breakpoint-down(sm){
+      width: 100%;
+    }
+  }
+
+  .detail-info{
+    width: calc(100% - 300px);
+    margin-left: 20px;
+    display: inline-block;
+    @include media-breakpoint-down(sm){
+      width: 100%;
+      margin-left: 0;
+    }
+    .book-kinds{
+      img{
+        width: 32px;
+        @include media-breakpoint-down(sm){
+          width: 24px;         
+        }
+      }
+
+      .left{
+        color:$dark;
+        vertical-align: middle;
+        @include fontSize(18px);
+        @include media-breakpoint-down(sm){
+         @include fontSize(14px);
+        }
+      }
+    }
+
+    .cancel-request{
+      width: 90px;
+      height: 32px;
+    }
+
+
+
+    .left-area{
+      width:calc(100% - 220px);
+
+      @include media-breakpoint-down(sm){
+      width: 100%;
+      }
+      h1{
+        @include fontSize(18px);
+        margin-top: 16px;
+      }
+
+      .booked_info{
+        li{
+          margin-top: 8px;
+          &:first-of-type{
+            margin-top: 16px;
+          }
+        }
+      }
+    }
+
+    .right-area{
+      min-width:220px;
+      background-color: $light;
+      padding:8px 16px;
+      @include media-breakpoint-down(sm){
+      width: 100%;
+      margin-top: 8px;
+      }
+      hr{
+        margin-top: 8px;
+        margin-bottom: 8px;
+      }
+
+      .amount{
+        @include fontSize(18px);
+        font-weight: 700;
+      }
+      .pay-type{
+        margin-top: 27px;
+      }
+    }
+
+    
+  }
+}

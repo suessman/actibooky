@@ -278,6 +278,11 @@ main {
       display: flex;
       flex-wrap: wrap;
 
+      &.company-product-body{
+        display: flex;
+        white-space: normal;
+      }
+
       @include media-breakpoint-down(lg) {
         margin: 8px 0 0 -20px;
       }
@@ -311,14 +316,78 @@ main {
             width: calc(25% - 20px);
             .content{
               min-height: 160px;
+            }   
+            
+            &.product{
+              .content{
+                min-height: 220px;
+              }   
             }
           }
+        }
+
+        @include media-breakpoint-down(xs){
+          &.four{
+            width: 160px;   
+            min-height: 205px;
+            
+            //업체 상품 메인페이지 카드 ui
+            &.half-width{ 
+              width:calc(50% - 20px);
+
+              &:nth-of-type(1){
+                margin-top: 8px;
+              }
+              &:nth-of-type(2){
+                margin-top: 8px;
+              }
+            }
+
+            .content{
+              min-height: 120px;
+
+              .percent{
+                width: 40px;
+                height: 40px;
+                @include fontSize(14px);
+              }
+            }
+
+            h1{
+              @include fontSize(14px);
+            }
+            
+
+            &.product{    
+              min-height: 245px;         
+              .content{
+                min-height: 160px;
+              }   
+            }
+          }           
         }
         margin-left: 20px;
         margin-top: 40px;
         @include media-breakpoint-down(xs){
            &.slide{
             margin-top: 8px;
+          }
+
+          &.xs-down{
+            width: 160px;
+            min-height: 205px;
+            .content{
+              min-height: 120px;
+              
+              .percent{
+                width: 40px;
+                height: 40px;
+                @include fontSize(14px);
+              }
+            }
+            h1{
+              @include fontSize(14px);
+            }
           }
         }
        
@@ -529,6 +598,16 @@ main {
           span.address {
             text-align: center;
             background-color: $secondary;
+            color: $white;
+            min-width: 70px;   
+            padding:2px 8px;
+            position: absolute;
+            left:0;
+          }
+
+          span.pr-category{
+            text-align: center;
+            background-color: $pink;
             color: $white;
             min-width: 70px;   
             padding:2px 8px;
