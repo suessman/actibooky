@@ -3,8 +3,14 @@
 
 <head>
   <meta charset="utf-8">
-  <title>나의 정보</title>
+  <title>내 정보 수정</title>
   <meta name="description" content="">
+  <link rel="stylesheet" href="/css/headertitle.css">
+
+  <!-- rater css -->
+  <link rel="stylesheet" href="/css/rater.css">
+  <!--raterjs-->
+  <script src="/js/rater.js"></script>
   <!-- include -->
   ${ require('../partials/head.html') }
 </head>
@@ -12,11 +18,103 @@
 <body>
   <!-- 브라우저 권장 -->
   ${ require('../partials/browserupgrade.html') }
-  <div>
+  <div class="fm">
     <!-- 헤더 -->
     ${ require('../partials/header.html') }
     <main class="d-flex flex-column h-100 main">
       <!-- Content Here -->
+      <header class="header-title">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="d-flex justify-content-between">
+                <!-- <a href="">
+                                  <img src="/images/icon-left-black@3x.png" class="sm-icon" alt="뒤로가기">
+                                </a> -->
+                <button class="navbar-toggler collapsed header-main" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-controls="navbarSupportedContent backdropUi" aria-expanded="false" aria-label="Toggle navigation">
+                  <div class="acetrnt-toggle" data-click-state="1">
+                    <span class="icon-bar line-1"></span>
+                    <span class="icon-bar line-2"></span>
+                    <span class="icon-bar line-3"></span>
+                  </div>
+                </button>
+                <h1 class="title">마이페이지</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="mypage-tab-nav text-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 m-p0">
+              <ul class="nav nav-tabs">
+                <li class="nav-item">
+                  <a class="nav-link active" href="/mypage/myInfo.html">내 정보 수정</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="/mypage/myReview.html">나의리뷰</a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link " href="/mypage/myRequest.html">상품문의</a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="/mypage/myBook.html">예약확인</a>
+                </li>
+                <li class="nav-item display-md-down">
+                  <a class="nav-link" href="/mypage/terms.html">이용약관</a>
+                </li>
+                <li class="nav-item  display-md-down">
+                  <a class="nav-link" href="/mypage/policy.html">개인정보 처리방침</a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- book card -->
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 my-info-update">
+            <h3>프로필 수정</h3>
+
+            <div class="left">
+              <div class="form-group list">
+                <h6>이메일</h6>
+                <div>didim@actibooky.com</div>
+              </div>
+              <div class="form-group list">
+                <h6>생년월일</h6>
+                <div>1992.04.10</div>
+              </div>
+              <div class="form-group list">
+                <h6>가입일자</h6>
+                <div>2021.03.30</div>
+              </div>
+              <hr>
+              <input type="text" class="form-control" placeholder="이름">
+              <input type="text" class="form-control m-t2" placeholder="휴대폰번호">
+              <button type="button" class="btn btn-primary profile-update">프로필 수정하기</button>
+            </div>
+            <button type="button" class="secession">
+              <ins>탈퇴하기</ins>
+            </button>
+          </div>
+
+          <div class="col-lg-6 my-info-update">
+            <h3>비밀번호 변경</h3>
+            <div class="right">
+              <input type="password" class="form-control" placeholder="현재 비밀번호">
+              <input type="password" class="form-control m-t2" placeholder="새로운 비밀번호">
+              <input type="password" class="form-control m-t2" placeholder="비밀번호 확인">
+              <button type="button" class="btn btn-primary profile-update">비밀번호 변경</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
     </main>
     <!-- 푸터 -->
     ${ require('../partials/footer.html') }
@@ -25,7 +123,18 @@
   <!-- JS -->
   <script>
     $(function () {
+      $('#stars li').on('click', function () {
+        var onStar = parseInt($(this).data('value'), 10); // The star currently selected
+        var stars = $(this).parent().children('li.star');
 
+        for (i = 0; i < stars.length; i++) {
+          $(stars[i]).removeClass('selected');
+        }
+
+        for (i = 0; i < onStar; i++) {
+          $(stars[i]).addClass('selected');
+        }
+      });
     })
   </script>
 </body>

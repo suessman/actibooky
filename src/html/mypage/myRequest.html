@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>나의 문의</title>
   <meta name="description" content="">
+  <link rel="stylesheet" href="/css/headertitle.css">
   <!-- include -->
   ${ require('../partials/head.html') }
 </head>
@@ -12,11 +13,245 @@
 <body>
   <!-- 브라우저 권장 -->
   ${ require('../partials/browserupgrade.html') }
-  <div>
+  <div class="fm">
     <!-- 헤더 -->
     ${ require('../partials/header.html') }
     <main class="d-flex flex-column h-100 main">
       <!-- Content Here -->
+      <header class="header-title">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="d-flex justify-content-between">
+                <!-- <a href="">
+                                  <img src="/images/icon-left-black@3x.png" class="sm-icon" alt="뒤로가기">
+                                </a> -->
+                <button class="navbar-toggler collapsed header-main" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-controls="navbarSupportedContent backdropUi" aria-expanded="false" aria-label="Toggle navigation">
+                  <div class="acetrnt-toggle" data-click-state="1">
+                    <span class="icon-bar line-1"></span>
+                    <span class="icon-bar line-2"></span>
+                    <span class="icon-bar line-3"></span>
+                  </div>
+                </button>
+                <h1 class="title">마이페이지</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="mypage-tab-nav text-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 m-p0">
+              <ul class="nav nav-tabs">
+                <li class="nav-item">
+                  <a class="nav-link" href="/mypage/myInfo.html">내 정보 수정</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/mypage/myReview.html">나의리뷰</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="/mypage/myRequest.html">상품문의</a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link " href="/mypage/myBook.html">예약확인</a>
+                </li>
+                <li class="nav-item display-md-down">
+                  <a class="nav-link" href="/mypage/terms.html">이용약관</a>
+                </li>
+                <li class="nav-item  display-md-down">
+                  <a class="nav-link" href="/mypage/policy.html">개인정보 처리방침</a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- 문의 -->
+      <section class="my-inquiry list-detail">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="inquiry-list">
+                <h3 class="inquiry-title">안녕하세요, 아엠홈입니다.
+                  도톰 쉬폰커튼은 이음선이 없는 프리미엄 커튼입니다.</h3>
+                <div class="d-flex align-items-center flex-wrap">
+                  <span class="user">
+                    <!-- <span class="state ing">답변중</span> -->
+                    <span class="state complete">답변완료</span>
+                    <span class="align-middle id">guswlsrjf123</span>
+                  </span>
+                  <span class="date">2021.03.17</span>
+                </div>
+                <div class="content align-middle d-flex justify-content-between">
+                  <div class="qa-area">
+                    <div class="ask">
+                      <span class="qa">Q.</span>
+                      16일 주문했어요~ 언제 배송 시작될까요??
+                    </div>
+                    <div class="answer">
+                      <span class="qa">A.</span>
+                      안녕하세요. 고객님!
+                      공간을 바꾸는 디자인 마틸라입니다.
+
+                      우선, 문의주신 내용에 답변드리기에 앞서 저희 마틸라 제품에 관심을 갖고 구매해 주셔서 감사합니다!
+                      구매하신 상품의 배송에 대해 많이 궁금하셨을 텐데요.
+
+                      마틸라는 평일 오전 09시에 주문건 수집이 마감이 되며
+                      그 이후 주문건은 익일 확인이 됩니다. ( 주말, 공휴일 제외 )
+                    </div>
+                  </div>
+
+                  <div class="review-form">
+                    <a href="/mypage/updateMyReviewForm.html" class="btn update-btn btn-outline-primary">수정</a>
+                    <button type="button" class="btn btn-outline-primary del-btn">삭제</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="inquiry-list">
+                <h3 class="inquiry-title">안녕하세요, 아엠홈입니다.
+                  도톰 쉬폰커튼은 이음선이 없는 프리미엄 커튼입니다.</h3>
+                <div class="d-flex align-items-center flex-wrap">
+                  <span class="user">
+                    <!-- <span class="state ing">답변중</span> -->
+                    <span class="state complete">답변완료</span>
+                    <span class="align-middle id">guswlsrjf123</span>
+                  </span>
+                  <span class="date">2021.03.17</span>
+                </div>
+                <div class="content align-middle d-flex justify-content-between">
+                  <div class="qa-area">
+                    <div class="ask">
+                      <span class="qa">Q.</span>
+                      16일 주문했어요~ 언제 배송 시작될까요??
+                    </div>
+                    <div class="answer">
+                      <span class="qa">A.</span>
+                      안녕하세요. 고객님!
+                      공간을 바꾸는 디자인 마틸라입니다.
+
+                      우선, 문의주신 내용에 답변드리기에 앞서 저희 마틸라 제품에 관심을 갖고 구매해 주셔서 감사합니다!
+                      구매하신 상품의 배송에 대해 많이 궁금하셨을 텐데요.
+
+                      마틸라는 평일 오전 09시에 주문건 수집이 마감이 되며
+                      그 이후 주문건은 익일 확인이 됩니다. ( 주말, 공휴일 제외 )
+                    </div>
+                  </div>
+
+                  <div class="review-form">
+                    <a href="/mypage/updateMyReviewForm.html" class="btn update-btn btn-outline-primary">수정</a>
+                    <button type="button" class="btn btn-outline-primary del-btn">삭제</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="inquiry-list">
+                <h3 class="inquiry-title">안녕하세요, 아엠홈입니다.
+                  도톰 쉬폰커튼은 이음선이 없는 프리미엄 커튼입니다.</h3>
+                <div class="d-flex align-items-center flex-wrap">
+                  <span class="user">
+                    <!-- <span class="state ing">답변중</span> -->
+                    <span class="state complete">답변완료</span>
+                    <span class="align-middle id">guswlsrjf123</span>
+                  </span>
+                  <span class="date">2021.03.17</span>
+                </div>
+                <div class="content align-middle d-flex justify-content-between">
+                  <div class="qa-area">
+                    <div class="ask">
+                      <span class="qa">Q.</span>
+                      16일 주문했어요~ 언제 배송 시작될까요??
+                    </div>
+                    <div class="answer">
+                      <span class="qa">A.</span>
+                      안녕하세요. 고객님!
+                      공간을 바꾸는 디자인 마틸라입니다.
+
+                      우선, 문의주신 내용에 답변드리기에 앞서 저희 마틸라 제품에 관심을 갖고 구매해 주셔서 감사합니다!
+                      구매하신 상품의 배송에 대해 많이 궁금하셨을 텐데요.
+
+                      마틸라는 평일 오전 09시에 주문건 수집이 마감이 되며
+                      그 이후 주문건은 익일 확인이 됩니다. ( 주말, 공휴일 제외 )
+                    </div>
+                  </div>
+
+                  <div class="review-form">
+                    <a href="/mypage/updateMyReviewForm.html" class="btn update-btn btn-outline-primary">수정</a>
+                    <button type="button" class="btn btn-outline-primary del-btn">삭제</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="inquiry-list">
+                <h3 class="inquiry-title">안녕하세요, 아엠홈입니다.
+                  도톰 쉬폰커튼은 이음선이 없는 프리미엄 커튼입니다.</h3>
+                <div class="d-flex align-items-center flex-wrap">
+                  <span class="user">
+                    <!-- <span class="state ing">답변중</span> -->
+                    <span class="state complete">답변완료</span>
+                    <span class="align-middle id">guswlsrjf123</span>
+                  </span>
+                  <span class="date">2021.03.17</span>
+                </div>
+                <div class="content align-middle d-flex justify-content-between">
+                  <div class="qa-area">
+                    <div class="ask">
+                      <span class="qa">Q.</span>
+                      16일 주문했어요~ 언제 배송 시작될까요??
+                    </div>
+                    <div class="answer">
+                      <span class="qa">A.</span>
+                      안녕하세요. 고객님!
+                      공간을 바꾸는 디자인 마틸라입니다.
+
+                      우선, 문의주신 내용에 답변드리기에 앞서 저희 마틸라 제품에 관심을 갖고 구매해 주셔서 감사합니다!
+                      구매하신 상품의 배송에 대해 많이 궁금하셨을 텐데요.
+
+                      마틸라는 평일 오전 09시에 주문건 수집이 마감이 되며
+                      그 이후 주문건은 익일 확인이 됩니다. ( 주말, 공휴일 제외 )
+                    </div>
+                  </div>
+
+                  <div class="review-form">
+                    <a href="/mypage/updateMyReviewForm.html" class="btn update-btn btn-outline-primary">수정</a>
+                    <button type="button" class="btn btn-outline-primary del-btn">삭제</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <nav aria-label="Page navigation example" class="col-12">
+          <ul class="pagination justify-content-center mb-0">
+            <li class="page-item">
+              <a class="page-link" href="#">
+                <img class="sm-icon" srcset="/images/icon-left-black.png 400w,
+                                          /images/icon-left-black@2x.png 700w,
+                                          /images/icon-left-black@3x.png 1000w" src="/images/icon-left-black@3x.png" alt="이전" />
+              </a>
+            </li>
+            <li class="page-item active number"><a class="page-link" href="#">1</a></li>
+            <li class="page-item number"><a class="page-link" href="#">2</a></li>
+            <li class="page-item number"><a class="page-link" href="#">3</a></li>
+            <li class="page-item number"><a class="page-link" href="#">4</a></li>
+            <li class="page-item number"><a class="page-link" href="#">5</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">
+                <img class="sm-icon" srcset="/images/icon-right-black.png 400w,
+                                        /images/icon-right-black@2x.png 700w,
+                                        /images/icon-right-black@3x.png 1000w" src="/images/icon-right-black@3x.png" alt="다음" />
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+
+
+
     </main>
     <!-- 푸터 -->
     ${ require('../partials/footer.html') }

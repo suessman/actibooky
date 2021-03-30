@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>공지사항</title>
   <meta name="description" content="">
+  <link rel="stylesheet" href="/css/headertitle.css">
   <!-- include -->
   ${ require('../partials/head.html') }
 </head>
@@ -12,11 +13,79 @@
 <body>
   <!-- 브라우저 권장 -->
   ${ require('../partials/browserupgrade.html') }
-  <div>
+  <div class="fm">
     <!-- 헤더 -->
     ${ require('../partials/header.html') }
     <main class="d-flex flex-column h-100 main">
       <!-- Content Here -->
+      <header class="header-title">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="d-flex justify-content-between">
+                <!-- <a href="">
+                                  <img src="/images/icon-left-black@3x.png" class="sm-icon" alt="뒤로가기">
+                                </a> -->
+                <button class="navbar-toggler collapsed header-main" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-controls="navbarSupportedContent backdropUi" aria-expanded="false" aria-label="Toggle navigation">
+                  <div class="acetrnt-toggle" data-click-state="1">
+                    <span class="icon-bar line-1"></span>
+                    <span class="icon-bar line-2"></span>
+                    <span class="icon-bar line-3"></span>
+                  </div>
+                </button>
+                <h1 class="title">고객지원</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="cs-tab-nav text-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 m-p0">
+              <ul class="nav nav-tabs">
+                <li class="nav-item">
+                  <a class="nav-link active" href="/cscenter/notice.html">공지사항</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/cscenter/faq.html">자주 묻는 질문</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/cscenter/request.html">1:1문의</a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+      <!-- book card -->
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="notice-list">
+              <h1 class="font-weight-bold">공지사항 제목</h1>
+              <span class="date">2021.03.30</span>
+            </div>
+
+            <div class="notice-content">
+              <p>
+
+                <img src="/images/stay-detail.jpg" class="w-100" alt="상세사진">
+              </p>
+              <hr>
+              <a href="/cscenter/notice.html" class="btn btn-outline-primary list-btn">목록으로 돌아가기</a>
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+
+
     </main>
     <!-- 푸터 -->
     ${ require('../partials/footer.html') }

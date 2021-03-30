@@ -1,3 +1,17 @@
+
+//mypage title
+
+  .section-title{
+  margin-top: 40px;
+  @include fontSize(24px);
+  @include media-breakpoint-down(xs){
+    @include fontSize(18px);
+    margin-top: 24px;
+  }
+}
+
+
+
 //company tab nav
 .mypage-tab-nav{
   width: 100%;
@@ -17,19 +31,23 @@
     display: block;
     border-bottom: none;
      @include media-breakpoint-down(md){
-      display: flex;
-      flex-wrap: wrap;     
+      // display: flex;
+      // flex-wrap: wrap;   
+      white-space: nowrap;
+      overflow: hidden;
+      overflow-x: auto;  
     }
+
     li{
       display: inline-block;
-      min-width: 97px;
+      min-width: 145px;
       @include media-breakpoint-down(md){
-        min-width: 53px;
+        min-width: 25%;
       }
 
-      @include media-breakpoint-down(xs){
-       width: 25%;
-      }
+      // @include media-breakpoint-down(xs){
+      //  min-width: 25%;
+      // }
 
       a{
         padding:16px;
@@ -49,6 +67,13 @@
         background:none;
         color:$primary;
         font-weight: 700;       
+      }
+
+
+      @include media-breakpoint-up(lg){
+        &.display-md-down{
+          display: none;
+        }
       }
     }
   }
@@ -145,7 +170,7 @@
     height: 100%; 
     background-color: rgba(255, 255, 255, 0.85);
   }
-  @include media-breakpoint-down(sm){
+  @include media-breakpoint-down(md){
       .md-block{
         display: block !important;
       }
@@ -185,7 +210,7 @@
       @include fontSize(18px);
     }
 
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(md){
       width: 100%;
     }
   }
@@ -194,7 +219,7 @@
     width: calc(100% - 300px);
     margin-left: 20px;
     display: inline-block;
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(md){
       width: 100%;
       margin-left: 0;
     }
@@ -249,7 +274,7 @@
       min-width:220px;
       background-color: $light;
       padding:8px 16px;
-      @include media-breakpoint-down(sm){
+      @include media-breakpoint-down(md){
       width: 100%;
       margin-top: 8px;
       }
@@ -268,5 +293,374 @@
     }
 
     
+  }
+}
+
+//예약 상세 업체 정보
+.book-company-section{
+  padding: 16px 24px; 
+  border: 1px solid $light;
+  margin-top: 24px;
+
+  @include media-breakpoint-down(xs){
+    paddin:16px;
+  }
+
+  h3{
+    @include fontSize(18px);
+    color: $primary;
+  }
+
+  .list-group-row{
+    margin-top: 16px;
+    display: flex;
+
+    @include media-breakpoint-down(sm){
+      flex-direction: column;
+    }
+    .list{
+      margin-left: 80px;
+      @include media-breakpoint-down(sm){
+       margin-left: 0;
+       margin-top: 8px;
+      }
+      &:first-of-type{
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.refund-policy{
+  margin-top: 40px;
+
+  @include media-breakpoint-down(sm){
+    margin-top: 24px;
+  }
+
+  h3{
+    @include fontSize(24px);
+
+    @include media-breakpoint-down(xs){
+      @include fontSize(18px);
+    }
+  }
+
+  p{margin-top: 8px;}
+}
+
+.rating-area{
+  margin-top: 40px;
+  h4{
+    @include fontSize(18px);    
+
+    @include media-breakpoint-down(xs){
+      @include fontSize(14px);
+    }
+  }
+
+  .rating-stars{
+    margin-top: 16px;
+  }
+  
+}
+
+.review-area{
+  margin-top: 40px;
+  h4{
+    @include fontSize(18px);    
+
+    @include media-breakpoint-down(xs){
+      @include fontSize(14px);
+    }
+  }
+  textarea{
+    margin-top: 16px;
+  }
+}
+
+.review-submit-btn{
+  margin-top: 24px;
+  justify-content: center;
+  display: flex;
+  .btn{
+    width: 220px;
+    @include media-breakpoint-down(sm){
+      width: 50%;
+      &.cancel{
+        margin-right: 4px;
+      }
+
+      &.add{
+        margin-left: 4px;
+      }
+    }
+  }
+
+  .align-center{
+    line-height: 27px;
+  }
+
+  button{
+    margin-left: 8px;
+  }
+}
+
+//내정보수정
+.my-info-update{
+  margin-top: 40px;
+  &:first-of-type{
+    button.secession{
+      background:none;
+      box-shadow: none;
+      border:none;
+      padding:0;
+      margin-top: 8px;     
+      color:$dark;
+      @include fontSize(12px);     
+    }
+
+    @include media-breakpoint-down(xs){
+      margin-top: 16px;
+    }
+  }
+  h3{
+    @include fontSize(18px);
+    @include media-breakpoint-down(xs){
+     @include fontSize(14px);
+    }
+  }
+  .left{
+    margin-top:  16px;;
+    border: 1px solid $light;
+    padding: 40px 60px;
+    @include media-breakpoint-down(xs){
+      margin-top: 8px;
+      padding: 16px;
+    }
+    .form-group{
+      h6{
+        @include fontSize(12px);
+      }
+
+      &.list{
+        margin-top: 24px;
+
+        &:first-of-type{
+          margin-top: 0;
+        }
+      }
+
+      hr{
+        margin-top: 24px;
+        margin-bottom: 24px;
+        border-top: 1px solid #e9ecef;
+      }
+    }
+
+    .profile-update{
+      margin-top: 24px;
+    }
+
+  }
+
+  .right{
+    margin-top: 16px;
+    border: 1px solid $light;
+     padding: 40px 60px;
+    @include media-breakpoint-down(xs){
+      margin-top: 8px;
+      padding: 16px;
+    }
+
+    .form-group{
+      h6{
+        @include fontSize(12px);
+      }
+
+      &.list{
+        margin-top: 24px;
+
+        &:first-of-type{
+          margin-top: 0;
+        }
+      }
+
+      hr{
+        margin-top: 24px;
+        margin-bottom: 24px;
+        border-top: 1px solid #e9ecef;
+      }
+    }
+
+    .profile-update{
+      margin-top: 24px;
+    }
+  }
+}
+
+
+//mypage my review
+.my-review{
+    .review-filter{
+      margin-top: 40px;
+
+      @include media-breakpoint-down(xs){
+        margin-top: 16px;
+      }
+      select.option{      
+        min-width: 126px;
+        width: fit-content;
+        height: 32px;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      .insert-review{
+        padding:0; 
+        height: 32px; 
+        line-height: 32px; 
+        min-width: 156px;
+        width: fit-content;
+        @include media-breakpoint-down(xs){
+          min-width: 90px;
+          width: fit-content;
+        }
+      }
+    }
+  .review-list{
+    margin-top: 40px;
+  
+    &:first-of-type{
+      margin-top: 24px;
+    }
+
+    .review-title{
+      @include fontSize(18px)
+    }
+    .user{
+      font-weight: $font-weight-bold;
+      .rating{
+        margin-left: 4px;
+      }
+    }
+    .date{
+      color:$dark;
+      margin-left: 4px;
+    }
+
+    .content{
+      margin-top: 8px;
+      @include media-breakpoint-down(xs){
+       flex-direction: column;
+      }
+      .review-form{
+        display: flex;
+        @include media-breakpoint-up(lg){
+          margin-left: 24px;
+        }
+        .btn{
+          width:48px;
+          height:27px;
+          padding: 0;
+          line-height: 27px;
+          margin-left: 8px;
+          @include media-breakpoint-down(xs){
+            margin-top: 8px;
+            &.update-btn{
+              margin-left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+//mypage my inquiry
+
+.my-inquiry{
+
+  .inquiry-list{
+    margin-top: 40px;
+    
+    @include media-breakpoint-down(xs){
+      &:first-of-type{
+        margin-top: 16px;
+      }
+    }
+ 
+
+    .inquiry-title{
+      @include fontSize(18px)
+    }
+    .user{
+      font-weight: $font-weight-bold;
+      .state{
+          min-width: 80px;
+          display: inline-block;
+          text-align: center;
+          border-radius: 14px;
+          padding: 4px 0;
+          vertical-align: middle;
+          font-weight: 400;
+        &.ing{
+            background: #e9ecef;
+        }
+
+        &.complete{
+          background: #9334ff;
+          color: #ffffff;
+        }
+      }
+
+      .id{
+        margin-left: 8px;
+      }
+    }
+    .date{
+      color:$dark;
+      margin-left: 4px;
+    }
+
+    .content{
+      margin-top: 8px;
+      @include media-breakpoint-down(xs){
+       flex-direction: column;
+      }
+      .review-form{
+        display: flex;
+        @include media-breakpoint-up(lg){
+          margin-left: 24px;
+        }
+        .btn{
+          width:48px;
+          height:27px;
+          padding: 0;
+          line-height: 27px;
+          margin-right: 8px;
+
+          &.del-btn{
+            margin-right: 0;
+          }
+          @include media-breakpoint-down(xs){
+            margin-top: 8px;            
+          }
+        }
+      }
+
+      .qa-area{
+        margin-top: 8px;
+        .answer{
+          margin-top: 12px;
+        }
+        .qa{
+          color: $primary;
+          font-weight: $font-weight-bold;
+          margin-right: 8px;
+        }
+      }
+    }
   }
 }

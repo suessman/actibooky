@@ -3,9 +3,14 @@
 
 <head>
   <meta charset="utf-8">
-  <title>나의 예약</title>
+  <title>나의 리뷰 수정</title>
   <meta name="description" content="">
   <link rel="stylesheet" href="/css/headertitle.css">
+
+  <!-- rater css -->
+  <link rel="stylesheet" href="/css/rater.css">
+  <!--raterjs-->
+  <script src="/js/rater.js"></script>
   <!-- include -->
   ${ require('../partials/head.html') }
 </head>
@@ -13,7 +18,7 @@
 <body>
   <!-- 브라우저 권장 -->
   ${ require('../partials/browserupgrade.html') }
-  <div>
+  <div class="fm">
     <!-- 헤더 -->
     ${ require('../partials/header.html') }
     <main class="d-flex flex-column h-100 main">
@@ -48,13 +53,13 @@
                   <a class="nav-link" href="/mypage/myInfo.html">내 정보 수정</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link " href="/mypage/myReview.html">나의리뷰</a>
+                  <a class="nav-link active" href="/mypage/myReview.html">나의 리뷰</a>
                 </li>
                 <li class="nav-item ">
                   <a class="nav-link " href="/mypage/myRequest.html">상품문의</a>
                 </li>
                 <li class="nav-item ">
-                  <a class="nav-link active" href="/mypage/myBook.html">예약확인</a>
+                  <a class="nav-link" href="/mypage/myBook.html">예약확인</a>
                 </li>
                 <li class="nav-item display-md-down">
                   <a class="nav-link" href="/mypage/terms.html">이용약관</a>
@@ -69,28 +74,11 @@
         </div>
       </div>
 
-      <div class="book-tab">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <ul class="nav nav-tabs">
-                <!-- 지난 예약에서는 상세페이지에서 지난예약 링크에 active 추가 됌 -->
-                <li class="nav-item">
-                  <a class="nav-link active scheduled-book " href="/mypage/myInfo.html">예정된 예약</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link prev-book" href="/mypage/myReview.html">지난 예약</a>
-                </li>
-              </ul>
-              <hr>
-            </div>
-          </div>
-        </div>
-      </div>
       <!-- book card -->
       <div class="container">
         <div class="row">
           <div class="col-12">
+            <h3 class="section-title">리뷰 작성</h3>
             <ul>
               <li class="book-card">
                 <a href="" class="d-flex md-block">
@@ -114,10 +102,7 @@
                           <span>숙소&nbsp;|</span>
                           <span>2021.03.29</span>
                         </span>
-
                       </div>
-                      <button type="button" class="btn btn-outline-primary cancel-request">취소요청</button>
-
                     </div>
                     <div class="d-flex md-block">
                       <div class="left-area">
@@ -168,40 +153,41 @@
                 </a>
               </li>
             </ul>
-
-            <!-- 업체정보 -->
-            <div class="book-company-section">
-              <h3>업체이름</h3>
-              <ul class="list-group-row">
-                <li class="list">
-                  <img class="sm-icon" srcset="/images/icon-user-gray.png 400w,
-                              /images/icon-user-gray@2x.png 700w,
-                              /images/icon-user-gray@3x.png 1000w" src="/images/icon-user-gray@3x.png" alt="숙소">
-                  <span>최성진</span>
-                </li>
-                <li class="list">
-                  <img class="sm-icon" srcset="/images/icon-call-gray.png 400w,
-                                            /images/icon-call-gray@2x.png 700w,
-                                            /images/icon-call-gray@3x.png 1000w" src="/images/icon-call-gray@3x.png" alt="숙소">
-                  <span>031-7777-7776</span>
-                </li>
-                <li class="list">
-                  <img class="sm-icon" srcset="/images/icon-location-gray.png 400w,
-                                              /images/icon-location-gray@2x.png 700w,
-                                              /images/icon-location-gray@3x.png 1000w" src="/images/icon-location-gray@3x.png" alt="숙소">
-                  <span>031-7777-7776</span>
-                </li>
-              </ul>
+            <!-- 별점 -->
+            <div class="rating-area">
+              <h4>별점</h4>
+              <div class='rating-stars'>
+                <ul id='stars'>
+                  <li class='star' title='Poor' data-value='1'>
+                    <i class='fa fa-star fa-fw'></i>
+                  </li>
+                  <li class='star' title='Fair' data-value='2'>
+                    <i class='fa fa-star fa-fw'></i>
+                  </li>
+                  <li class='star' title='Good' data-value='3'>
+                    <i class='fa fa-star fa-fw'></i>
+                  </li>
+                  <li class='star' title='Excellent' data-value='4'>
+                    <i class='fa fa-star fa-fw'></i>
+                  </li>
+                  <li class='star' title='WOW!!!' data-value='5'>
+                    <i class='fa fa-star fa-fw'></i>
+                  </li>
+                </ul>
+              </div>
             </div>
 
-            <!-- 예약취소 활불 정책 -->
-            <div class="refund-policy">
-              <h3>예약 취소 환불 정책 안내</h3>
-              <p>환불금은 업체의 환불 정책 및 예약 취소 시점에 따라 결정됩니다.</p>
-              <!-- 업체에서 입력한 환불 정책 내용 -->
-              <p></p>
+            <!-- 리뷰내용 -->
+            <div class="review-area">
+              <h4 class="sm-text-gray bold">리뷰 내용</h4>
+              <textarea cols="30" rows="10" class="form-control" placeholder="리뷰 내용을 입력하세요">
+              </textarea>
             </div>
 
+            <div class="review-submit-btn">
+              <a href="/mypage/myBookPrev.html" class="btn cancel btn-outline-primary align-center">취소</a>
+              <button type="button" class="btn add btn-primary">리뷰 수정</button>
+            </div>
           </div>
         </div>
       </div>
@@ -215,7 +201,18 @@
   <!-- JS -->
   <script>
     $(function () {
+      $('#stars li').on('click', function () {
+        var onStar = parseInt($(this).data('value'), 10); // The star currently selected
+        var stars = $(this).parent().children('li.star');
 
+        for (i = 0; i < stars.length; i++) {
+          $(stars[i]).removeClass('selected');
+        }
+
+        for (i = 0; i < onStar; i++) {
+          $(stars[i]).addClass('selected');
+        }
+      });
     })
   </script>
 </body>

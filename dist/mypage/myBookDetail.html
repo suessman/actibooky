@@ -1,230 +1,139 @@
-<!DOCTYPE html>
-<html lang="ko">
-
-<head>
-  <meta charset="utf-8">
-  <title>나의 예약 상세</title>
-  <meta name="description" content="">
-  <!-- include -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no,maximum-scale=1">
-<!-- favicon.ico in the root directory -->
-<link rel="apple-touch-icon" href="favicon.ico">
-<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"> -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css">
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<!-- <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script> -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.9/l10n/ko.min.js" crossorigin="anonymous"></script> -->
-<script src="/js/dotdotdot.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
-<script type="text/javascript" defer src="/js/moment.min.js"></script>
-<link rel="stylesheet" type="text/css" href="/css/daterangepicker.css" />
-<script type="text/javascript" defer src="/js/daterangepicker.js"></script>
-<link href=".././css/styles.css?f74742fdd81ec7595bfb" rel="stylesheet"></head>
-
-<body>
-  <!-- 브라우저 권장 -->
-  <!--[if IE]>
-<div class="p-3 bg-light">
-  <div class="container">
-    <p class="mb-0 browserupgrade">
-      You are using an <strong>outdated</strong> browser.
-      Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.
-    </p>
-  </div>
-</div>
-<![endif]-->
-
-  <div>
-    <!-- 헤더 -->
-    <header class="header">
-
-  <div class="container">
-    <div class="header-top">
-      <!-- 로그인 전 -->
-      <ul class="d-flex justify-content-end">
-        <li class="nav-item active">
-          <a class="nav-link" href="/login.html">로그인<span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">고객지원</a>
-        </li>
-      </ul>
-      <!-- 로그인 후 -->
-      <!-- <ul class="d-flex justify-content-end">
-        <li class="nav-item active">
-          <a class="nav-link" href="/farmStay.html">로그아웃<span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/farmPlay.html">고객지원</a>
-        </li>
-      </ul> -->
-    </div>
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <a class="navbar-brand" href="/index.html">
-        <img src="/images/logo@3x.png" alt="로고" style="width:120px;">
-      </a>
-      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-controls="navbarSupportedContent backdropUi" aria-expanded="false" aria-label="Toggle navigation">
-        <div class="acetrnt-toggle" data-click-state="1">
-          <span class="icon-bar line-1"></span>
-          <span class="icon-bar line-2"></span>
-          <span class="icon-bar line-3"></span>
-        </div>
-      </button>
-
-
-      <div class="navbar-collapse collapse multi-collapse" id="navbarSupportedContent">
-        <!-- app header ui -->
-        <div class="app-header-ui">
-          <a href="/login.html" class="login">로그인 해주세요
-            <img class="sm-icon" srcset="/images/icon-right-white.png 400w,
-                    /images/icon-right-white@2x.png 700w,
-                    /images/icon-right-white@3x.png 1000w" src="/images/icon-right-white@3x.png" alt="로그인페이지로이동" />
-          </a>
-          <div class="list">
-            <a href="">
-              <img class="sm-icon" srcset="/images/icon-home-white.png 400w,
-                      /images/icon-home-white@2x.png 700w,
-                      /images/icon-home-white@3x.png 1000w" src="/images/icon-home-white@3x" alt="홈" />
-              홈
-            </a>
-            <a href="">
-              <img class="sm-icon" srcset="/images/icon-mypage-white.png 400w,
-                      /images/icon-mypage-white@2x.png 700w,
-                      /images/icon-mypage-white@3x.png 1000w" src="/images/icon-mypage-white@3x" alt="마이페이지" />
-              마이페이지
-            </a>
-            <a href="">
-              <img class="sm-icon" srcset="/images/icon-date-white.png 400w,
-                      /images/icon-date-white@2x.png 700w,
-                      /images/icon-date-white@3x.png 1000w" src="/images/icon-date-white@3x.png" alt="예약확인" />
-              예약확인
-            </a>
-          </div>
-        </div>
-
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="/stay/stayMain.html">숙소<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/exp/expMain.html">체험</a>
-          </li>
-          <!-- <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              dropdown
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li> -->
-          <li class="nav-item">
-            <a class="nav-link" href="/promotions/promoMain.html">프로모션</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">상품구매</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">우수체험관</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0 web-header-ui">
-          <div>
-            <a href="" class="nav-right primary-color">예약확인&nbsp;</a>
-            <!-- <a href="/login.html" class="nav-right">|&nbsp; 마이페이지</a> -->
-          </div>
-        </form>
-      </div>
-    </nav>
-  </div>
-</header>
-
-<div id="backdropUi" class="backdrop-ui multi-collapse" aria-hidden="true">
-</div>
-    <main class="d-flex flex-column h-100 main">
-      <!-- Content Here -->
-    </main>
-    <!-- 푸터 -->
-    <!-- Footer -->
-<footer class="footer bg-light text-lg-start">
-  <!-- Grid container -->
-  <div class="container">
-    <!--Grid row-->
-    <div class="row">
-
-      <!--Grid column-->
-      <div class="col-lg-12 mb-4">
-        <ul class="list-unstyled mb-0 d-flex">
-          <li>
-            <a href="#!" class="text-dark">이용약관&nbsp;&nbsp;|</a>
-          </li>
-          <li>
-            <a href="#!" class="text-dark">&nbsp;&nbsp;개인정보처리방침&nbsp;&nbsp;|</a>
-          </li>
-          <li>
-            <a href="#!" class="text-dark">&nbsp;&nbsp;고객지원</a>
-          </li>
-        </ul>
-      </div>
-      <!--Grid column-->
-
-      <!--Grid column-->
-      <div class="col-lg-12 mb-4 m-t5">
-        <h5 class="text-uppercase mb-0">액티부키</h5>
-        <div class="d-flex justify-content-between align-items-end">
-          <div>
-            <div class="m-t1">
-              <span>사업자 등록번호 : 123-56-789</span>
-              <span>대표 : 이동원</span>
-            </div>
-            <div class="m-th">전라북도 전주시 완산구 효자동2가 바우배기2길 18, 2층 202호</div>
-          </div>
-          <!-- sns -->
-          <ul class="sns-group">
-            <li class="sns-list">
-              <a href="">
-                <img class="md-icon" srcset="/images/naver-footer.png 400w,
-                                                /images/naver-footer@2x.png 700w,
-                                                /images/naver-footer@3x.png 1000w" src="/images/icon-right-white@3x.png" alt="네이버" />
-              </a>
-            </li>
-            <li class="sns-list">
-              <a href="">
-                <img class="md-icon" srcset="/images/facebook.png 400w,
-                                                /images/facebook@2x.png 700w,
-                                                /images/facebook@3x.png 1000w" src="/images/icon-right-white@3x.png" alt="카카오" />
-              </a>
-            </li>
-            <li class="sns-list">
-              <a href="">
-                <img class="md-icon" srcset="/images/instagram.png 400w,
-                                                /images/instagram@2x.png 700w,
-                                                /images/instagram@3x.png 1000w" src="/images/icon-right-white@3x.png" alt="인스타그램" />
-              </a>
-            </li>
-
-          </ul>
-        </div>
-
-      </div>
-      <!--Grid column-->
-    </div>
-    <!--Grid row-->
-  </div>
-  <!-- Grid container -->
-
-</footer>
-<!-- Footer -->
-  </div>
-
-  <!-- JS -->
-  <script>
-    $(function () {
-
-    })
-  </script>
-<script src=".././js/index.bundle.js?f74742fdd81ec7595bfb"></script></body>
-
-</html>
+<head><link href=".././css/styles.css?1f54f1f52c712f32b75c" rel="stylesheet"></head>Html Webpack Plugin:
+<pre>
+  Error: Child compilation failed:
+  Module build failed (from ./node_modules/html-srcsets-loader/index.js):
+  Error: ENOENT: no such file or directory, open 'C:\Users\kimhyeonjin\액티부키\src\html\recommendFarmplay.html':
+  Error: ENOENT: no such file or directory, open 'C:\Users\kimhyeonjin\액티부키\src\html\recommendFarmplay.html'
+  ModuleBuildError: Module build failed (from ./node_modules/html-srcsets-loader/index.js):
+  Error: ENOENT: no such file or directory, open 'C:\Users\kimhyeonjin\액티부키\src\html\recommendFarmplay.html'
+  
+  - NormalModule.js:316 
+    [액티부키]/[webpack]/lib/NormalModule.js:316:20
+  
+  - LoaderRunner.js:367 
+    [액티부키]/[loader-runner]/lib/LoaderRunner.js:367:11
+  
+  - LoaderRunner.js:203 
+    [액티부키]/[loader-runner]/lib/LoaderRunner.js:203:19
+  
+  - CachedInputFileSystem.js:85 
+    [액티부키]/[enhanced-resolve]/lib/CachedInputFileSystem.js:85:15
+  
+  - task_queues.js:75 processTicksAndRejections
+    internal/process/task_queues.js:75:11
+  
+  - Module build failed (from ./node_modules/html-srcsets-loader/index.js):
+  
+  - Error: ENOENT: no such file or directory, open 'C:\Users\kimhyeonjin\액티부키\src\html\recommendTour.html':
+  
+  - Error: ENOENT: no such file or directory, open 'C:\Users\kimhyeonjin\액티부키\src\html\recommendTour.html'
+  
+  - ModuleBuildError: Module build failed (from ./node_modules/html-srcsets-loader/index.js):
+  
+  - Error: ENOENT: no such file or directory, open 'C:\Users\kimhyeonjin\액티부키\src\html\recommendTour.html'
+  
+  - NormalModule.js:316 
+    [액티부키]/[webpack]/lib/NormalModule.js:316:20
+  
+  - LoaderRunner.js:367 
+    [액티부키]/[loader-runner]/lib/LoaderRunner.js:367:11
+  
+  - LoaderRunner.js:203 Array.<anonymous>
+    [액티부키]/[loader-runner]/lib/LoaderRunner.js:203:19
+  
+  - CachedInputFileSystem.js:55 Storage.finished
+    [액티부키]/[enhanced-resolve]/lib/CachedInputFileSystem.js:55:16
+  
+  - CachedInputFileSystem.js:91 ReadFileContext.<anonymous>
+    [액티부키]/[enhanced-resolve]/lib/CachedInputFileSystem.js:91:9
+  
+  - graceful-fs.js:123 ReadFileContext.callback
+    [액티부키]/[graceful-fs]/graceful-fs.js:123:16
+  
+  - Module build failed (from ./node_modules/html-srcsets-loader/index.js):
+  
+  - Error: ENOENT: no such file or directory, open 'C:\Users\kimhyeonjin\액티부키\src\html\recommend\recommedMain.html':
+  
+  - Error: ENOENT: no such file or directory, open 'C:\Users\kimhyeonjin\액티부키\src\html\recommend\recommedMain.html'
+  
+  - ModuleBuildError: Module build failed (from ./node_modules/html-srcsets-loader/index.js):
+  
+  - Error: ENOENT: no such file or directory, open 'C:\Users\kimhyeonjin\액티부키\src\html\recommend\recommedMain.html'
+  
+  - NormalModule.js:316 
+    [액티부키]/[webpack]/lib/NormalModule.js:316:20
+  
+  - LoaderRunner.js:367 
+    [액티부키]/[loader-runner]/lib/LoaderRunner.js:367:11
+  
+  - LoaderRunner.js:203 
+    [액티부키]/[loader-runner]/lib/LoaderRunner.js:203:19
+  
+  - CachedInputFileSystem.js:85 
+    [액티부키]/[enhanced-resolve]/lib/CachedInputFileSystem.js:85:15
+  
+  - task_queues.js:75 processTicksAndRejections
+    internal/process/task_queues.js:75:11
+  
+  - child-compiler.js:131 
+    [액티부키]/[html-webpack-plugin]/lib/child-compiler.js:131:18
+  
+  - Compiler.js:343 
+    [액티부키]/[webpack]/lib/Compiler.js:343:11
+  
+  - Compiler.js:681 
+    [액티부키]/[webpack]/lib/Compiler.js:681:15
+  
+  
+  - Hook.js:154 AsyncSeriesHook.lazyCompileHook
+    [액티부키]/[tapable]/lib/Hook.js:154:20
+  
+  - Compiler.js:678 
+    [액티부키]/[webpack]/lib/Compiler.js:678:31
+  
+  
+  - Hook.js:154 AsyncSeriesHook.lazyCompileHook
+    [액티부키]/[tapable]/lib/Hook.js:154:20
+  
+  - Compilation.js:1423 
+    [액티부키]/[webpack]/lib/Compilation.js:1423:35
+  
+  
+  - Hook.js:154 AsyncSeriesHook.lazyCompileHook
+    [액티부키]/[tapable]/lib/Hook.js:154:20
+  
+  - Compilation.js:1414 
+    [액티부키]/[webpack]/lib/Compilation.js:1414:32
+  
+  
+  - Hook.js:154 AsyncSeriesHook.lazyCompileHook
+    [액티부키]/[tapable]/lib/Hook.js:154:20
+  
+  - Compilation.js:1409 
+    [액티부키]/[webpack]/lib/Compilation.js:1409:36
+  
+  
+  - Hook.js:154 AsyncSeriesHook.lazyCompileHook
+    [액티부키]/[tapable]/lib/Hook.js:154:20
+  
+  - Compilation.js:1405 
+    [액티부키]/[webpack]/lib/Compilation.js:1405:32
+  
+  
+  - Hook.js:154 AsyncSeriesHook.lazyCompileHook
+    [액티부키]/[tapable]/lib/Hook.js:154:20
+  
+  - Compilation.js:1342 Compilation.seal
+    [액티부키]/[webpack]/lib/Compilation.js:1342:27
+  
+  - Compiler.js:675 
+    [액티부키]/[webpack]/lib/Compiler.js:675:18
+  
+  - Compilation.js:1261 
+    [액티부키]/[webpack]/lib/Compilation.js:1261:4
+  
+  
+  - Hook.js:154 AsyncSeriesHook.lazyCompileHook
+    [액티부키]/[tapable]/lib/Hook.js:154:20
+  
+</pre><script src=".././js/index.bundle.js?1f54f1f52c712f32b75c"></script>
