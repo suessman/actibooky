@@ -3,9 +3,8 @@
 
 <head>
   <meta charset="utf-8">
-  <title>상품</title>
+  <title>농촌여행지</title>
   <meta name="description" content="">
-  <!-- include -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no,maximum-scale=1">
 <!-- favicon.ico in the root directory -->
 <link rel="apple-touch-icon" href="favicon.ico">
@@ -20,10 +19,13 @@
 <script type="text/javascript" defer src="/js/moment.min.js"></script>
 <link rel="stylesheet" type="text/css" href="/css/daterangepicker.css" />
 <script type="text/javascript" defer src="/js/daterangepicker.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="/css/headertitle.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
 <link href=".././css/styles.css?c0c254ccb3a3b6e59280" rel="stylesheet"></head>
 
 <body>
-  <!-- 브라우저 권장 -->
   <!--[if IE]>
 <div class="p-3 bg-light">
   <div class="container">
@@ -36,7 +38,6 @@
 <![endif]-->
 
   <div>
-    <!-- 헤더 -->
     <header class="header">
 
   <div class="container">
@@ -143,11 +144,136 @@
 
 <div id="backdropUi" class="backdrop-ui multi-collapse" aria-hidden="true">
 </div>
+    <header class="header-title">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="d-flex justify-content-between">
+              <a href="#" class="prev">
+                <img src="/images/icon-left-black@3x.png" class="sm-icon" alt="뒤로가기">
+              </a>
+              <h1 class="title">농촌여행지</h1>
+              <a href="/partials/search.html">
+                <img src="/images/icon-search-gray.png" class="sm-icon" alt="검색화면으로이동">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
     <main class="d-flex flex-column h-100 main">
-      <!-- Content Here -->
-    </main>
-    <!-- 푸터 -->
-    <!-- Footer -->
+      <div class="container">
+        <div class="row">
+          <section class="col-12 mt-5 section-body card-ui mobile">
+            <div class="d-flex justify-content-between top-title">
+              <h3 class="m-d-none">농촌 여행지</h3>
+              <select name="" id="" class="form-control">
+                <option value="">전라북도</option>
+              </select>
+            </div>
+            <ul class="popular-card-body list">
+              <li class="popular-card h-auto">
+                <a href="">
+                  <div class="content" style="background-image:url('https://images.unsplash.com/photo-1594913785111-0c95bf86bd65?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80')">
+                    <span class="address">전라/전주</span>
+                    <div class="title-bg">
+                      내 삶에서 잃어버린 기억을 향기로 찾아보는 나만의 향수만들기
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <p>
+                      <span class="price">₩25,000</span>
+                      <del class="sale-price">₩44,000</del>
+                    </p>
+                    <span class="percent">50%</span>
+                  </div>
+                </a>
+              </li>
+              <li class="popular-card h-auto">
+                <a href="">
+                  <div class="content" style="background-image:url('/images/crystal.jpg')">
+                    <span class="address">전라/전주</span>
+                    <div class="title-bg">
+                      나만의 특별한 돌목걸이 만들기 체험
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <p>
+                      <span class="price">₩25,000000</span>
+                      <del class="sale-price">₩44,000</del>
+                    </p>
+                    <span class="percent">50%</span>
+                  </div>
+
+                </a>
+              </li>
+              <li class="popular-card h-auto">
+                <a href="">
+                  <div class="content" style="background-image:url('/images/daniel.jpg')">
+                    <span class="address">전라/전주</span>
+                    <div class="title-bg">
+                      나만의 특별한 돌목걸이 만들기 체험
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <p>
+                      <span class="price">₩25,000</span>
+                      <del class="sale-price">₩44,000</del>
+                    </p>
+                    <span class="percent">50%</span>
+                  </div>
+                </a>
+              </li>
+
+              <li class="popular-card h-auto">
+                <a href="">
+                  <div class="content" style="background-image:url('https://images.unsplash.com/photo-1607082333475-51c2938c9bfc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')">
+                    <span class="address">전라/전주</span>
+                    <div class="title-bg">
+                      나만의 특별한 돌목걸이 만들기 체험
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <p>
+                      <span class="price">₩25,000</span>
+                      <del class="sale-price">₩44,000</del>
+                    </p>
+                    <span class="percent">50%</span>
+                  </div>
+
+                </a>
+              </li>
+
+
+            </ul>
+          </section>
+
+          <nav aria-label="Page navigation example" class="col-12">
+            <ul class="pagination justify-content-center">
+              <li class="page-item">
+                <a class="page-link" href="#">
+                  <img class="sm-icon" srcset="/images/icon-left-black.png 400w,
+                                                                /images/icon-left-black@2x.png 700w,
+                                                                /images/icon-left-black@3x.png 1000w" src="/images/icon-left-black@3x.png" alt="이전" />
+                </a>
+              </li>
+              <li class="page-item active number"><a class="page-link" href="#">1</a></li>
+              <li class="page-item number"><a class="page-link" href="#">2</a></li>
+              <li class="page-item number"><a class="page-link" href="#">3</a></li>
+              <li class="page-item number"><a class="page-link" href="#">4</a></li>
+              <li class="page-item number"><a class="page-link" href="#">5</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">
+                  <img class="sm-icon" srcset="/images/icon-right-black.png 400w,
+                                                                /images/icon-right-black@2x.png 700w,
+                                                                /images/icon-right-black@3x.png 1000w" src="/images/icon-right-black@3x.png" alt="다음" />
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </main> <!-- Footer -->
 <footer class="footer bg-light text-lg-start">
   <!-- Grid container -->
   <div class="container">
@@ -218,13 +344,40 @@
 </footer>
 <!-- Footer -->
   </div>
-
-  <!-- JS -->
-  <script>
-    $(function () {
-
-    })
-  </script>
 <script src=".././js/index.bundle.js?c0c254ccb3a3b6e59280"></script></body>
+
+<script>
+  $(function () {
+    var filterBtn = $('.filter-btn')
+    // $(".acetrnt-toggle").click(function () {
+    //   $(this).toggleClass("active");
+    // });
+
+    function setDotDotDot() {
+      $(".title-overflow").dotdotdot({
+        ellipsis: '...',//말줄임 뭘로 할지
+        watch: true, //윈도우 창에따라서 업데이트 할건지, 윈도우가 리사이즈될 때 업데이트할 건지
+        wrap: 'letter',//word(단어단위), letter(글 단위), children(자식단위) 자르기
+        height: 40,
+        tolerance: 20
+        //글이 넘치면 얼만큼 height 늘릴건
+      });
+    }
+
+    setDotDotDot();
+
+    //date picker
+    $(".date").flatpickr({
+      dateFormat: "Y-m-d",
+      minDate: "today",
+      disableMobile: "true"
+    });
+
+
+    filterBtn.click(function () {
+      $('.modal').css('z-index', '1200');
+    })
+  })
+</script>
 
 </html>
