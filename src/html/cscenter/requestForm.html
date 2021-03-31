@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>나의 문의 작성하기</title>
   <meta name="description" content="">
+  <link rel="stylesheet" href="/css/headertitle.css">
   <!-- include -->
   ${ require('../partials/head.html') }
 </head>
@@ -12,11 +13,77 @@
 <body>
   <!-- 브라우저 권장 -->
   ${ require('../partials/browserupgrade.html') }
-  <div>
+  <div class="fm">
     <!-- 헤더 -->
     ${ require('../partials/header.html') }
     <main class="d-flex flex-column h-100 main">
       <!-- Content Here -->
+      <header class="header-title">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="d-flex justify-content-between">
+                <!-- <a href="">
+                                  <img src="/images/icon-left-black@3x.png" class="sm-icon" alt="뒤로가기">
+                                </a> -->
+                <button class="navbar-toggler collapsed header-main" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-controls="navbarSupportedContent backdropUi" aria-expanded="false" aria-label="Toggle navigation">
+                  <div class="acetrnt-toggle" data-click-state="1">
+                    <span class="icon-bar line-1"></span>
+                    <span class="icon-bar line-2"></span>
+                    <span class="icon-bar line-3"></span>
+                  </div>
+                </button>
+                <h1 class="title">고객지원</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="cs-tab-nav text-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 m-p0">
+              <ul class="nav nav-tabs">
+                <li class="nav-item">
+                  <a class="nav-link" href="/cscenter/notice.html">공지사항</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/cscenter/faq.html">자주 묻는 질문</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="/cscenter/request.html">1:1문의</a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+      <!-- book card -->
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="request-form">
+              <h1>문의하기</h1>
+              <div class="form-group">
+                <select class="form-control category-select">
+                  <option value="">
+                    카테고리1
+                  </option>
+                </select>
+                <input type="text" class="form-control" placeholder="문의제목">
+                <textarea cols="30" rows="15" class="form-control" placeholder=" 문의 내용을 입력하세요"></textarea>
+              </div>
+              <div class="inquire-submit-btn">
+                <a href="/mypage/myBookPrev.html" class="btn cancel btn-outline-primary align-center">취소</a>
+                <button type="button" class="btn add btn-primary">리뷰 등록</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
     <!-- 푸터 -->
     ${ require('../partials/footer.html') }

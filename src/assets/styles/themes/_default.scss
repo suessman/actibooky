@@ -131,6 +131,20 @@ input{
   }
 }
 
+textarea{
+  &.form-control::-webkit-input-placeholder {
+    color:#868e96;
+  }
+
+  &.form-control:-ms-input-placeholder {
+    color:#868e96;
+  }
+
+  &.pick-calendar.form-control[readonly]{
+    background-color:#fff;
+  }
+}
+
 //navbar
 .nav-item{
   .nav-link{

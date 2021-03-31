@@ -121,7 +121,6 @@
 }
 
 //faq list
-
 .faq-list-body{
   border-bottom: 1px solid $light;
   padding-bottom: 24px;
@@ -195,4 +194,235 @@
   @include media-breakpoint-down(sm){
     padding:16px 0 0 0;
   }
+}
+
+//request form
+.request-form{
+  padding:40px 80px;
+  border: 1px solid $light;
+  margin-top: 80px;
+  
+  @include media-breakpoint-down(xs){
+    margin-top: 16px;
+    border: none;
+    padding: 0;
+  }
+
+  h1{
+    @include fontSize(18px);
+    @include media-breakpoint-down(xs){
+      @include fontSize(14px);
+    }
+  }
+
+  select.category-select{
+    min-width: 156px;
+    margin-top: 16px;
+  }
+
+  input{
+    margin-top: 16px;
+  }
+
+  textarea{
+    margin-top: 16px;
+    padding: 16px 27px;
+    @include media-breakpoint-down(xs){
+      padding: 16px;
+    }
+  }
+}
+
+.inquire-submit-btn{
+  margin-top: 24px;
+  justify-content: center;
+  display: flex;
+  .btn{
+    width: 220px;
+    @include media-breakpoint-down(sm){
+      width: 50%;
+      &.cancel{
+        margin-right: 4px;
+      }
+
+      &.add{
+        margin-left: 4px;
+      }
+    }
+  }
+
+  .align-center{
+    line-height: 27px;
+  }
+
+  button{
+    margin-left: 8px;
+  }
+}
+
+//request
+.request-list-body{
+  border-bottom: 1px solid $light;
+  padding-bottom: 24px;
+  margin-top: 24px;
+
+  @include media-breakpoint-down(xs){
+    padding-bottom: 16px;
+    margin-top: 16px;
+  }
+  &:first-of-type{
+    margin-top: 40px;
+    @include media-breakpoint-down(xs){
+      margin-top: 16px;    
+    }
+  }
+}
+.request-list{
+  // display:flex; 
+  height: auto;  
+  border-bottom:1px solid #e9ecef; 
+  padding-bottom:24px;
+
+  .del-btn{
+    width: 48px;
+    height: 27px;
+    padding: 0;
+    line-height: 27px;
+  }
+  .category{
+    color:$dark;
+    margin-left: 8px;
+    @include fontSize(18px);
+    @include media-breakpoint-down(xs){
+      @include fontSize(14px);
+    }
+  }
+
+  .state{
+      min-width: 80px;
+      display: inline-block;
+      text-align: center;
+      border-radius: 14px;
+      // padding: 4px 0;
+      height: 28px;
+      line-height: 28px;
+      vertical-align: middle;
+      font-weight: 400;
+    &.complete{
+      background: #9334ff;
+      color: #ffffff;
+    }
+
+    &.ing{
+      background: #e9ecef;
+    }
+  }
+
+  h1{
+    @include fontSize(18px);
+    margin-left: 8px;
+    margin-bottom: 0;
+    @include media-breakpoint-down(xs){
+      @include fontSize(14px);
+    }    
+  }
+
+  .mobile-title{
+    margin-left: 26px;
+    margin-top: 8px;
+    text-align: left;
+  }
+  .request-info{
+    font-weight: 400;
+    margin-left: 70px;
+    margin-bottom: 0;
+    width: calc(100% - 10px);
+
+    @include media-breakpoint-down(md){
+      margin-left: 16px;
+      width: 100%
+    }
+  }
+
+  span.number{
+    @include fontSize(18px);
+    @include media-breakpoint-down(xs){
+      @include fontSize(14px);
+    }
+    font-weight: 400;
+  }
+
+  .date{
+    color:$dark;
+    @include fontSize(12px);
+    font-weight: 500;
+  }
+}
+.request-collapse{
+ 
+  border: none;
+  .qa-area{     
+      margin-top: 16px;
+      font-size: 18px;
+
+      @include media-breakpoint-down(xs){
+        margin-top: 8px;
+        @include fontSize(14px);
+      }
+    
+      .ask{
+         padding: 0 16px 0 80px;
+          @include media-breakpoint-down(sm){
+          padding: 0 16px 0 24px;
+          }
+      }
+      .answer{
+        margin-top: 24px;
+        padding: 24px 16px 24px 80px;
+        @include media-breakpoint-down(sm){
+          padding: 16px 16px 16px 24px;
+        }
+        background-color: $pale-gray;
+        @include media-breakpoint-down(xs){
+          margin-top: 16px;          
+        }
+      }
+      .qa{
+        color: $primary;
+        font-weight: $font-weight-bold;
+        margin-right: 8px;
+      }
+    }
+  @include media-breakpoint-down(sm){
+    padding:16px 0 0 0;
+  }
+}
+
+.request-btn-body{
+  margin-top:40px;
+  @include media-breakpoint-down(xs){
+   display: none;
+  }
+  .request-btn{
+    width: 90px;
+    padding:0;
+    height: 32px;
+    line-height: 32px;
+  }
+}
+
+//app element
+.app-request-btn{
+  position:fixed; 
+  right:0; 
+  bottom:48px; 
+  border-radius:12px 0 0 12px;
+  background-color:#ff5a85; 
+   width: 64px; 
+   height: 48px; 
+   margin: 1px 0 24px 30px; 
+   padding: 8px 24px 8px 8px; 
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+   background-color: #ff5a85;
+   z-index:999;
 }

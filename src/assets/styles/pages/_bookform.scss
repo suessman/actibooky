@@ -92,7 +92,7 @@
     .pay-type{     
       display: flex;
       li.pay-list{ 
-        width: calc(455px / 3);
+        width: calc(455px / 3);    
         // @include media-breakpoint-down(md) { 
         //   width: 33.3333%;
         // }
@@ -128,6 +128,21 @@
       + button.book-btn{
           margin-top: 24px;
         }
+    }
+
+    .pay-way{
+      .list{
+        margin-top: 12px;
+        &:first-of-type{
+          margin-top: 16px;
+        }
+
+        .list-detail{
+          color:$dark;
+          @include fontSize(12px);
+          padding-left: 26px;
+        }
+      }
     }
   }
 }

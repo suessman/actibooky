@@ -57,3 +57,49 @@
         }
     }
 }
+
+//terms form
+.mypage-tab-nav.terms{
+    @include media-breakpoint-up(lg){
+        display: none;
+    }
+}
+.terms-form{
+    h1{
+        @include fontSize(30px);
+        margin-bottom: 0;
+        margin-top: 40px;
+        @include media-breakpoint-down(xs){
+            display: none;
+        }
+    }
+    .forms-group{
+        padding:16px 24px;
+        border: 1px solid $light;
+        margin-top: 40px;
+
+        @include media-breakpoint-down(xs){
+            margin-top: 16px;
+            border: none;
+            padding: 0;
+        }
+       
+
+        select.category-select{
+            min-width: 156px;
+            margin-top: 16px;
+        }
+
+        input{
+            margin-top: 16px;
+        }
+
+            textarea{
+            margin-top: 16px;
+            padding: 16px 27px;
+            @include media-breakpoint-down(xs){
+            padding: 16px;
+            }
+        }
+    }
+}
