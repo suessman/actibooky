@@ -21,145 +21,38 @@
 <link rel="stylesheet" type="text/css" href="/css/daterangepicker.css" />
 <script type="text/javascript" defer src="/js/daterangepicker.js"></script>
   <style>
-    .checks {
-      position: relative;
+    .custom-radio .custom-control-input:checked~.custom-control-label::before {
+      color: #ffffff;
+      border-color: #9334ff;
+      background-color: #fff;
     }
 
-    .checks input[type="radio"] {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      border: 0;
+    .custom-radio .custom-control-input:checked~.custom-control-label::after {
+      border-color: #9334ff;
+      background-color: #9334ff;
     }
 
-    .checks input[type="radio"]+label {
-      display: inline-block;
-      position: relative;
-      padding-left: 26px;
-      cursor: pointer;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-    }
-
-    .checks input[type="radio"]+label:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
+    .custom-radio .custom-control-label::before {
       width: 16px;
       height: 16px;
-      text-align: center;
-      background: #fff;
-      border: 1px solid #ced4da;
-      border-radius: 100%;
-      box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
     }
 
-    .checks input[type="radio"]+label:active:before,
-    .checks input[type="radio"]:checked+label:active:before {
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
-    }
-
-    .checks input[type="radio"]:checked+label:before {
-      background: #E9ECEE;
-      border-color: #adb8c0;
-    }
-
-    .checks input[type="radio"]:checked+label:after {
-      content: '';
+    .custom-radio .custom-control-label::after {
+      background-image: none !important;
       position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      left: 3px;
+      top: 34%;
+      left: -18px;
+      display: block;
       width: 10px;
       height: 10px;
-      background: #9334ff;
-      border-radius: 100%;
-      box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.3);
-    }
+      content: "";
+      background: 50% / 50% 50% no-repeat;
+      background: #fff;
+      border-radius: 50%;
 
-    .checks input[type="radio"]:checked+label:before {
-      border: 1px solid #9334ff;
-    }
-
-    /* input checkbox */
-    .checks {
-      position: relative;
-    }
-
-    .checks input[type="checkbox"] {
-      /* 실제 체크박스는 화면에서 숨김 */
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      border: 0
-    }
-
-    .checks input[type="checkbox"]+label {
-      display: inline-block;
-      position: relative;
-      padding-left: 30px;
-      /* 글자와 체크박스 사이의 간격을 변경 */
-      cursor: pointer;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-    }
-
-    .checks input[type="checkbox"]+label:before {
-      /* 가짜 체크박스 */
-      content: '';
-      position: absolute;
-      left: 0;
-      top: -4px;
-      /* 이 값을 변경해서 글자와의 정렬 */
-      width: 21px;
-      /* 체크박스의 너비를 지정 */
-      height: 21px;
-      /* 체크박스의 높이를 지정 */
-      line-height: 21px;
-      /* 세로정렬을 위해 높이값과 일치 */
-      text-align: center;
-      background: #fafafa;
-      border: 1px solid #cacece;
-      border-radius: 3px;
-      box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
-    }
-
-    .checks input[type="checkbox"]+label:active:before,
-    .checks input[type="checkbox"]:checked+label:active:before {
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
-    }
-
-    .checks input[type="checkbox"]:checked+label:before {
-      /* 체크박스를 체크했을때 */
-
-      border: 1px solid #aa8cce;
-      border-width: 0 3px 3px 0;
-      -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      transform: rotate(45deg);
-      z-index: 200;
-      border-radius: 2px;
-      /* 체크표시 유니코드 사용 */
-      color: #99a1a7;
-      text-shadow: 1px 1px #fff;
-      background: #e9ecee;
-      border-color: #adb8c0;
-      box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
     }
   </style>
-<link href="./css/styles.css?1867d9fdda85060e823d" rel="stylesheet"></head>
+<link href="./css/styles.css?d52f40352326aa8365ce" rel="stylesheet"></head>
 
 <body>
 
@@ -183,27 +76,26 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-12 col-lg-5 m-auto">
-            <div class="checks">
+            <!-- <div class="checks">
               <input type="radio" id="ex_rd2" name="ex_rds"> <label for="ex_rd2">체크박스</label>
             </div>
             <div class="checks">
               <input type="radio" id="ex_rd3" name="ex_rds"> <label for="ex_rd3">체크박스</label>
-            </div>
-          </div>
+            </div> -->
 
+            <form>
+              <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="select1" name="category">
+                <label class="custom-control-label" for="select1">Custom radio</label>
+              </div>
+            </form>
 
-
-
-          <!-- checkbox -->
-          <div class="col-12 col-lg-5 m-auto">
-            <div class="checks">
-              <input type="checkbox" id="ex_chk">
-              <label for="ex_chk">체크박스</label>
-            </div>
-            <div class="checks">
-              <input type="checkbox" id="ex_chk">
-              <label for="ex_chk">체크박스</label>
-            </div>
+            <!-- <form>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+                <label class="custom-control-label" for="customCheck">Check this custom checkbox</label>
+              </div>
+            </form> -->
           </div>
         </div>
       </div>
@@ -316,6 +208,6 @@
     var slideIndex = 1;
     showSlides(slideIndex);
   </script>
-<script src="./js/index.bundle.js?1867d9fdda85060e823d"></script></body>
+<script src="./js/index.bundle.js?d52f40352326aa8365ce"></script></body>
 
 </html>

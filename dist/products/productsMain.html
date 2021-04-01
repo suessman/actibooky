@@ -3,8 +3,9 @@
 
 <head>
   <meta charset="utf-8">
-  <title>상품</title>
+  <title>상품 구매</title>
   <meta name="description" content="">
+  <link rel="stylesheet" href="/css/headertitle.css">
   <!-- include -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no,maximum-scale=1">
 <!-- favicon.ico in the root directory -->
@@ -20,11 +21,42 @@
 <script type="text/javascript" defer src="/js/moment.min.js"></script>
 <link rel="stylesheet" type="text/css" href="/css/daterangepicker.css" />
 <script type="text/javascript" defer src="/js/daterangepicker.js"></script>
-<link href=".././css/styles.css?1867d9fdda85060e823d" rel="stylesheet"></head>
+  <style>
+    .custom-radio .custom-control-input:checked~.custom-control-label::before {
+      color: #ffffff;
+      border-color: #9334ff;
+      background-color: #fff;
+    }
+
+    .custom-radio .custom-control-input:checked~.custom-control-label::after {
+      border-color: #9334ff;
+      background-color: #9334ff;
+    }
+
+    .custom-radio .custom-control-label::before {
+      width: 16px;
+      height: 16px;
+    }
+
+    .custom-radio .custom-control-label::after {
+      background-image: none !important;
+      position: absolute;
+      top: 34%;
+      left: -18px;
+      display: block;
+      width: 10px;
+      height: 10px;
+      content: "";
+      background: 50% / 50% 50% no-repeat;
+      background: #fff;
+      border-radius: 50%;
+
+    }
+  </style>
+<link href=".././css/styles.css?d52f40352326aa8365ce" rel="stylesheet"></head>
 
 <body>
-  <!-- 브라우저 권장 -->
-  <!--[if IE]>
+  <!-- 브라우저 권장 --> <!--[if IE]>
 <div class="p-3 bg-light">
   <div class="container">
     <p class="mb-0 browserupgrade">
@@ -35,9 +67,8 @@
 </div>
 <![endif]-->
 
-  <div>
-    <!-- 헤더 -->
-    <header class="header">
+  <div class="">
+    <!-- 헤더 --> <header class="header">
 
   <div class="container">
     <div class="header-top">
@@ -124,7 +155,7 @@
             <a class="nav-link" href="/promotions/promoMain.html">프로모션</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">상품구매</a>
+            <a class="nav-link" href="/products/productsMain.html">상품구매</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">우수체험관</a>
@@ -144,10 +175,299 @@
 <div id="backdropUi" class="backdrop-ui multi-collapse" aria-hidden="true">
 </div>
     <main class="d-flex flex-column h-100 main">
-      <!-- Content Here -->
-    </main>
-    <!-- 푸터 -->
-    <!-- Footer -->
+
+      <header class="header-title">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="d-flex justify-content-between">
+                <!-- <a href="">
+                      <img src="/images/icon-left-black@3x.png" class="sm-icon" alt="뒤로가기">
+                    </a> -->
+                <button class="navbar-toggler collapsed header-main" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-controls="navbarSupportedContent backdropUi" aria-expanded="false" aria-label="Toggle navigation">
+                  <div class="acetrnt-toggle" data-click-state="1">
+                    <span class="icon-bar line-1"></span>
+                    <span class="icon-bar line-2"></span>
+                    <span class="icon-bar line-3"></span>
+                  </div>
+                </button>
+                <h1 class="title">상품구매</h1>
+                <a href="/partials/search.html">
+                  <img src="/images/icon-search-gray.png" class="sm-icon" alt="검색화면으로이동">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="top-filter">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <ul class="product-category">
+                <li class="list">
+                  <a href="" class="active">전체</a>
+                </li>
+
+                <li class="list">
+                  <a href="" class="">체험키트</a>
+                </li>
+
+                <li class="list">
+                  <a href="" class="">농식품</a>
+                </li>
+
+                <li class="list">
+                  <a href="" class="">카테고리</a>
+                </li>
+              </ul>
+              <div class="form-group filter-group md-up-d-block d-flex">
+                <div class="btn-group dropdown-group">
+                  <button type="button" class="dropdown-filter btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    가격
+                  </button>
+                  <div class="dropdown-menu">
+                    <div class="dropdown-item">
+                      <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="select1" name="category">
+                        <label class="custom-control-label" for="select1">Custom radio</label>
+                      </div>
+                    </div>
+                    <div class="dropdown-item">
+                      <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="select2" name="category">
+                        <label class="custom-control-label" for="select2">Custom radio</label>
+                      </div>
+                    </div>
+                    <div class="dropdown-item">
+                      <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="select3" name="category">
+                        <label class="custom-control-label" for="select3">Custom radio</label>
+                      </div>
+                    </div>
+                    <!-- <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="#">Separated link</a>
+                    <a class="dropdown-item" href="#">Separated link</a>
+                    <a class="dropdown-item" href="#">Separated link</a> -->
+                  </div>
+                </div>
+                <input type="text" class="filter-input form-control" placeholder="검색어를 입력해주세요">
+                <button type="button" class="btn-primary filter-search-btn">검색</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <div class="container">
+        <div class="row">
+          <section class="col-12 mt-5 m-mt section-body card-ui">
+            <div class="d-flex justify-content-between top-title">
+              <h3 class="invisible">상품</h3>
+              <select name="" id="" class="form-control filter-select">
+                <option value="">인기순</option>
+                <option value="">최신순</option>
+                <option value="">낮은가격순</option>
+              </select>
+            </div>
+            <ul class="popular-card-body company-product-body">
+              <li class="popular-card four product half-width">
+                <a href="/stay/stayDetail.html">
+                  <div class="content" style="background-image:url('https://images.unsplash.com/photo-1584436138541-4a1d0c9deace?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OXx8amVqdSUyMGZvb2R8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')">
+                    <span class="pr-category">카테고리카테고리</span>
+                    <!-- <span class="percent">50%</span> -->
+                    <!-- 숙소 -->
+                    <span class="percent stay">50%</span>
+                  </div>
+                  <h1 class="title-overflow strcut strcut-twoline">제주도한라봉!_!</h1>
+                  <p>
+                    <span class="price">₩25000</span>
+                    <del class="sale-price">₩44000</del>
+                  </p>
+                </a>
+              </li>
+              <li class="popular-card four product half-width">
+                <a href="/stay/stayDetail.html">
+                  <div class="content" style="background-image:url('/images/bread.jpg')">
+                    <span class="pr-category">카테고리</span>
+                    <span class="percent stay">50%</span>
+                  </div>
+                  <h1 class="title-overflow">제목</h1>
+                  <p>
+                    <span class="price">₩25000</span>
+                    <del class="sale-price">₩44000</del>
+                  </p>
+                </a>
+              </li>
+              <li class="popular-card four product half-width">
+                <a href="/stay/stayDetail.html">
+                  <div class="content" style="background-image:url('https://images.unsplash.com/photo-1598943392629-19ddae99855c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjB8fGplanUlMjBmb29kfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')">
+                    <span class="pr-category">카테고리</span>
+                    <span class="percent stay">50%</span>
+                  </div>
+                  <h1 class="title-overflow">없는게 없는 국진철물 철물점.!.</h1>
+                  <p>
+                    <span class="price">₩25000</span>
+                    <del class="sale-price">₩44000</del>
+                  </p>
+                </a>
+              </li>
+              <li class="popular-card four product half-width">
+                <a href="/stay/stayDetail.html">
+                  <div class="content" style="background-image:url('https://images.unsplash.com/photo-1579169825453-8d4b4653cc2c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTN8fGplanUlMjBmb29kfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')">
+                    <span class="pr-category">카테고리</span>
+                    <span class="percent stay">50%</span>
+                  </div>
+                  <h1 class="title-overflow">제주도 서귀포로 와서 , 함께 따는 귤체험을 즐겨보세요ㅇ_ㅇ</h1>
+                  <p>
+                    <span class="price">₩25000</span>
+                    <del class="sale-price">₩44000</del>
+                  </p>
+                </a>
+              </li>
+
+              <li class="popular-card four product half-width">
+                <a href="/stay/stayDetail.html">
+                  <div class="content" style="background-image:url('https://images.unsplash.com/photo-1584436138541-4a1d0c9deace?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OXx8amVqdSUyMGZvb2R8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')">
+                    <span class="pr-category">카테고리카테고리</span>
+                    <!-- <span class="percent">50%</span> -->
+                    <!-- 숙소 -->
+                    <span class="percent stay">50%</span>
+                  </div>
+                  <h1 class="title-overflow strcut strcut-twoline">제주도한라봉!_!</h1>
+                  <p>
+                    <span class="price">₩25000</span>
+                    <del class="sale-price">₩44000</del>
+                  </p>
+                </a>
+              </li>
+              <li class="popular-card four product half-width">
+                <a href="/stay/stayDetail.html">
+                  <div class="content" style="background-image:url('/images/bread.jpg')">
+                    <span class="pr-category">카테고리</span>
+                    <span class="percent stay">50%</span>
+                  </div>
+                  <h1 class="title-overflow">제목</h1>
+                  <p>
+                    <span class="price">₩25000</span>
+                    <del class="sale-price">₩44000</del>
+                  </p>
+                </a>
+              </li>
+              <li class="popular-card four product half-width">
+                <a href="/stay/stayDetail.html">
+                  <div class="content" style="background-image:url('https://images.unsplash.com/photo-1598943392629-19ddae99855c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjB8fGplanUlMjBmb29kfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')">
+                    <span class="pr-category">카테고리</span>
+                    <span class="percent stay">50%</span>
+                  </div>
+                  <h1 class="title-overflow">없는게 없는 국진철물 철물점.!.</h1>
+                  <p>
+                    <span class="price">₩25000</span>
+                    <del class="sale-price">₩44000</del>
+                  </p>
+                </a>
+              </li>
+              <li class="popular-card four product half-width">
+                <a href="/stay/stayDetail.html">
+                  <div class="content" style="background-image:url('https://images.unsplash.com/photo-1579169825453-8d4b4653cc2c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTN8fGplanUlMjBmb29kfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')">
+                    <span class="pr-category">카테고리</span>
+                    <span class="percent stay">50%</span>
+                  </div>
+                  <h1 class="title-overflow">제주도 서귀포로 와서 , 함께 따는 귤체험을 즐겨보세요ㅇ_ㅇ</h1>
+                  <p>
+                    <span class="price">₩25000</span>
+                    <del class="sale-price">₩44000</del>
+                  </p>
+                </a>
+              </li>
+
+              <li class="popular-card four product half-width">
+                <a href="/stay/stayDetail.html">
+                  <div class="content" style="background-image:url('https://images.unsplash.com/photo-1584436138541-4a1d0c9deace?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OXx8amVqdSUyMGZvb2R8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')">
+                    <span class="pr-category">카테고리카테고리</span>
+                    <!-- <span class="percent">50%</span> -->
+                    <!-- 숙소 -->
+                    <span class="percent stay">50%</span>
+                  </div>
+                  <h1 class="title-overflow strcut strcut-twoline">제주도한라봉!_!</h1>
+                  <p>
+                    <span class="price">₩25000</span>
+                    <del class="sale-price">₩44000</del>
+                  </p>
+                </a>
+              </li>
+              <li class="popular-card four product half-width">
+                <a href="/stay/stayDetail.html">
+                  <div class="content" style="background-image:url('/images/bread.jpg')">
+                    <span class="pr-category">카테고리</span>
+                    <span class="percent stay">50%</span>
+                  </div>
+                  <h1 class="title-overflow">제목</h1>
+                  <p>
+                    <span class="price">₩25000</span>
+                    <del class="sale-price">₩44000</del>
+                  </p>
+                </a>
+              </li>
+              <li class="popular-card four product half-width">
+                <a href="/stay/stayDetail.html">
+                  <div class="content" style="background-image:url('https://images.unsplash.com/photo-1598943392629-19ddae99855c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjB8fGplanUlMjBmb29kfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')">
+                    <span class="pr-category">카테고리</span>
+                    <span class="percent stay">50%</span>
+                  </div>
+                  <h1 class="title-overflow">없는게 없는 국진철물 철물점.!.</h1>
+                  <p>
+                    <span class="price">₩25000</span>
+                    <del class="sale-price">₩44000</del>
+                  </p>
+                </a>
+              </li>
+              <li class="popular-card four product half-width">
+                <a href="/stay/stayDetail.html">
+                  <div class="content" style="background-image:url('https://images.unsplash.com/photo-1579169825453-8d4b4653cc2c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTN8fGplanUlMjBmb29kfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')">
+                    <span class="pr-category">카테고리</span>
+                    <span class="percent stay">50%</span>
+                  </div>
+                  <h1 class="title-overflow">제주도 서귀포로 와서 , 함께 따는 귤체험을 즐겨보세요ㅇ_ㅇ</h1>
+                  <p>
+                    <span class="price">₩25000</span>
+                    <del class="sale-price">₩44000</del>
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </section>
+
+          <nav aria-label="Page navigation example" class="col-12">
+            <ul class="pagination justify-content-center">
+              <li class="page-item">
+                <a class="page-link" href="#">
+                  <img class="sm-icon" srcset="/images/icon-left-black.png 400w,
+                                                                              /images/icon-left-black@2x.png 700w,
+                                                                              /images/icon-left-black@3x.png 1000w" src="/images/icon-left-black@3x.png" alt="이전" />
+                </a>
+              </li>
+              <li class="page-item active number"><a class="page-link" href="#">1</a></li>
+              <li class="page-item number"><a class="page-link" href="#">2</a></li>
+              <li class="page-item number"><a class="page-link" href="#">3</a></li>
+              <li class="page-item number"><a class="page-link" href="#">4</a></li>
+              <li class="page-item number"><a class="page-link" href="#">5</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">
+                  <img class="sm-icon" srcset="/images/icon-right-black.png 400w,
+                                                                              /images/icon-right-black@2x.png 700w,
+                                                                              /images/icon-right-black@3x.png 1000w" src="/images/icon-right-black@3x.png" alt="다음" />
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+    </main> <!-- Footer -->
 <footer class="footer bg-light text-lg-start">
   <!-- Grid container -->
   <div class="container">
@@ -219,12 +539,26 @@
 <!-- Footer -->
   </div>
 
-  <!-- JS -->
   <script>
     $(function () {
 
+      //dotdotdot
+      function setDotDotDot() {
+        $(".title-overflow").dotdotdot({
+          ellipsis: '...',//말줄임 뭘로 할지
+          watch: true, //윈도우 창에따라서 업데이트 할건지, 윈도우가 리사이즈될 때 업데이트할 건지
+          wrap: 'letter',//word(단어단위), letter(글 단위), children(자식단위) 자르기
+          height: 40,
+          tolerance: 20
+          //글이 넘치면 얼만큼 height 늘릴건
+        });
+      }
+
+      setDotDotDot();
+
     })
   </script>
-<script src=".././js/index.bundle.js?1867d9fdda85060e823d"></script></body>
+<script src=".././js/index.bundle.js?d52f40352326aa8365ce"></script></body>
+
 
 </html>

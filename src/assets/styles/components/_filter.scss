@@ -2,6 +2,15 @@
   cursor: pointer;
 }
 
+select.form-control.filter-select{
+  width: 126px;
+  height: 32px;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 12px;  
+  background-position: 92% 55%;
+}
+
 .filter-picker-ui{
 
   .pick-filter-body{

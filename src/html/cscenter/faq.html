@@ -195,18 +195,13 @@
 
       faqList.click(function (e) {
         var thisEl = $(e.currentTarget);
-
-        if (collapse.hasClass('show')) {
+        var collapseHasShow = thisEl.next(collapse).hasClass('show');
+        if (collapseHasShow) {
           thisEl.find('.faq-toggle').removeClass('faq-toggle-up');
         } else {
           thisEl.find('.faq-toggle').addClass('faq-toggle-up');
         }
       })
-      // faqList.click(function () {
-      //   if (faqList.hassClass('collapsed')) {
-
-      //   }
-      // })
     })
   </script>
 </body>

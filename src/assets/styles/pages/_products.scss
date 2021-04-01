@@ -1,0 +1,124 @@
+//filter
+@include media-breakpoint-down(md){
+  .md-up-d-block{
+    display: block !important;
+    width: 100%;
+  }
+
+  .dropdown-group{
+    width: 100%;
+  }
+}
+
+.top-filter{
+  background-color:$pale-gray;
+  padding:16px 0;
+}
+
+.filter-group{
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+
+.dropdown-filter{
+  width: 220px;
+  height: 40px;
+  text-align: left;
+  position: relative;
+  border: 1px solid $light;
+  font-weight: 500;
+  background-color: $white;
+  @include media-breakpoint-down(md){
+    width: 100%;
+  }
+  &:after{
+    border:none;
+    content:'';
+    background-image:url('/src/assets/images/triangl@3x.png');
+    background-repeat: no-repeat;
+    background-position: 95% 55%;
+    width: 10px;
+    height: 8px;
+    background-size: cover;
+    position: absolute;
+    display: inline-block;
+    right:16px;
+    top:50%;
+    transform: translateY(-50%);  
+  }
+}
+
+.dropdown-menu{
+  width: 220px;
+  margin-top: 8px;
+  border: 1px solid $light;
+  padding: 16px;
+  border-radius: 0;
+
+  .dropdown-item{
+    padding:8px 0;
+  }
+
+  @include media-breakpoint-down(md){
+    width:100%;
+  }
+}
+
+input.form-control.filter-input{
+  border:1px solid $light;
+  padding:16px 10px;
+  height: 40px;
+  margin-left: 20px;
+  width: 380px;
+
+  @include media-breakpoint-down(md){
+    width: 100%;
+    margin-left: 0;
+    margin-top: 8px;
+  }
+}
+
+.product-category{
+  display: flex;
+  .list{
+    color:$dark;
+    padding:0 40px;
+    @include fontSize(18px);
+    @include media-breakpoint-down(sm){
+      @include fontSize(14px);
+      padding:0 16px;
+    }
+    width: 140px;
+    border-right: 2px solid $cool-grey;
+    text-align: center;   
+    font-weight: 700;
+
+    
+    &:nth-last-of-type(1){
+      border-right:none;
+    }
+    &:first-of-type{
+      text-align: left;
+      padding-left: 0;
+
+    }
+    a{
+       color:$dark;
+       &.active{
+         color:$primary;
+       }
+    }
+  }
+}
+
+.filter-search-btn{
+  width: 90px;
+  height: 40px;
+  margin-left: 20px;
+  @include media-breakpoint-down(md){
+    width: 100%;
+    margin-left: 0;
+    margin-top: 8px;
+  }
+}
