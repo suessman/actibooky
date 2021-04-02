@@ -48,8 +48,10 @@
         </ol>
         <div class="carousel-inner promotion">
           <div class="carousel-item active">
-            <img class="d-block w-100 xs-up-promotion" src="/images/promotion.png" alt="First slide">
-            <img class="d-block w-100 xs-down-promotion" src="/images/promotion-mobile.png" alt="First slide">
+            <img srcset="/images/promotion-mobile.png 320w,
+                                      /images/promotion.png 800w,
+                                      /images/promotion.png 1200w,
+                                      /images/promotion.png" src="/images/promotion.png" alt="프로모션" sizes="(min-width: 1000px) 1000px" />
           </div>
           <!-- <div class="carousel-item">
             <img class="d-block w-100" src="/images/stay2.jpg" alt="Second slide">
@@ -74,7 +76,7 @@
           <section class="col-12 mt-5 section-body card-ui m-mt">
             <div class="d-flex justify-content-between top-title">
               <h3 class="invisible">농촌 여행지</h3>
-              <select name="" id="" class="form-control" style="width:126px;">
+              <select name="" id="" class="form-control filter-select">
                 <option value="">최신순</option>
                 <option value="">인기순</option>
                 <option value="">낮은가격순</option>

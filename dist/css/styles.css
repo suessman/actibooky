@@ -9658,6 +9658,9 @@ main {
   white-space: nowrap;
   word-break: break-all; }
 
+.invisible {
+  height: 0; }
+
 @font-face {
   font-family: 'Noto Sans KR';
   src: url(../fonts/NotoSansKR-Light.woff) format("woff"), url(../fonts/NotoSansKR-Light.woff2) format("woff2");
@@ -13186,7 +13189,6 @@ input.form-control.filter-input {
     color: #868e96;
     padding: 0 40px;
     font-size: 18px;
-    width: 140px;
     border-right: 2px solid #adb5bd;
     text-align: center;
     font-weight: 700; }
@@ -13213,6 +13215,24 @@ input.form-control.filter-input {
       width: 100%;
       margin-left: 0;
       margin-top: 8px; } }
+
+.custom-control {
+  padding-left: 0; }
+
+.custom-control-label {
+  width: 100%; }
+
+.custom-control-label::before {
+  right: 0;
+  left: auto; }
+
+.custom-control-label::after {
+  right: 0;
+  left: auto; }
+
+.custom-radio .custom-control-label::after {
+  right: 3px;
+  left: auto; }
 
 html,
 body {
@@ -13415,6 +13435,11 @@ textarea.pick-calendar.form-control[readonly] {
 
 .p-l6 {
   padding-left: 3.75rem; }
+
+.dropdown-menu .dropdown-item:hover, .dropdown-menu .dropdown-item:active {
+  background: none;
+  cursor: pointer;
+  color: #343a40; }
 
 
 /*# sourceMappingURL=styles.css.map*/

@@ -280,3 +280,10 @@ padding-top: 0.571rem;
 }
 
 
+//dropdown
+
+.dropdown-menu .dropdown-item:hover, .dropdown-menu .dropdown-item:active{
+  background: none;
+  cursor: pointer;
+  color:#343a40;
+}
