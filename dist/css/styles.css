@@ -9729,7 +9729,8 @@ button:focus, button:active {
       color: #343a40; }
 
 button.btn.filter-btn:hover {
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  color: #343a40; }
 
 .not-focus:not(:disabled):not(.disabled) {
   border: none;
@@ -10800,6 +10801,9 @@ body.menu-open {
 @media (min-width: 992px) {
   .header-title {
     display: none; } }
+
+header .prev-bg {
+  background: rgba(33, 37, 41, 0.4); }
 
 header.header-title {
   position: relative;

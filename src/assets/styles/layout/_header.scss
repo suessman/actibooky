@@ -26,6 +26,11 @@ body.menu-open{
 
 
 header{
+
+  //slide prev bg
+  .prev-bg{
+    background: rgba(33, 37, 41, 0.4);
+  }  
    &.header-title{
     position: relative;
     padding: 16px 0;
