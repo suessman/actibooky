@@ -49,7 +49,7 @@
   }
 }
 
-.dropdown-menu{
+.dropdown-filter + .dropdown-menu{
   width: 220px;
   margin-top: 8px;
   border: 1px solid $light;
@@ -57,12 +57,32 @@
   border-radius: 0;
 
   .dropdown-item{
-    padding:8px 0;
+    padding:16px 0 0 0;
+  
+    &:first-of-type{
+      padding:36px 0 0 0;
+    }
   }
 
   @include media-breakpoint-down(md){
     width:100%;
   }
+
+  h1.dropdown-title{
+    @include fontSize(14px);
+  }
+
+  button.close{
+    opacity: 1;
+  }
+
+  .apply-btn-wrapper{
+      padding:24px 0 0 16px;
+      button.apply{
+        width:156px;
+      }
+  }
+
 }
 
 input.form-control.filter-input{

@@ -41,7 +41,7 @@
     .custom-radio .custom-control-label::after {
       background-image: none !important;
       position: absolute;
-      top: 34%;
+      top: 30%;
       left: -18px;
       display: block;
       width: 10px;
@@ -50,10 +50,19 @@
       background: 50% / 50% 50% no-repeat;
       background: #fff;
       border-radius: 50%;
+    }
 
+    .custom-control-input {
+      position: absolute;
+      right: 0;
+      left: auto !important;
+      z-index: -1;
+      width: 1rem;
+      height: 1.25rem;
+      opacity: 0;
     }
   </style>
-<link href=".././css/styles.css?caf345e403a5e2ad5d76" rel="stylesheet"></head>
+<link href=".././css/styles.css?98b9e40848991a51ddbc" rel="stylesheet"></head>
 
 <body>
   <!-- 브라우저 권장 --> <!--[if IE]>
@@ -228,50 +237,59 @@
                     가격
                   </button>
                   <div class="dropdown-menu">
+                    <div class="d-flex justify-content-between">
+                      <h1 class="dropdown-title">가격</h1>
+                      <button type="button" class="dropdown-close close" data-dismiss="modal" aria-label="Close">
+                        <img class="sm-icon" srcset="/images/icon-cancel-gray.png 400w,
+                                                  /images/icon-cancel-gray@2x.png 700w,
+                                                  /images/icon-cancel-gray@3x.png 1000w" src="/images/icon-cancel-gray@3x.png" alt="닫기">
+                      </button>
+                    </div>
                     <div class="dropdown-item">
                       <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="select1" name="category">
-                        <label class="custom-control-label" for="select1"><span>전체</span></label>
+                        <input type="radio" class="custom-control-input check-box-list" id="select1" name="category">
+                        <label class="custom-control-label check-list" for="select1"><span>전체</span></label>
                       </div>
                     </div>
                     <div class="dropdown-item">
                       <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="select2" name="category">
-                        <label class="custom-control-label" for="select2">5천원미만</label>
+                        <input type="radio" class="custom-control-input check-box-list" id="select2" name="category">
+                        <label class="custom-control-label check-list" for="select2">5천원미만</label>
                       </div>
                     </div>
                     <div class="dropdown-item">
                       <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="select3" name="category">
-                        <label class="custom-control-label" for="select3">5천원~1만원미만</label>
+                        <input type="radio" class="custom-control-input check-box-list" id="select3" name="category">
+                        <label class="custom-control-label check-list" for="select3">5천원~1만원미만</label>
                       </div>
                     </div>
                     <div class="dropdown-item">
                       <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="select3" name="category">
-                        <label class="custom-control-label" for="select3">1만원~1만5천원미만</label>
+                        <input type="radio" class="custom-control-input check-box-list" id="select4" name="category">
+                        <label class="custom-control-label check-list" for="select4">1만원~1만5천원미만</label>
                       </div>
                     </div>
                     <div class="dropdown-item">
                       <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="select3" name="category">
-                        <label class="custom-control-label" for="select3">1만원~1만5천원미만</label>
+                        <input type="radio" class="custom-control-input check-box-list" id="select5" name="category">
+                        <label class="custom-control-label check-list" for="select5">1만원~1만5천원미만</label>
                       </div>
                     </div>
                     <div class="dropdown-item">
                       <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="select3" name="category">
-                        <label class="custom-control-label" for="select3">1만5천원~2만원미만</label>
+                        <input type="radio" class="custom-control-input check-box-list" id="select6" name="category">
+                        <label class="custom-control-label check-list" for="select6">1만5천원~2만원미만</label>
                       </div>
                     </div>
                     <div class="dropdown-item">
                       <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="select3" name="category">
-                        <label class="custom-control-label" for="select3">2만원이상</label>
+                        <input type="radio" class="custom-control-input check-box-list" id="select7" name="category">
+                        <label class="custom-control-label check-list" for="select7">2만원이상</label>
                       </div>
                     </div>
-
-
+                    <div class="text-center apply-btn-wrapper">
+                      <button type="button" class="btn btn-primary apply dropdown-close">적용하기</button>
+                    </div>
                   </div>
                 </div>
                 <input type="text" class="filter-input form-control" placeholder="검색어를 입력해주세요">
@@ -365,7 +383,7 @@
                 </a>
               </li>
               <li class="popular-card four product half-width">
-                <a href="/stay/stayDetail.html">
+                <a href="/stay/stayDetail.htm ">
                   <div class="content" style="background-image:url('/images/bread.jpg')">
                     <span class="pr-category">카테고리</span>
                     <span class="percent stay">50%</span>
@@ -576,9 +594,31 @@
 
       setDotDotDot();
 
+      $('.dropdown-menu').click(function (e) {
+        // console.log(e);
+        e.stopPropagation();
+      })
+
+      $('.dropdown-close').click(function () {
+        $('.dropdown-menu').removeClass('show');
+      })
+
+
+      $('.apply').click(function () {
+        for (var i = 0; i < $('.dropdown-item').length; i++) {
+          let checkedItem;
+          if ($('.check-box-list').eq(i).is(':checked')) {
+            checkedItem = ($('.check-box-list').eq(i));
+            checkedItemVal = checkedItem.next().text();
+            $('.dropdown-filter').text(checkedItemVal);
+          }
+        }
+      })
     })
+
+
   </script>
-<script src=".././js/index.bundle.js?caf345e403a5e2ad5d76"></script></body>
+<script src=".././js/index.bundle.js?98b9e40848991a51ddbc"></script></body>
 
 
 </html>
