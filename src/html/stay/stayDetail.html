@@ -678,10 +678,10 @@
         <div class="mobile-book-ui">
           <div class="d-flex justify-content-between align-items-center">
             <span class="price">₩120,000~</span>
-            <button type="button" class="btn btn-primary book-btn" data-toggle="modal" data-target="#book">예약하기</button>
+            <button type="button" class="btn btn-primary book-btn">예약하기</button>
           </div>
         </div>
-        <section class="book-ui" id="book" data-modal-index="2" aria-labelledby="bookLabel" aria-hidden="true">
+        <section class="book-ui">
           <div class="text-center close-book-ui">
             <button type="button" class="btn close_modal" data-dismiss="modal" aria-label="Close">
               <img srcset="/images/icon-down-gray-@1x.png 400w,
@@ -845,13 +845,10 @@
   <!-- JS -->
   <script>
     $(function () {
-
       var bookBtn = $('.book-btn');
       var middleNav = $('.middle-nav');
-      var mdNavList = $('.md-nav-list');
-      var middleNavParent = $('.md-width')
       var middleNavOffset = middleNav.offset();
-      var listDetail = $('.list-detail');
+
       var $sidebar = $(".book-ui"),
         $window = $(window),
         offset = $sidebar.offset(),
@@ -876,7 +873,6 @@
       //middle nav
       $window.scroll(function () {
         if ($window.scrollTop() > middleNavOffset.top) {
-          // var middleNavWidth = middleNavParent.width() + 'px';
           middleNav.addClass('fixed');
           middleNav.width('100%');
         } else {
@@ -893,7 +889,11 @@
 
       //modal
       bookBtn.click(function () {
-        $('.book-ui').addClass('book-ui-modal')
+        $('.book-ui').addClass('book-ui-modal');
+        $('body').css('overflow', 'hidden');
+      })
+      $('.close_modal').click(function () {
+        $('.book-ui').removeClass('book-ui-modal');
       })
 
       function setDotDotDot() {
@@ -955,6 +955,7 @@
       //value값 초기화
       $('input[name="daterange"]').val('');
 
+      //owl carousel
       $('.owl-carousel').owlCarousel({
         loop: true,
         responsiveClass: true,

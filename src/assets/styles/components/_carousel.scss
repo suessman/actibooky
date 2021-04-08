@@ -309,15 +309,26 @@
       font-weight: 700;
       @include fontSize(24px);
       color:$primary;
+
+      @include media-breakpoint-down(xs){
+        @include fontSize(18px);
+      }
     }
 
     .sale-price{
       color:$dark;
+      @include media-breakpoint-down(xs){
+        @include fontSize(12px);
+      }
     }
 
     .price{
       @include fontSize(24px);
       font-weight: 700;
+
+      @include media-breakpoint-down(xs){
+        @include fontSize(18px);
+      }
     }
 
     .stay-type{

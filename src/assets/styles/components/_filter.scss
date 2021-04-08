@@ -16,13 +16,14 @@ select.form-control.filter-select{
   .pick-filter-body{
     padding:8px 0;
     background-color: $white;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     border:1px solid #e9ecef;
 
     @include media-breakpoint-down(sm){
       background-color: transparent;
       border:none;
       padding:0;
+      flex-wrap: wrap;
     } 
 
     //people number dropdown
@@ -80,7 +81,7 @@ select.form-control.filter-select{
           }
           display: flex;
           justify-content: space-between;
-          margin-top: 24px;
+          
 
           //상세설명
           .detail{
@@ -173,21 +174,95 @@ select.form-control.filter-select{
     }
 
     .pick-filter{
-      width: 25%;
+      // width: 25%;
       height:22px; 
       padding:0 0 0 42px; 
       border: none;
       position:relative;     
       background-color: $white;
 
+      .dropdown-filter{
+        border:none; 
+        height:22px;
+        background:none;
+        padding:0;
+        color:$dark;
+        font-weight: 400;
 
+        &:after{
+          background-image: none;
+        }
+      }
+
+      .dropdown-menu{
+       left:auto !important;
+       right: 0;
+        margin-top: 16px;
+        .activity-counter{
+          &:first-of-type{
+            margin-top: 0;
+          }
+          display: flex;
+          justify-content: space-between;
+          margin-top: 24px;
+
+          //상세설명
+          .detail{
+            color:$dark;
+            font-size: 12px;
+          }
+
+          //right영역
+          .right{
+            display: flex;
+            align-items: center;
+          }
+          
+          //counter num
+          .counter-num{
+            padding:0 20px;
+          }
+          //counter btn
+          button{
+            border:none;
+            box-shadow: none;
+            background: transparent;
+            padding:0;
+            vertical-align: middle;
+
+            &.add-btn{
+              background-image: url('/src/assets/images/icon-add-gray@3x.png');
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size:cover;
+              width: 24px;  
+              height: 24px;
+            }
+
+            &.minus-btn{
+              background-image: url('/src/assets/images/icon-minus-gray@3x.png');
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size:cover;
+              width: 24px;
+              height: 24px;
+            }
+          }  
+        }
+
+        @include media-breakpoint-down(md){
+          width: auto !important;
+          right: 0;
+          left: auto;
+        }        
+      }
       @include media-breakpoint-up(lg) {
         border-right: 1px solid #e9ecef;           
 
       }
 
       @include media-breakpoint-down(sm){
-        width:50%;
+        width:50% !important;
         height: 40px;
         margin-top: 8px;
 
@@ -206,6 +281,7 @@ select.form-control.filter-select{
         background-position: 14px center;
         background-repeat: no-repeat;
         background-size:24px auto;  
+        width: 240px;
       }
 
       &.place{     
@@ -213,6 +289,8 @@ select.form-control.filter-select{
         background-position: 14px center;
         background-repeat: no-repeat;
         background-size:24px auto;  
+        width: 240px;
+
       }
 
       &.people-n{
@@ -221,6 +299,7 @@ select.form-control.filter-select{
         background-repeat: no-repeat;
         background-size:24px auto;  
         border-radius: none;
+        width: 220px;
       }
 
       &.people-n.time{
@@ -238,6 +317,13 @@ select.form-control.filter-select{
     height:56px; 
     min-width:80px;
   }
+
+  .top-filter-search{
+    height:40px;
+    width: 90px;
+  }
+
+
 
   @include media-breakpoint-down(sm) { 
     // margin-bottom:2rem !important;

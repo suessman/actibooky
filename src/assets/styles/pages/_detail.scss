@@ -30,6 +30,9 @@
   .acti-info{
     margin-top: 24px;
 
+    @include media-breakpoint-down(xs){
+      margin-top: 8px;
+    }
     &.promotion{
       .top-promotion{
         .category{
@@ -117,12 +120,19 @@
 
     .content{
       min-height: 162px;
+      @include media-breakpoint-down(xs){
+        p{margin-top: 8px !important;}
+      }
     }
   }
 
   .facility{
     h5{
      @include fontSize(18px);
+    }
+
+    @include media-breakpoint-down(md){
+      margin:24px 0 16px 0;
     }
     .facility-group{
       display: flex;
@@ -203,7 +213,10 @@
     section{
       padding:24px 0;
       border-bottom: 1px solid $light;
-      
+      @include media-breakpoint-down(xs){
+        border-bottom: none;
+      }
+
       &.list-detail.top-area{
           padding-top: 64px;
       }
@@ -314,6 +327,10 @@
   .company-info{
     margin-top: 24px;
     
+    @include media-breakpoint-down(xs){
+      margin-top: 8px;
+    }
+    
     img.company-thumbnail{
       width: 100%;
       height: auto;
@@ -415,16 +432,22 @@
     margin-top: 24px;
     padding:0;
   }
-  &-modal{
+  @include media-breakpoint-down(xs){   
+    position: fixed;
+    width: 100%;
+    bottom:-1000px;        
+    transition: all 0.8s;
     position:fixed;
+    width: 100%;
     left: 0;
-    bottom:0;
     background: $white;
     min-height: 420px;
     z-index: 2100;
     padding-bottom: 2rem;
-    overflow: hidden;
-    overflow-y: auto;
+    overflow: hidden;   
+  }
+  &-modal{  
+    bottom:0;    
   }
 
   hr{
@@ -443,9 +466,9 @@
       box-shadow: 0 4px 8px 0 rgba(33, 37, 41, 0.05);
   }
 
-  @include media-breakpoint-down(md) { 
-    display: none;
-  }
+  // @include media-breakpoint-down(md) { 
+  //   display: none;
+  // }
 
   @include media-breakpoint-up(lg) { 
     .close-book-ui{
@@ -467,7 +490,7 @@
       font-weight: $font-weight-bold;
     }
     @include media-breakpoint-down(md) { 
-      margin-top:24px;
+      // margin-top:24px;
       border:none;
       padding:0;
     }
