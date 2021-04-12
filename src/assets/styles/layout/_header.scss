@@ -181,7 +181,8 @@ header{
         a.nav-link{
           color:$main-grey;
           font-weight: 700;
-          position: relative;        
+          position: relative;    
+          margin-bottom: 0;    
           &.dropdown-toggle::after{
             border:none;
             content: "";

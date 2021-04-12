@@ -120,3 +120,87 @@ main{
 }
 
 //title
+
+
+//dropdown
+
+.base-dropdown{
+  &.dropdown-filter{
+    border:none; 
+    height:40px;
+    background:none;
+    padding:0;
+    color:$dark;
+    font-weight: 400;
+
+    &:after{
+      background-image: none;
+    }
+  }
+
+
+  + .dropdown-menu{
+  left:auto !important;
+  right: 0;
+  margin-top: 16px;
+  .activity-counter{
+    &:first-of-type{
+      margin-top: 0;
+    }
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+
+    //상세설명
+    .detail{
+      color:$dark;
+      font-size: 12px;
+    }
+
+    //right영역
+    .right{
+      display: flex;
+      align-items: center;
+    }
+    
+    //counter num
+    .counter-num{
+      padding:0 20px;
+    }
+    //counter btn
+    button{
+      border:none;
+      box-shadow: none;
+      background: transparent;
+      padding:0;
+      vertical-align: middle;
+
+      &.add-btn{
+        background-image: url('/src/assets/images/icon-add-gray@3x.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size:cover;
+        width: 24px;  
+        height: 24px;
+      }
+
+      &.minus-btn{
+        background-image: url('/src/assets/images/icon-minus-gray@3x.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size:cover;
+        width: 24px;
+        height: 24px;
+      }
+    }  
+  }
+
+  @include media-breakpoint-down(md){
+    width: auto !important;
+    right: 0;
+    left: auto;
+  }        
+}
+}
+      
+

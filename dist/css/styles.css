@@ -9658,6 +9658,60 @@ main {
   white-space: nowrap;
   word-break: break-all; }
 
+.base-dropdown.dropdown-filter {
+  border: none;
+  height: 40px;
+  background: none;
+  padding: 0;
+  color: #868e96;
+  font-weight: 400; }
+  .base-dropdown.dropdown-filter:after {
+    background-image: none; }
+
+.base-dropdown + .dropdown-menu {
+  left: auto !important;
+  right: 0;
+  margin-top: 16px; }
+  .base-dropdown + .dropdown-menu .activity-counter {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px; }
+    .base-dropdown + .dropdown-menu .activity-counter:first-of-type {
+      margin-top: 0; }
+    .base-dropdown + .dropdown-menu .activity-counter .detail {
+      color: #868e96;
+      font-size: 12px; }
+    .base-dropdown + .dropdown-menu .activity-counter .right {
+      display: flex;
+      align-items: center; }
+    .base-dropdown + .dropdown-menu .activity-counter .counter-num {
+      padding: 0 20px; }
+    .base-dropdown + .dropdown-menu .activity-counter button {
+      border: none;
+      box-shadow: none;
+      background: transparent;
+      padding: 0;
+      vertical-align: middle; }
+      .base-dropdown + .dropdown-menu .activity-counter button.add-btn {
+        background-image: url(../images/icon-add-gray@3x.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 24px;
+        height: 24px; }
+      .base-dropdown + .dropdown-menu .activity-counter button.minus-btn {
+        background-image: url(../images/icon-minus-gray@3x.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 24px;
+        height: 24px; }
+  @media (max-width: 991.98px) {
+    .base-dropdown + .dropdown-menu {
+      width: auto !important;
+      right: 0;
+      left: auto; } }
+
 .invisible {
   height: 0; }
 
@@ -11001,6 +11055,7 @@ header.header {
     color: #343a40;
     font-weight: 700;
     position: relative;
+    margin-bottom: 0;
     font-size: 18px;
     padding: 1.5rem 20px; }
     header.header nav ul.navbar-nav li.nav-item a.nav-link.dropdown-toggle::after {
@@ -11987,7 +12042,7 @@ main .section-body.card-ui-video .area {
   @media (min-width: 1200px) {
     .book-ui {
       position: absolute;
-      top: 680px;
+      top: 674px;
       left: calc(50% + 486px);
       width: 218px;
       border: 1px solid #e9ecef;
