@@ -9591,6 +9591,26 @@ a.text-dark:hover, a.text-dark:focus {
       padding-left: 0;
       padding-right: 0; } }
 
+.in_scroll {
+  opacity: 0;
+  background-color: rgba(147, 52, 255, 0.8);
+  position: fixed;
+  width: 100vh;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: -1000px;
+  z-index: 2000;
+  transition: all 0.8s; }
+
+body.open {
+  overflow: hidden; }
+
+.in_scroll.display {
+  opacity: 1;
+  bottom: 0; }
+
 .flex-column-between {
   display: flex;
   justify-content: space-between;
@@ -9710,7 +9730,12 @@ main {
     .base-dropdown + .dropdown-menu {
       width: auto !important;
       right: 0;
-      left: auto; } }
+      left: auto; }
+      .base-dropdown + .dropdown-menu.position {
+        top: 40px !important;
+        left: auto !important;
+        transform: inherit !important;
+        width: 100% !important; } }
 
 .invisible {
   height: 0; }
@@ -12020,7 +12045,7 @@ main .section-body.card-ui-video .area {
     .book-ui {
       margin-top: 24px;
       padding: 0; } }
-  @media (max-width: 575.98px) {
+  @media (max-width: 991.98px) {
     .book-ui {
       position: fixed;
       width: 100%;
@@ -12033,7 +12058,8 @@ main .section-body.card-ui-video .area {
       min-height: 420px;
       z-index: 2100;
       padding-bottom: 2rem;
-      overflow: hidden; } }
+      overflow: hidden;
+      overflow-y: auto; } }
   .book-ui-modal {
     bottom: 0; }
   .book-ui hr {

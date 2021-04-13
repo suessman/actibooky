@@ -13,6 +13,30 @@
   }
 }
 
+.in_scroll{
+  opacity: 0;
+  background-color:rgba(147, 52, 255, 0.8);  
+  position: fixed;
+  width:100vh;
+  height: 100vh;
+  top:0;
+  left:0;
+  right:0;
+  bottom:-1000px;
+  z-index: 2000;
+  // background-color: lightblue;
+  transition: all 0.8s;
+}
+
+body.open{
+  overflow: hidden;
+}
+
+.in_scroll.display{
+  opacity: 1;  
+  bottom:0;
+}
+
 //flex
 .flex-column-between{
  @include flex(space-between, center, column);
@@ -195,12 +219,20 @@ main{
     }  
   }
 
-  @include media-breakpoint-down(md){
-    width: auto !important;
-    right: 0;
-    left: auto;
-  }        
-}
+    @include media-breakpoint-down(md){
+      width: auto !important;
+      right: 0;
+      left: auto;
+
+      &.position{      
+        top:40px !important;
+        left: auto !important;
+        transform: inherit !important;
+        width: 100% !important;
+
+      }
+    }        
+  }
 }
       
 

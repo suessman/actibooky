@@ -432,7 +432,7 @@
     margin-top: 24px;
     padding:0;
   }
-  @include media-breakpoint-down(xs){   
+  @include media-breakpoint-down(md){   
     position: fixed;
     width: 100%;
     bottom:-1000px;        
@@ -445,6 +445,7 @@
     z-index: 2100;
     padding-bottom: 2rem;
     overflow: hidden;   
+    overflow-y: auto;
   }
   &-modal{  
     bottom:0;    

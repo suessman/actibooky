@@ -36,9 +36,9 @@
       font-weight: bold;
     }
   </style>
-<link href=".././css/styles.css?6707803d5001260928f7" rel="stylesheet"></head>
+<link href=".././css/styles.css?ab7b811c649d44b83247" rel="stylesheet"></head>
 
-<body>
+<body style="position: relative;">
   <!-- 브라우저 권장 -->
   <!--[if IE]>
 <div class="p-3 bg-light">
@@ -924,7 +924,7 @@
                 <button type="button" class="base-dropdown dropdown-filter btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   인원
                 </button>
-                <div class="dropdown-menu">
+                <div class="dropdown-menu position">
                   <div class="d-flex justify-content-between">
                     <h1 class="dropdown-title">인원</h1>
                     <button type="button" class="dropdown-close close" data-dismiss="modal" aria-label="Close">
@@ -1137,6 +1137,8 @@
 </footer>
 <!-- Footer -->
   </div>
+  <div class="in_scroll">
+  </div>
 
   <!-- JS -->
   <script>
@@ -1151,6 +1153,7 @@
         topPadding = 60;
       var rightTop = $('.right-top')
       var tagEl = $('.tag');
+
       //1200px up style 
       if (window.matchMedia("(min-width: 1200px)").matches) {
         $window.scroll(function () {
@@ -1165,7 +1168,6 @@
           }
         });
       }
-
       //middle nav
       $window.scroll(function () {
         if ($window.scrollTop() > middleNavOffset.top) {
@@ -1186,10 +1188,14 @@
       //modal
       bookBtn.click(function () {
         $('.book-ui').addClass('book-ui-modal');
-        $('body').css('overflow', 'hidden');
+        $('.in_scroll').addClass('display');
+        $('body').addClass('open');
       })
       $('.close_modal').click(function () {
         $('.book-ui').removeClass('book-ui-modal');
+        $('.in_scroll').removeClass('display');
+        $('body').removeClass('open');
+
       })
 
       function setDotDotDot() {
@@ -1213,8 +1219,8 @@
         autoApply: true,
         singleDatePicker: true,
         "locale": {
-          "format": "YYYY/MM/DD",
-          "separator": " - ",
+          "format": "YYYY.MM.DD",
+          "separator": "-",
           "applyLabel": "적용",
           "cancelLabel": "취소",
           "fromLabel": "From",
@@ -1262,7 +1268,7 @@
         $('.dropdown-menu').removeClass('show');
       })
 
-      //owl carousel
+      //객실정보 carousel
       $('.owl-carousel').owlCarousel({
         loop: true,
         responsiveClass: true,
@@ -1291,7 +1297,6 @@
     })
 
     //객실정보 slide
-
     var slideIndex = 1;
     showSlides(slideIndex);
 
@@ -1321,6 +1326,6 @@
     }
 
   </script>
-<script src=".././js/index.bundle.js?6707803d5001260928f7"></script></body>
+<script src=".././js/index.bundle.js?ab7b811c649d44b83247"></script></body>
 
 </html>
