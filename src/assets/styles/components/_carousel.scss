@@ -173,6 +173,24 @@
       width: 120px !important;
     }
   }
+
+  &.near-exp{
+    .owl-stage-outer{
+      width: 100%;
+    }
+    .owl-stage{
+      width: 100%;
+    }
+
+    .owl-item{
+      width:calc(300px) !important;
+
+      li.popular-card{
+        width: 100% !important;
+        margin-left: 0 !important;
+      }
+    }
+  }
 }
 
 .content-list{

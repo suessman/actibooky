@@ -9603,6 +9603,9 @@ a.text-dark:hover, a.text-dark:focus {
   bottom: -1000px;
   z-index: 2000;
   transition: all 0.8s; }
+  @media (min-width: 992px) {
+    .in_scroll {
+      display: none; } }
 
 body.open {
   overflow: hidden; }
@@ -10769,6 +10772,15 @@ label {
   @media (max-width: 1199.98px) {
     .owl-carousel .owl-item {
       width: 120px !important; } }
+  .owl-carousel.near-exp .owl-stage-outer {
+    width: 100%; }
+  .owl-carousel.near-exp .owl-stage {
+    width: 100%; }
+  .owl-carousel.near-exp .owl-item {
+    width: calc(300px) !important; }
+    .owl-carousel.near-exp .owl-item li.popular-card {
+      width: 100% !important;
+      margin-left: 0 !important; }
 
 .content-list {
   /* Position the image container (needed to position the left and right arrows) */

@@ -26,6 +26,10 @@
   z-index: 2000;
   // background-color: lightblue;
   transition: all 0.8s;
+
+  @include media-breakpoint-up(lg){
+    display: none;
+  }
 }
 
 body.open{
