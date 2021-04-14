@@ -7882,7 +7882,6 @@ button.bg-dark:focus {
   position: fixed !important; }
 
 .position-sticky {
-  position: -webkit-sticky !important;
   position: sticky !important; }
 
 .fixed-top {
@@ -7899,9 +7898,8 @@ button.bg-dark:focus {
   left: 0;
   z-index: 1030; }
 
-@supports ((position: -webkit-sticky) or (position: sticky)) {
+@supports (position: sticky) {
   .sticky-top {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020; } }
@@ -9593,16 +9591,16 @@ a.text-dark:hover, a.text-dark:focus {
 
 .in_scroll {
   opacity: 0;
-  background-color: rgba(147, 52, 255, 0.8);
+  background-color: rgba(52, 58, 64, 0.8);
   position: fixed;
-  width: 100vh;
-  height: 100vh;
+  width: 0;
+  height: 0;
   top: 0;
   left: 0;
   right: 0;
   bottom: -1000px;
   z-index: 2000;
-  transition: all 0.8s; }
+  transition: opacity 0.8s; }
   @media (min-width: 992px) {
     .in_scroll {
       display: none; } }
@@ -9612,7 +9610,8 @@ body.open {
 
 .in_scroll.display {
   opacity: 1;
-  bottom: 0; }
+  width: 100vh;
+  height: 100vh; }
 
 .flex-column-between {
   display: flex;
