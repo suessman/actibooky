@@ -13,19 +13,34 @@ select.form-control.filter-select{
 
 .filter-picker-ui{
 
-  .pick-filter-body{
-    padding:8px 0;
+  .pick-filter-body{    
     background-color: $white;
     flex-wrap: nowrap;
     border:1px solid #e9ecef;
 
+    .filter-list{
+      display: flex;
+      align-items: center;
+    }
     @include media-breakpoint-down(sm){
       background-color: transparent;
       border:none;
       padding:0;
       flex-wrap: wrap;
-    } 
 
+      .filter-list{
+        width:50% !important;
+        height: 40px;
+        margin-top: 8px;
+
+        //mobile input divider
+        input.divider{
+          border-right: 1px solid $light;
+        }
+      }
+    }
+
+         
     //people number dropdown
     div.pick-filter{  
       position: relative;
@@ -56,126 +71,11 @@ select.form-control.filter-select{
         align-items: center;
       } 
 
-      //인원 modal
-      .modal{
-        position: absolute; 
-        height: auto; 
-        top: 40px;
-        width: 100%;
-        right:0;
-        left: auto;
-        padding-right: 0 !important;
-                  
-       
-        &.left{
-          left:0;
-          right:auto;
-        }
-        @include media-breakpoint-down(md){
-         width: auto;
-        }
-
-        .activity-counter{
-          &:first-of-type{
-            margin-top: 0;
-          }
-          display: flex;
-          justify-content: space-between;
-          
-
-          //상세설명
-          .detail{
-            color:$dark;
-            font-size: 12px;
-          }
-
-          //right영역
-          .right{
-            display: flex;
-            align-items: center;
-          }
-          
-          //counter num
-          .counter-num{
-            padding:0 20px;
-          }
-          //counter btn
-          button{
-            border:none;
-            box-shadow: none;
-            background: transparent;
-            padding:0;
-            vertical-align: middle;
-
-            &.add-btn{
-              background-image: url('/src/assets/images/icon-add-gray@3x.png');
-              background-position: center;
-              background-repeat: no-repeat;
-              background-size:cover;
-              width: 24px;  
-              height: 24px;
-            }
-
-            &.minus-btn{
-              background-image: url('/src/assets/images/icon-minus-gray@3x.png');
-              background-position: center;
-              background-repeat: no-repeat;
-              background-size:cover;
-              width: 24px;
-              height: 24px;
-            }
-          }  
-        }
-
-        
-
-        .modal-dialog{
-          display: inline-block; 
-          margin-top:0; 
-          min-width: 220px;
-          border:1px solid $light;
-          border-radius: 0;
-
-          @include media-breakpoint-up(md){
-            width: 100%;
-          }
-
-          .modal-content{
-            border:none;
-            border-radius: 0;
-
-            .modal-header{
-              border-bottom:none;
-              color:$main-grey;
-            }
-
-            .modal-body{
-                ul li:nth-last-of-type(1) .input-container{
-                  margin-bottom: -8px;
-                }
-              }
-       
-            .modal-footer{
-              border-top:none;
-              button{
-                width: 100%;
-                margin: auto;
-              }
-            }
-          }
-
-          //X BUTTON
-            .close{
-              font-size: 24px;
-              font-weight: normal;
-            }
-        }
-      }  
     }
 
     .pick-filter{
       // width: 25%;
-      height:22px; 
+
       padding:0 0 0 42px; 
       border: none;
       position:relative;     
@@ -194,10 +94,8 @@ select.form-control.filter-select{
         }
       }
 
-      .dropdown-menu{
-       left:auto !important;
-       right: 0;
-        margin-top: 16px;
+      & + .dropdown-menu{      
+        margin-top: 8px;
         .activity-counter{
           &:first-of-type{
             margin-top: 0;
@@ -249,28 +147,12 @@ select.form-control.filter-select{
             }
           }  
         }
-
-        @include media-breakpoint-down(md){
-          width: auto !important;
-          right: 0;
-          left: auto;
-        }        
       }
       @include media-breakpoint-up(lg) {
-        border-right: 1px solid #e9ecef;           
-
+        border-right: 1px solid #e9ecef;
       }
 
-      @include media-breakpoint-down(sm){
-        width:50% !important;
-        height: 40px;
-        margin-top: 8px;
 
-        //mobile input divider
-        input.divider{
-          border-right: 1px solid $light;
-        }
-      } 
 
       &:focus{
         border-bottom:none;
@@ -290,7 +172,6 @@ select.form-control.filter-select{
         background-repeat: no-repeat;
         background-size:24px auto;  
         width: 240px;
-
       }
 
       &.people-n{
@@ -299,7 +180,11 @@ select.form-control.filter-select{
         background-repeat: no-repeat;
         background-size:24px auto;  
         border-radius: none;
-        width: 220px;
+        border-right: none;
+        color:$dark;
+        &:after{
+          display: none;
+        }
       }
 
       &.people-n.time{

@@ -5,9 +5,8 @@
   <meta charset="utf-8">
   <title>로그인</title>
   <meta name="description" content="">
-
+  <link rel="stylesheet" href="/css/headertitle.css">
   ${ require('./partials/head.html') }
-
 </head>
 
 <body>
@@ -17,13 +16,30 @@
   <div class="d-flex flex-column h-100">
 
     ${ require('./partials/header.html') }
-
-    <main class="d-flex h-100 main main-sub">
+    <!-- Content Here -->
+    <header class="header-title">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="d-flex justify-content-between">
+              <a href="javascript:history.go(-1)" class="prev">
+                <img src="/images/icon-left-black@3x.png" class="sm-icon" alt="뒤로가기">
+              </a>
+              <h1 class="title">로그인</h1>
+              <!-- <a>
+                                <img src="/images/icon-search-gray.png" class="sm-icon" alt="검색화면으로이동">
+                              </a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="d-flex h-100 main">
       <!-- 메인 이미지 -->
 
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-12 col-lg-5 m-auto">
+          <div class="col-12 col-lg-6 m-auto">
             <form action="" class="account-form">
               <div class="form-box">
                 <h1>로그인</h1>
@@ -60,9 +76,6 @@
         </div>
       </div>
     </main>
-
-    ${ require('./partials/footer.html') }
-
   </div>
 </body>
 

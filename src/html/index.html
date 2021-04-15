@@ -7,35 +7,8 @@
 	<meta name="description" content="">
 	<!-- include -->
 	${ require('./partials/head.html') }
-	<style>
-		.header nav .navbar-toggler.collapsed .icon-bar {
-			background-color: #fff !important;
-		}
+	<link rel="stylesheet" href="/css/main-calendar.css">
 
-		@media (min-width: 576px) and (max-width: 767.98px) {
-			.daterangepicker {
-				width: calc(100% - 32px);
-				left: 16px !important;
-			}
-
-			.drp-calendar.left,
-			.drp-calendar.right {
-				width: 50%;
-			}
-		}
-
-		@media(min-width:768px) {
-			.daterangepicker {
-				width: calc(100% - 110px);
-				left: 16px !important;
-			}
-
-			.drp-calendar.left,
-			.drp-calendar.right {
-				width: 50%;
-			}
-		}
-	</style>
 </head>
 
 <body>
@@ -61,27 +34,34 @@
 								<h5 class="title">인기검색어</h5>
 								<ul class="d-flex">
 									<li class="popular-list">
-										<button type="button" class="btn active">서울</button>
+										<input type="radio" id="area1" name="popularlist">
+										<label for="area1">서울</label>
 									</li>
 									<li class="popular-list">
-										<button type="button" class="btn">제주도</button>
+										<input type="radio" id="area2" name="popularlist">
+										<label for="area2">제주도</label>
 									</li>
 									<li class="popular-list">
-										<button type="button" class="btn">강원도</button>
+										<input type="radio" id="area3" name="popularlist">
+										<label for="area3">강원도</label>
 									</li>
 								</ul>
 								<ul class="d-flex area-group">
 									<li class="area-list">
-										<button type="button" class="btn area active">전체</button>
+										<input type="radio" id="area4" name="popularlist">
+										<label for="area4">전체</label>
 									</li>
 									<li class="area-list">
-										<button type="button" class="btn area">서울</button>
+										<input type="radio" id="area5" name="popularlist">
+										<label for="area5">서울</label>
 									</li>
 									<li class="area-list">
-										<button type="button" class="btn area">전주</button>
+										<input type="radio" id="area6" name="popularlist">
+										<label for="area6">전주</label>
 									</li>
 									<li class="area-list">
-										<button type="button" class="btn area">임실</button>
+										<input type="radio" id="area7" name="popularlist">
+										<label for="area7">임실</label>
 									</li>
 								</ul>
 							</div>

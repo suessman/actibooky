@@ -9619,33 +9619,38 @@ body.open {
   align-items: center;
   flex-direction: column; }
 
-main {
+main.min-height {
   min-height: 100vh; }
-  main .card_body.grey {
-    background-color: #f8f9fa;
-    padding: 16px 0; }
-  main .card_body.white {
-    background-color: #ffffff;
-    padding: 16px; }
-    main .card_body.white.border {
-      border: 1px solid #e9ecef; }
+
+main .card_body.grey {
+  background-color: #f8f9fa;
+  padding: 16px 0; }
+
+main .card_body.white {
+  background-color: #ffffff;
+  padding: 16px; }
+  main .card_body.white.border {
+    border: 1px solid #e9ecef; }
+
+@media (max-width: 991.98px) {
+  main.main-nav {
+    padding-bottom: 70px; } }
+
+main.main-sub {
+  min-height: 100vh; }
   @media (max-width: 991.98px) {
-    main.main-nav {
-      padding-bottom: 70px; } }
-  main.main-sub {
-    min-height: 100vh; }
-    @media (max-width: 991.98px) {
-      main.main-sub {
-        padding-top: 48px; } }
+    main.main-sub {
+      padding-top: 48px; } }
   @media (max-width: 991.98px) and (max-width: 991.98px) {
     main.main-sub.main-top {
       padding-top: 460px; } }
   @media (max-width: 991.98px) and (max-width: 767.98px) {
     main.main-sub.main-top {
       padding-top: 180px; } }
-  @media (max-width: 575.98px) {
-    main {
-      padding-bottom: 40px; } }
+
+@media (max-width: 575.98px) {
+  main {
+    padding-bottom: 40px; } }
 
 .more {
   display: flex;
@@ -9679,6 +9684,9 @@ main {
   text-overflow: ellipsis;
   white-space: nowrap;
   word-break: break-all; }
+
+hr.sm-interval {
+  margin: 8px 0; }
 
 .base-dropdown.dropdown-filter {
   border: none;
@@ -9790,6 +9798,10 @@ button:focus, button:active {
   box-shadow: none;
   border-radius: 0;
   width: 100%; }
+  .btn.md-fix {
+    min-width: 90px;
+    width: 90px;
+    padding: 0; }
   .btn-primary {
     background-color: #9334ff;
     color: #ffffff;
@@ -9939,16 +9951,24 @@ select.form-control.filter-select {
   background-position: 92% 55%; }
 
 .filter-picker-ui .pick-filter-body {
-  padding: 8px 0;
   background-color: #ffffff;
   flex-wrap: nowrap;
   border: 1px solid #e9ecef; }
+  .filter-picker-ui .pick-filter-body .filter-list {
+    display: flex;
+    align-items: center; }
   @media (max-width: 767.98px) {
     .filter-picker-ui .pick-filter-body {
       background-color: transparent;
       border: none;
       padding: 0;
-      flex-wrap: wrap; } }
+      flex-wrap: wrap; }
+      .filter-picker-ui .pick-filter-body .filter-list {
+        width: 50% !important;
+        height: 40px;
+        margin-top: 8px; }
+        .filter-picker-ui .pick-filter-body .filter-list input.divider {
+          border-right: 1px solid #e9ecef; } }
   .filter-picker-ui .pick-filter-body div.pick-filter {
     position: relative; }
     .filter-picker-ui .pick-filter-body div.pick-filter.last {
@@ -9968,80 +9988,7 @@ select.form-control.filter-select {
         height: 40px;
         display: flex;
         align-items: center; } }
-    .filter-picker-ui .pick-filter-body div.pick-filter .modal {
-      position: absolute;
-      height: auto;
-      top: 40px;
-      width: 100%;
-      right: 0;
-      left: auto;
-      padding-right: 0 !important; }
-      .filter-picker-ui .pick-filter-body div.pick-filter .modal.left {
-        left: 0;
-        right: auto; }
-      @media (max-width: 991.98px) {
-        .filter-picker-ui .pick-filter-body div.pick-filter .modal {
-          width: auto; } }
-      .filter-picker-ui .pick-filter-body div.pick-filter .modal .activity-counter {
-        display: flex;
-        justify-content: space-between; }
-        .filter-picker-ui .pick-filter-body div.pick-filter .modal .activity-counter:first-of-type {
-          margin-top: 0; }
-        .filter-picker-ui .pick-filter-body div.pick-filter .modal .activity-counter .detail {
-          color: #868e96;
-          font-size: 12px; }
-        .filter-picker-ui .pick-filter-body div.pick-filter .modal .activity-counter .right {
-          display: flex;
-          align-items: center; }
-        .filter-picker-ui .pick-filter-body div.pick-filter .modal .activity-counter .counter-num {
-          padding: 0 20px; }
-        .filter-picker-ui .pick-filter-body div.pick-filter .modal .activity-counter button {
-          border: none;
-          box-shadow: none;
-          background: transparent;
-          padding: 0;
-          vertical-align: middle; }
-          .filter-picker-ui .pick-filter-body div.pick-filter .modal .activity-counter button.add-btn {
-            background-image: url(../images/icon-add-gray@3x.png);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            width: 24px;
-            height: 24px; }
-          .filter-picker-ui .pick-filter-body div.pick-filter .modal .activity-counter button.minus-btn {
-            background-image: url(../images/icon-minus-gray@3x.png);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            width: 24px;
-            height: 24px; }
-      .filter-picker-ui .pick-filter-body div.pick-filter .modal .modal-dialog {
-        display: inline-block;
-        margin-top: 0;
-        min-width: 220px;
-        border: 1px solid #e9ecef;
-        border-radius: 0; }
-        @media (min-width: 768px) {
-          .filter-picker-ui .pick-filter-body div.pick-filter .modal .modal-dialog {
-            width: 100%; } }
-        .filter-picker-ui .pick-filter-body div.pick-filter .modal .modal-dialog .modal-content {
-          border: none;
-          border-radius: 0; }
-          .filter-picker-ui .pick-filter-body div.pick-filter .modal .modal-dialog .modal-content .modal-header {
-            border-bottom: none;
-            color: #343a40; }
-          .filter-picker-ui .pick-filter-body div.pick-filter .modal .modal-dialog .modal-content .modal-body ul li:nth-last-of-type(1) .input-container {
-            margin-bottom: -8px; }
-          .filter-picker-ui .pick-filter-body div.pick-filter .modal .modal-dialog .modal-content .modal-footer {
-            border-top: none; }
-            .filter-picker-ui .pick-filter-body div.pick-filter .modal .modal-dialog .modal-content .modal-footer button {
-              width: 100%;
-              margin: auto; }
-        .filter-picker-ui .pick-filter-body div.pick-filter .modal .modal-dialog .close {
-          font-size: 24px;
-          font-weight: normal; }
   .filter-picker-ui .pick-filter-body .pick-filter {
-    height: 22px;
     padding: 0 0 0 42px;
     border: none;
     position: relative;
@@ -10055,59 +10002,45 @@ select.form-control.filter-select {
       font-weight: 400; }
       .filter-picker-ui .pick-filter-body .pick-filter .dropdown-filter:after {
         background-image: none; }
-    .filter-picker-ui .pick-filter-body .pick-filter .dropdown-menu {
-      left: auto !important;
-      right: 0;
-      margin-top: 16px; }
-      .filter-picker-ui .pick-filter-body .pick-filter .dropdown-menu .activity-counter {
+    .filter-picker-ui .pick-filter-body .pick-filter + .dropdown-menu {
+      margin-top: 8px; }
+      .filter-picker-ui .pick-filter-body .pick-filter + .dropdown-menu .activity-counter {
         display: flex;
         justify-content: space-between;
         margin-top: 24px; }
-        .filter-picker-ui .pick-filter-body .pick-filter .dropdown-menu .activity-counter:first-of-type {
+        .filter-picker-ui .pick-filter-body .pick-filter + .dropdown-menu .activity-counter:first-of-type {
           margin-top: 0; }
-        .filter-picker-ui .pick-filter-body .pick-filter .dropdown-menu .activity-counter .detail {
+        .filter-picker-ui .pick-filter-body .pick-filter + .dropdown-menu .activity-counter .detail {
           color: #868e96;
           font-size: 12px; }
-        .filter-picker-ui .pick-filter-body .pick-filter .dropdown-menu .activity-counter .right {
+        .filter-picker-ui .pick-filter-body .pick-filter + .dropdown-menu .activity-counter .right {
           display: flex;
           align-items: center; }
-        .filter-picker-ui .pick-filter-body .pick-filter .dropdown-menu .activity-counter .counter-num {
+        .filter-picker-ui .pick-filter-body .pick-filter + .dropdown-menu .activity-counter .counter-num {
           padding: 0 20px; }
-        .filter-picker-ui .pick-filter-body .pick-filter .dropdown-menu .activity-counter button {
+        .filter-picker-ui .pick-filter-body .pick-filter + .dropdown-menu .activity-counter button {
           border: none;
           box-shadow: none;
           background: transparent;
           padding: 0;
           vertical-align: middle; }
-          .filter-picker-ui .pick-filter-body .pick-filter .dropdown-menu .activity-counter button.add-btn {
+          .filter-picker-ui .pick-filter-body .pick-filter + .dropdown-menu .activity-counter button.add-btn {
             background-image: url(../images/icon-add-gray@3x.png);
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
             width: 24px;
             height: 24px; }
-          .filter-picker-ui .pick-filter-body .pick-filter .dropdown-menu .activity-counter button.minus-btn {
+          .filter-picker-ui .pick-filter-body .pick-filter + .dropdown-menu .activity-counter button.minus-btn {
             background-image: url(../images/icon-minus-gray@3x.png);
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
             width: 24px;
             height: 24px; }
-      @media (max-width: 991.98px) {
-        .filter-picker-ui .pick-filter-body .pick-filter .dropdown-menu {
-          width: auto !important;
-          right: 0;
-          left: auto; } }
     @media (min-width: 992px) {
       .filter-picker-ui .pick-filter-body .pick-filter {
         border-right: 1px solid #e9ecef; } }
-    @media (max-width: 767.98px) {
-      .filter-picker-ui .pick-filter-body .pick-filter {
-        width: 50% !important;
-        height: 40px;
-        margin-top: 8px; }
-        .filter-picker-ui .pick-filter-body .pick-filter input.divider {
-          border-right: 1px solid #e9ecef; } }
     .filter-picker-ui .pick-filter-body .pick-filter:focus {
       border-bottom: none; }
     .filter-picker-ui .pick-filter-body .pick-filter.start-d, .filter-picker-ui .pick-filter-body .pick-filter.end-d {
@@ -10128,7 +10061,10 @@ select.form-control.filter-select {
       background-repeat: no-repeat;
       background-size: 24px auto;
       border-radius: none;
-      width: 220px; }
+      border-right: none;
+      color: #868e96; }
+      .filter-picker-ui .pick-filter-body .pick-filter.people-n:after {
+        display: none; }
     .filter-picker-ui .pick-filter-body .pick-filter.people-n.time {
       background-image: url(../images/icon-time-gray@3x.png);
       background-position: 14px center;
@@ -10305,263 +10241,8 @@ select.form-control.filter-select {
               font-size: 24px;
               font-weight: normal; } }
 
-.form-control:focus {
-  box-shadow: none; }
-
-input.form-control.main-color {
-  color: #343a40; }
-  input.form-control.main-color::-moz-placeholder {
-    color: #343a40; }
-  input.form-control.main-color:-ms-input-placeholder {
-    color: #343a40; }
-  input.form-control.main-color::placeholder {
-    color: #343a40; }
-
-label {
-  margin-bottom: 0; }
-
-/* The container */
-.input-container {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 16px; }
-
-.container-radio {
-  display: block;
-  width: 16px;
-  height: 16px;
-  position: relative;
-  cursor: pointer;
-  font-size: 14px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none; }
-
-/* Hide the browser's default radio button */
-.container-radio input {
-  position: absolute;
-  left: 0;
-  opacity: 0;
-  cursor: pointer; }
-
-/* Create a custom radio button */
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 16px;
-  width: 16px;
-  background-color: #fff;
-  border: 1px solid #ced4da;
-  border-radius: 50%; }
-
-/* On mouse-over, add a grey background color */
-.container-radio:hover input ~ .checkmark {
-  background-color: #ccc; }
-
-/* When the radio button is checked, add a blue background */
-.container-radio input:checked ~ .checkmark {
-  background-color: #9334ff;
-  border: 1px solid #9334ff; }
-
-/* Create the indicator (the dot/circle - hidden when not checked) */
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none; }
-
-/* Show the indicator (dot/circle) when checked */
-.container-radio input:checked ~ .checkmark:after {
-  display: block; }
-
-/* Style the indicator (dot/circle) */
-.container-radio .checkmark:after {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: white; }
-
-/* The container */
-.input-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
-
-.container-check {
-  display: block;
-  width: 16px;
-  height: 16px;
-  position: relative;
-  cursor: pointer;
-  font-size: 14px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none; }
-
-/* Hide the browser's default radio button */
-.container-check input {
-  position: absolute;
-  left: 0;
-  opacity: 0;
-  cursor: pointer; }
-
-/* Create a custom radio button */
-.ch-checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 16px;
-  width: 16px;
-  background-color: #fff;
-  border: 1px solid #ced4da;
-  border-radius: 4px; }
-
-/* On mouse-over, add a grey background color */
-.container-check:hover input ~ .checkmark {
-  background-color: #ccc; }
-
-/* When the radio button is checked, add a blue background */
-.container-check input:checked ~ .ch-checkmark {
-  background-color: #9334ff;
-  border: 1px solid #9334ff; }
-
-/* Create the indicator (the dot/circle - hidden when not checked) */
-.ch-checkmark:after {
-  content: "";
-  position: absolute;
-  display: none; }
-
-/* Show the indicator (dot/circle) when checked */
-.container-check input:checked ~ .ch-checkmark:after {
-  display: block; }
-
-/* Style the indicator (dot/circle) */
-.container-check .ch-checkmark:after {
-  left: 50%;
-  top: 50%;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  transform: translate(-50%, -50%) rotate(45deg); }
-
-/* The container */
-.input-container {
-  display: flex;
-  justify-content: space-between; }
-
-.container-type {
-  display: block;
-  width: 68px;
-  height: 24px;
-  position: relative;
-  cursor: pointer;
-  font-size: 14px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none; }
-  @media (max-width: 991.98px) {
-    .container-type {
-      width: 90px; } }
-
-/* Hide the browser's default radio button */
-.container-type input {
-  position: absolute;
-  left: 0;
-  opacity: 0;
-  cursor: pointer; }
-
-/* Create a custom radio button */
-.container-type .checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 24px;
-  width: 68px;
-  background-color: #fff;
-  border-radius: 12px;
-  text-align: center;
-  border: none; }
-  @media (max-width: 991.98px) {
-    .container-type .checkmark {
-      width: 90px; } }
-
-/* On mouse-over, add a grey background color */
-.container-type:hover input ~ .checkmark {
-  background-color: #ccc; }
-
-/* When the radio button is checked, add a blue background */
-.container-type input:checked ~ .checkmark {
-  background-color: #ffffff;
-  border: 1px solid #9334ff;
-  border-radius: 12px;
-  color: #9334ff;
-  opacity: 1; }
-
-/* Create the indicator (the dot/circle - hidden when not checked) */
-/* Show the indicator (dot/circle) when checked */
-.container-type input:checked ~ .checkmark:after {
-  display: block; }
-
-/* Style the indicator (dot/circle) */
-.container-type .checkmark:after {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: transparent; }
-
-.radio {
-  color: var(--color); }
-  .radio:focus-within .radio__label {
-    transform: scale(1.05);
-    opacity: 1; }
-
-.radio__label {
-  line-height: 1;
-  transition: 180ms all ease-in-out;
-  opacity: 0.8; }
-
-.radio__input {
-  display: flex; }
-  .radio__input input {
-    opacity: 0;
-    width: 0;
-    height: 0; }
-    .radio__input input:focus + .radio__control {
-      box-shadow: 0 0 0 0.05em #fff, 0 0 0.15em 0.1em currentColor; }
-
-.radio-gradient input:checked + .radio__control {
-  background: #9334ff;
+.custom-control-label:before {
   border: 1px solid #ced4da; }
-
-.radio-before input + .radio__control::before {
-  content: "";
-  width: 0.5em;
-  height: 0.5em;
-  box-shadow: inset 0.5em 0.5em currentColor;
-  border-radius: 50%;
-  transition: 180ms transform ease-in-out;
-  transform: scale(0); }
-
-.radio-before input:checked + .radio__control::before {
-  transform: scale(1); }
-
-.radio__control {
-  display: block;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  border: 1px solid #ced4da;
-  transform: translateY(-0.05em); }
 
 .checks {
   position: relative; }
@@ -11037,8 +10718,9 @@ header.header {
           header.header .container .navbar .navbar-collapse {
             background: #ffffff;
             z-index: 1500;
-            position: absolute;
+            position: fixed;
             width: 100%;
+            height: 100%;
             top: 0;
             left: 0; }
           header.header .container .navbar .dropdown-menu {
@@ -11212,31 +10894,43 @@ main.main .popular-search-word {
   main.main .popular-search-word ul {
     flex-wrap: wrap; }
     main.main .popular-search-word ul li.popular-list {
-      margin-top: 8px; }
-      main.main .popular-search-word ul li.popular-list button {
+      margin-top: 8px;
+      position: relative; }
+      main.main .popular-search-word ul li.popular-list input {
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0; }
+        main.main .popular-search-word ul li.popular-list input:checked + label {
+          background-color: #9334ff;
+          color: #ffffff; }
+      main.main .popular-search-word ul li.popular-list label {
         background-color: #f1f3f5;
         width: auto;
         min-width: 56px;
         height: 28px;
+        line-height: 28px;
         font-weight: normal;
         border-radius: 14px;
         margin-right: 8px;
         padding: 0 16px; }
-        main.main .popular-search-word ul li.popular-list button.active {
-          background-color: #9334ff;
-          color: #ffffff; }
     main.main .popular-search-word ul.area-group {
       margin-top: 40px; }
       main.main .popular-search-word ul.area-group li.area-list {
         margin-top: 8px; }
-        main.main .popular-search-word ul.area-group li.area-list button {
+        main.main .popular-search-word ul.area-group li.area-list input {
+          position: absolute;
+          left: 0;
+          top: 0;
+          opacity: 0; }
+          main.main .popular-search-word ul.area-group li.area-list input:checked + label {
+            color: #9334ff; }
+        main.main .popular-search-word ul.area-group li.area-list label {
           color: #343a40;
           width: auto;
           font-weight: normal;
           margin-right: 24px;
           padding: 0; }
-          main.main .popular-search-word ul.area-group li.area-list button.active {
-            color: #9334ff; }
 
 main.main .main-top-body {
   height: 640px;
@@ -11703,14 +11397,16 @@ main .section-body.card-ui-video .area {
 
 .account-form .form-box {
   border: 1px solid #e9ecef;
-  padding: 40px 60px;
-  margin-top: 15vh; }
-  @media (max-width: 575.98px) {
+  padding: 40px 60px; }
+  @media (min-width: 992px) {
+    .account-form .form-box {
+      margin: 12rem 0; } }
+  @media (max-width: 991.98px) {
     .account-form .form-box {
       padding: 24px;
       border: none;
       padding: 0;
-      margin-top: 2vh; } }
+      margin: 2rem 0; } }
   .account-form .form-box h1 {
     font-size: 18px; }
   .account-form .form-box .link {
@@ -11774,6 +11470,13 @@ main .section-body.card-ui-video .area {
     @media (max-width: 575.98px) {
       .terms-form .forms-group textarea {
         padding: 16px; } }
+
+.custom-control-label.checkbox {
+  padding-left: 24px; }
+  .custom-control-label.checkbox:before {
+    left: 0; }
+  .custom-control-label.checkbox:after {
+    left: 0; }
 
 @media (max-width: 991.98px) {
   .detail-info-sec hr {
@@ -12188,6 +11891,7 @@ main .section-body.card-ui-video .area {
 .mobile-book-ui {
   position: fixed;
   left: 0;
+  right: 0;
   bottom: 0;
   width: 100%;
   background-color: #ffffff;
@@ -13393,13 +13097,13 @@ main .section-body.card-ui-video .area {
   border: 1px solid #e9ecef;
   padding: 16px;
   border-radius: 0; }
+  .dropdown-filter + .dropdown-menu.right {
+    right: 0;
+    left: inherit; }
   .dropdown-filter + .dropdown-menu .dropdown-item {
     padding: 16px 0 0 0; }
     .dropdown-filter + .dropdown-menu .dropdown-item:first-of-type {
       padding: 36px 0 0 0; }
-  @media (max-width: 991.98px) {
-    .dropdown-filter + .dropdown-menu {
-      width: 100%; } }
   .dropdown-filter + .dropdown-menu h1.dropdown-title {
     font-size: 14px; }
   .dropdown-filter + .dropdown-menu button.close {
@@ -13408,6 +13112,9 @@ main .section-body.card-ui-video .area {
     margin-top: 24px; }
     .dropdown-filter + .dropdown-menu .apply-btn-wrapper button.apply {
       width: 156px; }
+      @media (max-width: 767.98px) {
+        .dropdown-filter + .dropdown-menu .apply-btn-wrapper button.apply.button-list {
+          width: 120px; } }
 
 input.form-control.filter-input {
   border: 1px solid #e9ecef;
@@ -13571,7 +13278,8 @@ input.form-control {
   border-right: none;
   border-bottom: 1px solid #e9ecef;
   border-radius: 0;
-  padding-left: 0; }
+  padding-left: 0;
+  height: 40px; }
 
 input.form-control:focus {
   border-top: none;

@@ -20,7 +20,7 @@
 <script type="text/javascript" defer src="/js/moment.min.js"></script>
 <link rel="stylesheet" type="text/css" href="/css/daterangepicker.css" />
 <script type="text/javascript" defer src="/js/daterangepicker.js"></script>
-<link href=".././css/styles.css?57e464efa040616c2b08" rel="stylesheet"></head>
+<link href=".././css/styles.css?0acd167cb6befeae266b" rel="stylesheet"></head>
 
 <body>
   <!-- 브라우저 권장 -->
@@ -82,7 +82,7 @@
                     /images/icon-right-white@3x.png 1000w" src="/images/icon-right-white@3x.png" alt="로그인페이지로이동" />
           </a>
           <div class="list">
-            <a href="">
+            <a href="/index.html">
               <img class="sm-icon" srcset="/images/icon-home-white.png 400w,
                       /images/icon-home-white@2x.png 700w,
                       /images/icon-home-white@3x.png 1000w" src="/images/icon-home-white@3x" alt="홈" />
@@ -110,16 +110,6 @@
           <li class="nav-item">
             <a class="nav-link" href="/exp/expMain.html">체험</a>
           </li>
-          <!-- <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              dropdown
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li> -->
           <li class="nav-item">
             <a class="nav-link" href="/promotions/promoMain.html">프로모션</a>
           </li>
@@ -140,9 +130,6 @@
     </nav>
   </div>
 </header>
-
-<div id="backdropUi" class="backdrop-ui multi-collapse" aria-hidden="true">
-</div>
     <main class="d-flex flex-column h-100 main main-sub">
       <section class="card_body grey">
         <div class="container">
@@ -150,76 +137,74 @@
             <div class="col-lg-12 m-auto filter-picker-ui">
               <div class="w-100">
                 <div class="d-flex pick-filter-body">
-                  <div class="pick-filter place">
+                  <div class="filter-list pick-filter place">
                     <input type="text" class="form-control divider" value="어디로 떠날까요?" />
                   </div>
-                  <div class="pick-filter start-d br-0">
+                  <div class="filter-list pick-filter start-d br-0">
                     <input type="text" class="form-control date br-0" readonly value="" name="daterange" placeholder="체크인" />
                   </div>
 
-                  <div class=" pick-filter end-d">
+                  <div class="filter-list pick-filter end-d">
                     <input type="text" class="form-control date divider" readonly value="" name="daterange" placeholder="체크아웃" />
                   </div>
-                  <div class="pick-filter people-n dropdown filter-btn last br-0">
-
-                    <div class="btn-group dropdown-group w-100">
-                      <button type="button" class="dropdown-filter btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        인원
-                      </button>
-                      <div class="dropdown-menu">
-                        <div class="d-flex justify-content-between">
-                          <h1 class="dropdown-title">인원</h1>
-                          <button type="button" class="dropdown-close close" data-dismiss="modal" aria-label="Close">
-                            <img class="sm-icon" srcset="/images/icon-cancel-gray.png 400w,
+                  <div class="filter-list">
+                    <button type="button" class="pick-filter people-n dropdown-filter btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      인원
+                    </button>
+                    <div class="dropdown-menu">
+                      <div class="d-flex justify-content-between">
+                        <h1 class="dropdown-title">인원</h1>
+                        <button type="button" class="dropdown-close close" data-dismiss="modal" aria-label="Close">
+                          <img class="sm-icon" srcset="/images/icon-cancel-gray.png 400w,
                                                                       /images/icon-cancel-gray@2x.png 700w,
                                                                       /images/icon-cancel-gray@3x.png 1000w" src="/images/icon-cancel-gray@3x.png" alt="닫기">
+                        </button>
+                      </div>
+                      <div class="dropdown-item activity-counter">
+                        <div>
+                          <span>성인</span>
+                        </div>
+                        <span class="right">
+                          <button type="button" class="minus-btn">
                           </button>
+                          <span class="counter-num">2</span>
+                          <button type="button" class="add-btn">
+                          </button>
+                        </span>
+                      </div>
+                      <div class="dropdown-item activity-counter">
+                        <div>
+                          <span>소아</span>
+                          <div class="detail">24개월~12세</div>
                         </div>
-                        <div class="dropdown-item activity-counter">
-                          <div>
-                            <span>성인</span>
-                          </div>
-                          <span class="right">
-                            <button type="button" class="minus-btn">
-                            </button>
-                            <span class="counter-num">2</span>
-                            <button type="button" class="add-btn">
-                            </button>
-                          </span>
-                        </div>
-                        <div class="dropdown-item activity-counter">
-                          <div>
-                            <span>소아</span>
-                            <div class="detail">24개월~12세</div>
-                          </div>
-                          <span class="right">
-                            <button type="button" class="minus-btn">
-                            </button>
-                            <span class="counter-num">2</span>
-                            <button type="button" class="add-btn">
-                            </button>
+                        <span class="right">
+                          <button type="button" class="minus-btn">
+                          </button>
+                          <span class="counter-num">2</span>
+                          <button type="button" class="add-btn">
+                          </button>
 
-                          </span>
+                        </span>
+                      </div>
+                      <div class="dropdown-item activity-counter">
+                        <div>
+                          <span>유아</span>
+                          <div class="detail">24개월 미만</div>
                         </div>
-                        <div class="dropdown-item activity-counter">
-                          <div>
-                            <span>유아</span>
-                            <div class="detail">24개월 미만</div>
-                          </div>
-                          <span class="right">
-                            <button type="button" class="minus-btn">
-                            </button>
-                            <span class="counter-num">2</span>
-                            <button type="button" class="add-btn">
-                            </button>
-                          </span>
-                        </div>
+                        <span class="right">
+                          <button type="button" class="minus-btn">
+                          </button>
+                          <span class="counter-num">2</span>
+                          <button type="button" class="add-btn">
+                          </button>
+                        </span>
+                      </div>
 
-                        <div class="text-center apply-btn-wrapper">
-                          <button type="button" class="btn btn-primary apply dropdown-close">적용하기</button>
-                        </div>
+                      <div class="text-center apply-btn-wrapper">
+                        <button type="button" class="btn btn-primary apply dropdown-close">적용하기</button>
                       </div>
                     </div>
+
                   </div>
                 </div>
                 <!-- Button trigger modal -->
@@ -281,7 +266,7 @@
                           </div>
                         </div>
                         <div class="text-center apply-btn-wrapper">
-                          <button type="button" class="btn btn-primary apply dropdown-close">적용하기</button>
+                          <button type="button" class="btn btn-primary apply dropdown-close button-list">적용하기</button>
                         </div>
                       </div>
                     </div>
@@ -289,7 +274,7 @@
                       <button type="button" class="dropdown-filter btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         숙소유형
                       </button>
-                      <div class="dropdown-menu">
+                      <div class="dropdown-menu right">
                         <div class="d-flex justify-content-between">
                           <h1 class="dropdown-title">숙소유형</h1>
                           <button type="button" class="dropdown-close close" data-dismiss="modal" aria-label="Close">
@@ -336,7 +321,7 @@
                         </div>
 
                         <div class="text-center apply-btn-wrapper">
-                          <button type="button" class="btn btn-primary apply dropdown-close">적용하기</button>
+                          <button type="button" class="btn btn-primary apply dropdown-close button-list">적용하기</button>
                         </div>
                       </div>
                     </div>
@@ -355,7 +340,7 @@
           <section class="col-12 mt-5 section-body card-ui m-mt">
             <div class="d-flex justify-content-between top-title">
               <h3>숙소</h3>
-              <select name="" id="" class="form-control" style="width:126px;">
+              <select name="" id="" class="form-control">
                 <option value="">인기순</option>
                 <option value="">최신순</option>
                 <option value="">낮은가격순</option>
@@ -691,6 +676,6 @@
       })
     })
   </script>
-<script src=".././js/index.bundle.js?57e464efa040616c2b08"></script></body>
+<script src=".././js/index.bundle.js?0acd167cb6befeae266b"></script></body>
 
 </html>

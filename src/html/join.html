@@ -1,78 +1,144 @@
 <!DOCTYPE html>
 <html lang="">
+
 <head>
   <meta charset="utf-8">
-  <title>로그인</title>
+  <title>회원가입</title>
+  <link rel="stylesheet" href="/css/headertitle.css">
+
   <meta name="description" content="">
 
   ${ require('./partials/head.html') }
 
 </head>
+
 <body>
 
-${ require('./partials/browserupgrade.html') }
+  ${ require('./partials/browserupgrade.html') }
 
-<div class="d-flex flex-column h-100">
+  <div class="d-flex flex-column h-100">
 
-  ${ require('./partials/header.html') }
-
-  <main class="d-flex h-100 align-items-center main">
-    <!-- 메인 이미지 -->
-
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-12 col-lg-5 m-auto">
-          <form action="" class="account-form">
-            <div class="form-box">
-              <h1>로그인</h1>
-              <input type="text" class="form-control mt-3" placeholder="이메일">
-              <input type="password" class="form-control mt-3" placeholder="비밀번호">
-              <button type="button" class="btn btn-primary mt-3">로그인</button>
-              <div class="mt-2 d-flex justify-content-between">
-                <a href="/join.html" class="link">회원가입</a>
-                <a href="/findPassword.html" class="link">비밀번호찾기</a>
-              </div>
-              <p class="text-center mt-5">다른 계정으로 로그인하기</p>
-              <div class="sns">                
-                <button type="button" class="btn kakao">
-                  <img
-                  srcset="/images/kakao@1x.png.png 400w,
-                          /images/kakao@2x.png 700w,
-                          /images/kakao@3x.png 1000w"
-                  
-                  src="/images/kakao@3x.png"
-                  alt="카카오로로그인"/>            
-                </button>
-
-                <button type="button" class="btn naver">
-                  <img
-                  srcset="/images/naver@1x.png.png 400w,
-                          /images/naver@2x.png 700w,
-                          /images/naver@3x.png 1000w"
-                  
-                  src="/images/kakao@3x.png"
-                  alt="네이버로로그인"/>            
-                </button>
-
-                <button type="button" class="btn apple">
-                  <img
-                  srcset="/images/apple@1x.png.png 400w,
-                          /images/apple@2x.png 700w,
-                          /images/apple@3x.png 1000w"
-                  
-                  src="/images/apple@3x.png"
-                  alt="애플로로그인"/>            
-                </button>
-              </div>
+    ${ require('./partials/header.html') }
+    <header class="header-title">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="d-flex justify-content-between">
+              <a href="javascript:history.go(-1)" class="prev">
+                <img src="/images/icon-left-black@3x.png" class="sm-icon" alt="뒤로가기">
+              </a>
+              <h1 class="title">회원가입</h1>
+              <!-- <a>
+                                        <img src="/images/icon-search-gray.png" class="sm-icon" alt="검색화면으로이동">
+                                      </a> -->
             </div>
-          </form>          
+          </div>
         </div>
       </div>
-    </div>
-  </main>
+    </header>
+    <main class="d-flex h-100 main">
+      <!-- 메인 이미지 -->
 
-  ${ require('./partials/footer.html') }
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-6 m-auto">
+            <form action="" class="account-form">
+              <div class="form-box">
+                <h1>회원가입</h1>
+                <div class="d-flex mt-3">
+                  <input type="text" class="form-control" placeholder="이메일">
+                  <button type="button" class="btn btn-outline-primary md-fix ml-2">중복확인</button>
+                </div>
+                <input type="password" class="form-control mt-3" placeholder="비밀번호">
+                <input type="text" class="form-control mt-3" placeholder="이름">
+                <input type="number" class="form-control mt-3" placeholder="생년월일(8자리의 숫자를 입력해주세요)">
+                <div class="d-flex mt-3">
+                  <input type="number" class="form-control" placeholder="휴대폰번호">
+                  <button type="button" class="btn btn-outline-primary md-fix ml-2">인증번호 발송</button>
+                </div>
+                <input type="number" class="form-control mt-3" placeholder="인증번호를 입력해주세요">
 
-</div>
+
+                <div class="mt-5">
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="allCheck">
+                    <label class="custom-control-label checkbox" for="allCheck">전체동의</label>
+                  </div>
+                  <hr class="sm-interval">
+                  <div class="custom-control custom-checkbox d-flex justify-content-between">
+                    <div>
+                      <input type="checkbox" class="custom-control-input" id="terms1">
+                      <label class="custom-control-label checkbox" for="terms1">서비스 이용약관(필수)</label>
+                    </div>
+                    <a href="/account/terms.html">내용보기</a>
+                  </div>
+                  <div class="custom-control custom-checkbox mt-2 d-flex justify-content-between">
+                    <div>
+                      <input type="checkbox" class="custom-control-input" id="terms2">
+                      <label class="custom-control-label checkbox" for="terms2">개인정보 처리방침(필수)</label>
+                    </div>
+                    <a href="/account/policy.html">내용보기</a>
+                  </div>
+                  <hr class="sm-interval">
+                  <button type="button" class="btn btn-primary mt-5">회원가입</button>
+                </div>
+                <p class="text-center mt-5">다른 계정으로 회원가입하기</p>
+                <div class="sns">
+                  <button type="button" class="btn kakao">
+                    <img srcset="/images/kakao@1x.png.png 400w,
+                          /images/kakao@2x.png 700w,
+                          /images/kakao@3x.png 1000w" src="/images/kakao@3x.png" alt="카카오로로그인" />
+                  </button>
+
+                  <button type="button" class="btn naver">
+                    <img srcset="/images/naver@1x.png.png 400w,
+                          /images/naver@2x.png 700w,
+                          /images/naver@3x.png 1000w" src="/images/kakao@3x.png" alt="네이버로로그인" />
+                  </button>
+
+                  <button type="button" class="btn apple">
+                    <img srcset="/images/apple@1x.png.png 400w,
+                          /images/apple@2x.png 700w,
+                          /images/apple@3x.png 1000w" src="/images/apple@3x.png" alt="애플로로그인" />
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    $(function () {
+      //전체동의 체크OnOff
+      $('#allCheck').click(function () {
+        $('#terms1').prop('checked', this.checked);
+        $('#terms2').prop('checked', this.checked);
+      });
+
+
+      //단일 체크 제어
+      $('#terms1').click(function () {
+        if ($('#tems2').is(':checked')) {
+          $('#allCheck').prop('checked', this.checked);
+        } else {
+          $('#allCheck').prop('checked', false);
+        }
+      });
+      $('#terms2').click(function () {
+        if ($('#terms1').is(':checked')) {
+          $('#allCheck').prop('checked', this.checked);
+        } else {
+          $('#allCheck').prop('checked', false);
+        }
+      });
+    })
+
+
+
+  </script>
 </body>
+
 </html>

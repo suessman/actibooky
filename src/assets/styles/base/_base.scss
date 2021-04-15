@@ -47,7 +47,9 @@ body.open{
 }
 
 main{
-  min-height: 100vh;
+  &.min-height{
+    min-height:100vh;
+  }
 
   .card_body{
     &.grey{
@@ -149,6 +151,12 @@ main{
 
 //title
 
+//hr
+hr{
+  &.sm-interval{
+    margin:8px 0;
+  }
+}
 
 //dropdown
 

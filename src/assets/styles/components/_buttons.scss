@@ -26,6 +26,12 @@ button:focus, button:active{
     border-radius: 0;
     width:100%;
 
+    &.md-fix{
+        min-width:90px;
+        width: 90px;
+        padding:0;
+    }
+
     &-primary{
         background-color:$primary;
         color:$white;

@@ -44,20 +44,29 @@ main {
         flex-wrap: wrap;  
         li.popular-list{
           margin-top: 8px;
-          button{
+          position: relative;
+          input{
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            &:checked{
+              + label{ 
+                background-color: $primary;
+                color:$white;                 
+              }
+            }
+          }
+          label{
             background-color:#f1f3f5; 
             width: auto; 
             min-width: 56px; 
             height: 28px; 
+            line-height:28px;
             font-weight: normal; 
             border-radius: 14px; 
             margin-right: 8px;
             padding:0 16px;
-
-            &.active{
-              background-color: $primary;
-              color:$white;
-            }
           }
         }
 
@@ -65,15 +74,25 @@ main {
           margin-top: 40px;
           li.area-list{
             margin-top: 8px;
-            button{
-              color:$main-grey;
+
+          input{
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            &:checked{
+              + label{                 
+                color:$primary;                 
+              }
+            }
+          }
+          
+          label{
+             color:$main-grey;
               width: auto;            
               font-weight: normal;            
               margin-right: 24px;            
               padding:0;
-              &.active{
-              color:$primary;
-              }      
             }
           }
         }

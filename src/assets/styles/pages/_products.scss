@@ -86,6 +86,11 @@
   padding: 16px;
   border-radius: 0;
 
+  &.right{
+    right:0;
+    left:inherit;
+  }
+
   .dropdown-item{
     padding:16px 0 0 0;
   
@@ -95,7 +100,7 @@
   }
 
   @include media-breakpoint-down(md){
-    width:100%;
+    // width:100%;
   }
 
   h1.dropdown-title{
@@ -111,6 +116,12 @@
       margin-top: 24px;
       button.apply{
         width:156px;
+        @include media-breakpoint-down(sm){
+          &.button-list{
+            width:120px;
+          }
+        }
+        
       }
   }
 

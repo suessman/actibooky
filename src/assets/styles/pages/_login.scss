@@ -2,12 +2,14 @@
     .form-box {
         border:1px solid #e9ecef;
         padding:40px 60px;
-        margin-top: 15vh;
-        @include media-breakpoint-only(xs) {
+        @include media-breakpoint-up(lg){
+            margin: 12rem 0;
+        }
+        @include media-breakpoint-down(md) {
             padding:24px;
             border:none;
             padding:0;
-            margin-top:2vh;
+            margin:2rem 0;
         }
        
         h1{
@@ -100,6 +102,21 @@
             @include media-breakpoint-down(xs){
             padding: 16px;
             }
+        }
+    }
+}
+
+//custom checkbox
+.custom-control-label{
+
+    &.checkbox{
+        padding-left: 24px;
+        &:before{
+            left:0;
+        }
+
+        &:after{
+            left:0;
         }
     }
 }
