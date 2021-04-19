@@ -10620,6 +10620,20 @@ select.form-control.filter-select {
     border: none;
     padding: 1rem 2rem; }
 
+.modal-popup .modal-title {
+  font-size: 18px; }
+
+.modal-popup .modal-body textarea {
+  border: 1px solid #e9ecef; }
+
+.modal-popup .modal-body p {
+  color: #868e96;
+  font-size: 12px;
+  margin-top: 16px; }
+
+.modal-popup .modal-footer {
+  border: none; }
+
 .pagination {
   margin-top: 40px;
   margin-bottom: 40px; }
@@ -10666,6 +10680,9 @@ body.menu-open {
 @media (min-width: 992px) {
   .header-title {
     display: none; } }
+
+ul .nav-tabs .nav-link {
+  border: none; }
 
 header .prev-bg {
   background: rgba(33, 37, 41, 0.4); }
@@ -10733,7 +10750,7 @@ header.header {
       margin-right: 0; }
     @media (min-width: 992px) {
       header.header nav.navbar .navbar-nav {
-        margin-left: 10vw; } }
+        margin-left: 8vw; } }
   @media (min-width: 992px) {
     header.header nav .navbar-collapse {
       margin-top: -6px; } }
@@ -10774,6 +10791,7 @@ header.header {
     font-weight: 700;
     position: relative;
     margin-bottom: 0;
+    border: none;
     font-size: 18px;
     padding: 1.5rem 20px; }
     header.header nav ul.navbar-nav li.nav-item a.nav-link.dropdown-toggle::after {

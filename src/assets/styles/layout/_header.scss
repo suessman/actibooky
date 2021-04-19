@@ -24,6 +24,13 @@ body.menu-open{
   }
 }
 
+ul{
+  .nav-tabs{
+    .nav-link{
+      border:none;
+    }
+  }
+}
 
 header{
 
@@ -122,7 +129,7 @@ header{
 
         .navbar-nav{
           @include media-breakpoint-up(lg) {
-            margin-left: 10vw;;
+            margin-left: 8vw;;
           }
         }
       }
@@ -184,6 +191,7 @@ header{
           font-weight: 700;
           position: relative;    
           margin-bottom: 0;    
+          border: none;
           &.dropdown-toggle::after{
             border:none;
             content: "";

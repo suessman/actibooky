@@ -46,3 +46,25 @@
   }
   
 }
+
+//modal popup
+.modal-popup{
+  .modal-title{
+    font-size:18px;
+  }
+
+  .modal-body{
+    textarea{
+      border: 1px solid $light;
+    };
+    p{
+      color:$dark;
+      font-size: 12px;
+      margin-top: 16px;
+    }
+  }
+
+  .modal-footer{
+    border:none;
+  }
+}
