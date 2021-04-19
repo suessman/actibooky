@@ -9921,7 +9921,7 @@ button.btn.filter-btn:hover {
   @media (max-width: 575.98px) {
     .daterangepicker {
       left: 0 !important;
-      width: 100%; } }
+      width: 100% !important; } }
   .daterangepicker .drp-calendar.left, .daterangepicker .drp-calendar.right {
     max-width: 100%;
     padding: 8px; }
@@ -13029,6 +13029,9 @@ main .section-body.card-ui-video .area {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   background-color: #ff5a85;
   z-index: 999; }
+  @media (min-width: 576px) {
+    .app-request-btn {
+      display: none; } }
 
 @media (max-width: 991.98px) {
   .md-up-d-block {

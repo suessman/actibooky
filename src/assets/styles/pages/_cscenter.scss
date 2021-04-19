@@ -413,6 +413,9 @@
 
 //app element
 .app-request-btn{
+  @include media-breakpoint-up(sm){
+    display: none;
+  }
   position:fixed; 
   right:0; 
   bottom:48px; 
