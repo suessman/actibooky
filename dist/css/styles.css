@@ -9799,8 +9799,8 @@ button:focus, button:active {
   border-radius: 0;
   width: 100%; }
   .btn.md-fix {
-    min-width: 90px;
-    width: 90px;
+    min-width: 92px;
+    width: 92px;
     padding: 0; }
   .btn-primary {
     background-color: #9334ff;
