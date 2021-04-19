@@ -9926,10 +9926,6 @@ button.btn.filter-btn:hover {
     max-width: 100%;
     padding: 8px; }
 
-@media (max-width: 575.98px) {
-  left: 0;
-  width: 100%; }
-
 .flatpickr-calendar {
   border-radius: 0; }
 

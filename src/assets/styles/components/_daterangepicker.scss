@@ -175,12 +175,6 @@
 }
 
 
-  @include media-breakpoint-down(xs) { 
-    left:0;
-    width:100%;
-  }
-
-
 //flatpickr update
 .flatpickr-calendar{
   border-radius: 0;
