@@ -176,7 +176,7 @@
       }
 
       &:first-of-type{
-        margin-top: 0;
+        margin-top: 16px;
       }
     }
   .content{
@@ -197,6 +197,26 @@
       padding: 2px 8px;
       position: absolute;
       left: 0;
+    }
+
+    .d-day{
+      font-size: 18px;
+      font-weight: 700;
+      width: 48px;
+      height: 48px;
+      background-color: rgba(255,255,255,0.8);
+      border-radius: 50%;
+      color: $primary;
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      &.complete{
+        color:$main-grey;
+      }
     }
 
     .canceled{

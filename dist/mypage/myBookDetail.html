@@ -21,7 +21,7 @@
 <script type="text/javascript" defer src="/js/moment.min.js"></script>
 <link rel="stylesheet" type="text/css" href="/css/daterangepicker.css" />
 <script type="text/javascript" defer src="/js/daterangepicker.js"></script>
-<link href=".././css/styles.css?ea38eb9e3054220a602b" rel="stylesheet"></head>
+<link href=".././css/styles.css?d78408fa3d8e911d84f7" rel="stylesheet"></head>
 
 <body>
   <!-- 브라우저 권장 -->
@@ -36,7 +36,7 @@
 </div>
 <![endif]-->
 
-  <div>
+  <div class="fm">
     <!-- 헤더 -->
     <header class="header">
 
@@ -139,9 +139,9 @@
             <div class="col-12">
               <div class="d-flex justify-content-between">
                 <a href="#" class="prev" onclick="history.back();">
-                  <img src="/user/_images/icon-left-black@3x.png" class="sm-icon" alt="뒤로가기">
+                  <img src="/images/icon-left-black@3x.png" class="sm-icon" alt="뒤로가기">
                 </a>
-                <h1 class="title">고객지원</h1>
+                <h1 class="title">마이페이지</h1>
                 <!-- <a>
                           <img src="/images/icon-search-gray.png" class="sm-icon" alt="검색화면으로이동">
                         </a> -->
@@ -180,33 +180,18 @@
         </div>
       </div>
 
-      <div class="book-tab">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <ul class="nav nav-tabs">
-                <!-- 지난 예약에서는 상세페이지에서 지난예약 링크에 active 추가 됌 -->
-                <li class="nav-item">
-                  <a class="nav-link active scheduled-book " href="/mypage/myInfo.html">예정된 예약</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link prev-book" href="/mypage/myReview.html">지난 예약</a>
-                </li>
-              </ul>
-              <hr>
-            </div>
-          </div>
-        </div>
-      </div>
       <!-- book card -->
       <div class="container">
         <div class="row">
           <div class="col-12">
             <ul>
               <li class="book-card">
-                <a href="" class="d-flex md-block">
+                <div class="d-flex md-block">
                   <div class="content" style="background-image:url('/images/bread.jpg')">
                     <span class="address">전라/전주</span>
+                    <span class="d-day">D-20</span>
+                    <!-- 지난예약일경우 -->
+                    <!-- <span class="d-day complete">종료</span> -->
                   </div>
                   <div class="detail-info">
                     <div class="d-flex justify-content-between align-items-center border-bottom">
@@ -225,9 +210,21 @@
                           <span>숙소&nbsp;|</span>
                           <span>2021.03.29</span>
                         </span>
-
                       </div>
-                      <button type="button" class="btn btn-outline-primary cancel-request">취소요청</button>
+                      <button type="button" class="btn btn-outline-primary cancel-request" data-toggle="modal" data-target="#alert">취소요청</button>
+                      <div class="modal fade" id="alert" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content alert-modal">
+                            <div class="modal-body text-center font-weight-bold">
+                              예약을 취소 하시겠습니까?
+                            </div>
+                            <div class="modal-footer m-auto">
+                              <button type="button" class="btn btn-secondary md-fix-height" data-dismiss="modal">아니오</button>
+                              <button type="button" class="btn btn-primary md-fix-height">취소하기</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
 
                     </div>
                     <div class="d-flex md-block">
@@ -276,7 +273,7 @@
                     </div>
 
                   </div>
-                </a>
+                </div>
               </li>
             </ul>
 
@@ -398,6 +395,6 @@
 
     })
   </script>
-<script src=".././js/index.bundle.js?ea38eb9e3054220a602b"></script></body>
+<script src=".././js/index.bundle.js?d78408fa3d8e911d84f7"></script></body>
 
 </html>

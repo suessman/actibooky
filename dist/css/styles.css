@@ -9788,7 +9788,6 @@ hr.sm-interval {
   border: none; }
 
 button:focus, button:active {
-  border: none;
   outline: none; }
 
 .btn {
@@ -9802,12 +9801,16 @@ button:focus, button:active {
     min-width: 92px;
     width: 92px;
     padding: 0; }
+  .btn.md-fix-height {
+    min-width: 92px;
+    width: 92px;
+    height: 32px;
+    padding: 0; }
   .btn-primary {
     background-color: #9334ff;
     color: #ffffff;
     border: none; }
   .btn:focus {
-    border: none;
     outline: none;
     box-shadow: none; }
   .btn-outline {
@@ -9921,10 +9924,14 @@ button.btn.filter-btn:hover {
   @media (max-width: 575.98px) {
     .daterangepicker {
       left: 0 !important;
-      width: 100% !important; } }
+      width: 100%; } }
   .daterangepicker .drp-calendar.left, .daterangepicker .drp-calendar.right {
     max-width: 100%;
     padding: 8px; }
+
+@media (max-width: 575.98px) {
+  left: 0;
+  width: 100%; }
 
 .flatpickr-calendar {
   border-radius: 0; }
@@ -10587,7 +10594,7 @@ select.form-control.filter-select {
       color: #868e96; }
 
 .modal .modal-dialog {
-  margin-top: 16vh; }
+  margin-top: 15rem; }
   @media (min-width: 768px) {
     .modal .modal-dialog.popup {
       max-width: 460px; }
@@ -10629,6 +10636,12 @@ select.form-control.filter-select {
 
 .modal-popup .modal-footer {
   border: none; }
+
+.alert-modal {
+  padding: 3rem 0; }
+  @media (min-width: 992px) {
+    .alert-modal {
+      width: 460px; } }
 
 .pagination {
   margin-top: 40px;
@@ -12385,7 +12398,7 @@ main .section-body.card-ui-video .area {
     .book-card .md-block {
       display: block !important; }
     .book-card:first-of-type {
-      margin-top: 0; } }
+      margin-top: 16px; } }
   .book-card .content {
     width: 300px;
     display: inline-block;
@@ -12403,6 +12416,23 @@ main .section-body.card-ui-video .area {
       padding: 2px 8px;
       position: absolute;
       left: 0; }
+    .book-card .content .d-day {
+      font-size: 18px;
+      font-weight: 700;
+      width: 48px;
+      height: 48px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 50%;
+      color: #9334ff;
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row; }
+      .book-card .content .d-day.complete {
+        color: #343a40; }
     .book-card .content .canceled {
       color: #868e96;
       position: absolute;

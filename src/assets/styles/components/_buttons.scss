@@ -13,8 +13,7 @@
 //     box-shadow: none !important;
 //     border: none;
 // }
-button:focus, button:active{
-    border:none;
+button:focus, button:active{   
     outline: none;
 }
 
@@ -32,6 +31,13 @@ button:focus, button:active{
         padding:0;
     }
 
+    &.md-fix-height{
+        min-width:92px;
+        width: 92px;
+        height:32px;
+        padding:0;
+    }
+
     &-primary{
         background-color:$primary;
         color:$white;
@@ -39,8 +45,7 @@ button:focus, button:active{
     }
 
 
-    &:focus{
-        border:none;
+    &:focus{     
         outline:none;
         box-shadow:none;
     }
