@@ -242,15 +242,17 @@ select.form-control.filter-select{
         background-repeat: no-repeat;
         background-size:24px auto;  
       }
-    }
-    
-    .search{
+    }    
+   
+  }
+
+  @include media-breakpoint-down(md){
+     .search{
       height:40px; 
       min-width:100%;
       margin-top: 8px;
     }
   }
-
   .dropdown-ui{
     display: flex;
     justify-content: space-between;
@@ -354,32 +356,7 @@ select.form-control.filter-select{
       }
     }
 
-    .category{
-      background-color: $white;
-      padding:8px; 
-      height: 40px;
-      border: 1px solid $light;
-      position:relative;
-      z-index: 1100;      
-      
-      ul{
-        display: flex;
-      }
-      
-      label{
-        margin-bottom:0;
-      } 
 
-      @include media-breakpoint-down(md){
-         width:100%;
-         margin-left: 0 !important;
-         margin-top: 8px;
-
-         ul{
-           justify-content: center;
-         }
-       }
-    }
 
       @include media-breakpoint-down(sm) {
         .dropdown{
@@ -452,3 +429,64 @@ select.form-control.filter-select{
 }
 
 
+    .category{
+      background-color: $white;
+      display: inline-flex;
+      padding:8px; 
+      height: 40px;
+      border: 1px solid $light;
+      position:relative; 
+      
+      ul{
+        display: flex;
+        width: 220px;
+
+        @include media-breakpoint-down(md){
+          width: 100%;
+        }
+        li{
+          min-width: 68px;
+
+          input{
+          display: none;
+            &:checked + label{
+              border:1px solid $primary;
+              border-radius: 12px;
+            }
+          }
+        }        
+      }
+      
+      label{
+        margin-bottom:0;
+        min-width: 68px;
+        text-align: center;
+        height: 24px;
+      } 
+
+      @include media-breakpoint-down(md){
+         width:100%;
+         margin-left: 0 !important;
+         margin-top: 8px;
+
+         ul{
+           justify-content: center;
+         }
+       }
+    }
+
+    .stay-option{
+      display:none;
+    }
+
+    .play-option{
+      display:none;
+    }
+
+    .stay-option.display{
+      display:block;
+    }
+
+    .play-option.display{
+      display:block;
+    }

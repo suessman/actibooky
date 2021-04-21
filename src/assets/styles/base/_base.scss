@@ -131,6 +131,14 @@ main{
   .m-m-t5{
     margin-top: 2.5rem !important;
   }
+
+  .md-down-flex{
+    display: flex;
+  }
+
+  .md-down-block{
+    display: block !important;
+  }
 } 
 
 @include media-breakpoint-up(lg){
