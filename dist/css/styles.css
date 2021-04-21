@@ -10042,7 +10042,7 @@ select.form-control.filter-select {
             width: 24px;
             height: 24px; }
     @media (min-width: 992px) {
-      .filter-picker-ui .pick-filter-body .pick-filter {
+      .filter-picker-ui .pick-filter-body .pick-filter input {
         border-right: 1px solid #e9ecef; } }
     .filter-picker-ui .pick-filter-body .pick-filter:focus {
       border-bottom: none; }
@@ -10902,7 +10902,11 @@ main.main .md-popular-ui {
     main.main .md-popular-ui {
       margin-top: 16px !important; } }
 
+main.main .popular-search-word.display {
+  display: block; }
+
 main.main .popular-search-word {
+  display: none;
   position: absolute;
   top: 0;
   z-index: 1050;

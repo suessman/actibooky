@@ -149,7 +149,9 @@ select.form-control.filter-select{
         }
       }
       @include media-breakpoint-up(lg) {
-        border-right: 1px solid #e9ecef;
+        input{
+          border-right: 1px solid #e9ecef;
+        }
       }
 
 

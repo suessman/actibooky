@@ -22,7 +22,7 @@
 					<div class="row">
 						<div class="col-lg-8 m-auto date-picker-ui">
 							<div class="d-flex w-100 input-group">
-								<input type="text" class="form-control pick-calendar place" placeholder="어디로 떠날까요??" />
+								<input type="text" class="form-control pick-calendar place list-popup" readonly placeholder="어디로 떠날까요??" />
 								<input type="text" class="form-control pick-calendar date" readonly value="" name="daterange" placeholder="언제떠날까요?" />
 							</div>
 							<button type="button" class="btn-primary search" onclick="location.href='/searchResult.html'">검색</button>
@@ -31,7 +31,15 @@
 					<div class="row">
 						<div class="col-lg-8 col-12 m-auto md-popular-ui">
 							<div class="popular-search-word">
-								<h5 class="title">인기검색어</h5>
+								<div class="d-flex  justify-content-between align-items-center">
+									<h5 class="title mb-0">인기검색어</h5>
+									<button type="button" class="dropdown-close close close-list-popup">
+										<img class="sm-icon" srcset="/images/icon-cancel-gray.png 400w,
+																	/images/icon-cancel-gray@2x.png 700w,
+																	/images/icon-cancel-gray@3x.png 1000w" src="/images/icon-cancel-gray@3x.png" alt="닫기">
+									</button>
+								</div>
+
 								<ul class="d-flex">
 									<li class="popular-list">
 										<input type="radio" id="area1" name="popularlist">
@@ -283,7 +291,9 @@
 </body>
 <script>
 	$(function () {
-
+		var listPopup = $('.list-popup');
+		var popularSearchWord = $('.popular-search-word');
+		var closeListPopup = $('.close-list-popup');
 		function setDotDotDot() {
 			$(".title-overflow").dotdotdot({
 				ellipsis: '...',//말줄임 뭘로 할지
@@ -297,6 +307,21 @@
 
 		setDotDotDot();
 
+		//popular search list popup
+		listPopup.click(function () {
+			popularSearchWord.addClass('display');
+		})
+
+		closeListPopup.click(function () {
+			popularSearchWord.removeClass('display');
+			var selectedCheck = $("input:radio[name=popularlist]:checked");
+			var selectedValText = selectedCheck.next('label').text();
+			listPopup.val(selectedValText);
+		})
+
+
+
+		//daterangepicker
 		$('input[name="daterange"]').daterangepicker({
 			defaultDate: "",
 			opens: 'center',
