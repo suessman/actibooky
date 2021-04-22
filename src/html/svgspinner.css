@@ -1,0 +1,40 @@
+
+.spinner {
+	position: relative;
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+	background: #2bb1ff;
+}
+
+#svgSpinner{
+	width: 40%;
+	height: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#arrow {
+  animation: spinner 1.5s infinite;
+	transform-origin: center;
+}
+
+@keyframes spinner {
+  0% {
+		opacity: 0;
+		transform: translateY(-150%)
+  }
+	30% {
+		opacity: 0;
+	}
+	90% {
+		opacity: 1;
+		transform: translateY(10%)
+	}
+  100% {
+		opacity: 0;
+		transform: translateY(10%)
+	}
+}
