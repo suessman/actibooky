@@ -21,6 +21,7 @@ select.form-control.filter-select{
     .filter-list{
       display: flex;
       align-items: center;
+      height: 40px;
     }
     @include media-breakpoint-down(sm){
       background-color: transparent;
@@ -36,6 +37,10 @@ select.form-control.filter-select{
         //mobile input divider
         input.divider{
           border-right: 1px solid $light;
+        }
+
+        &.md-down-w-100{
+          width: 100% !important;
         }
       }
     }
@@ -151,6 +156,10 @@ select.form-control.filter-select{
       @include media-breakpoint-up(lg) {
         input{
           border-right: 1px solid #e9ecef;
+        }
+
+        &:nth-last-of-type(1) input{
+          border-right: none;
         }
       }
 

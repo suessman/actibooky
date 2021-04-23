@@ -22,7 +22,7 @@
 <script type="text/javascript" defer src="/js/daterangepicker.js"></script>
     <link rel="stylesheet" href="/css/main-calendar.css">
 
-<link href="./css/styles.css?0aedd5f9fd3ba3b7255d" rel="stylesheet"></head>
+<link href="./css/styles.css?c4d7d0aec747a24dec69" rel="stylesheet"></head>
 
 <body>
     <!-- 브라우저 권장 --> <!--[if IE]>
@@ -156,33 +156,33 @@
                                 </div>
 
                                 <ul class="d-flex">
-                                    <li class="popular-list">
+                                    <li class="popular-list click-el">
                                         <input type="radio" id="area1" name="popularlist">
                                         <label for="area1">서울</label>
                                     </li>
-                                    <li class="popular-list">
+                                    <li class="popular-list click-el">
                                         <input type="radio" id="area2" name="popularlist">
                                         <label for="area2">제주도</label>
                                     </li>
-                                    <li class="popular-list">
+                                    <li class="popular-list click-el">
                                         <input type="radio" id="area3" name="popularlist">
                                         <label for="area3">강원도</label>
                                     </li>
                                 </ul>
                                 <ul class="d-flex area-group">
-                                    <li class="area-list">
+                                    <li class="area-list click-el">
                                         <input type="radio" id="area4" name="popularlist">
                                         <label for="area4">전체</label>
                                     </li>
-                                    <li class="area-list">
+                                    <li class="area-list click-el">
                                         <input type="radio" id="area5" name="popularlist">
                                         <label for="area5">서울</label>
                                     </li>
-                                    <li class="area-list">
+                                    <li class="area-list click-el">
                                         <input type="radio" id="area6" name="popularlist">
                                         <label for="area6">전주</label>
                                     </li>
-                                    <li class="area-list">
+                                    <li class="area-list click-el">
                                         <input type="radio" id="area7" name="popularlist">
                                         <label for="area7">임실</label>
                                     </li>
@@ -472,7 +472,7 @@
 </footer>
 <!-- Footer -->
     </div>
-<script src="./js/index.bundle.js?0aedd5f9fd3ba3b7255d"></script></body>
+<script src="./js/index.bundle.js?c4d7d0aec747a24dec69"></script></body>
 <script>
     $(function () {
         var listPopup = $('.list-popup');
@@ -496,11 +496,17 @@
             popularSearchWord.addClass('display');
         })
 
+        $('.click-el').click(function () {
+            if ($("input:radio[name=popularlist]:checked")) {
+                var selectedCheck = $("input:radio[name=popularlist]:checked");
+                var selectedValText = selectedCheck.next('label').text();
+                popularSearchWord.removeClass('display');
+                listPopup.val(selectedValText);
+            }
+        })
+
         closeListPopup.click(function () {
             popularSearchWord.removeClass('display');
-            var selectedCheck = $("input:radio[name=popularlist]:checked");
-            var selectedValText = selectedCheck.next('label').text();
-            listPopup.val(selectedValText);
         })
 
 

@@ -9613,6 +9613,9 @@ body.open {
   width: 100vh;
   height: 100vh; }
 
+.more-view {
+  color: #868e96; }
+
 .flex-column-between {
   display: flex;
   justify-content: space-between;
@@ -9641,10 +9644,10 @@ main.main-sub {
   @media (max-width: 991.98px) {
     main.main-sub {
       padding-top: 48px; } }
-  @media (max-width: 991.98px) and (max-width: 991.98px) {
+  @media (max-width: 991.98px) {
     main.main-sub.main-top {
       padding-top: 460px; } }
-  @media (max-width: 991.98px) and (max-width: 767.98px) {
+  @media (max-width: 767.98px) {
     main.main-sub.main-top {
       padding-top: 180px; } }
 
@@ -9661,6 +9664,14 @@ main.main-sub {
     width: 24px;
     background-position: center;
     background-repeat: no-repeat; }
+
+@media (max-width: 767.98px) {
+  .sm-down-outline {
+    border: 1px solid #e9ecef !important; }
+  .sm-down-mt {
+    margin-top: 8px; }
+    .sm-down-mt.filter-list {
+      margin-top: 0 !important; } }
 
 @media (max-width: 991.98px) {
   .m-d-none {
@@ -9680,7 +9691,13 @@ main.main-sub {
 
 @media (min-width: 992px) {
   .md-down-display {
-    display: none; } }
+    display: none; }
+  .lg-up-d-flex {
+    display: flex; } }
+
+@media (min-width: 768px) {
+  .md-up-d-flex {
+    display: flex; } }
 
 .title-overflow {
   overflow: hidden;
@@ -9963,7 +9980,8 @@ select.form-control.filter-select {
   border: 1px solid #e9ecef; }
   .filter-picker-ui .pick-filter-body .filter-list {
     display: flex;
-    align-items: center; }
+    align-items: center;
+    height: 40px; }
   @media (max-width: 767.98px) {
     .filter-picker-ui .pick-filter-body {
       background-color: transparent;
@@ -9975,7 +9993,9 @@ select.form-control.filter-select {
         height: 40px;
         margin-top: 8px; }
         .filter-picker-ui .pick-filter-body .filter-list input.divider {
-          border-right: 1px solid #e9ecef; } }
+          border-right: 1px solid #e9ecef; }
+        .filter-picker-ui .pick-filter-body .filter-list.md-down-w-100 {
+          width: 100% !important; } }
   .filter-picker-ui .pick-filter-body div.pick-filter {
     position: relative; }
     .filter-picker-ui .pick-filter-body div.pick-filter.last {
@@ -10047,7 +10067,9 @@ select.form-control.filter-select {
             height: 24px; }
     @media (min-width: 992px) {
       .filter-picker-ui .pick-filter-body .pick-filter input {
-        border-right: 1px solid #e9ecef; } }
+        border-right: 1px solid #e9ecef; }
+      .filter-picker-ui .pick-filter-body .pick-filter:nth-last-of-type(1) input {
+        border-right: none; } }
     .filter-picker-ui .pick-filter-body .pick-filter:focus {
       border-bottom: none; }
     .filter-picker-ui .pick-filter-body .pick-filter.start-d, .filter-picker-ui .pick-filter-body .pick-filter.end-d {
@@ -10464,30 +10486,6 @@ select.form-control.filter-select {
             display: none; } }
       .owl-carousel .owl-nav button img {
         width: 24px; }
-  .owl-carousel .owl-item .stay-list {
-    position: relative; }
-    .owl-carousel .owl-item .stay-list .list {
-      position: absolute;
-      background-color: rgba(33, 37, 41, 0.4);
-      bottom: 0;
-      width: 100%;
-      left: 0;
-      display: flex;
-      justify-content: space-between;
-      padding: 8px; }
-  .owl-carousel .owl-item img {
-    height: 120px;
-    -o-object-fit: cover;
-       object-fit: cover; }
-    @media (max-width: 575.98px) {
-      .owl-carousel .owl-item img {
-        height: 80px; } }
-  @media (min-width: 992px) {
-    .owl-carousel .owl-item {
-      width: 162px !important; } }
-  @media (max-width: 1199.98px) {
-    .owl-carousel .owl-item {
-      width: 120px !important; } }
   .owl-carousel.near-exp .owl-stage-outer {
     width: 100%; }
   .owl-carousel.near-exp .owl-stage {
@@ -12696,7 +12694,16 @@ main .section-body.card-ui-video .area {
         min-width: 90px;
         width: -webkit-fit-content;
         width: -moz-fit-content;
-        width: fit-content; } }
+        width: fit-content;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        display: block;
+        left: 0;
+        right: 0;
+        height: 40px;
+        z-index: 9999;
+        line-height: 40px; } }
 
 .my-review .review-list {
   margin-top: 40px; }

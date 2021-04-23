@@ -41,6 +41,11 @@ body.open{
   height:100vh;
 }
 
+//더보기
+.more-view{
+  color:$dark;
+}
+
 //flex
 .flex-column-between{
  @include flex(space-between, center, column);
@@ -79,16 +84,16 @@ main{
     @include media-breakpoint-down(md) {
         padding-top:48px;
         //슬라이드 이미지 크기에 따라서 padding change
-        &.main-top{
-          @include media-breakpoint-down(md) {
-              padding-top:460px;
-          }
-          @include media-breakpoint-down(sm) {
-              padding-top:180px;
-          }          
-        }
+        
     }
-    
+    &.main-top{
+        @include media-breakpoint-down(md) {
+            padding-top:460px;
+        }
+        @include media-breakpoint-down(sm) {
+            padding-top:180px;
+        }          
+      }
     min-height: 100vh;
   }
 
@@ -112,6 +117,23 @@ main{
 
 
 //section media query
+
+ @include media-breakpoint-down(sm) {
+    .sm-down-outline{
+      border:1px solid $light !important;
+    }
+
+    .sm-down-mt{
+      margin-top: 8px;
+
+      &.filter-list{
+        margin-top: 0 !important;
+      }
+    }
+
+  }    
+
+
 @include media-breakpoint-down(md) {
   .m-d-none{
     visibility: hidden;
@@ -139,11 +161,22 @@ main{
   .md-down-block{
     display: block !important;
   }
+
 } 
 
 @include media-breakpoint-up(lg){
   .md-down-display{
     display: none;
+  }
+
+  .lg-up-d-flex{
+    display:flex;
+  }
+}
+
+@include media-breakpoint-up(md){
+  .md-up-d-flex{
+    display: flex;
   }
 }
   

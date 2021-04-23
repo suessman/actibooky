@@ -7,297 +7,85 @@
   <meta name="description" content="">
   ${ require('./partials/head.html') }
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="/css/headertitle.css">
 
+  <style>
+    main .section-body.card-ui ul.popular-card-body {
+      margin: 0 !important;
+    }
+
+    @media(min-width:992px) {
+      .owl-stage {
+        width: auto !important;
+      }
+
+      .owl-stage-outer {
+        overflow: visible;
+      }
+
+      .owl-item:nth-child(3n) {
+        margin-right: 0 !important;
+      }
+    }
+
+    .owl-item li {
+      width: calc(100%) !important;
+      margin-left: 0 !important;
+    }
+  </style>
 </head>
 
 <body>
   ${ require('./partials/browserupgrade.html') }
   <div>
     ${ require('./partials/header.html') }
-    <main class="d-flex flex-column h-100 main main-sub">
+    <header class="header-title">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="d-flex justify-content-between">
+              <!-- <a href="">
+                                      <img src="/images/icon-left-black@3x.png" class="sm-icon" alt="뒤로가기">
+                                    </a> -->
+              <button class="navbar-toggler collapsed header-main" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-controls="navbarSupportedContent backdropUi" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="acetrnt-toggle" data-click-state="1">
+                  <span class="icon-bar line-1"></span>
+                  <span class="icon-bar line-2"></span>
+                  <span class="icon-bar line-3"></span>
+                </div>
+              </button>
+              <h1 class="title">검색결과</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="d-flex flex-column h-100">
       <section class="card_body grey">
         <div class="container">
           <div class="row">
             <div class="col-lg-12 m-auto filter-picker-ui">
               <div class="w-100">
-                <div class="d-flex pick-filter-body">
-                  <div class="filter-list pick-filter place">
-                    <input type="text" class="form-control divider" value="어디로 떠날까요?" />
-                  </div>
-                  <div class="filter-list pick-filter start-d br-0">
-                    <input type="text" class="form-control date br-0" readonly value="" name="daterange" placeholder="체크인" />
-                  </div>
-
-                  <div class="filter-list pick-filter end-d">
-                    <input type="text" class="form-control date divider" readonly value="" name="daterange" placeholder="체크아웃" />
-                  </div>
-                  <div class="filter-list">
-                    <button type="button" class="pick-filter people-n dropdown-filter btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      인원
-                    </button>
-                    <div class="dropdown-menu">
-                      <div class="d-flex justify-content-between">
-                        <h1 class="dropdown-title">인원</h1>
-                        <button type="button" class="dropdown-close close" data-dismiss="modal" aria-label="Close">
-                          <img class="sm-icon" srcset="/images/icon-cancel-gray.png 400w,
-                                                                      /images/icon-cancel-gray@2x.png 700w,
-                                                                      /images/icon-cancel-gray@3x.png 1000w" src="/images/icon-cancel-gray@3x.png" alt="닫기">
-                        </button>
-                      </div>
-                      <div class="dropdown-item activity-counter">
-                        <div>
-                          <span>성인</span>
-                        </div>
-                        <span class="right">
-                          <button type="button" class="minus-btn">
-                          </button>
-                          <span class="counter-num">2</span>
-                          <button type="button" class="add-btn">
-                          </button>
-                        </span>
-                      </div>
-                      <div class="dropdown-item activity-counter">
-                        <div>
-                          <span>소아</span>
-                          <div class="detail">24개월~12세</div>
-                        </div>
-                        <span class="right">
-                          <button type="button" class="minus-btn">
-                          </button>
-                          <span class="counter-num">2</span>
-                          <button type="button" class="add-btn">
-                          </button>
-
-                        </span>
-                      </div>
-                      <div class="dropdown-item activity-counter">
-                        <div>
-                          <span>유아</span>
-                          <div class="detail">24개월 미만</div>
-                        </div>
-                        <span class="right">
-                          <button type="button" class="minus-btn">
-                          </button>
-                          <span class="counter-num">2</span>
-                          <button type="button" class="add-btn">
-                          </button>
-                        </span>
+                <div class="lg-up-d-flex  justify-content-between">
+                  <div class="md-up-d-flex pick-filter-body">
+                    <div class="filter-list pick-filter place md-down-w-100 sm-down-outline">
+                      <input type="text" class="form-control" value="어디로 떠날까요?" />
+                    </div>
+                    <div class="d-flex sm-down-outline sm-down-mt">
+                      <div class="filter-list pick-filter start-d">
+                        <input type=" text" class="form-control date divider" readonly value="" name="daterange" placeholder="체크인" />
                       </div>
 
-                      <div class="text-center apply-btn-wrapper">
-                        <button type="button" class="btn btn-primary apply dropdown-close">적용하기</button>
+                      <div class="filter-list pick-filter end-d">
+                        <input type="text" class="form-control date" readonly value="" name="daterange" placeholder="체크아웃" />
                       </div>
                     </div>
 
                   </div>
-                </div>
-                <!-- Button trigger modal -->
-                <div class="form-group filter-group md-up-d-block main">
-                  <div class="d-flex md-down-block">
-                    <div class="d-flex">
-                      <div class="btn-group dropdown-group list">
-                        <button type="button" class="dropdown-filter btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          가격
-                        </button>
-                        <div class="dropdown-menu">
-                          <div class="d-flex justify-content-between">
-                            <h1 class="dropdown-title">가격</h1>
-                            <button type="button" class="dropdown-close close" data-dismiss="modal" aria-label="Close">
-                              <img class="sm-icon" srcset="/images/icon-cancel-gray.png 400w,
-                                                                                                              /images/icon-cancel-gray@2x.png 700w,
-                                                                                                              /images/icon-cancel-gray@3x.png 1000w" src="/images/icon-cancel-gray@3x.png" alt="닫기">
-                            </button>
-                          </div>
-                          <div class="dropdown-item">
-                            <div class="custom-control custom-radio">
-                              <input type="radio" class="custom-control-input check-box-list" id="select1" name="category">
-                              <label class="custom-control-label check-list" for="select1"><span>전체</span></label>
-                            </div>
-                          </div>
-                          <div class="dropdown-item">
-                            <div class="custom-control custom-radio">
-                              <input type="radio" class="custom-control-input check-box-list" id="select2" name="category">
-                              <label class="custom-control-label check-list" for="select2">5천원미만</label>
-                            </div>
-                          </div>
-                          <div class="dropdown-item">
-                            <div class="custom-control custom-radio">
-                              <input type="radio" class="custom-control-input check-box-list" id="select3" name="category">
-                              <label class="custom-control-label check-list" for="select3">5천원~1만원미만</label>
-                            </div>
-                          </div>
-                          <div class="dropdown-item">
-                            <div class="custom-control custom-radio">
-                              <input type="radio" class="custom-control-input check-box-list" id="select4" name="category">
-                              <label class="custom-control-label check-list" for="select4">1만원~1만5천원미만</label>
-                            </div>
-                          </div>
-                          <div class="dropdown-item">
-                            <div class="custom-control custom-radio">
-                              <input type="radio" class="custom-control-input check-box-list" id="select5" name="category">
-                              <label class="custom-control-label check-list" for="select5">1만원~1만5천원미만</label>
-                            </div>
-                          </div>
-                          <div class="dropdown-item">
-                            <div class="custom-control custom-radio">
-                              <input type="radio" class="custom-control-input check-box-list" id="select6" name="category">
-                              <label class="custom-control-label check-list" for="select6">1만5천원~2만원미만</label>
-                            </div>
-                          </div>
-                          <div class="dropdown-item">
-                            <div class="custom-control custom-radio">
-                              <input type="radio" class="custom-control-input check-box-list" id="select7" name="category">
-                              <label class="custom-control-label check-list" for="select7">2만원이상</label>
-                            </div>
-                          </div>
-                          <div class="text-center apply-btn-wrapper">
-                            <button type="button" class="btn btn-primary apply dropdown-close button-list">적용하기</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="btn-group dropdown-group list ml-3 stay-option">
-                        <button type="button" class="dropdown-filter btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          숙소유형
-                        </button>
-                        <div class="dropdown-menu right">
-                          <div class="d-flex justify-content-between">
-                            <h1 class="dropdown-title">숙소유형</h1>
-                            <button type="button" class="dropdown-close close" data-dismiss="modal" aria-label="Close">
-                              <img class="sm-icon" srcset="/images/icon-cancel-gray.png 400w,
-                                                                                                  /images/icon-cancel-gray@2x.png 700w,
-                                                                                                  /images/icon-cancel-gray@3x.png 1000w" src="/images/icon-cancel-gray@3x.png" alt="닫기">
-                            </button>
-                          </div>
-                          <div class="dropdown-item">
-                            <div class="custom-control custom-radio">
-                              <input type="radio" class="custom-control-input check-box-list" id="roomtype1" name="roomType">
-                              <label class="custom-control-label check-list" for="roomtype1"><span>전체</span></label>
-                            </div>
-                          </div>
-                          <div class="dropdown-item">
-                            <div class="custom-control custom-radio">
-                              <input type="radio" class="custom-control-input check-box-list" id="roomtype2" name="roomType">
-                              <label class="custom-control-label check-list" for="roomtype2">원룸</label>
-                            </div>
-                          </div>
-                          <div class="dropdown-item">
-                            <div class="custom-control custom-radio">
-                              <input type="radio" class="custom-control-input check-box-list" id="roomtype3" name="roomType">
-                              <label class="custom-control-label check-list" for="roomtype3">농촌민박</label>
-                            </div>
-                          </div>
-                          <div class="dropdown-item">
-                            <div class="custom-control custom-radio">
-                              <input type="radio" class="custom-control-input check-box-list" id="roomtype4" name="roomType">
-                              <label class="custom-control-label check-list" for="roomtype4">펜션</label>
-                            </div>
-                          </div>
-                          <div class="dropdown-item">
-                            <div class="custom-control custom-radio">
-                              <input type="radio" class="custom-control-input check-box-list" id="roomtype5" name="roomType">
-                              <label class="custom-control-label check-list" for="roomtype5">농촌호텔</label>
-                            </div>
-                          </div>
-                          <div class="dropdown-item">
-                            <div class="custom-control custom-radio">
-                              <input type="radio" class="custom-control-input check-box-list" id="roomtype6" name="roomType">
-                              <label class="custom-control-label check-list" for="roomtype6">전통가옥</label>
-                            </div>
-                          </div>
-
-                          <div class="text-center apply-btn-wrapper">
-                            <button type="button" class="btn btn-primary apply dropdown-close button-list">적용하기</button>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="btn-group dropdown-group list ml-3 play-option">
-                        <button type="button" class="dropdown-filter btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          체험유형
-                        </button>
-                        <div class="dropdown-menu right">
-                          <div class="d-flex justify-content-between">
-                            <h1 class="dropdown-title">체험유형</h1>
-                            <button type="button" class="dropdown-close close" data-dismiss="modal" aria-label="Close">
-                              <img class="sm-icon" srcset="/images/icon-cancel-gray.png 400w,
-                                                                                                                      /images/icon-cancel-gray@2x.png 700w,
-                                                                                                                      /images/icon-cancel-gray@3x.png 1000w" src="/images/icon-cancel-gray@3x.png" alt="닫기">
-                            </button>
-                          </div>
-                          <div class="dropdown-item">
-                            <div class="custom-control custom-radio">
-                              <input type="radio" class="custom-control-input check-box-list" id="roomtype1" name="roomType">
-                              <label class="custom-control-label check-list" for="roomtype1"><span>전체</span></label>
-                            </div>
-                          </div>
-                          <div class="dropdown-item">
-                            <div class="custom-control custom-radio">
-                              <input type="radio" class="custom-control-input check-box-list" id="roomtype2" name="roomType">
-                              <label class="custom-control-label check-list" for="roomtype2">영농/생활체험</label>
-                            </div>
-                          </div>
-                          <div class="dropdown-item">
-                            <div class="custom-control custom-radio">
-                              <input type="radio" class="custom-control-input check-box-list" id="roomtype3" name="roomType">
-                              <label class="custom-control-label check-list" for="roomtype3">자연/생태체험</label>
-                            </div>
-                          </div>
-                          <div class="dropdown-item">
-                            <div class="custom-control custom-radio">
-                              <input type="radio" class="custom-control-input check-box-list" id="roomtype4" name="roomType">
-                              <label class="custom-control-label check-list" for="roomtype4">문화/예술체험</label>
-                            </div>
-                          </div>
-                          <div class="dropdown-item">
-                            <div class="custom-control custom-radio">
-                              <input type="radio" class="custom-control-input check-box-list" id="roomtype5" name="roomType">
-                              <label class="custom-control-label check-list" for="roomtype5">힐링/레포츠체험</label>
-                            </div>
-                          </div>
-                          <div class="dropdown-item">
-                            <div class="custom-control custom-radio">
-                              <input type="radio" class="custom-control-input check-box-list" id="roomtype6" name="roomType">
-                              <label class="custom-control-label check-list" for="roomtype6">궁예/요리체험</label>
-                            </div>
-                          </div>
-
-                          <div class="text-center apply-btn-wrapper">
-                            <button type="button" class="btn btn-primary apply dropdown-close button-list">적용하기</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="category ml-3">
-                      <ul>
-                        <li class="category-list">
-                          <div class="custom-control custom-radio">
-                            <input type="radio" id="category1" name="categoryType" checked>
-                            <label for="category1">전체</label>
-                          </div>
-                        </li>
-                        <li class="category-list">
-                          <div class="custom-control custom-radio">
-                            <input type="radio" id="category2" name="categoryType">
-                            <label for="category2">숙소</label>
-                          </div>
-                        </li>
-
-                        <li class="category-list">
-                          <div class="custom-control custom-radio">
-                            <div class="custom-control custom-radio">
-                              <input type="radio" id="category3" name="categoryType">
-                              <label for="category3">체험</label>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-
 
                   <button type="button" class="btn-primary search top-filter-search">검색</button>
                 </div>
+
               </div>
             </div>
           </div>
@@ -305,19 +93,20 @@
       </section>
       <div class="container">
         <div class="row">
-          <section class="col-12 mt-5 section-body card-ui m-mt">
-            <div class="d-flex justify-content-between top-title">
-              <h3>검색결과</h3>
-              <select name="" id="" class="form-control" style="width:126px;">
-                <option value="">인기순</option>
-                <option value="">최신순</option>
-                <option value="">낮은가격순</option>
-              </select>
+          <section class="col-12 mt-5 section-body card-ui m-mt sm-down-pr-0">
+            <div class="d-flex justify-content-between align-items-center top-title">
+              <h3>숙소 검색결과</h3>
+              <a href="/stay/stayMain.html" class="more-view">
+                더보기<img class="sm-icon" srcset="/images/icon-right-gray.png 400w,
+                                    /images/icon-right-gray@2x.png 700w,
+                                    /images/icon-right-gray@3x.png 1000w" src="/images/icon-right-gray@3x.png" alt="로그인페이지로이동" />
+              </a>
             </div>
-            <ul class="popular-card-body list">
-              <li class="popular-card">
+
+            <ul class="popular-card-body list owl-carousel owl-theme">
+              <li class="popular-card item">
                 <a href="">
-                  <div class="content" style="background-image:url('https://images.unsplash.com/photo-1612977512598-3b8d6a498bbb?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8JUVDJUEwJTlDJUVDJUEzJUJDJUVCJThGJTg0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')">
+                  <div class="content" style="background-image:url('https://images.unsplash.com/photo-1612977512598-3b8d6a498bbb?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8JUVDJUEwJTlDJUVDJUEzJUJDJUVCJThGJTg0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'),url('/images/onerror.jpg')">
                     <span class="address">전라/전주</span>
                     <!-- <span class="percent">50%</span> -->
                     <!-- 숙소 -->
@@ -330,9 +119,9 @@
                   </p>
                 </a>
               </li>
-              <li class="popular-card">
+              <li class="popular-card item">
                 <a href="">
-                  <div class="content" style="background-image:url('/images/main_top.jpg')">
+                  <div class="content" style="background-image:url('/images/main_.jpg'),url('/images/onerror.jpg')">
                     <span class="address">전라/전주</span>
                     <!-- <span class="percent">50%</span> -->
                     <!-- 숙소 -->
@@ -345,7 +134,7 @@
                   </p>
                 </a>
               </li>
-              <li class="popular-card">
+              <li class="popular-card item">
                 <a href="">
                   <div class="content" style="background-image:url('/images/stay1.jpg')">
                     <span class="address">전라/전주</span>
@@ -360,7 +149,7 @@
                   </p>
                 </a>
               </li>
-              <li class="popular-card">
+              <li class="popular-card item">
                 <a href="">
                   <div class="content" style="background-image:url('/images/stay2.jpg')">
                     <span class="address">전라/전주</span>
@@ -375,7 +164,7 @@
                   </p>
                 </a>
               </li>
-              <li class="popular-card">
+              <li class="popular-card item">
                 <a href="">
                   <div class="content" style="background-image:url('/images/stay3.jpg')">
                     <span class="address">전라/전주</span>
@@ -390,7 +179,7 @@
                   </p>
                 </a>
               </li>
-              <li class="popular-card">
+              <li class="popular-card item">
                 <a href="">
                   <div class="content" style="background-image:url('https://images.unsplash.com/photo-1547554710-6460f316aa27?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8JUVDJUEwJTlDJUVDJUEzJUJDJUVCJThGJTg0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')">
                     <span class="address">전라/전주</span>
@@ -405,45 +194,106 @@
                   </p>
                 </a>
               </li>
-              <li class="popular-card">
+            </ul>
+          </section>
+        </div>
+
+        <div class="row">
+          <section class="col-12 mt-5 section-body card-ui m-mt sm-down-pr-0">
+            <div class="d-flex justify-content-between align-items-center top-title">
+              <h3>체험 검색결과</h3>
+              <a href="/stay/stayMain.html" class="more-view">
+                더보기<img class="sm-icon" srcset="/images/icon-right-gray.png 400w,
+                                            /images/icon-right-gray@2x.png 700w,
+                                            /images/icon-right-gray@3x.png 1000w" src="/images/icon-right-gray@3x.png" alt="로그인페이지로이동" />
+              </a>
+            </div>
+
+            <ul class="popular-card-body list owl-carousel owl-theme">
+              <li class="popular-card item">
                 <a href="">
-                  <div class="content" style="background-image:url('https://images.unsplash.com/photo-1567257639169-bc999ffe69ce?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OHx8JUVDJUEwJTlDJUVDJUEzJUJDJUVCJThGJTg0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')">
+                  <div class="content" style="background-image:url('https://images.unsplash.com/photo-1612977512598-3b8d6a498bbb?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8JUVDJUEwJTlDJUVDJUEzJUJDJUVCJThGJTg0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'),url('/images/onerror.jpg')">
                     <span class="address">전라/전주</span>
                     <!-- <span class="percent">50%</span> -->
                     <!-- 숙소 -->
                     <span class="percent stay">50%</span>
                   </div>
-                  <h1 class="title-overflow">#한림</h1>
+                  <h1 class="title-overflow">세월 속에 현대의 시간이 포개지는 곳</h1>
                   <p>
                     <span class="price">₩25,000</span>
                     <del class="sale-price">₩44,000</del>
                   </p>
                 </a>
               </li>
-              <li class="popular-card">
+              <li class="popular-card item">
                 <a href="">
-                  <div class="content" style="background-image:url('https://images.unsplash.com/photo-1541379119855-2078576bb41f?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8JUVDJUJCJUE0JUVEJTk0JUJDfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')">
+                  <div class="content" style="background-image:url('/images/main_.jpg'),url('/images/onerror.jpg')">
                     <span class="address">전라/전주</span>
                     <!-- <span class="percent">50%</span> -->
                     <!-- 숙소 -->
                     <span class="percent stay">50%</span>
                   </div>
-                  <h1 class="title-overflow">#커피드립백</h1>
+                  <h1 class="title-overflow">자연과 한옥의 완벽한 조화로부터!</h1>
                   <p>
                     <span class="price">₩25,000</span>
                     <del class="sale-price">₩44,000</del>
                   </p>
                 </a>
               </li>
-              <li class="popular-card">
+              <li class="popular-card item">
                 <a href="">
-                  <div class="content" style="background-image:url('https://images.unsplash.com/photo-1607082333475-51c2938c9bfc?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8cGxheXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')">
+                  <div class="content" style="background-image:url('/images/stay1.jpg')">
+                    <span class="address">전라/전주</span>
+                    <!-- <span class="percent">50%</span> -->
+                    <!-- 숙소 -->
+                    <span class="percent stay">50%</span>
+                  </div>
+                  <h1 class="title-overflow">오래되어 새로운 것 , 빈티지 제주</h1>
+                  <p>
+                    <span class="price">₩25,000</span>
+                    <del class="sale-price">₩44,000</del>
+                  </p>
+                </a>
+              </li>
+              <li class="popular-card item">
+                <a href="">
+                  <div class="content" style="background-image:url('/images/stay2.jpg')">
+                    <span class="address">전라/전주</span>
+                    <!-- <span class="percent">50%</span> -->
+                    <!-- 숙소 -->
+                    <span class="percent stay">50%</span>
+                  </div>
+                  <h1 class="title-overflow">제주를 온전히 담아낸 제주집 두모공입니다_ 제주!</h1>
+                  <p>
+                    <span class="price">₩25,000</span>
+                    <del class="sale-price">₩44,000</del>
+                  </p>
+                </a>
+              </li>
+              <li class="popular-card item">
+                <a href="">
+                  <div class="content" style="background-image:url('/images/stay3.jpg')">
+                    <span class="address">전라/전주</span>
+                    <!-- <span class="percent">50%</span> -->
+                    <!-- 숙소 -->
+                    <span class="percent stay">50%</span>
+                  </div>
+                  <h1 class="title-overflow">제주 어느 마을 깊숙이 소요소림,,</h1>
+                  <p>
+                    <span class="price">₩25,000</span>
+                    <del class="sale-price">₩44,000</del>
+                  </p>
+                </a>
+              </li>
+              <li class="popular-card item">
+                <a href="">
+                  <div class="content" style="background-image:url('https://images.unsplash.com/photo-1547554710-6460f316aa27?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8JUVDJUEwJTlDJUVDJUEzJUJDJUVCJThGJTg0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')">
                     <span class="address">전라/전주</span>
                     <!-- <span class="percent">50%</span> -->
                     <!-- 숙소 -->
                     <span class="percent">50%</span>
                   </div>
-                  <h1 class="title-overflow">아이와 함께하는 체험, 찰흙놀이</h1>
+                  <h1 class="title-overflow">제주의 온기를 전하다 와온!!!!!!</h1>
                   <p>
                     <span class="price">₩25,000</span>
                     <del class="sale-price">₩44,000</del>
@@ -452,30 +302,6 @@
               </li>
             </ul>
           </section>
-
-          <nav aria-label="Page navigation example" class="col-12">
-            <ul class="pagination justify-content-center">
-              <li class="page-item">
-                <a class="page-link" href="#">
-                  <img class="sm-icon" srcset="/images/icon-left-black.png 400w,
-                                                                /images/icon-left-black@2x.png 700w,
-                                                                /images/icon-left-black@3x.png 1000w" src="/images/icon-left-black@3x.png" alt="이전" />
-                </a>
-              </li>
-              <li class="page-item active number"><a class="page-link" href="#">1</a></li>
-              <li class="page-item number"><a class="page-link" href="#">2</a></li>
-              <li class="page-item number"><a class="page-link" href="#">3</a></li>
-              <li class="page-item number"><a class="page-link" href="#">4</a></li>
-              <li class="page-item number"><a class="page-link" href="#">5</a></li>
-              <li class="page-item">
-                <a class="page-link" href="#">
-                  <img class="sm-icon" srcset="/images/icon-right-black.png 400w,
-                                                                /images/icon-right-black@2x.png 700w,
-                                                                /images/icon-right-black@3x.png 1000w" src="/images/icon-right-black@3x.png" alt="다음" />
-                </a>
-              </li>
-            </ul>
-          </nav>
         </div>
       </div>
     </main> ${ require('./partials/footer.html') }
@@ -579,6 +405,29 @@
       } else {
         $('.play-option').removeClass('display');
         $('.stay-option').removeClass('display');
+      }
+    })
+
+    $('.owl-carousel').owlCarousel({
+
+      margin: 20,
+      // autoWidth: true,
+      responsiveClass: true,
+      responsive: {
+        0: {
+          items: 1.08,
+          nav: true,
+          margin: 8
+        },
+        600: {
+          // autoWidth: true,
+        },
+        1000: {
+          items: 3,
+          // autoWidth: true,
+          loop: false,
+          margin: 20
+        }
       }
     })
   })

@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>체험</title>
   <meta name="description" content="">
+  <link rel="stylesheet" href="/css/headertitle.css">
   <!-- include -->
   ${ require('../partials/head.html') }
 </head>
@@ -15,6 +16,27 @@
   <div>
     <!-- 헤더 -->
     ${ require('../partials/header.html') }
+    <header class="header-title">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="d-flex justify-content-between">
+              <!-- <a href="">
+                                                  <img src="/images/icon-left-black@3x.png" class="sm-icon" alt="뒤로가기">
+                                                </a> -->
+              <button class="navbar-toggler collapsed header-main" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-controls="navbarSupportedContent backdropUi" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="acetrnt-toggle" data-click-state="1">
+                  <span class="icon-bar line-1"></span>
+                  <span class="icon-bar line-2"></span>
+                  <span class="icon-bar line-3"></span>
+                </div>
+              </button>
+              <h1 class="title">체험</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
     <main class="d-flex flex-column h-100 main main-sub">
       <section class="card_body grey">
         <div class="container">
@@ -22,113 +44,111 @@
             <div class="col-lg-12 m-auto filter-picker-ui">
               <div class="w-100">
                 <div class="d-flex pick-filter-body">
-                  <div class="pick-filter place">
+                  <div class="filter-list pick-filter place">
                     <input type="text" class="form-control divider" value="어디로 떠날까요?" />
                   </div>
-                  <div class="pick-filter start-d br-0">
+                  <div class="filter-list pick-filter start-d br-0">
                     <input type="text" class="form-control date br-0" readonly value="" name="daterange" placeholder="날짜" />
                   </div>
 
-                  <div class="pick-filter people-n time filter-btn br-0">
-                    <div class="btn-group dropdown-group w-100">
-                      <button type="button" class="dropdown-filter btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        시간
-                      </button>
-                      <div class="dropdown-menu">
-                        <div class="d-flex justify-content-between">
-                          <h1 class="dropdown-title">인원</h1>
-                          <button type="button" class="dropdown-close close" data-dismiss="modal" aria-label="Close">
-                            <img class="sm-icon" srcset="/images/icon-cancel-gray.png 400w,
-                                                                                                              /images/icon-cancel-gray@2x.png 700w,
-                                                                                                              /images/icon-cancel-gray@3x.png 1000w" src="/images/icon-cancel-gray@3x.png" alt="닫기">
-                          </button>
-                        </div>
-                        <div class="dropdown-item">
-                          <div class="custom-control custom-radio">
-                            <input type="radio" class="custom-control-input check-box-list" id="time1" name="category">
-                            <label class="custom-control-label check-list" for="time1"><span>전체</span></label>
-                          </div>
-                        </div>
-                        <div class="dropdown-item">
-                          <div class="custom-control custom-radio">
-                            <input type="radio" class="custom-control-input check-box-list" id="time2" name="category">
-                            <label class="custom-control-label check-list" for="time2"><span>오전</span></label>
-                          </div>
-                        </div>
-                        <div class="dropdown-item">
-                          <div class="custom-control custom-radio">
-                            <input type="radio" class="custom-control-input check-box-list" id="time3" name="category">
-                            <label class="custom-control-label check-list" for="time3"><span>오후</span></label>
-                          </div>
-                        </div>
-
-                        <div class="text-center apply-btn-wrapper">
-                          <button type="button" class="btn btn-primary apply dropdown-close">적용하기</button>
+                  <div class="filter-list">
+                    <button type="button" class="pick-filter people-n time filter-btn br-0 dropdown-filter btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      시간
+                    </button>
+                    <div class="dropdown-menu">
+                      <div class="d-flex justify-content-between">
+                        <h1 class="dropdown-title">시간</h1>
+                        <button type="button" class="dropdown-close close" data-dismiss="modal" aria-label="Close">
+                          <img class="sm-icon" srcset="/images/icon-cancel-gray.png 400w,
+                                                                                                            /images/icon-cancel-gray@2x.png 700w,
+                                                                                                            /images/icon-cancel-gray@3x.png 1000w" src="/images/icon-cancel-gray@3x.png" alt="닫기">
+                        </button>
+                      </div>
+                      <div class="dropdown-item">
+                        <div class="custom-control custom-radio">
+                          <input type="radio" class="custom-control-input check-box-list" id="time" name="time">
+                          <label class="custom-control-label check-list" for="time"><span>전체</span></label>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  <div class="pick-filter people-n dropdown filter-btn last br-0">
-
-                    <div class="btn-group dropdown-group w-100">
-                      <button type="button" class="dropdown-filter btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        인원
-                      </button>
-                      <div class="dropdown-menu">
-                        <div class="d-flex justify-content-between">
-                          <h1 class="dropdown-title">인원</h1>
-                          <button type="button" class="dropdown-close close" data-dismiss="modal" aria-label="Close">
-                            <img class="sm-icon" srcset="/images/icon-cancel-gray.png 400w,
-                                                                                            /images/icon-cancel-gray@2x.png 700w,
-                                                                                            /images/icon-cancel-gray@3x.png 1000w" src="/images/icon-cancel-gray@3x.png" alt="닫기">
-                          </button>
-                        </div>
-                        <div class="dropdown-item activity-counter">
-                          <div>
-                            <span>성인</span>
-                          </div>
-                          <span class="right">
-                            <button type="button" class="minus-btn">
-                            </button>
-                            <span class="counter-num">2</span>
-                            <button type="button" class="add-btn">
-                            </button>
-                          </span>
-                        </div>
-                        <div class="dropdown-item activity-counter">
-                          <div>
-                            <span>소아</span>
-                            <div class="detail">24개월~12세</div>
-                          </div>
-                          <span class="right">
-                            <button type="button" class="minus-btn">
-                            </button>
-                            <span class="counter-num">2</span>
-                            <button type="button" class="add-btn">
-                            </button>
-
-                          </span>
-                        </div>
-                        <div class="dropdown-item activity-counter">
-                          <div>
-                            <span>유아</span>
-                            <div class="detail">24개월 미만</div>
-                          </div>
-                          <span class="right">
-                            <button type="button" class="minus-btn">
-                            </button>
-                            <span class="counter-num">2</span>
-                            <button type="button" class="add-btn">
-                            </button>
-                          </span>
-                        </div>
-
-                        <div class="text-center apply-btn-wrapper">
-                          <button type="button" class="btn btn-primary apply dropdown-close">적용하기</button>
+                      <div class="dropdown-item">
+                        <div class="custom-control custom-radio">
+                          <input type="radio" class="custom-control-input check-box-list" id="time2" name="time">
+                          <label class="custom-control-label check-list" for="time2">오전</label>
                         </div>
                       </div>
+                      <div class="dropdown-item">
+                        <div class="custom-control custom-radio">
+                          <input type="radio" class="custom-control-input check-box-list" id="time3" name="time">
+                          <label class="custom-control-label check-list" for="time3">오후</label>
+                        </div>
+                      </div>
+
+                      <div class="text-center apply-btn-wrapper">
+                        <button type="button" class="btn btn-primary apply dropdown-close button-list">적용하기</button>
+                      </div>
                     </div>
+
                   </div>
+                  <div class="filter-list">
+                    <button type="button" class="pick-filter people-n dropdown-filter btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      인원
+                    </button>
+                    <div class="dropdown-menu">
+                      <div class="d-flex justify-content-between">
+                        <h1 class="dropdown-title">인원</h1>
+                        <button type="button" class="dropdown-close close" data-dismiss="modal" aria-label="Close">
+                          <img class="sm-icon" srcset="/images/icon-cancel-gray.png 400w,
+                                                                                  /images/icon-cancel-gray@2x.png 700w,
+                                                                                  /images/icon-cancel-gray@3x.png 1000w" src="/images/icon-cancel-gray@3x.png" alt="닫기">
+                        </button>
+                      </div>
+                      <div class="dropdown-item activity-counter">
+                        <div>
+                          <span>성인</span>
+                        </div>
+                        <span class="right">
+                          <button type="button" class="minus-btn">
+                          </button>
+                          <span class="counter-num">2</span>
+                          <button type="button" class="add-btn">
+                          </button>
+                        </span>
+                      </div>
+                      <div class="dropdown-item activity-counter">
+                        <div>
+                          <span>소아</span>
+                          <div class="detail">24개월~12세</div>
+                        </div>
+                        <span class="right">
+                          <button type="button" class="minus-btn">
+                          </button>
+                          <span class="counter-num">2</span>
+                          <button type="button" class="add-btn">
+                          </button>
+
+                        </span>
+                      </div>
+                      <div class="dropdown-item activity-counter">
+                        <div>
+                          <span>유아</span>
+                          <div class="detail">24개월 미만</div>
+                        </div>
+                        <span class="right">
+                          <button type="button" class="minus-btn">
+                          </button>
+                          <span class="counter-num">2</span>
+                          <button type="button" class="add-btn">
+                          </button>
+                        </span>
+                      </div>
+
+                      <div class="text-center apply-btn-wrapper">
+                        <button type="button" class="btn btn-primary apply dropdown-close">적용하기</button>
+                      </div>
+                    </div>
+
+                  </div>
+
                 </div>
                 <!-- Button trigger modal -->
                 <div class="form-group filter-group md-up-d-block main">
@@ -142,54 +162,45 @@
                           <h1 class="dropdown-title">가격</h1>
                           <button type="button" class="dropdown-close close" data-dismiss="modal" aria-label="Close">
                             <img class="sm-icon" srcset="/images/icon-cancel-gray.png 400w,
-                                                                                                              /images/icon-cancel-gray@2x.png 700w,
-                                                                                                              /images/icon-cancel-gray@3x.png 1000w" src="/images/icon-cancel-gray@3x.png" alt="닫기">
+                                                                                                    /images/icon-cancel-gray@2x.png 700w,
+                                                                                                    /images/icon-cancel-gray@3x.png 1000w" src="/images/icon-cancel-gray@3x.png" alt="닫기">
                           </button>
                         </div>
                         <div class="dropdown-item">
                           <div class="custom-control custom-radio">
-                            <input type="radio" class="custom-control-input check-box-list" id="select1" name="category">
-                            <label class="custom-control-label check-list" for="select1"><span>전체</span></label>
+                            <input type="radio" class="custom-control-input check-box-list" id="price1" name="price">
+                            <label class="custom-control-label check-list" for="price1"><span>전체</span></label>
                           </div>
                         </div>
                         <div class="dropdown-item">
                           <div class="custom-control custom-radio">
-                            <input type="radio" class="custom-control-input check-box-list" id="select2" name="category">
-                            <label class="custom-control-label check-list" for="select2">5천원미만</label>
+                            <input type="radio" class="custom-control-input check-box-list" id="price2" name="price2">
+                            <label class="custom-control-label check-list" for="price2">5천원미만</label>
                           </div>
                         </div>
                         <div class="dropdown-item">
                           <div class="custom-control custom-radio">
-                            <input type="radio" class="custom-control-input check-box-list" id="select3" name="category">
-                            <label class="custom-control-label check-list" for="select3">5천원~1만원미만</label>
+                            <input type="radio" class="custom-control-input check-box-list" id="price3" name="price">
+                            <label class="custom-control-label check-list" for="price3">5천원~1만원미만</label>
                           </div>
                         </div>
                         <div class="dropdown-item">
                           <div class="custom-control custom-radio">
-                            <input type="radio" class="custom-control-input check-box-list" id="select4" name="category">
-                            <label class="custom-control-label check-list" for="select4">1만원~1만5천원미만</label>
+                            <input type="radio" class="custom-control-input check-box-list" id="price4" name="price">
+                            <label class="custom-control-label check-list" for="price4">1만원~1만5천원미만</label>
                           </div>
                         </div>
                         <div class="dropdown-item">
                           <div class="custom-control custom-radio">
-                            <input type="radio" class="custom-control-input check-box-list" id="select5" name="category">
-                            <label class="custom-control-label check-list" for="select5">1만원~1만5천원미만</label>
+                            <input type="radio" class="custom-control-input check-box-list" id="price5" name="price">
+                            <label class="custom-control-label check-list" for="price5">1만5천원~2만원미만</label>
                           </div>
                         </div>
                         <div class="dropdown-item">
                           <div class="custom-control custom-radio">
-                            <input type="radio" class="custom-control-input check-box-list" id="select6" name="category">
-                            <label class="custom-control-label check-list" for="select6">1만5천원~2만원미만</label>
+                            <input type="radio" class="custom-control-input check-box-list" id="price6" name="price">
+                            <label class="custom-control-label check-list" for="price6">2만원이상</label>
                           </div>
-                        </div>
-                        <div class="dropdown-item">
-                          <div class="custom-control custom-radio">
-                            <input type="radio" class="custom-control-input check-box-list" id="select7" name="category">
-                            <label class="custom-control-label check-list" for="select7">2만원이상</label>
-                          </div>
-                        </div>
-                        <div class="text-center apply-btn-wrapper">
-                          <button type="button" class="btn btn-primary apply dropdown-close">적용하기</button>
                         </div>
                       </div>
                     </div>
@@ -197,62 +208,66 @@
                       <button type="button" class="dropdown-filter btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         체험유형
                       </button>
-                      <div class="dropdown-menu">
+                      <div class="dropdown-menu right">
                         <div class="d-flex justify-content-between">
                           <h1 class="dropdown-title">체험유형</h1>
                           <button type="button" class="dropdown-close close" data-dismiss="modal" aria-label="Close">
                             <img class="sm-icon" srcset="/images/icon-cancel-gray.png 400w,
-                                                                                                  /images/icon-cancel-gray@2x.png 700w,
-                                                                                                  /images/icon-cancel-gray@3x.png 1000w" src="/images/icon-cancel-gray@3x.png" alt="닫기">
+                                                                                        /images/icon-cancel-gray@2x.png 700w,
+                                                                                        /images/icon-cancel-gray@3x.png 1000w" src="/images/icon-cancel-gray@3x.png" alt="닫기">
                           </button>
                         </div>
                         <div class="dropdown-item">
                           <div class="custom-control custom-radio">
-                            <input type="radio" class="custom-control-input check-box-list" id="roomtype1" name="roomType">
-                            <label class="custom-control-label check-list" for="roomtype1"><span>전체</span></label>
+                            <input type="radio" class="custom-control-input check-box-list" id="exptype1" name="exptype">
+                            <label class="custom-control-label check-list" for="exptype1"><span>전체</span></label>
                           </div>
                         </div>
                         <div class="dropdown-item">
                           <div class="custom-control custom-radio">
-                            <input type="radio" class="custom-control-input check-box-list" id="roomtype2" name="roomType">
-                            <label class="custom-control-label check-list" for="roomtype2">영농/생활체험</label>
+                            <input type="radio" class="custom-control-input check-box-list" id="exptype2" name="exptype">
+                            <label class="custom-control-label check-list" for="exptype2">영농/생활체험</label>
                           </div>
                         </div>
                         <div class="dropdown-item">
                           <div class="custom-control custom-radio">
-                            <input type="radio" class="custom-control-input check-box-list" id="roomtype3" name="roomType">
-                            <label class="custom-control-label check-list" for="roomtype3">자연/생태체험</label>
+                            <input type="radio" class="custom-control-input check-box-list" id="exptype3" name="exptype">
+                            <label class="custom-control-label check-list" for="exptype3">자연/생태체험</label>
                           </div>
                         </div>
                         <div class="dropdown-item">
                           <div class="custom-control custom-radio">
-                            <input type="radio" class="custom-control-input check-box-list" id="roomtype4" name="roomType">
-                            <label class="custom-control-label check-list" for="roomtype4">문화/예술체험</label>
+                            <input type="radio" class="custom-control-input check-box-list" id="exptype4" name="exptype">
+                            <label class="custom-control-label check-list" for="exptype4">문화/예술체험</label>
                           </div>
                         </div>
                         <div class="dropdown-item">
                           <div class="custom-control custom-radio">
-                            <input type="radio" class="custom-control-input check-box-list" id="roomtype5" name="roomType">
-                            <label class="custom-control-label check-list" for="roomtype5">힐링/레포츠체험</label>
+                            <input type="radio" class="custom-control-input check-box-list" id="exptype5" name="exptype">
+                            <label class="custom-control-label check-list" for="exptype5">힐링/레포츠체험</label>
                           </div>
                         </div>
                         <div class="dropdown-item">
                           <div class="custom-control custom-radio">
-                            <input type="radio" class="custom-control-input check-box-list" id="roomtype6" name="roomType">
-                            <label class="custom-control-label check-list" for="roomtype6">공예/요리체험</label>
+                            <input type="radio" class="custom-control-input check-box-list" id="exptype6" name="exptype">
+                            <label class="custom-control-label check-list" for="exptype6">공예/요리체험</label>
                           </div>
                         </div>
 
                         <div class="text-center apply-btn-wrapper">
-                          <button type="button" class="btn btn-primary apply dropdown-close">적용하기</button>
+                          <button type="button" class="btn btn-primary apply dropdown-close button-list">적용하기</button>
                         </div>
                       </div>
                     </div>
+
+
                   </div>
 
 
                   <button type="button" class="btn-primary search top-filter-search">검색</button>
                 </div>
+
+
               </div>
             </div>
 
