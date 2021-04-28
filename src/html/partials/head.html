@@ -12,3 +12,19 @@
 <script type="text/javascript" defer src="/js/moment.min.js"></script>
 <link rel="stylesheet" type="text/css" href="/css/daterangepicker.css" />
 <script type="text/javascript" defer src="/js/daterangepicker.js"></script>
+
+
+<!-- header -->
+<script>
+    $(function () {
+        $('.navbar-toggler').click(function () {
+            if ($('.navbar-collapse').hasClass('show')) {
+                $('body').removeClass('hidden');
+            } else {
+                $('body').addClass('hidden');
+            }
+        })
+
+    })
+
+</script>

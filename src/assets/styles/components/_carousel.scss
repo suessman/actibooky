@@ -342,3 +342,27 @@
     }
   }
 }
+
+//app slide carousel
+main.carousel-body .section-body.card-ui ul.popular-card-body {
+  margin: 0 !important;
+}
+
+@include media-breakpoint-up(lg) {
+  .app-owl-carousel .owl-stage {
+    width: auto !important;
+  }
+
+  .app-owl-carousel .owl-stage-outer {
+    overflow: visible;
+  }
+
+  .app-owl-carousel .owl-item:nth-child(3n) {
+    margin-right: 0 !important;
+  }
+}
+
+.app-owl-carousel .owl-item li {
+  width: calc(100%) !important;
+  margin-left: 0 !important;
+}

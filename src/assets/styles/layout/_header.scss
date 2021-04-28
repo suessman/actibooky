@@ -5,6 +5,10 @@ body.menu-open{
   overflow: hidden;
 }
 
+body.hidden{
+  overflow: hidden;
+}
+
 .backdrop-ui.show{
   position:fixed;
   top:0;

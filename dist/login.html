@@ -20,7 +20,23 @@
 <script type="text/javascript" defer src="/js/moment.min.js"></script>
 <link rel="stylesheet" type="text/css" href="/css/daterangepicker.css" />
 <script type="text/javascript" defer src="/js/daterangepicker.js"></script>
-<link href="./css/styles.css?c4d7d0aec747a24dec69" rel="stylesheet"></head>
+
+
+<!-- header -->
+<script>
+    $(function () {
+        $('.navbar-toggler').click(function () {
+            if ($('.navbar-collapse').hasClass('show')) {
+                $('body').removeClass('hidden');
+            } else {
+                $('body').addClass('hidden');
+            }
+        })
+
+    })
+
+</script>
+<link href="./css/styles.css?16236c97ec7941e31fe0" rel="stylesheet"></head>
 
 <body>
 
@@ -192,6 +208,6 @@
       </div>
     </main>
   </div>
-<script src="./js/index.bundle.js?c4d7d0aec747a24dec69"></script></body>
+<script src="./js/index.bundle.js?16236c97ec7941e31fe0"></script></body>
 
 </html>

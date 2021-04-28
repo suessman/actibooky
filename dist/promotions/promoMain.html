@@ -21,7 +21,23 @@
 <script type="text/javascript" defer src="/js/moment.min.js"></script>
 <link rel="stylesheet" type="text/css" href="/css/daterangepicker.css" />
 <script type="text/javascript" defer src="/js/daterangepicker.js"></script>
-<link href=".././css/styles.css?c4d7d0aec747a24dec69" rel="stylesheet"></head>
+
+
+<!-- header -->
+<script>
+    $(function () {
+        $('.navbar-toggler').click(function () {
+            if ($('.navbar-collapse').hasClass('show')) {
+                $('body').removeClass('hidden');
+            } else {
+                $('body').addClass('hidden');
+            }
+        })
+
+    })
+
+</script>
+<link href=".././css/styles.css?16236c97ec7941e31fe0" rel="stylesheet"></head>
 
 <body>
   <!-- 브라우저 권장 -->
@@ -163,9 +179,13 @@
         </ol>
         <div class="carousel-inner promotion">
           <div class="carousel-item active">
-            <img srcset="/images/promotion-mobile.png 700w,
-                                      /images/promotion.png 1000w,
-                                      /images/promotion.png 1200w" src="/images/promotion.png" alt="프로모션" />
+            <img srcset="/images/promotion-mobile.png 160w,
+             /images/promotion-mobile.png 320w,
+             /images/promotion.png 640w,
+             /images/promotion.png 1280w" alt="프로모션" />
+            <!-- <img srcset="/images/promotion-mobile.png 700w,
+                        /images/promotion.png 1000w,
+                        /images/promotion.png 1200w" src="/images/promotion.png" alt="프로모션" /> -->
           </div>
 
         </div>
@@ -483,6 +503,11 @@
 </footer>
 <!-- Footer -->
   </div>
-<script src=".././js/index.bundle.js?c4d7d0aec747a24dec69"></script></body>
+
+  <script>
+
+
+  </script>
+<script src=".././js/index.bundle.js?16236c97ec7941e31fe0"></script></body>
 
 </html>

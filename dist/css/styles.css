@@ -10254,51 +10254,6 @@ select.form-control.filter-select {
               font-size: 24px;
               font-weight: normal; } }
 
-.category {
-  background-color: #ffffff;
-  display: inline-flex;
-  padding: 8px;
-  height: 40px;
-  border: 1px solid #e9ecef;
-  position: relative; }
-  .category ul {
-    display: flex;
-    width: 220px; }
-    @media (max-width: 991.98px) {
-      .category ul {
-        width: 100%; } }
-    .category ul li {
-      min-width: 68px; }
-      .category ul li input {
-        display: none; }
-        .category ul li input:checked + label {
-          border: 1px solid #9334ff;
-          border-radius: 12px; }
-  .category label {
-    margin-bottom: 0;
-    min-width: 68px;
-    text-align: center;
-    height: 24px; }
-  @media (max-width: 991.98px) {
-    .category {
-      width: 100%;
-      margin-left: 0 !important;
-      margin-top: 8px; }
-      .category ul {
-        justify-content: center; } }
-
-.stay-option {
-  display: none; }
-
-.play-option {
-  display: none; }
-
-.stay-option.display {
-  display: block; }
-
-.play-option.display {
-  display: block; }
-
 .custom-control-label:before {
   border: 1px solid #ced4da; }
 
@@ -10624,6 +10579,21 @@ select.form-control.filter-select {
     .slides-group .stay-detail .stay-type .title {
       color: #868e96; }
 
+main.carousel-body .section-body.card-ui ul.popular-card-body {
+  margin: 0 !important; }
+
+@media (min-width: 992px) {
+  .app-owl-carousel .owl-stage {
+    width: auto !important; }
+  .app-owl-carousel .owl-stage-outer {
+    overflow: visible; }
+  .app-owl-carousel .owl-item:nth-child(3n) {
+    margin-right: 0 !important; } }
+
+.app-owl-carousel .owl-item li {
+  width: calc(100%) !important;
+  margin-left: 0 !important; }
+
 .modal .modal-dialog {
   margin-top: 15rem; }
   @media (min-width: 768px) {
@@ -10704,6 +10674,9 @@ select.form-control.filter-select {
       background: none; }
 
 body.menu-open {
+  overflow: hidden; }
+
+body.hidden {
   overflow: hidden; }
 
 .backdrop-ui.show {
@@ -13242,7 +13215,7 @@ input.form-control.filter-input {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      right: 0; }
+      right: 1px; }
     .product-category .list:nth-last-of-type(1):after {
       content: "";
       width: 0;
