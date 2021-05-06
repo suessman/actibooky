@@ -36,7 +36,7 @@
     })
 
 </script>
-<link href=".././css/styles.css?16236c97ec7941e31fe0" rel="stylesheet"></head>
+<link href=".././css/styles.css?0ce3413d0579e0c3ce1a" rel="stylesheet"></head>
 
 <body>
   <!-- 브라우저 권장 -->
@@ -78,7 +78,7 @@
     </div>
     <nav class="navbar navbar-expand-lg navbar-light">
       <a class="navbar-brand" href="/index.html">
-        <img src="/images/logo@3x.png" alt="로고" style="width:120px;">
+        <img src="/images/logo@3x.png" alt="로고" class="nav-logo">
       </a>
       <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-controls="navbarSupportedContent backdropUi" aria-expanded="false" aria-label="Toggle navigation">
         <div class="acetrnt-toggle" data-click-state="1">
@@ -110,12 +110,20 @@
                       /images/icon-mypage-white@3x.png 1000w" src="/images/icon-mypage-white@3x" alt="마이페이지" />
               마이페이지
             </a>
-            <a href="/mypage/myBook.html">
+            <!-- non member -->
+            <a href="/login.html">
               <img class="sm-icon" srcset="/images/icon-date-white.png 400w,
                       /images/icon-date-white@2x.png 700w,
                       /images/icon-date-white@3x.png 1000w" src="/images/icon-date-white@3x.png" alt="예약확인" />
               예약확인
             </a>
+            <!-- member -->
+            <!-- <a href="/mypage/myBook.html">
+              <img class="sm-icon" srcset="/images/icon-date-white.png 400w,
+                                  /images/icon-date-white@2x.png 700w,
+                                  /images/icon-date-white@3x.png 1000w" src="/images/icon-date-white@3x.png" alt="예약확인" />
+              예약확인
+            </a> -->
           </div>
         </div>
 
@@ -137,15 +145,79 @@
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0 web-header-ui">
+          <!-- 로그인 전 -->
+          <div>
+            <a href="/mypage/myBook.html" class="nav-right primary-color" data-toggle="modal" data-target="#reservationConfirm">예약확인&nbsp;</a>
+          </div>
+          <!-- 로그인 후 -->
           <div>
             <a href="/mypage/myBook.html" class="nav-right primary-color">예약확인&nbsp;</a>
-            <!-- <a href="/login.html" class="nav-right">|&nbsp; 마이페이지</a> -->
+            <a href="/login.html" class="nav-right">|&nbsp; 마이페이지</a>
           </div>
         </form>
       </div>
     </nav>
   </div>
 </header>
+
+<!-- 로그인 전 예약확인 popup pc-->
+<div class="modal fade reservation-modal" id="reservationConfirm" tabindex="-1" role="dialog" aria-labelledby="reservationConfirmLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <form action="" class="account-form">
+          <div class="form-box reservation-confirm-modal">
+            <div class="d-flex justify-content-between">
+              <h1>로그인</h1>
+              <button type="button" class="dropdown-close close" data-dismiss="modal" aria-label="Close">
+                <img class="sm-icon" srcset="/images/icon-cancel-gray.png 400w,
+                                            /images/icon-cancel-gray@2x.png 700w,
+                                            /images/icon-cancel-gray@3x.png 1000w" src="/images/icon-cancel-gray@3x.png" alt="닫기">
+              </button>
+            </div>
+
+            <input type="text" class="form-control mt-3" placeholder="이메일">
+            <input type="password" class="form-control mt-3" placeholder="비밀번호">
+            <button type="button" class="btn btn-primary mt-3">로그인</button>
+            <div class="mt-2 d-flex justify-content-between">
+              <a href="/join.html" class="link">회원가입</a>
+              <a href="/findPassword.html" class="link">비밀번호찾기</a>
+            </div>
+            <p class="text-center mt-5">다른 계정으로 로그인하기</p>
+            <div class="sns">
+              <button type="button" class="btn kakao">
+                <img srcset="/images/kakao@1x.png.png 400w,
+                                  /images/kakao@2x.png 700w,
+                                  /images/kakao@3x.png 1000w" src="/images/kakao@3x.png" alt="카카오로로그인" />
+              </button>
+
+              <button type="button" class="btn naver">
+                <img srcset="/images/naver@1x.png.png 400w,
+                                  /images/naver@2x.png 700w,
+                                  /images/naver@3x.png 1000w" src="/images/kakao@3x.png" alt="네이버로로그인" />
+              </button>
+
+              <button type="button" class="btn apple">
+                <img srcset="/images/apple@1x.png.png 400w,
+                                  /images/apple@2x.png 700w,
+                                  /images/apple@3x.png 1000w" src="/images/apple@3x.png" alt="애플로로그인" />
+              </button>
+            </div>
+            <div class="mt-6">
+              <h1>비회원 예약확인</h1>
+              <input type="text" class="form-control mt-3" placeholder="예약자이름">
+              <input type="number" class="form-control mt-3" placeholder="예약자 연락처">
+              <input type="password" class="form-control mt-3" placeholder="비밀번호">
+              <button type="button" class="btn btn-primary mt-3">예약 확인하기</button>
+            </div>
+
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
     <main class="d-flex flex-column h-100 main">
       <!-- Content Here -->
     </main>
@@ -228,6 +300,6 @@
 
     })
   </script>
-<script src=".././js/index.bundle.js?16236c97ec7941e31fe0"></script></body>
+<script src=".././js/index.bundle.js?0ce3413d0579e0c3ce1a"></script></body>
 
 </html>

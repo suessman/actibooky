@@ -4,6 +4,9 @@
         padding:40px 60px;
         @include media-breakpoint-up(lg){
             margin: 12rem 0;
+            &.join{
+                margin:4rem 0;  
+            }
         }
         @include media-breakpoint-down(md) {
             padding:24px;
@@ -57,7 +60,28 @@
                 }
             }
         }
+
+        &.reservation-confirm-modal{
+            margin-top:0;
+            margin-bottom:0;
+            padding:40px 60px;
+            border: none !important;
+        }
     }
+}
+
+.reservation-modal{
+    @include media-breakpoint-down(md){
+        display: none;
+
+    }
+     .modal-dialog{
+        @include media-breakpoint-up(lg){
+            max-width:460px;
+            margin-top: 8rem !important;
+        }
+     }
+   
 }
 
 //terms form

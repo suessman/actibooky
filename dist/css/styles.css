@@ -9589,6 +9589,9 @@ a.text-dark:hover, a.text-dark:focus {
       padding-left: 0;
       padding-right: 0; } }
 
+.close {
+  opacity: 1; }
+
 .in_scroll {
   opacity: 0;
   background-color: rgba(52, 58, 64, 0.8);
@@ -9770,6 +9773,9 @@ hr.sm-interval {
 
 .invisible {
   height: 0; }
+
+.reservation-confirm-btn {
+  line-height: 27px; }
 
 @font-face {
   font-family: 'Noto Sans KR';
@@ -9990,8 +9996,7 @@ select.form-control.filter-select {
       flex-wrap: wrap; }
       .filter-picker-ui .pick-filter-body .filter-list {
         width: 50% !important;
-        height: 40px;
-        margin-top: 8px; }
+        height: 40px; }
         .filter-picker-ui .pick-filter-body .filter-list input.divider {
           border-right: 1px solid #e9ecef; }
         .filter-picker-ui .pick-filter-body .filter-list.md-down-w-100 {
@@ -10692,7 +10697,9 @@ body.hidden {
 
 @media (min-width: 992px) {
   .header-title {
-    display: none; } }
+    display: none; }
+  .nav-logo {
+    width: 120px; } }
 
 ul .nav-tabs .nav-link {
   border: none; }
@@ -11435,7 +11442,9 @@ main .section-body.card-ui-video .area {
   padding: 40px 60px; }
   @media (min-width: 992px) {
     .account-form .form-box {
-      margin: 12rem 0; } }
+      margin: 12rem 0; }
+      .account-form .form-box.join {
+        margin: 4rem 0; } }
   @media (max-width: 991.98px) {
     .account-form .form-box {
       padding: 24px;
@@ -11472,6 +11481,20 @@ main .section-body.card-ui-video .area {
       border-radius: 50%; }
       .account-form .form-box .sns .apple img {
         width: 24px; }
+  .account-form .form-box.reservation-confirm-modal {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 40px 60px;
+    border: none !important; }
+
+@media (max-width: 991.98px) {
+  .reservation-modal {
+    display: none; } }
+
+@media (min-width: 992px) {
+  .reservation-modal .modal-dialog {
+    max-width: 460px;
+    margin-top: 8rem !important; } }
 
 @media (min-width: 992px) {
   .mypage-tab-nav.terms {
