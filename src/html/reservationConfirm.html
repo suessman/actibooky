@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>비회원으로 로그인하기</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="/css/headertitle.css">
+    ${ require('./partials/head.html') }
+</head>
+
+<body>
+
+    ${ require('./partials/browserupgrade.html') }
+
+    <div class="d-flex flex-column h-100">
+
+        ${ require('./partials/header.html') }
+        <!-- Content Here -->
+        <header class="header-title">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="d-flex justify-content-between">
+                            <a href="javascript:history.go(-1)" class="prev">
+                                <img src="/images/icon-left-black@3x.png" class="sm-icon" alt="뒤로가기">
+                            </a>
+                            <h1 class="title">비회원으로 로그인</h1>
+                            <!-- <a>
+                                <img src="/images/icon-search-gray.png" class="sm-icon" alt="검색화면으로이동">
+                              </a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="d-flex h-100 main">
+            <!-- 메인 이미지 -->
+
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-6 m-auto">
+                        <form action="" class="account-form">
+                            <div class="form-box">
+                                <h1>비회원으로 로그인</h1>
+                                <input type="text" class="form-control mt-3" placeholder="예약자 이름">
+                                <input type="text" class="form-control mt-3" placeholder="예약자 연락처">
+                                <input type="password" class="form-control mt-3" placeholder="비밀번호">
+                                <button type="button" class="btn btn-primary mt-3">로그인</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
