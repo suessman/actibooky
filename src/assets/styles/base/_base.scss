@@ -121,7 +121,15 @@ main{
 
 
 //section media query
+@include media-breakpoint-down(xs){
+  .xs-down-mt-2{
+    margin-top: 8px;
+  }
 
+  .xs-down-border{
+    border:1px solid $light;
+  }
+}
  @include media-breakpoint-down(sm) {
     .sm-down-outline{
       border:1px solid $light !important;
@@ -293,3 +301,8 @@ hr{
 }
       
 
+//font color + size
+.sm-text-gray{
+  color:$dark;
+  @include fontSize(sm);
+}

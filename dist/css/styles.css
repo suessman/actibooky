@@ -9668,6 +9668,12 @@ main.main-sub {
     background-position: center;
     background-repeat: no-repeat; }
 
+@media (max-width: 575.98px) {
+  .xs-down-mt-2 {
+    margin-top: 8px; }
+  .xs-down-border {
+    border: 1px solid #e9ecef; } }
+
 @media (max-width: 767.98px) {
   .sm-down-outline {
     border: 1px solid #e9ecef !important; }
@@ -9770,6 +9776,10 @@ hr.sm-interval {
         left: auto !important;
         transform: inherit !important;
         width: 100% !important; } }
+
+.sm-text-gray {
+  color: #868e96;
+  font-size: 12px; }
 
 .invisible {
   height: 0; }
@@ -10077,9 +10087,7 @@ select.form-control.filter-select {
             height: 24px; }
     @media (min-width: 992px) {
       .filter-picker-ui .pick-filter-body .pick-filter input {
-        border-right: 1px solid #e9ecef; }
-      .filter-picker-ui .pick-filter-body .pick-filter:nth-last-of-type(1) input {
-        border-right: none; } }
+        border-right: 1px solid #e9ecef; } }
     .filter-picker-ui .pick-filter-body .pick-filter:focus {
       border-bottom: none; }
     .filter-picker-ui .pick-filter-body .pick-filter.start-d, .filter-picker-ui .pick-filter-body .pick-filter.end-d {
@@ -10300,12 +10308,7 @@ select.form-control.filter-select {
   text-align: center;
   background: #fff;
   border: 1px solid #ced4da;
-  border-radius: 100%;
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05); }
-
-.checks input[type="radio"] + label:active:before,
-.checks input[type="radio"]:checked + label:active:before {
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1); }
+  border-radius: 100%; }
 
 .checks input[type="radio"]:checked + label:before {
   background: #E9ECEE;
@@ -10342,7 +10345,8 @@ select.form-control.filter-select {
 .custom-radio .custom-control-label::after {
   background-image: none !important;
   position: absolute;
-  top: 30%;
+  top: 50%;
+  transform: translateY(-42%);
   left: -18px;
   display: block;
   width: 10px;
@@ -11320,7 +11324,7 @@ main .section-body.card-ui ul.popular-card-body {
     main .section-body.card-ui ul.popular-card-body li.popular-card h1 {
       font-size: 18px;
       font-weight: 700;
-      margin-top: 8px;
+      margin-top: 4px;
       line-height: 1.5;
       white-space: normal; }
     main .section-body.card-ui ul.popular-card-body li.popular-card p {
