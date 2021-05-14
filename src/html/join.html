@@ -70,14 +70,14 @@
                       <input type="checkbox" class="custom-control-input" id="terms1">
                       <label class="custom-control-label checkbox" for="terms1">서비스 이용약관(필수)</label>
                     </div>
-                    <a href="/account/terms.html">내용보기</a>
+                    <a data-toggle="modal" data-target="#terms">내용보기</a>
                   </div>
                   <div class="custom-control custom-checkbox mt-2 d-flex justify-content-between">
                     <div>
                       <input type="checkbox" class="custom-control-input" id="terms2">
                       <label class="custom-control-label checkbox" for="terms2">개인정보 처리방침(필수)</label>
                     </div>
-                    <a href="/account/policy.html">내용보기</a>
+                    <a data-toggle="modal" data-target="#personalInfo">내용보기</a>
                   </div>
                   <hr class="sm-interval">
                   <button type="button" class="btn btn-primary mt-5">회원가입</button>
@@ -109,7 +109,42 @@
       </div>
     </main>
   </div>
-
+  <!-- 서비스 이용약관-->
+  <div class="modal fade form-modal" id="terms" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog popup">
+      <div class="modal-content">
+        <div class="modal-header ">
+          <h5 class="modal-title">서비스 이용약관</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <img class="sm-icon" srcset="/images/icon-cancel-gray.png 400w,
+                                                                                    /images/icon-cancel-gray@2x.png 700w,
+                                                                                    /images/icon-cancel-gray@3x.png 1000w" src="/images/icon-cancel-gray@3x.png" alt="닫기" />
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>서비스이용약관서비스이용약관서비스이용약관서비스이용약관서비스이용약관서비스이용약관서비스이용약관</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 개인정보 처리방침 -->
+  <div class="modal fade form-modal" id="personalInfo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog popup">
+      <div class="modal-content">
+        <div class="modal-header ">
+          <h5 class="modal-title">개인정보 처리방침</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <img class="sm-icon" srcset="/images/icon-cancel-gray.png 400w,
+                                                                                        /images/icon-cancel-gray@2x.png 700w,
+                                                                                        /images/icon-cancel-gray@3x.png 1000w" src="/images/icon-cancel-gray@3x.png" alt="닫기" />
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>개인정보 처리방침</p>
+        </div>
+      </div>
+    </div>
+  </div>
   <script>
     $(function () {
       //전체동의 체크OnOff

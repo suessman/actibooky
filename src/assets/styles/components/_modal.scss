@@ -77,3 +77,30 @@
     width: 460px;
   }
 }
+
+//form modal
+.form-modal{
+  .modal-title{
+    font-size:18px;
+  }
+
+  .modal-body{
+    textarea{
+      border: 1px solid $light;
+    };
+    p{
+      color:$dark;
+      font-size: 14px;
+      margin-top: 16px;
+      word-break: break-all;
+      &.content{
+        height: 250px;
+        overflow-y: auto;
+      }
+    }
+  }
+
+  .modal-footer{
+    border:none;
+  }
+}
