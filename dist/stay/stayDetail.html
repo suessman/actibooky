@@ -38,7 +38,7 @@
     })
 
 </script>
-<link href=".././css/styles.css?eb7aa5b354a1def04a88" rel="stylesheet"></head>
+<link href=".././css/styles.css?4a43d6a08498fcab1324" rel="stylesheet"></head>
 
 <body style="position: relative;">
   <!-- 브라우저 권장 -->
@@ -377,7 +377,7 @@
           <div class="col">
             <div class="tab-content-list">
               <!-- 객실정보 -->
-              <div id="roomInfo" class="list-detail-wrapper">
+              <div id="roomInfo" class="list-detail-wrapper list-room">
                 <section class="list-detail">
                   <h5>객실정보</h5>
                   <div class="mt-3">
@@ -519,7 +519,7 @@
               </div>
 
               <!-- 상세정보 -->
-              <div id="detailInfo" class="list-detail-wrapper">
+              <div id="detailInfo" class="list-detail-wrapper list-detail-img">
                 <section class="list-detail">
                   <h5>상세정보</h5>
                   <img src="/images/stay_detail.jpg" class="w-100 mt-2" alt="상세이미지">
@@ -527,7 +527,7 @@
               </div>
 
               <!-- 위치 -->
-              <div id="position" class="list-detail-wrapper">
+              <div id="position" class="list-detail-wrapper list-position">
                 <section class="list-detail">
                   <h3 class="mt-2">위치</h3>
                   <p class="mt-2">전라북도 전주시 바우배기2길</p>
@@ -536,7 +536,7 @@
               </div>
 
               <!-- 리뷰 -->
-              <div id="review" class="list-detail-wrapper">
+              <div id="review" class="list-detail-wrapper list-review">
                 <section class="review list-detail">
                   <h5>리뷰&nbsp;03개</h5>
                   <div class="review-list">
@@ -597,7 +597,7 @@
               </div>
 
               <!-- 문의 -->
-              <div id="inquiry" class="list-detail-wrapper">
+              <div id="inquiry" class="list-detail-wrapper list-inquiry">
                 <section class="inquiry list-detail">
                   <div class="d-flex justify-content-between align-items-center">
                     <h5>문의&nbsp;10개</h5>
@@ -1010,7 +1010,6 @@
       var bookBtn = $('.book-btn');
       var middleNav = $('.middle-nav');
       var middleNavOffset = middleNav.offset();
-
       var $sidebar = $(".book-ui"),
         $near = $('.near-exp-list'),
         $window = $(window),
@@ -1028,13 +1027,12 @@
 
       //객실정보,상세정보,위치,리뷰,문의 active
       $('.detail-tab-list').click(function () {
-        $('.detail-tab-list').removeClass('active');
-        $('.list-detail-wrapper').removeClass('top-area');
-        $(this).addClass('active');
         $('.list-detail-wrapper').addClass('top-area');
+        $('.detail-tab-list').removeClass('active');
+        $(this).addClass('active');
       })
 
-      //1200px up style 
+      //1200px up scroll event 
       $window.scroll(function () {
         if ($window.scrollTop() > offset.top && window.matchMedia("(min-width: 1200px)").matches) {
           $sidebar.stop().animate({
@@ -1045,10 +1043,8 @@
             marginTop: 0
           }, 200);
         }
-      });
 
-      //middle nav
-      $window.scroll(function () {
+        //detail tab nav fixed
         if ($window.scrollTop() > middleNavOffset.top) {
           middleNav.addClass('fixed');
           middleNav.width('100%');
@@ -1057,7 +1053,10 @@
           middleNav.width('100%');
           middleNav.css('left', 0);
         }
-      })
+      });
+
+
+
 
       //mobile position change
       if (window.matchMedia("(max-width: 991px)").matches) {
@@ -1200,6 +1199,6 @@
 
 
   </script>
-<script src=".././js/index.bundle.js?eb7aa5b354a1def04a88"></script></body>
+<script src=".././js/index.bundle.js?4a43d6a08498fcab1324"></script></body>
 
 </html>
