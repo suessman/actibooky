@@ -9592,6 +9592,11 @@ a.text-dark:hover, a.text-dark:focus {
 .close {
   opacity: 1; }
 
+.no-content {
+  padding: 5rem 0;
+  border-bottom: none !important;
+  text-align: center; }
+
 .in_scroll {
   opacity: 0;
   background-color: rgba(52, 58, 64, 0.8);
