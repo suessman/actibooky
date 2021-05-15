@@ -399,9 +399,17 @@ main.carousel-body .section-body.card-ui ul.popular-card-body {
 }
 
 .one-line-carousel .owl-nav button.owl-prev{
- left:-22px; 
+ left:-31px; 
+ img{
+    width: 48px;
+    height: 48px;
+  }
 }
 
 .one-line-carousel .owl-nav button.owl-next{
- right:-22px; 
+ right:-31px; 
+ img{
+    width: 48px;
+    height: 48px;
+  }
 }

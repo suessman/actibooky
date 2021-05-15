@@ -10621,10 +10621,16 @@ main.carousel-body .section-body.card-ui ul.popular-card-body {
   margin-left: 0 !important; }
 
 .one-line-carousel .owl-nav button.owl-prev {
-  left: -22px; }
+  left: -31px; }
+  .one-line-carousel .owl-nav button.owl-prev img {
+    width: 48px;
+    height: 48px; }
 
 .one-line-carousel .owl-nav button.owl-next {
-  right: -22px; }
+  right: -31px; }
+  .one-line-carousel .owl-nav button.owl-next img {
+    width: 48px;
+    height: 48px; }
 
 .modal .modal-dialog {
   margin-top: 15rem; }
