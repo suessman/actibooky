@@ -1,6 +1,11 @@
 .carousel{
   height: 560px;
-
+  &.slide-tab{
+    height:400px;
+    @include media-breakpoint-down(xs){
+      height: 186px;
+    }
+  }
   &.promotion{
     height: auto;
 
@@ -129,12 +134,12 @@
     button{
       position: absolute;
       &.owl-prev{
-        left:-32px;
+        left:-25px;
         @include media-breakpoint-down(xs) { display: none; }
       }
 
       &.owl-next{
-        right: -32px;
+        right: -25px;
         @include media-breakpoint-down(xs) { display: none; }
       }
       img{
@@ -251,7 +256,9 @@
 
 
 .slides-group{
-  .mySlides{
+  .room-info-slide{
+    width: calc(100% - 300px);
+    
     .carousel.detail-img{
       height: 400px;
       @include media-breakpoint-down(md) {
@@ -259,7 +266,6 @@
       }
     }
 
-    width: calc(100% - 300px);
     @include media-breakpoint-down(md) {
       width: 100%;
     }
@@ -349,20 +355,53 @@ main.carousel-body .section-body.card-ui ul.popular-card-body {
 }
 
 @include media-breakpoint-up(lg) {
-  .app-owl-carousel .owl-stage {
-    width: auto !important;
+
+  .app-owl-carousel{
+    .owl-stage{
+      width: auto !important;
+    }
+
+    .owl-stage-outer{
+      overflow: visible;
+
+    }
+    .owl-item li {
+      width: calc(100%) !important;
+      margin-left: 0 !important;
+    }
+    
   }
 
-  .app-owl-carousel .owl-stage-outer {
-    overflow: visible;
-  }
 
   .app-owl-carousel .owl-item:nth-child(3n) {
     margin-right: 0 !important;
   }
+
+  .one-line-carousel{
+     .owl-stage {
+      width: block !important;
+    }
+
+    .owl-stage-outer {
+     overflow: hidden !important;
+    }
+
+    .owl-item li {
+      width: calc(100%) !important;
+      margin-left: 0 !important;
+    }
+  }
 }
 
-.app-owl-carousel .owl-item li {
+.one-line-carousel .owl-item li, .app-owl-carousel .owl-item li{
   width: calc(100%) !important;
   margin-left: 0 !important;
+}
+
+.one-line-carousel .owl-nav button.owl-prev{
+ left:-22px; 
+}
+
+.one-line-carousel .owl-nav button.owl-next{
+ right:-22px; 
 }

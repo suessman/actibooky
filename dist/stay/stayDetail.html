@@ -17,7 +17,8 @@
 <!-- <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script> -->
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.9/l10n/ko.min.js" crossorigin="anonymous"></script> -->
 <script src="/js/dotdotdot.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script> -->
+<script src="/js/owlcarousel.js"></script>
 <script type="text/javascript" defer src="/js/moment.min.js"></script>
 <link rel="stylesheet" type="text/css" href="/css/daterangepicker.css" />
 <script type="text/javascript" defer src="/js/daterangepicker.js"></script>
@@ -37,7 +38,7 @@
     })
 
 </script>
-<link href=".././css/styles.css?dc69506800bb3cd8d674" rel="stylesheet"></head>
+<link href=".././css/styles.css?eb7aa5b354a1def04a88" rel="stylesheet"></head>
 
 <body style="position: relative;">
   <!-- 브라우저 권장 -->
@@ -172,7 +173,7 @@
         </div>
       </div>
     </header>
-    <main class="d-flex flex-column h-100 main main-sub main-nav main-top">
+    <main class="d-flex flex-column h-100 main main-sub main-nav main-top carousel-body">
 
       <div id="carouselExampleIndicators" class="carousel slide top" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -215,8 +216,7 @@
                     <span class="rating">
                       <img class="sm-icon" srcset="/images/icon-star.png 400w,
                                                   /images/icon-star@2x.png 700w,
-                                                  /images/icon-star@3x.png 1000w" src="/images/icon-right-white@3x.png"
-                        alt="별점" />
+                                                  /images/icon-star@3x.png 1000w" src="/images/icon-right-white@3x.png" alt="별점" />
                       <span class="align-middle">4.5</span>
                     </span>
                   </div>
@@ -259,13 +259,11 @@
                       꿈꾸는바다 호스트 진돌맘..
                     </div>
                     <p class="text-center m-t1">
-                      <a class="primary-color d-flex align-items-center justify-content-center" data-toggle="collapse"
-                        href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                      <a class="primary-color d-flex align-items-center justify-content-center" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                         <span class="align-middle">더보기</span>
                         <img srcset="/images/icon-down-primary.png 400w,
                                     /images/icon-down-primary@2x.png 700w,
-                                    /images/icon-down-primary@3x.png 1000w" src="/images/icon-down-primary@3x.png"
-                          class="sm-icon align-middle" alt="열기" />
+                                    /images/icon-down-primary@3x.png 1000w" src="/images/icon-down-primary@3x.png" class="sm-icon align-middle" alt="열기" />
                       </a>
                     </p>
                   </div>
@@ -283,15 +281,13 @@
                 <li>
                   <img class="sm-icon" srcset="/images/icon-user-gray.png 400w,
                                                 /images/icon-user-gray@2x.png 700w,
-                                                /images/icon-user-gray@3x.png 1000w"
-                    src="/images/icon-user-gray@3x.png" alt="담당자이름" />
+                                                /images/icon-user-gray@3x.png 1000w" src="/images/icon-user-gray@3x.png" alt="담당자이름" />
                   <span class="align-middle content">최성진</span>
                 </li>
                 <li class="m-t1">
                   <img class="sm-icon" srcset="/images/icon-call-gray.png 400w,
                                                 /images/icon-call-gray@2x.png 700w,
-                                                /images/icon-call-gray@3x.png 1000w"
-                    src="/images/icon-call-gray@3x.png" alt="번호" />
+                                                /images/icon-call-gray@3x.png 1000w" src="/images/icon-call-gray@3x.png" alt="번호" />
                   <span class="align-middle content">031-775-7775</span>
                 </li>
                 <li class="m-t1 area">
@@ -314,59 +310,49 @@
                 <li class="facility-list">
                   <img class="sm-icon" srcset="/images/icon-kitchen-gray.png 400w,
                                                                      /images/icon-kitchen-gray@2x.png 700w,
-                                                                     /images/icon-kitchen-gray@3x.png 1000w"
-                    src="/images/icon-kitchen-gray@3x.png" alt="주방" />
+                                                                     /images/icon-kitchen-gray@3x.png 1000w" src="/images/icon-kitchen-gray@3x.png" alt="주방" />
                   <span>주방</span>
                 </li>
                 <li class="facility-list">
                   <img class="sm-icon" srcset="/images/icon-parking-gray.png 400w,
                                                                       /images/icon-parking-gray@2x.png 700w,
-                                                                      /images/icon-parking-gray@3x.png 1000w"
-                    src="/images/icon-computer-gray@3x.png" alt="무료주차" />
+                                                                      /images/icon-parking-gray@3x.png 1000w" src="/images/icon-computer-gray@3x.png" alt="무료주차" />
                   <span>무료 주차</span>
                 </li>
                 <li class="facility-list">
                   <img class="sm-icon" srcset="/images/icon-computer-gray.png 400w,
                                                                      /images/icon-computer-gray@2x.png 700w,
-                                                                     /images/icon-computer-gray@3x.png 1000w"
-                    src="/images/icon-computer-gray@3x.png" alt="업무공간" />
+                                                                     /images/icon-computer-gray@3x.png 1000w" src="/images/icon-computer-gray@3x.png" alt="업무공간" />
                   <span>업무공간</span>
                 </li>
                 <li class="facility-list">
                   <img class="sm-icon" srcset="/images/icon-wifi-gray.png 400w,
                                                                      /images/icon-wifi-gray@2x.png 700w,
-                                                                     /images/icon-wifi-gray@3x.png 1000w"
-                    src="/images/icon-computer-gray@3x.png" alt="무선인터넷" />
+                                                                     /images/icon-wifi-gray@3x.png 1000w" src="/images/icon-computer-gray@3x.png" alt="무선인터넷" />
                   <span>무선 인터넷</span>
                 </li>
                 <li class="facility-list">
                   <img class="sm-icon" srcset="/images/icon-tv-gray.png 400w,
                                                                      /images/icon-tv-gray@2x.png 700w,
-                                                                     /images/icon-tv-gray@3x.png 1000w"
-                    src="/images/icon-computer-gray@3x.png" alt="tv" />
+                                                                     /images/icon-tv-gray@3x.png 1000w" src="/images/icon-computer-gray@3x.png" alt="tv" />
                   <span>TV</span>
                 </li>
                 <li class="facility-list">
                   <img class="sm-icon" srcset="/images/icon-toothbrush-gray.png 400w,
                                                                      /images/icon-toothbrush-gray@2x.png 700w,
-                                                                     /images/icon-toothbrush-gray@3x.png 1000w"
-                    src="/images/icon-computer-gray@3x.png" alt="세면도구" />
+                                                                     /images/icon-toothbrush-gray@3x.png 1000w" src="/images/icon-computer-gray@3x.png" alt="세면도구" />
                   <span>세면도구</span>
                 </li>
                 <li class="facility-list">
-                  <img class="sm-icon"
-                    srcset="/images/icon-toothbrush-gray.png 400w,
+                  <img class="sm-icon" srcset="/images/icon-toothbrush-gray.png 400w,
                                                                                      /images/icon-toothbrush-gray@2x.png 700w,
-                                                                                     /images/icon-toothbrush-gray@3x.png 1000w"
-                    src="/images/icon-computer-gray@3x.png" alt="세면도구" />
+                                                                                     /images/icon-toothbrush-gray@3x.png 1000w" src="/images/icon-computer-gray@3x.png" alt="세면도구" />
                   <span>세면도구</span>
                 </li>
                 <li class="facility-list">
-                  <img class="sm-icon"
-                    srcset="/images/icon-toothbrush-gray.png 400w,
+                  <img class="sm-icon" srcset="/images/icon-toothbrush-gray.png 400w,
                                                                                      /images/icon-toothbrush-gray@2x.png 700w,
-                                                                                     /images/icon-toothbrush-gray@3x.png 1000w"
-                    src="/images/icon-computer-gray@3x.png" alt="세면도구" />
+                                                                                     /images/icon-toothbrush-gray@3x.png 1000w" src="/images/icon-computer-gray@3x.png" alt="세면도구" />
                   <span>세면도구</span>
                 </li>
               </ul>
@@ -378,11 +364,11 @@
           <div class="col detail-tab">
             <div class="middle-nav-parent">
               <div class="middle-nav">
-                <a class="md-nav-list list active" href="#roomInfo">객실정보</a>
-                <a class="md-nav-list list" href="#detailInfo">상세정보</a>
-                <a class="md-nav-list list" href="#position">위치</a>
-                <a class="md-nav-list list" href="#review">리뷰<span class="num">&nbsp;03</span></a>
-                <a class="md-nav-list list" href="#inquiry">문의<span class="num">&nbsp;03</span></a>
+                <a class="detail-tab-list list active" href="#roomInfo">객실정보</a>
+                <a class="detail-tab-list list" href="#detailInfo">상세정보</a>
+                <a class="detail-tab-list list" href="#position">위치</a>
+                <a class="detail-tab-list list" href="#review">리뷰<span class="num">&nbsp;03</span></a>
+                <a class="detail-tab-list list" href="#inquiry">문의<span class="num">&nbsp;03</span></a>
               </div>
             </div>
           </div>
@@ -391,361 +377,365 @@
           <div class="col">
             <div class="tab-content-list">
               <!-- 객실정보 -->
-              <section id="roomInfo" class="list-detail">
-                <h5>객실정보</h5>
-                <div class="mt-3">
-                  <!-- Thumbnail images -->
-                  <div class="owl-px">
-                    <div class="owl-carousel owl-theme">
-                      <div class="item stay-list">
-                        <img class="cursor w-100" src="/images/sheep.jpg" alt="객실사진" onclick="currentSlide(1)">
-                        <div class="list">
-                          <p class="text-light">객실이름</p>
-                          <p class="text-light m-d-none">복층형</p>
-                        </div>
-                      </div>
-
-                    </div>
-                  </div>
-
-
-                  <!-- Full-width images with number text -->
-                  <div class="mt-4 d-flex slides-group">
-
-
-
-
-
-
-                    <div class="stay-detail">
-                      <div>
-                        <h3>객실이름</h3>
-                        <p>넓은 마당과 평상이 있는 독채! 아이가 있는 단체 손님들에게 만족도가 높은 곳</p>
-                      </div>
-
-                      <div class=bottom>
-                        <div class="d-flex justify-content-between">
-                          <div class="percent">50%</div>
-                          <div>
-                            <del class="sale-price">₩44000</del>
-                            <span class="price">₩25000</span>
+              <div id="roomInfo" class="list-detail-wrapper">
+                <section class="list-detail">
+                  <h5>객실정보</h5>
+                  <div class="mt-3">
+                    <!-- 객실정보 슬라이드 -->
+                    <div class="stay-room-body">
+                      <div class="owl-carousel owl-theme stay-room-list">
+                        <div class="item stayroom active">
+                          <div class="room-info" style="background-image:url('/images/main_top.jpg'),url('/images/onerror.jpg')">
+                            <div class="detail d-flex justify-content-between">
+                              <span class="room-name">객실이름</span>
+                              <span class="room-type">도미토리</span>
+                            </div>
                           </div>
                         </div>
-                        <div class="stay-type">
-                          <ul>
-                            <li>
-                              <span class="title">체크인</span>
-                              <span class="info">15:00</span>
-                            </li>
-                            <li>
-                              <span class="title">체크아웃</span>
-                              <span class="info">11:00</span>
-                            </li>
-                            <li>
-                              <span class="title">인원</span>
-                              <span class="info">2~6명</span>
-                            </li>
-                            <li>
-                              <span class="title">객실유형</span>
-                              <span class="info">도미토리</span>
-                            </li>
-                            <li>
-                              <span class="title">침실/욕실</span>
-                              <span class="info">2층 침대2개/욕실1개</span>
-                            </li>
-                          </ul>
+                        <div class="item stayroom">
+                          <div class="room-info" style="background-image:url('/images/ricecake.jpg'),url('/images/onerror.jpg')">
+                            <div class="detail d-flex justify-content-between">
+                              <span class="room-name">객실이름</span>
+                              <span class="room-type">도미토리</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item stayroom">
+                          <div class="room-info" style="background-image:url('/images/main_.jpg'),url('/images/onerror.jpg')">
+                            <div class="detail d-flex justify-content-between">
+                              <span class="room-name">객실이름</span>
+                              <span class="room-type">도미토리</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item stayroom">
+                          <div class="room-info" style="background-image:url('/images/main_.jpg'),url('/images/onerror.jpg')">
+                            <div class="detail d-flex justify-content-between">
+                              <span class="room-name">객실이름</span>
+                              <span class="room-type">도미토리</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item stayroom ">
+                          <div class="room-info" style="background-image:url('/images/main_.jpg'),url('/images/onerror.jpg')">
+                            <div class="detail d-flex justify-content-between">
+                              <span class="room-name">객실이름</span>
+                              <span class="room-type">도미토리</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item stayroom">
+                          <div class="room-info" style="background-image:url('/images/main_.jpg'),url('/images/onerror.jpg')">
+                            <div class="detail d-flex justify-content-between">
+                              <span class="room-name">객실이름</span>
+                              <span class="room-type">도미토리</span>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+
+
+
+                    <!-- Full-width images with number text -->
+                    <div class="mt-4 d-flex slides-group">
+
+                      <!-- slide -->
+                      <div class="room-info-slide">
+                        <!-- 방정보슬라이드 -->
+                        <div id="roomList" class="carousel slide-tab" data-ride="carousel">
+                          <ol class="carousel-indicators">
+                            <li data-target="#roomList" data-slide-to="0" class="active"></li>
+                            <li data-target="#roomList" data-slide-to="1"></li>
+                            <li data-target="#roomList" data-slide-to="2"></li>
+                          </ol>
+                          <div class="carousel-inner">
+                            <div class="carousel-item active">
+                              <img class="d-block w-100" src="/images/stay3.jpg" alt="First slide">
+                            </div>
+                            <div class="carousel-item">
+                              <img class="d-block w-100" src="/images/stay2.jpg" alt="Second slide">
+                            </div>
+                            <div class="carousel-item">
+                              <img class="d-block w-100" src="/images/stay1.jpg" alt="Third slide">
+                            </div>
+                          </div>
+                          <a class="carousel-control-prev" href="#roomList" role="button" data-slide="prev">
+                            <img srcset="/images/icon-left-white.png 400w,
+                                                                    /images/icon-left-white@2x.png 700w,
+                                                                    /images/icon-left-white@3x.png 1000w" src="/images/icon-left-white@3x.png" alt="이전이미지" />
+                          </a>
+                          <a class="carousel-control-next" href="#roomList" role="button" data-slide="next">
+                            <img srcset="/images/icon-right-white.png 400w,
+                                                                    /images/icon-right-white@2x.png 700w,
+                                                                    /images/icon-right-white@3x.png 1000w" src="/images/icon-right-white@3x.png" alt="다음이미지" />
+                          </a>
+                        </div>
+                      </div>
+
+                      <div class="stay-detail">
+                        <div>
+                          <h3>객실이름</h3>
+                          <p>넓은 마당과 평상이 있는 독채! 아이가 있는 단체 손님들에게 만족도가 높은 곳</p>
+                        </div>
+                        <div class=bottom>
+                          <div class="d-flex justify-content-between">
+                            <div class="percent">50%</div>
+                            <div>
+                              <del class="sale-price">₩44000</del>
+                              <span class="price">₩25000</span>
+                            </div>
+                          </div>
+                          <div class="stay-type">
+                            <ul>
+                              <li>
+                                <span class="title">체크인</span>
+                                <span class="info">15:00</span>
+                              </li>
+                              <li>
+                                <span class="title">체크아웃</span>
+                                <span class="info">11:00</span>
+                              </li>
+                              <li>
+                                <span class="title">인원</span>
+                                <span class="info">2~6명</span>
+                              </li>
+                              <li>
+                                <span class="title">객실유형</span>
+                                <span class="info">도미토리</span>
+                              </li>
+                              <li>
+                                <span class="title">침실/욕실</span>
+                                <span class="info">2층 침대2개/욕실1개</span>
+                              </li>
+                            </ul>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </section>
+                </section>
+              </div>
+
               <!-- 상세정보 -->
-              <section id="detailInfo" class="list-detail">
-                <h5>상세정보</h5>
-                <img src="/images/stay_detail.jpg" class="w-100 mt-2" alt="상세이미지">
-              </section>
+              <div id="detailInfo" class="list-detail-wrapper">
+                <section class="list-detail">
+                  <h5>상세정보</h5>
+                  <img src="/images/stay_detail.jpg" class="w-100 mt-2" alt="상세이미지">
+                </section>
+              </div>
+
               <!-- 위치 -->
-              <section id="position" class="list-detail">
-                <h3 class="mt-2">위치</h3>
-                <p class="mt-2">전라북도 전주시 바우배기2길</p>
-                <iframe class="mt-2"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3235.3109127552284!2d127.1016308655536!3d35.816846730129214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35703b6a71ece8bb%3A0xa36c206db1be0703!2z7KCE652867aB64-EIOyghOyjvOyLnCDsmYTsgrDqtawg7Zqo7J6Q64-ZMuqwgCDrsJTsmrDrsLDquLAy6ri4!5e0!3m2!1sko!2skr!4v1616050991744!5m2!1sko!2skr"
-                  width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-              </section>
+              <div id="position" class="list-detail-wrapper">
+                <section class="list-detail">
+                  <h3 class="mt-2">위치</h3>
+                  <p class="mt-2">전라북도 전주시 바우배기2길</p>
+                  <iframe class="mt-2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3235.3109127552284!2d127.1016308655536!3d35.816846730129214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35703b6a71ece8bb%3A0xa36c206db1be0703!2z7KCE652867aB64-EIOyghOyjvOyLnCDsmYTsgrDqtawg7Zqo7J6Q64-ZMuqwgCDrsJTsmrDrsLDquLAy6ri4!5e0!3m2!1sko!2skr!4v1616050991744!5m2!1sko!2skr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </section>
+              </div>
+
               <!-- 리뷰 -->
-              <section id="review" class="review list-detail">
-                <h5>리뷰&nbsp;03개</h5>
-                <div class="review-list">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <span class="user">
-                      <span>guswlsrjf123</span>
-                      <span>
-                        <img class="sm-icon" srcset="/images/icon-star.png 400w,
-                                                                                /images/icon-star@2x.png 700w,
-                                                                                /images/icon-star@3x.png 1000w"
-                          src="/images/icon-right-white@3x.png" alt="별점" />
-                        <img class="sm-icon" srcset="/images/icon-star.png 400w,
-                                                                                /images/icon-star@2x.png 700w,
-                                                                                /images/icon-star@3x.png 1000w"
-                          src="/images/icon-right-white@3x.png" alt="별점" />
-                        <img class="sm-icon" srcset="/images/icon-star.png 400w,
-                                                                                /images/icon-star@2x.png 700w,
-                                                                                /images/icon-star@3x.png 1000w"
-                          src="/images/icon-right-white@3x.png" alt="별점" />
-                        <img class="sm-icon" srcset="/images/icon-star.png 400w,
-                                                                                /images/icon-star@2x.png 700w,
-                                                                                /images/icon-star@3x.png 1000w"
-                          src="/images/icon-right-white@3x.png" alt="별점" />
-                        <img class="sm-icon" srcset="/images/icon-star.png 400w,
-                                                                                /images/icon-star@2x.png 700w,
-                                                                                /images/icon-star@3x.png 1000w"
-                          src="/images/icon-right-white@3x.png" alt="별점" />
+              <div id="review" class="list-detail-wrapper">
+                <section class="review list-detail">
+                  <h5>리뷰&nbsp;03개</h5>
+                  <div class="review-list">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <span class="user">
+                        <span>guswlsrjf123</span>
                       </span>
-
-
-                    </span>
-                    <span class="date">2021.03.17</span>
+                      <span class="date">2021.03.17</span>
+                    </div>
+                    <div class="content">비닐 뜯지마자 깜짝 놀랐네요. 새 제품이 너무 더러워서.. 교환하기 귀찮아서 빨아서 사용하긴 하겠지만 기름때인지 뭔지 지워지기나 할지 모르겠네요.
+                      검수를 하고 보내는건지 비닐포장 없이 이불패드 채로 창고에 쌓아놓은거 그냥 비닐 포장만 해서 보내는건지 비닐 포장할 때 상태가 어떤건지 뭔지... 좀 어이가 없네요.</div>
                   </div>
-                  <div class="content">비닐 뜯지마자 깜짝 놀랐네요. 새 제품이 너무 더러워서.. 교환하기 귀찮아서 빨아서 사용하긴 하겠지만 기름때인지 뭔지 지워지기나 할지 모르겠네요.
-                    검수를 하고 보내는건지 비닐포장 없이 이불패드 채로 창고에 쌓아놓은거 그냥 비닐 포장만 해서 보내는건지 비닐 포장할 때 상태가 어떤건지 뭔지... 좀 어이가 없네요.</div>
-                </div>
-                <div class="review-list">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <span class="user">
-                      suessman
-                      <img class="sm-icon" srcset="/images/icon-star.png 400w,
-                                                                      /images/icon-star@2x.png 700w,
-                                                                      /images/icon-star@3x.png 1000w"
-                        src="/images/icon-right-white@3x.png" alt="별점" />
-                      <img class="sm-icon" srcset="/images/icon-star.png 400w,
-                                                                      /images/icon-star@2x.png 700w,
-                                                                      /images/icon-star@3x.png 1000w"
-                        src="/images/icon-right-white@3x.png" alt="별점" />
-                      <img class="sm-icon" srcset="/images/icon-star.png 400w,
-                                                                      /images/icon-star@2x.png 700w,
-                                                                      /images/icon-star@3x.png 1000w"
-                        src="/images/icon-right-white@3x.png" alt="별점" />
-                      <img class="sm-icon" srcset="/images/icon-star.png 400w,
-                                                                      /images/icon-star@2x.png 700w,
-                                                                      /images/icon-star@3x.png 1000w"
-                        src="/images/icon-right-white@3x.png" alt="별점" />
-                      <img class="sm-icon" srcset="/images/icon-star.png 400w,
-                                                                      /images/icon-star@2x.png 700w,
-                                                                      /images/icon-star@3x.png 1000w"
-                        src="/images/icon-right-white@3x.png" alt="별점" />
-
-                    </span>
-                    <span class="date">2021.03.17</span>
+                  <div class="review-list">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <span class="user">
+                        <span>guswlsrjf123</span>
+                      </span>
+                      <span class="date">2021.03.17</span>
+                    </div>
+                    <div class="content">비닐 뜯지마자 깜짝 놀랐네요. 새 제품이 너무 더러워서.. 교환하기 귀찮아서 빨아서 사용하긴 하겠지만 기름때인지 뭔지 지워지기나 할지 모르겠네요.
+                      검수를 하고 보내는건지 비닐포장 없이 이불패드 채로 창고에 쌓아놓은거 그냥 비닐 포장만 해서 보내는건지 비닐 포장할 때 상태가 어떤건지 뭔지... 좀 어이가 없네요.</div>
                   </div>
-                  <div class="content">비닐 뜯지마자 깜짝 놀랐네요. 새 제품이 너무 더러워서.. 교환하기 귀찮아서 빨아서 사용하긴 하겠지만 기름때인지 뭔지 지워지기나 할지 모르겠네요.
-                    검수를 하고 보내는건지 비닐포장 없이 이불패드 채로 창고에 쌓아놓은거 그냥 비닐 포장만 해서 보내는건지 비닐 포장할 때 상태가 어떤건지 뭔지... 좀 어이가 없네요.</div>
-                </div>
-                <div class="review-list">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <span class="user">
-                      suessman
-                      <img class="sm-icon" srcset="/images/icon-star.png 400w,
-                                                                      /images/icon-star@2x.png 700w,
-                                                                      /images/icon-star@3x.png 1000w"
-                        src="/images/icon-right-white@3x.png" alt="별점" />
-                      <img class="sm-icon" srcset="/images/icon-star.png 400w,
-                                                                      /images/icon-star@2x.png 700w,
-                                                                      /images/icon-star@3x.png 1000w"
-                        src="/images/icon-right-white@3x.png" alt="별점" />
-                      <img class="sm-icon" srcset="/images/icon-star.png 400w,
-                                                                      /images/icon-star@2x.png 700w,
-                                                                      /images/icon-star@3x.png 1000w"
-                        src="/images/icon-right-white@3x.png" alt="별점" />
-                      <img class="sm-icon" srcset="/images/icon-star.png 400w,
-                                                                      /images/icon-star@2x.png 700w,
-                                                                      /images/icon-star@3x.png 1000w"
-                        src="/images/icon-right-white@3x.png" alt="별점" />
-                      <img class="sm-icon" srcset="/images/icon-star.png 400w,
-                                                                      /images/icon-star@2x.png 700w,
-                                                                      /images/icon-star@3x.png 1000w"
-                        src="/images/icon-right-white@3x.png" alt="별점" />
-
-                    </span>
-                    <span class="date">2021.03.17</span>
+                  <div class="review-list">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <span class="user">
+                        <span>guswlsrjf123</span>
+                      </span>
+                      <span class="date">2021.03.17</span>
+                    </div>
+                    <div class="content">비닐 뜯지마자 깜짝 놀랐네요. 새 제품이 너무 더러워서.. 교환하기 귀찮아서 빨아서 사용하긴 하겠지만 기름때인지 뭔지 지워지기나 할지 모르겠네요.
+                      검수를 하고 보내는건지 비닐포장 없이 이불패드 채로 창고에 쌓아놓은거 그냥 비닐 포장만 해서 보내는건지 비닐 포장할 때 상태가 어떤건지 뭔지... 좀 어이가 없네요.</div>
                   </div>
-                  <div class="content">비닐 뜯지마자 깜짝 놀랐네요. 새 제품이 너무 더러워서.. 교환하기 귀찮아서 빨아서 사용하긴 하겠지만 기름때인지 뭔지 지워지기나 할지 모르겠네요.
-                    검수를 하고 보내는건지 비닐포장 없이 이불패드 채로 창고에 쌓아놓은거 그냥 비닐 포장만 해서 보내는건지 비닐 포장할 때 상태가 어떤건지 뭔지... 좀 어이가 없네요.</div>
-                </div>
 
-                <nav aria-label="Page navigation example" class="col-12">
-                  <ul class="pagination justify-content-center mb-0">
-                    <li class="page-item">
-                      <a class="page-link" href="#">
-                        <img class="sm-icon" srcset="/images/icon-left-black.png 400w,
-                                                                                  /images/icon-left-black@2x.png 700w,
-                                                                                  /images/icon-left-black@3x.png 1000w"
-                          src="/images/icon-left-black@3x.png" alt="이전" />
-                      </a>
-                    </li>
-                    <li class="page-item active number"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item number"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item number"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item number"><a class="page-link" href="#">4</a></li>
-                    <li class="page-item number"><a class="page-link" href="#">5</a></li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">
-                        <img class="sm-icon"
-                          srcset="/images/icon-right-black.png 400w,
-                                                                                  /images/icon-right-black@2x.png 700w,
-                                                                                  /images/icon-right-black@3x.png 1000w"
-                          src="/images/icon-right-black@3x.png" alt="다음" />
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
-              </section>
+                  <nav aria-label="Page navigation example" class="col-12">
+                    <ul class="pagination justify-content-center mb-0">
+                      <li class="page-item">
+                        <a class="page-link" href="#">
+                          <img class="sm-icon" srcset="/images/icon-left-black.png 400w,
+                                                                                                  /images/icon-left-black@2x.png 700w,
+                                                                                                  /images/icon-left-black@3x.png 1000w" src="/images/icon-left-black@3x.png" alt="이전" />
+                        </a>
+                      </li>
+                      <li class="page-item active number"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item number"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item number"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item number"><a class="page-link" href="#">4</a></li>
+                      <li class="page-item number"><a class="page-link" href="#">5</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">
+                          <img class="sm-icon" srcset="/images/icon-right-black.png 400w,
+                                                                                                  /images/icon-right-black@2x.png 700w,
+                                                                                                  /images/icon-right-black@3x.png 1000w" src="/images/icon-right-black@3x.png" alt="다음" />
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </section>
+              </div>
+
               <!-- 문의 -->
-              <section id="inquiry" class="inquiry list-detail">
-                <div class="d-flex justify-content-between align-items-center">
-                  <h5>문의&nbsp;10개</h5>
-                  <button type="button" class="btn btn-outline-primary inquiry-btn" data-toggle="modal"
-                    data-target="#inquiryModal">
-                    문의하기
-                  </button>
+              <div id="inquiry" class="list-detail-wrapper">
+                <section class="inquiry list-detail">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <h5>문의&nbsp;10개</h5>
+                    <button type="button" class="btn btn-outline-primary inquiry-btn" data-toggle="modal" data-target="#inquiryModal">
+                      문의하기
+                    </button>
 
-                  <!-- Modal -->
-                  <div class="modal fade" id="inquiryModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog popup">
-                      <div class="modal-content">
-                        <div class="modal-header ">
-                          <h5 class="modal-title" id="exampleModalLabel">문의하기</h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <img class="sm-icon"
-                              srcset="/images/icon-cancel-gray.png 400w,
-                                                                                  /images/icon-cancel-gray@2x.png 700w,
-                                                                                  /images/icon-cancel-gray@3x.png 1000w"
-                              src="/images/icon-cancel-gray@3x.png" alt="닫기" />
-                          </button>
-                        </div>
-                        <div class="modal-body">
-                          <textarea class="form-control" cols="30" rows="10" placeholder="문의내용을 입력하세요"></textarea>
-                          <p>문의 내용에 대한 답변은 '마이페이지>나의문의내역' 또는 '상세페이지'에서 확인 가능합니다.</p>
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-primary">완료</button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="inquiryModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog popup">
+                        <div class="modal-content">
+                          <div class="modal-header ">
+                            <h5 class="modal-title" id="exampleModalLabel">문의하기</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <img class="sm-icon" srcset="/images/icon-cancel-gray.png 400w,
+                                                                                                  /images/icon-cancel-gray@2x.png 700w,
+                                                                                                  /images/icon-cancel-gray@3x.png 1000w" src="/images/icon-cancel-gray@3x.png" alt="닫기" />
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <textarea class="form-control" cols="30" rows="10" placeholder="문의내용을 입력하세요"></textarea>
+                            <p>문의 내용에 대한 답변은 '마이페이지>나의문의내역' 또는 '상세페이지'에서 확인 가능합니다.</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">완료</button>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="inquiry-list">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="user">
-                      <!-- <span class="state ing">답변중</span> -->
-                      <span class="state complete">답변완료</span>
-                      <span class="id">suessman</span>
+                  <div class="inquiry-list">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="user">
+                        <!-- <span class="state ing">답변중</span> -->
+                        <span class="state complete">답변완료</span>
+                        <span class="id">suessman</span>
+                      </div>
+                      <span class="date">2021.03.17</span>
                     </div>
-                    <span class="date">2021.03.17</span>
-                  </div>
-                  <div class="content">
-                    <div class="ask">
-                      <span class="qa">Q.</span>
-                      16일 주문했어요~ 언제 배송 시작될까요??
-                    </div>
-                    <div class="answer">
-                      <span class="qa">A.</span>
-                      안녕하세요. 고객님!
-                      공간을 바꾸는 디자인 마틸라입니다.
+                    <div class="content">
+                      <div class="ask">
+                        <span class="qa">Q.</span>
+                        16일 주문했어요~ 언제 배송 시작될까요??
+                      </div>
+                      <div class="answer">
+                        <span class="qa">A.</span>
+                        안녕하세요. 고객님!
+                        공간을 바꾸는 디자인 마틸라입니다.
 
-                      우선, 문의주신 내용에 답변드리기에 앞서 저희 마틸라 제품에 관심을 갖고 구매해주셔서 감사합니다!
-                      구매하신 상품의 배송에 대해 많이 궁금하셨을 텐데요.
+                        우선, 문의주신 내용에 답변드리기에 앞서 저희 마틸라 제품에 관심을 갖고 구매해주셔서 감사합니다!
+                        구매하신 상품의 배송에 대해 많이 궁금하셨을 텐데요.
 
-                      마틸라는 평일 오전 09시에 주문건 수집이 마감이 되며
-                      그 이후 주문건은 익일 확인이 됩니다. ( 주말, 공휴일 제외 )
-                    </div>
-                  </div>
-                </div>
-                <div class="inquiry-list">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="user">
-                      <!-- <span class="state ing">답변중</span> -->
-                      <span class="state complete">답변완료</span>
-                      <span class="id">suessman</span>
-                    </div>
-                    <span class="date">2021.03.17</span>
-                  </div>
-                  <div class="content">
-                    <div class="ask">
-                      <span class="qa">Q.</span>
-                      16일 주문했어요~ 언제 배송 시작될까요??
-                    </div>
-                    <div class="answer">
-                      <span class="qa">A.</span>
-                      안녕하세요. 고객님!
-                      공간을 바꾸는 디자인 마틸라입니다.
-
-                      우선, 문의주신 내용에 답변드리기에 앞서 저희 마틸라 제품에 관심을 갖고 구매해 주셔서 감사합니다!
-                      구매하신 상품의 배송에 대해 많이 궁금하셨을 텐데요.
-
-                      마틸라는 평일 오전 09시에 주문건 수집이 마감이 되며
-                      그 이후 주문건은 익일 확인이 됩니다. ( 주말, 공휴일 제외 )
+                        마틸라는 평일 오전 09시에 주문건 수집이 마감이 되며
+                        그 이후 주문건은 익일 확인이 됩니다. ( 주말, 공휴일 제외 )
+                      </div>
                     </div>
                   </div>
-                </div>
-
-                <div class="inquiry-list">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="user">
-                      <span class="state ing">답변중</span>
-                      <!-- <span class="state complete">답변완료</span> -->
-                      <span class="id">suessman</span>
+                  <div class="inquiry-list">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="user">
+                        <!-- <span class="state ing">답변중</span> -->
+                        <span class="state complete">답변완료</span>
+                        <span class="id">suessman</span>
+                      </div>
+                      <span class="date">2021.03.17</span>
                     </div>
-                    <span class="date">2021.03.17</span>
+                    <div class="content">
+                      <div class="ask">
+                        <span class="qa">Q.</span>
+                        16일 주문했어요~ 언제 배송 시작될까요??
+                      </div>
+                      <div class="answer">
+                        <span class="qa">A.</span>
+                        안녕하세요. 고객님!
+                        공간을 바꾸는 디자인 마틸라입니다.
+
+                        우선, 문의주신 내용에 답변드리기에 앞서 저희 마틸라 제품에 관심을 갖고 구매해 주셔서 감사합니다!
+                        구매하신 상품의 배송에 대해 많이 궁금하셨을 텐데요.
+
+                        마틸라는 평일 오전 09시에 주문건 수집이 마감이 되며
+                        그 이후 주문건은 익일 확인이 됩니다. ( 주말, 공휴일 제외 )
+                      </div>
+                    </div>
                   </div>
-                  <div class="content">
-                    <div class="ask">
-                      <span class="qa">Q.</span>
-                      16일 주문했어요~ 언제 배송 시작될까요??
+
+                  <div class="inquiry-list">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="user">
+                        <span class="state ing">답변중</span>
+                        <!-- <span class="state complete">답변완료</span> -->
+                        <span class="id">suessman</span>
+                      </div>
+                      <span class="date">2021.03.17</span>
                     </div>
-                    <div class="answer">
-                      <span class="qa">A.</span>
-                      안녕하세요. 고객님!
-                      공간을 바꾸는 디자인 마틸라입니다.
+                    <div class="content">
+                      <div class="ask">
+                        <span class="qa">Q.</span>
+                        16일 주문했어요~ 언제 배송 시작될까요??
+                      </div>
+                      <div class="answer">
+                        <span class="qa">A.</span>
+                        안녕하세요. 고객님!
+                        공간을 바꾸는 디자인 마틸라입니다.
 
-                      우선, 문의주신 내용에 답변드리기에 앞서 저희 마틸라 제품에 관심을 갖고 구매해 주셔서 감사합니다!
-                      구매하신 상품의 배송에 대해 많이 궁금하셨을 텐데요.
+                        우선, 문의주신 내용에 답변드리기에 앞서 저희 마틸라 제품에 관심을 갖고 구매해 주셔서 감사합니다!
+                        구매하신 상품의 배송에 대해 많이 궁금하셨을 텐데요.
 
-                      마틸라는 평일 오전 09시에 주문건 수집이 마감이 되며
-                      그 이후 주문건은 익일 확인이 됩니다. ( 주말, 공휴일 제외 )
+                        마틸라는 평일 오전 09시에 주문건 수집이 마감이 되며
+                        그 이후 주문건은 익일 확인이 됩니다. ( 주말, 공휴일 제외 )
+                      </div>
                     </div>
                   </div>
-                </div>
-                <nav aria-label="Page navigation example" class="col-12">
-                  <ul class="pagination justify-content-center">
-                    <li class="page-item">
-                      <a class="page-link" href="#">
-                        <img class="sm-icon"
-                          srcset="/images/icon-left-black.png 400w,
-                                                                                                  /images/icon-left-black@2x.png 700w,
-                                                                                                  /images/icon-left-black@3x.png 1000w"
-                          src="/images/icon-left-black@3x.png" alt="이전" />
-                      </a>
-                    </li>
-                    <li class="page-item active number"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item number"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item number"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item number"><a class="page-link" href="#">4</a></li>
-                    <li class="page-item number"><a class="page-link" href="#">5</a></li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">
-                        <img class="sm-icon"
-                          srcset="/images/icon-right-black.png 400w,
-                                                                                                  /images/icon-right-black@2x.png 700w,
-                                                                                                  /images/icon-right-black@3x.png 1000w"
-                          src="/images/icon-right-black@3x.png" alt="다음" />
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
-              </section>
+                  <nav aria-label="Page navigation example" class="col-12">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item">
+                        <a class="page-link" href="#">
+                          <img class="sm-icon" srcset="/images/icon-left-black.png 400w,
+                                                                                                                  /images/icon-left-black@2x.png 700w,
+                                                                                                                  /images/icon-left-black@3x.png 1000w" src="/images/icon-left-black@3x.png" alt="이전" />
+                        </a>
+                      </li>
+                      <li class="page-item active number"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item number"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item number"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item number"><a class="page-link" href="#">4</a></li>
+                      <li class="page-item number"><a class="page-link" href="#">5</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">
+                          <img class="sm-icon" srcset="/images/icon-right-black.png 400w,
+                                                                                                                  /images/icon-right-black@2x.png 700w,
+                                                                                                                  /images/icon-right-black@3x.png 1000w" src="/images/icon-right-black@3x.png" alt="다음" />
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </section>
+              </div>
             </div>
           </div>
         </div>
@@ -769,25 +759,20 @@
           <div class="book-ui-content">
             <div>
               <h5>예약정보</h5>
-              <input type="text" class="form-control book-filter date" readonly value="" name="daterange"
-                placeholder="체크인" />
-              <input type="text" class="form-control book-filter date" readonly value="" name="daterange"
-                placeholder="체크아웃" />
+              <input type="text" class="form-control book-filter date" readonly value="" name="daterange" placeholder="체크인" />
+              <input type="text" class="form-control book-filter date" readonly value="" name="daterange" placeholder="체크아웃" />
               <div class="mt-2 book-filter people-n btn-group w-100">
 
-                <button type="button" class="base-dropdown dropdown-filter btn dropdown-toggle" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false">
+                <button type="button" class="base-dropdown dropdown-filter btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   인원
                 </button>
                 <div class="dropdown-menu position">
                   <div class="d-flex justify-content-between">
                     <h1 class="dropdown-title">인원</h1>
                     <button type="button" class="dropdown-close close" data-dismiss="modal" aria-label="Close">
-                      <img class="sm-icon"
-                        srcset="/images/icon-cancel-gray.png 400w,
+                      <img class="sm-icon" srcset="/images/icon-cancel-gray.png 400w,
                                                                                     /images/icon-cancel-gray@2x.png 700w,
-                                                                                    /images/icon-cancel-gray@3x.png 1000w"
-                        src="/images/icon-cancel-gray@3x.png" alt="닫기">
+                                                                                    /images/icon-cancel-gray@3x.png 1000w" src="/images/icon-cancel-gray@3x.png" alt="닫기">
                     </button>
                   </div>
                   <div class="dropdown-item activity-counter">
@@ -856,8 +841,7 @@
                 <span class="font-weight-bold">₩120,000</span>
               </div>
 
-              <button type="button" class="mt-3 btn btn-primary"
-                onclick="location.href='/stay/stayBookForm.html'">예약하기</button>
+              <button type="button" class="mt-3 btn btn-primary" onclick="location.href='/stay/stayBookForm.html'">예약하기</button>
             </div>
           </div>
         </section>
@@ -870,43 +854,67 @@
               <div class="d-flex justify-content-between top-title">
                 <h3 class="near-exp-title">근처 체험</h3>
               </div>
-              <ul class="popular-card-body">
-                <li class="popular-card slide">
-                  <a href="/stay/stayDetail.html">
-                    <div class="content" style="background-image:url('/images/bread.jpg')">
-                      <span class="address">전북/군산</span>
+              <ul class="popular-card-body list owl-carousel owl-theme one-line-carousel">
+                <li class="popular-card item">
+                  <a href="">
+                    <div class="content" style="background-image:url('https://images.unsplash.com/photo-1612977512598-3b8d6a498bbb?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8JUVDJUEwJTlDJUVDJUEzJUJDJUVCJThGJTg0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'),url('/images/onerror.jpg')">
+                      <span class="address">전라/전주</span>
+                      <!-- 숙소 -->
+                      <span class="percent stay">50%</span>
+                    </div>
+                    <!-- 카테고리 -->
+                    <div class="mt-1 sm-text-gray">농촌민박</div>
+                    <h1 class="title-overflow">세월 속에 현대의 시간이 포개지는 곳</h1>
+                    <p>
+                      <span class="price">₩25,000</span>
+                      <del class="sale-price">₩44,000</del>
+                    </p>
+                  </a>
+                </li>
+                <li class="popular-card item">
+                  <a href="">
+                    <div class="content" style="background-image:url('/images/main_.jpg'),url('/images/onerror.jpg')">
+                      <span class="address">전라/전주</span>
+                      <!-- 숙소 -->
+                      <span class="percent stay">50%</span>
+                    </div>
+                    <!-- 카테고리 -->
+                    <div class="mt-1 sm-text-gray">농촌민박</div>
+                    <h1 class="title-overflow">자연과 한옥의 완벽한 조화로부터!</h1>
+                    <p>
+                      <span class="price">₩25,000</span>
+                      <del class="sale-price">₩44,000</del>
+                    </p>
+                  </a>
+                </li>
+                <li class="popular-card item">
+                  <a href="">
+                    <div class="content" style="background-image:url('/images/stay1.jpg')">
+                      <span class="address">전라/전주</span>
                       <!-- <span class="percent">50%</span> -->
                       <!-- 숙소 -->
                       <span class="percent stay">50%</span>
                     </div>
-                    <h1 class="title-overflow strcut strcut-twoline">
-                      제목길이테스트제목길이테스트제목길이테스트제목길이테스트제목길이테스트제목길이테스트제목길이테스트제목길이테스트</h1>
+                    <!-- 카테고리 -->
+                    <div class="mt-1 sm-text-gray">펜션</div>
+                    <h1 class="title-overflow">오래되어 새로운 것 , 빈티지 제주</h1>
                     <p>
                       <span class="price">₩25,000</span>
                       <del class="sale-price">₩44,000</del>
                     </p>
                   </a>
                 </li>
-                <li class="popular-card slide">
-                  <a href="/stay/stayDetail.html">
-                    <div class="content" style="background-image:url('/images/bread.jpg')">
+                <li class="popular-card item">
+                  <a href="">
+                    <div class="content" style="background-image:url('/images/stay1.jpg')">
                       <span class="address">전라/전주</span>
-                      <span class="percent">50%</span>
+                      <!-- <span class="percent">50%</span> -->
+                      <!-- 숙소 -->
+                      <span class="percent stay">50%</span>
                     </div>
-                    <h1 class="title-overflow">제목</h1>
-                    <p>
-                      <span class="price">₩25,000</span>
-                      <del class="sale-price">₩44,000</del>
-                    </p>
-                  </a>
-                </li>
-                <li class="popular-card slide">
-                  <a href="/stay/stayDetail.html">
-                    <div class="content" style="background-image:url('/images/bread.jpg')">
-                      <span class="address">전라/전주</span>
-                      <span class="percent">50%</span>
-                    </div>
-                    <h1 class="title-overflow">제목</h1>
+                    <!-- 카테고리 -->
+                    <div class="mt-1 sm-text-gray">펜션</div>
+                    <h1 class="title-overflow">오래되어 새로운 것 , 빈티지 제주</h1>
                     <p>
                       <span class="price">₩25,000</span>
                       <del class="sale-price">₩44,000</del>
@@ -1004,26 +1012,41 @@
       var middleNavOffset = middleNav.offset();
 
       var $sidebar = $(".book-ui"),
+        $near = $('.near-exp-list'),
         $window = $(window),
         offset = $sidebar.offset(),
+        nearOffset = $near.offset(),
         topPadding = 60;
       var rightTop = $('.right-top')
       var tagEl = $('.tag');
 
+      //객실정보 리스트 active
+      $('.stayroom').click(function () {
+        $('.stayroom').removeClass('active');
+        $(this).addClass('active');
+      })
+
+      //객실정보,상세정보,위치,리뷰,문의 active
+      $('.detail-tab-list').click(function () {
+        $('.detail-tab-list').removeClass('active');
+        $('.list-detail-wrapper').removeClass('top-area');
+        $(this).addClass('active');
+        $('.list-detail-wrapper').addClass('top-area');
+      })
+
       //1200px up style 
-      if (window.matchMedia("(min-width: 1200px)").matches) {
-        $window.scroll(function () {
-          if ($window.scrollTop() > offset.top) {
-            $sidebar.stop().animate({
-              marginTop: $window.scrollTop() - offset.top + topPadding
-            }, 200);
-          } else {
-            $sidebar.stop().animate({
-              marginTop: 0
-            }, 200);
-          }
-        });
-      }
+      $window.scroll(function () {
+        if ($window.scrollTop() > offset.top && window.matchMedia("(min-width: 1200px)").matches) {
+          $sidebar.stop().animate({
+            marginTop: $window.scrollTop() - offset.top + topPadding
+          }, 200);
+        } else {
+          $sidebar.stop().animate({
+            marginTop: 0
+          }, 200);
+        }
+      });
+
       //middle nav
       $window.scroll(function () {
         if ($window.scrollTop() > middleNavOffset.top) {
@@ -1041,7 +1064,7 @@
         rightTop.insertAfter(tagEl);
       }
 
-      //modal
+      //모바일 예약하기 버튼 클릭
       bookBtn.click(function () {
         $('.book-ui').addClass('book-ui-modal');
         $('.in_scroll').addClass('display');
@@ -1051,9 +1074,9 @@
         $('.book-ui').removeClass('book-ui-modal');
         $('.in_scroll').removeClass('display');
         $('body').removeClass('open');
-
       })
 
+      //텍스트 2줄 이상일 경우 overflow 처리
       function setDotDotDot() {
         $(".title-overflow").dotdotdot({
           ellipsis: '...',//말줄임 뭘로 할지
@@ -1125,29 +1148,50 @@
         $('.dropdown-menu').removeClass('show');
       })
 
-      //객실정보 carousel
-      $('.owl-carousel').owlCarousel({
-        loop: true,
+      //근처체험 carousel
+      $('.one-line-carousel').owlCarousel({
+
+        margin: 20,
+        // autoWidth: true,
         responsiveClass: true,
         nav: true,
-        autoWidth: true,
-        navText: ["<img src='/images/icon-left-black@3x.png'>", "<img src='/images/icon-right-black@3x.png'>"],
+
         responsive: {
           0: {
-            items: 3,
+            items: 1.8,
             nav: true,
             margin: 8
           },
           600: {
+            // autoWidth: true,
+          },
+          1000: {
             items: 3,
-            nav: false,
-            margin: 8,
+            // autoWidth: true,
+            loop: false,
+            margin: 20
+          }
+        }
+      })
+
+      //객실정보 carousel
+      $('.stay-room-list').owlCarousel({
+        loop: true,
+        margin: 10,
+        responsiveClass: true,
+        responsive: {
+          0: {
+            items: 2.5,
+            nav: true
+          },
+          600: {
+            items: 3,
+            nav: false
           },
           1000: {
             items: 5,
             nav: true,
-            loop: false,
-            margin: 16
+            loop: false
           }
         }
       })
@@ -1156,6 +1200,6 @@
 
 
   </script>
-<script src=".././js/index.bundle.js?dc69506800bb3cd8d674"></script></body>
+<script src=".././js/index.bundle.js?eb7aa5b354a1def04a88"></script></body>
 
 </html>

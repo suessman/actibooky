@@ -157,6 +157,8 @@
     }
   }
   .middle-nav-parent{
+    height:60px;
+    position:relative;
     .middle-nav{
       background-color:$light;
       white-space: nowrap;
@@ -174,12 +176,6 @@
         height:48px;
         line-height: 48px;
       }
-      &.active{
-        color:$primary;
-        font-weight: $font-weight-bold;
-        border-bottom:2px solid $primary;
-      }
-
       .num{
         color:$dark;
       }
@@ -189,6 +185,7 @@
     &.fixed{
       position:fixed;
       top:0;
+      left:0;
       z-index: 999;
       text-align: center;
 
@@ -196,19 +193,28 @@
   }
 }
 
+.detail-tab-list{
+  &.active{
+    color:$primary;
+    font-weight: $font-weight-bold;
+    border-bottom:2px solid $primary;
+  }
+}
+
+      
 
   //객실정보,상세정보,위치,리뷰,문의
   .tab-content-list{
 
-    .owl-px{
-      @include media-breakpoint-up(lg){
-        padding:0 32px;
-      }
-    }
-
     //scroll 내렸을 때 paddingtop 추가
     &.top-area{
       padding-top: 64px;
+    }
+
+    .list-detail-wrapper{
+      &.top-area{
+        padding-top:60px;
+      }
     }
     section{
       padding:24px 0;
@@ -218,7 +224,7 @@
       }
 
       &.list-detail.top-area{
-          padding-top: 64px;
+          margin-top: 64px;
       }
 
       &:nth-last-of-type(1){
@@ -320,6 +326,59 @@
             }
           }
         }
+      }
+    }
+
+    //객실정보 top slide
+    .stay-room-body{
+      padding:0 16px;
+      @include media-breakpoint-down(lg){
+        padding:0;
+      }
+    }
+    .stay-room-list{
+      color:$white;
+      .room-info{
+        min-height:120px;
+        background-size:cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+      }
+
+      .detail{
+        position: absolute;
+        padding: 8px;
+        background-color: rgba(33, 37, 41, 0.4);
+        width:100%;bottom:0;
+      }
+
+      .room-name{
+        font-weight: bold;
+      }
+
+      .room-type{
+        @include fontSize(12px);
+        @include media-breakpoint-down(sm){
+          display:none;
+        }
+      }    
+    }
+  }
+
+  //room info click active
+  .stayroom{
+    cursor: pointer;
+    &.active{
+      .detail{
+        background-color:rgba(255,255,255,0.9);
+      }
+      .room-name{
+        color:$primary;
+      }
+
+      .room-type{
+        color:$primary;
       }
     }
   }
@@ -458,7 +517,8 @@
 
   @include media-breakpoint-only(xl) { 
       position: absolute;
-      top: 674px;
+      top: 698px;
+      background: $white;
       left: calc(50% + 486px);
       width: 218px;
       // height: 200px;
