@@ -378,6 +378,12 @@ main.carousel-body .section-body.card-ui ul.popular-card-body {
   }
 
   .one-line-carousel{
+    .popular-card{
+      @include media-breakpoint-up(lg){
+        margin-top: 24px !important;
+      }
+    }
+    
      .owl-stage {
       width: block !important;
     }

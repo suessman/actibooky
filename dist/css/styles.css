@@ -10004,7 +10004,9 @@ select.form-control.filter-select {
   .filter-picker-ui .pick-filter-body .filter-list {
     display: flex;
     align-items: center;
-    height: 40px; }
+    height: 40px;
+    width: calc(100% / 2);
+    background-color: #ffffff; }
   @media (max-width: 767.98px) {
     .filter-picker-ui .pick-filter-body {
       background-color: transparent;
@@ -10096,14 +10098,12 @@ select.form-control.filter-select {
       background-image: url(../images/icon-date-gray@3x.png);
       background-position: 14px center;
       background-repeat: no-repeat;
-      background-size: 24px auto;
-      width: 240px; }
+      background-size: 24px auto; }
     .filter-picker-ui .pick-filter-body .pick-filter.place {
       background-image: url(../images/icon-location-gray@3x.png);
       background-position: 14px center;
       background-repeat: no-repeat;
-      background-size: 24px auto;
-      width: 240px; }
+      background-size: 24px auto; }
     .filter-picker-ui .pick-filter-body .pick-filter.people-n {
       background-image: url(../images/icon-user-gray@3x.png);
       background-position: 14px center;
@@ -10114,11 +10114,16 @@ select.form-control.filter-select {
       color: #868e96; }
       .filter-picker-ui .pick-filter-body .pick-filter.people-n:after {
         display: none; }
-    .filter-picker-ui .pick-filter-body .pick-filter.people-n.time {
+    .filter-picker-ui .pick-filter-body .pick-filter.time {
       background-image: url(../images/icon-time-gray@3x.png);
       background-position: 14px center;
       background-repeat: no-repeat;
-      background-size: 24px auto; }
+      background-size: 24px auto;
+      border-right: 1px solid #e9ecef;
+      height: 22px;
+      color: #868e96; }
+      .filter-picker-ui .pick-filter-body .pick-filter.time:after {
+        display: none; }
 
 .filter-picker-ui .search {
   height: 56px;
@@ -10612,7 +10617,13 @@ main.carousel-body .section-body.card-ui ul.popular-card-body {
     width: calc(100%) !important;
     margin-left: 0 !important; }
   .app-owl-carousel .owl-item:nth-child(3n) {
-    margin-right: 0 !important; }
+    margin-right: 0 !important; } }
+
+@media (min-width: 992px) and (min-width: 992px) {
+  .one-line-carousel .popular-card {
+    margin-top: 24px !important; } }
+
+@media (min-width: 992px) {
   .one-line-carousel .owl-stage {
     width: block !important; }
   .one-line-carousel .owl-stage-outer {
@@ -11204,7 +11215,7 @@ main .section-body.card-ui ul.popular-card-body {
   main .section-body.card-ui ul.popular-card-body li.popular-card {
     width: calc(33.33% - 20px);
     margin-left: 20px;
-    margin-top: 24px;
+    margin-top: 40px;
     display: inline-block;
     min-height: 304px;
     vertical-align: top;

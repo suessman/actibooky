@@ -37,118 +37,117 @@
         </div>
       </div>
     </header>
-    <main class="d-flex flex-column h-100 main main-sub">
+    <main class="d-flex flex-column h-100 main">
       <section class="card_body grey">
         <div class="container">
           <div class="row">
             <div class="col-lg-12 m-auto filter-picker-ui">
               <div class="w-100">
                 <div class="d-flex pick-filter-body">
-                  <div class="filter-list pick-filter place">
-                    <input type="text" class="form-control divider" value="어디로 떠날까요?" />
-                  </div>
-                  <div class="filter-list pick-filter start-d br-0">
-                    <input type="text" class="form-control date br-0" readonly value="" name="daterange" placeholder="날짜" />
-                  </div>
-
-                  <div class="filter-list">
-                    <button type="button" class="pick-filter people-n time filter-btn br-0 dropdown-filter btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      시간
-                    </button>
-                    <div class="dropdown-menu">
-                      <div class="d-flex justify-content-between">
-                        <h1 class="dropdown-title">시간</h1>
-                        <button type="button" class="dropdown-close close" data-dismiss="modal" aria-label="Close">
-                          <img class="sm-icon" srcset="/images/icon-cancel-gray.png 400w,
-                                                                                                            /images/icon-cancel-gray@2x.png 700w,
-                                                                                                            /images/icon-cancel-gray@3x.png 1000w" src="/images/icon-cancel-gray@3x.png" alt="닫기">
-                        </button>
-                      </div>
-                      <div class="dropdown-item">
-                        <div class="custom-control custom-radio">
-                          <input type="radio" class="custom-control-input check-box-list" id="time" name="time">
-                          <label class="custom-control-label check-list" for="time"><span>전체</span></label>
-                        </div>
-                      </div>
-                      <div class="dropdown-item">
-                        <div class="custom-control custom-radio">
-                          <input type="radio" class="custom-control-input check-box-list" id="time2" name="time">
-                          <label class="custom-control-label check-list" for="time2">오전</label>
-                        </div>
-                      </div>
-                      <div class="dropdown-item">
-                        <div class="custom-control custom-radio">
-                          <input type="radio" class="custom-control-input check-box-list" id="time3" name="time">
-                          <label class="custom-control-label check-list" for="time3">오후</label>
-                        </div>
-                      </div>
-
-                      <div class="text-center apply-btn-wrapper">
-                        <button type="button" class="btn btn-primary apply dropdown-close button-list">적용하기</button>
-                      </div>
+                  <div class="d-flex w-100 xs-down-border">
+                    <div class="filter-list pick-filter place">
+                      <input type="text" class="form-control divider" value="어디로 떠날까요?" />
                     </div>
-
-                  </div>
-                  <div class="filter-list">
-                    <button type="button" class="pick-filter people-n dropdown-filter btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      인원
-                    </button>
-                    <div class="dropdown-menu">
-                      <div class="d-flex justify-content-between">
-                        <h1 class="dropdown-title">인원</h1>
-                        <button type="button" class="dropdown-close close" data-dismiss="modal" aria-label="Close">
-                          <img class="sm-icon" srcset="/images/icon-cancel-gray.png 400w,
-                                                                                  /images/icon-cancel-gray@2x.png 700w,
-                                                                                  /images/icon-cancel-gray@3x.png 1000w" src="/images/icon-cancel-gray@3x.png" alt="닫기">
-                        </button>
-                      </div>
-                      <div class="dropdown-item activity-counter">
-                        <div>
-                          <span>성인</span>
-                        </div>
-                        <span class="right">
-                          <button type="button" class="minus-btn">
-                          </button>
-                          <span class="counter-num">2</span>
-                          <button type="button" class="add-btn">
-                          </button>
-                        </span>
-                      </div>
-                      <div class="dropdown-item activity-counter">
-                        <div>
-                          <span>소아</span>
-                          <div class="detail">24개월~12세</div>
-                        </div>
-                        <span class="right">
-                          <button type="button" class="minus-btn">
-                          </button>
-                          <span class="counter-num">2</span>
-                          <button type="button" class="add-btn">
-                          </button>
-
-                        </span>
-                      </div>
-                      <div class="dropdown-item activity-counter">
-                        <div>
-                          <span>유아</span>
-                          <div class="detail">24개월 미만</div>
-                        </div>
-                        <span class="right">
-                          <button type="button" class="minus-btn">
-                          </button>
-                          <span class="counter-num">2</span>
-                          <button type="button" class="add-btn">
-                          </button>
-                        </span>
-                      </div>
-
-                      <div class="text-center apply-btn-wrapper">
-                        <button type="button" class="btn btn-primary apply dropdown-close">적용하기</button>
-                      </div>
+                    <div class="filter-list pick-filter start-d br-0">
+                      <input type="text" class="form-control date br-0" readonly value="" name="daterange" placeholder="날짜" />
                     </div>
-
                   </div>
+                  <div class="d-flex w-100 xs-down-mt-2 xs-down-border">
+                    <div class="filter-list">
+                      <button type="button" class="pick-filter time dropdown-filter btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        시간
+                      </button>
+                      <div class="dropdown-menu">
+                        <div class="d-flex justify-content-between">
+                          <h1 class="dropdown-title">시간</h1>
+                          <button type="button" class="dropdown-close close" data-dismiss="modal" aria-label="Close">
+                            <img class="sm-icon" srcset="/images/icon-cancel-gray.png 400w,
+                                                                                                                                  /images/icon-cancel-gray@2x.png 700w,
+                                                                                                                                  /images/icon-cancel-gray@3x.png 1000w" src="/images/icon-cancel-gray@3x.png" alt="닫기">
+                          </button>
+                        </div>
+                        <div class="dropdown-item">
+                          <div class="custom-control custom-radio">
+                            <input type="radio" class="custom-control-input check-box-list" id="time" name="time">
+                            <label class="custom-control-label check-list" for="time"><span>전체</span></label>
+                          </div>
+                        </div>
+                        <div class="dropdown-item">
+                          <div class="custom-control custom-radio">
+                            <input type="radio" class="custom-control-input check-box-list" id="time2" name="time">
+                            <label class="custom-control-label check-list" for="time2">오전</label>
+                          </div>
+                        </div>
+                        <div class="dropdown-item">
+                          <div class="custom-control custom-radio">
+                            <input type="radio" class="custom-control-input check-box-list" id="time3" name="time">
+                            <label class="custom-control-label check-list" for="time3">오후</label>
+                          </div>
+                        </div>
 
+                        <div class="text-center apply-btn-wrapper">
+                          <button type="button" class="btn btn-primary apply dropdown-close button-list">적용하기</button>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="filter-list">
+                      <button type="button" class="pick-filter people-n dropdown-filter btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        인원
+                      </button>
+                      <div class="dropdown-menu">
+                        <div class="d-flex justify-content-between">
+                          <h1 class="dropdown-title">인원</h1>
+                          <button type="button" class="dropdown-close close" data-dismiss="modal" aria-label="Close">
+                            <img class="sm-icon" srcset="/images/icon-cancel-gray.png 400w,
+                                                                                                                                  /images/icon-cancel-gray@2x.png 700w,
+                                                                                                                                  /images/icon-cancel-gray@3x.png 1000w" src="/images/icon-cancel-gray@3x.png" alt="닫기">
+                          </button>
+                        </div>
+                        <div class="dropdown-item">
+                          <div class="custom-control custom-radio">
+                            <input type="radio" class="custom-control-input check-box-list" id="personnel1" name="personnel">
+                            <label class="custom-control-label check-list" for="personnel1"><span>전체</span></label>
+                          </div>
+                        </div>
+                        <div class="dropdown-item">
+                          <div class="custom-control custom-radio">
+                            <input type="radio" class="custom-control-input check-box-list" id="personnel2" name="personnel">
+                            <label class="custom-control-label check-list" for="personnel2">6명미만</label>
+                          </div>
+                        </div>
+                        <div class="dropdown-item">
+                          <div class="custom-control custom-radio">
+                            <input type="radio" class="custom-control-input check-box-list" id="personnel3" name="personnel">
+                            <label class="custom-control-label check-list" for="personnel3">6명~11명미만</label>
+                          </div>
+                        </div>
+                        <div class="dropdown-item">
+                          <div class="custom-control custom-radio">
+                            <input type="radio" class="custom-control-input check-box-list" id="personnel3" name="personnel">
+                            <label class="custom-control-label check-list" for="personnel3">11명~16명미만</label>
+                          </div>
+                        </div>
+                        <div class="dropdown-item">
+                          <div class="custom-control custom-radio">
+                            <input type="radio" class="custom-control-input check-box-list" id="personnel3" name="personnel">
+                            <label class="custom-control-label check-list" for="personnel3">16명~21명미만</label>
+                          </div>
+                        </div>
+                        <div class="dropdown-item">
+                          <div class="custom-control custom-radio">
+                            <input type="radio" class="custom-control-input check-box-list" id="personnel3" name="personnel">
+                            <label class="custom-control-label check-list" for="personnel3">21명이상(단체)</label>
+                          </div>
+                        </div>
+
+                        <div class="text-center apply-btn-wrapper">
+                          <button type="button" class="btn btn-primary apply dropdown-close button-list">적용하기</button>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
                 </div>
                 <!-- Button trigger modal -->
                 <div class="form-group filter-group md-up-d-block main">
@@ -201,6 +200,9 @@
                             <input type="radio" class="custom-control-input check-box-list" id="price6" name="price">
                             <label class="custom-control-label check-list" for="price6">2만원이상</label>
                           </div>
+                        </div>
+                        <div class="text-center apply-btn-wrapper">
+                          <button type="button" class="btn btn-primary apply dropdown-close button-list">적용하기</button>
                         </div>
                       </div>
                     </div>
@@ -294,6 +296,8 @@
                     <!-- 숙소 -->
                     <span class="percent">50%</span>
                   </div>
+                  <!-- 카테고리 -->
+                  <div class="mt-1 sm-text-gray">농촌민박</div>
                   <h1 class="title-overflow">세월속에 현대의 시간이 포개지는 곳</h1>
                   <p>
                     <span class="price">₩2,5000</span>
@@ -320,6 +324,8 @@
                     <span class="address">전라/전주</span>
                     <span class="percent">50%</span>
                   </div>
+                  <!-- 카테고리 -->
+                  <div class="mt-1 sm-text-gray">농촌민박</div>
                   <h1 class="title-overflow">오인왕산 동쪽과 경복궁 서쪽 사이, 옛 모습을 고스란히 간직한 동네 서촌으로 떠나볼까요?</h1>
                   <p>
                     <span class="price">₩25,000</span>
@@ -333,6 +339,8 @@
                     <span class="address">전라/전주</span>
                     <span class="percent">50%</span>
                   </div>
+                  <!-- 카테고리 -->
+                  <div class="mt-1 sm-text-gray">농촌민박</div>
                   <h1 class="title-overflow">오래되어 새로운 것 제주,,!</h1>
                   <p>
                     <span class="price">₩25,000</span>
