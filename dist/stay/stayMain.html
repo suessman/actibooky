@@ -38,7 +38,7 @@
     })
 
 </script>
-<link href=".././css/styles.css?fed5542b6b993259502e" rel="stylesheet"></head>
+<link href=".././css/styles.css?a89afa675e191595dff0" rel="stylesheet"></head>
 
 <body>
   <!-- 브라우저 권장 -->
@@ -191,7 +191,60 @@
                 <div class="d-flex pick-filter-body">
                   <div class="d-flex w-100 xs-down-border">
                     <div class="filter-list pick-filter place">
-                      <input type="text" class="form-control divider" value="어디로 떠날까요?" />
+                      <button type="button" class="dropdown-filter btn dropdown-toggle filter-place-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        어디로 떠날까요?
+                      </button>
+                      <div class="dropdown-menu w-auto filter-place-half">
+                        <div class="d-flex justify-content-between">
+                          <h1 class="dropdown-title">어디로 떠날까요?</h1>
+                          <button type="button" class="dropdown-close close" data-dismiss="modal" aria-label="Close">
+                            <img class="sm-icon" srcset="/images/icon-cancel-gray.png 400w,
+                                                                                                                                      /images/icon-cancel-gray@2x.png 700w,
+                                                                                                                                      /images/icon-cancel-gray@3x.png 1000w" src="/images/icon-cancel-gray@3x.png" alt="닫기">
+                          </button>
+                        </div>
+                        <div class="dropdown-item activity-counter">
+                          <div class="popular-search-word">
+                            <ul class="d-flex">
+                              <li class="popular-list click-el">
+                                <input type="radio" id="area1" name="popularlist">
+                                <label for="area1">서울</label>
+                              </li>
+                              <li class="popular-list click-el">
+                                <input type="radio" id="area2" name="popularlist">
+                                <label for="area2">제주도</label>
+                              </li>
+                              <li class="popular-list click-el">
+                                <input type="radio" id="area3" name="popularlist">
+                                <label for="area3">강원도</label>
+                              </li>
+                            </ul>
+                            <ul class="d-flex area-group">
+                              <li class="area-list click-el">
+                                <input type="radio" id="area4" name="popularlist">
+                                <label for="area4">전체</label>
+                              </li>
+                              <li class="area-list click-el">
+                                <input type="radio" id="area5" name="popularlist">
+                                <label for="area5">서울</label>
+                              </li>
+                              <li class="area-list click-el">
+                                <input type="radio" id="area6" name="popularlist">
+                                <label for="area6">전주</label>
+                              </li>
+                              <li class="area-list click-el">
+                                <input type="radio" id="area7" name="popularlist">
+                                <label for="area7">임실</label>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+
+                        <div class="text-center apply-btn-wrapper">
+                          <button type="button" class="btn btn-primary apply dropdown-close">적용하기</button>
+                        </div>
+                      </div>
                     </div>
                     <div class="filter-list pick-filter start-d br-0">
                       <input type="text" class="form-control date br-0" readonly value="" name="daterange" placeholder="체크인" />
@@ -730,6 +783,6 @@
 
     })
   </script>
-<script src=".././js/index.bundle.js?fed5542b6b993259502e"></script></body>
+<script src=".././js/index.bundle.js?a89afa675e191595dff0"></script></body>
 
 </html>

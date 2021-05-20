@@ -184,7 +184,9 @@ select.form-control.filter-select{
         background-position: 14px center;
         background-repeat: no-repeat;
         background-size:24px auto;  
-        // width: 240px;
+        @include media-breakpoint-up(md){
+          width: 240px;
+        }
       }
 
       &.people-n{

@@ -9794,6 +9794,79 @@ hr.sm-interval {
       bottom: 16px;
       width: calc(100% - 30px) !important; } }
 
+main.main .filter-picker-ui .popular-search-word {
+  display: block;
+  position: relative;
+  background-color: #ffffff;
+  min-height: 146px;
+  margin-top: 8px;
+  width: auto;
+  padding: 0; }
+  main.main .filter-picker-ui .popular-search-word .title {
+    color: #868e96;
+    font-size: 12px;
+    font-weight: 700; }
+  main.main .filter-picker-ui .popular-search-word ul {
+    flex-wrap: wrap; }
+    main.main .filter-picker-ui .popular-search-word ul li.popular-list {
+      margin-top: 8px;
+      position: relative; }
+      main.main .filter-picker-ui .popular-search-word ul li.popular-list input {
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0; }
+        main.main .filter-picker-ui .popular-search-word ul li.popular-list input:checked + label {
+          background-color: #9334ff;
+          color: #ffffff; }
+      main.main .filter-picker-ui .popular-search-word ul li.popular-list label {
+        background-color: #f1f3f5;
+        width: auto;
+        min-width: 56px;
+        height: 28px;
+        line-height: 28px;
+        font-weight: normal;
+        border-radius: 14px;
+        margin-right: 8px;
+        padding: 0 16px; }
+    main.main .filter-picker-ui .popular-search-word ul.area-group {
+      margin-top: 40px; }
+      main.main .filter-picker-ui .popular-search-word ul.area-group li.area-list {
+        margin-top: 8px; }
+        main.main .filter-picker-ui .popular-search-word ul.area-group li.area-list input {
+          position: absolute;
+          left: 0;
+          top: 0;
+          opacity: 0; }
+          main.main .filter-picker-ui .popular-search-word ul.area-group li.area-list input:checked + label {
+            color: #9334ff; }
+        main.main .filter-picker-ui .popular-search-word ul.area-group li.area-list label {
+          color: #343a40;
+          width: auto;
+          font-weight: normal;
+          margin-right: 24px;
+          padding: 0; }
+
+@media (min-width: 992px) {
+  main.main .filter-picker-ui .filter-place-btn {
+    border-right: 1px solid #e9ecef !important; } }
+
+main.main .filter-picker-ui .filter-place {
+  top: 8px !important;
+  left: -44px !important; }
+  @media (max-width: 991.98px) {
+    main.main .filter-picker-ui .filter-place {
+      width: 100% !important;
+      left: -12px !important; } }
+
+main.main .filter-picker-ui .filter-place-half {
+  top: 8px !important;
+  left: -44px !important; }
+  @media (max-width: 991.98px) {
+    main.main .filter-picker-ui .filter-place-half {
+      width: auto !important;
+      left: -44px !important; } }
+
 @font-face {
   font-family: 'Noto Sans KR';
   src: url(../fonts/NotoSansKR-Light.woff) format("woff"), url(../fonts/NotoSansKR-Light.woff2) format("woff2");
@@ -10104,6 +10177,9 @@ select.form-control.filter-select {
       background-position: 14px center;
       background-repeat: no-repeat;
       background-size: 24px auto; }
+      @media (min-width: 768px) {
+        .filter-picker-ui .pick-filter-body .pick-filter.place {
+          width: 240px; } }
     .filter-picker-ui .pick-filter-body .pick-filter.people-n {
       background-image: url(../images/icon-user-gray@3x.png);
       background-position: 14px center;

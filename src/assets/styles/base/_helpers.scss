@@ -16,3 +16,110 @@
       width: calc(100% - 30px) !important;
    }
 }
+
+
+main.main{
+  .filter-picker-ui{
+    .popular-search-word{
+        // display: none;
+        // position: absolute; 
+        // top: 0; 
+        // z-index: 1050; 
+        display: block;
+        position: relative;
+        background-color:$white; 
+        min-height: 146px;
+        margin-top: 8px;
+        width: auto;
+        padding:0;
+
+        .title{
+          color:#868e96; 
+          font-size: 12px;
+          font-weight: 700;
+        }
+        ul{      
+          flex-wrap: wrap;  
+          li.popular-list{
+            margin-top: 8px;
+            position: relative;
+            input{
+              position: absolute;
+              left: 0;
+              top: 0;
+              opacity: 0;
+              &:checked{
+                + label{ 
+                  background-color: $primary;
+                  color:$white;                 
+                }
+              }
+            }
+            label{
+              background-color:#f1f3f5; 
+              width: auto; 
+              min-width: 56px; 
+              height: 28px; 
+              line-height:28px;
+              font-weight: normal; 
+              border-radius: 14px; 
+              margin-right: 8px;
+              padding:0 16px;
+            }
+          }
+
+          &.area-group{
+            margin-top: 40px;
+            li.area-list{
+              margin-top: 8px;
+
+            input{
+              position: absolute;
+              left: 0;
+              top: 0;
+              opacity: 0;
+              &:checked{
+                + label{                 
+                  color:$primary;                 
+                }
+              }
+            }
+            
+            label{
+              color:$main-grey;
+                width: auto;            
+                font-weight: normal;            
+                margin-right: 24px;            
+                padding:0;
+              }
+            }
+          }
+          
+        }
+      }
+
+      .filter-place-btn{
+        @include media-breakpoint-up(lg){
+          border-right:1px solid $light !important;
+        }
+      }
+      .filter-place{
+        top:8px !important;
+        left:-44px !important;
+        @include media-breakpoint-down(md){
+          width: 100% !important;
+          left: -12px !important;
+        }      
+    }
+
+    .filter-place-half{
+        top:8px !important;
+        left:-44px !important;
+        @include media-breakpoint-down(md){
+          width: auto !important;
+          left: -44px !important;
+        }      
+    }
+  }
+    
+}
