@@ -9717,6 +9717,9 @@ main {
   white-space: nowrap;
   word-break: break-all; }
 
+.text-light-gray {
+  color: #adb5bd !important; }
+
 hr.sm-interval {
   margin: 8px 0; }
 
@@ -11823,6 +11826,26 @@ main .section-body.card-ui-video .area {
   font-weight: 700;
   border-bottom: 2px solid #9334ff; }
 
+.detail-info-sec .list-detail .exp-info-title {
+  color: #868e96;
+  font-weight: bold;
+  display: inline-block;
+  min-width: 55px;
+  font-size: 18px; }
+  @media (max-width: 575.98px) {
+    .detail-info-sec .list-detail .exp-info-title {
+      font-size: 14px; } }
+
+.detail-info-sec .list-detail .exp-info-detail {
+  margin-left: 90px;
+  font-size: 18px; }
+  @media (max-width: 575.98px) {
+    .detail-info-sec .list-detail .exp-info-detail {
+      display: block;
+      margin-left: 0;
+      margin-top: 8px;
+      font-size: 14px; } }
+
 .detail-info-sec .tab-content-list.top-area {
   padding-top: 64px; }
 
@@ -12039,6 +12062,8 @@ main .section-body.card-ui-video .area {
   @media (min-width: 992px) {
     .book-ui .close-book-ui {
       display: none; } }
+  .book-ui.experience {
+    min-height: 340px; }
   .book-ui .book-ui-content {
     padding: 16px;
     border: 1px solid #e9ecef; }
@@ -12156,6 +12181,29 @@ main .section-body.card-ui-video .area {
   @media (min-width: 992px) {
     .mobile-book-ui {
       display: none; } }
+
+.group-book input.form-control {
+  border: 1px solid #e9ecef; }
+
+.group-book .base-dropdown {
+  border: 1px solid #e9ecef;
+  padding-left: 40px; }
+
+.group-book h5 {
+  font-size: 14px; }
+
+.group-book .date {
+  background-image: url(../images/icon-date-gray@3x.png);
+  background-position: 14px center;
+  background-repeat: no-repeat;
+  background-size: 24px auto;
+  padding-left: 42px; }
+
+.group-book .people-n {
+  background-image: url(../images/icon-user-gray@3x.png);
+  background-position: 14px center;
+  background-repeat: no-repeat;
+  background-size: 24px auto; }
 
 .book-form .book-form-card {
   border: 1px solid #e9ecef;

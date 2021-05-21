@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>숙소 예약 작성</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="/css/headertitle.css">
+    <!-- include -->
+    ${ require('../partials/head.html') }
+</head>
+
+<body>
+    <!-- 브라우저 권장 -->
+    ${ require('../partials/browserupgrade.html') }
+    <div class="fm">
+        <!-- 헤더 -->
+        ${ require('../partials/header.html') }
+        <header class="header-title">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="d-flex justify-content-between">
+                            <a href="#" class="prev">
+                                <img src="/images/icon-left-black@3x.png" class="sm-icon" alt="뒤로가기">
+                            </a>
+                            <h1 class="title">예약 및 결제</h1>
+                            <!-- <a>
+                <img src="/images/icon-search-gray.png" class="sm-icon" alt="검색화면으로이동">
+              </a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="d-flex flex-column h-100 main">
+            <!-- Content Here -->
+            <div class="container book-form">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="book-form-title">예약 및 결제</h1>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="book-form-card">
+                            <!-- 예약 이미지 -->
+                            <div class="activity-img">
+                                <span class="area">
+                                    전북/전주
+                                </span>
+                            </div>
+
+                            <!-- 예약 정보 -->
+                            <div class="activity-info">
+                                <span class="company-name">업체이름</span>
+                                <h3>요즘 핫한 여행지, 농촌 (제목)</h3>
+                                <hr>
+                                <ul>
+                                    <li class="list">
+                                        <img class="sm-icon" srcset="/images/icon-date-black.png 400w,
+                                        /images/icon-date-black@2x.png 700w,
+                                        /images/icon-date-black@3x.png 1000w" src="/images/icon-date-black@3x.png" alt="날짜" />
+                                        <span>2021년 3월 25일 ~ 2021년 3월 27일</span>
+                                    </li>
+                                    <li class="list">
+                                        <img class="sm-icon" srcset="/images/icon-user-gray.png 400w,
+                                                /images/icon-user-gray@2x.png 700w,
+                                                /images/icon-user-gray@3x.png 1000w" src="/images/icon-user-gray@3x.png" alt="인원수" />
+                                        <span>인원3</span>
+                                    </li>
+                                    <li class="list">
+                                        <img class="sm-icon" srcset="/images/icon-time-gray@3x.png 400w,
+                                                /images/icon-time-gray@3x.png 700w,
+                                                /images/icon-time-gray@3x.png 1000w" src="/images/icon-time-black@3x.png" alt="시간" />
+                                        <span>14:00~16:00</span>
+                                    </li>
+                                </ul>
+
+                                <!-- 단체예약일경우 -->
+                                <!-- <div class="group-book">
+                  <div class="">
+                    <h5>예약정보</h5>
+                    <input type="text" class="form-control book-filter date" readonly value="" name="daterange" placeholder="날짜" />
+                    <div class="mt-2 book-filter people-n btn-group w-100">
+
+                      <button type="button" class="base-dropdown dropdown-filter btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        인원
+                      </button>
+                      <div class="dropdown-menu position">
+                        <div class="d-flex justify-content-between">
+                          <h1 class="dropdown-title">인원</h1>
+                          <button type="button" class="dropdown-close close" data-dismiss="modal" aria-label="Close">
+                            <img class="sm-icon" srcset="/images/icon-cancel-gray.png 400w,
+                                                                                                    /images/icon-cancel-gray@2x.png 700w,
+                                                                                                    /images/icon-cancel-gray@3x.png 1000w" src="/images/icon-cancel-gray@3x.png" alt="닫기">
+                          </button>
+                        </div>
+                        <div class="dropdown-item activity-counter">
+                          <div>
+                            <span>성인</span>
+                          </div>
+                          <span class="right">
+                            <button type="button" class="minus-btn">
+                            </button>
+                            <span class="counter-num">2</span>
+                            <button type="button" class="add-btn">
+                            </button>
+                          </span>
+                        </div>
+                        <div class="dropdown-item activity-counter">
+                          <div>
+                            <span>소아</span>
+                            <div class="detail">24개월~12세</div>
+                          </div>
+                          <span class="right">
+                            <button type="button" class="minus-btn">
+                            </button>
+                            <span class="counter-num">2</span>
+                            <button type="button" class="add-btn">
+                            </button>
+
+                          </span>
+                        </div>
+                        <div class="dropdown-item activity-counter">
+                          <div>
+                            <span>유아</span>
+                            <div class="detail">24개월 미만</div>
+                          </div>
+                          <span class="right">
+                            <button type="button" class="minus-btn">
+                            </button>
+                            <span class="counter-num">2</span>
+                            <button type="button" class="add-btn">
+                            </button>
+                          </span>
+                        </div>
+
+                        <div class="text-center apply-btn-wrapper">
+                          <button type="button" class="btn btn-primary apply dropdown-close">적용하기</button>
+                        </div>
+                      </div>
+                    </div>
+                    <select class="form-control w-100 mt-2">
+                      <option value="">체험시간</option>
+                    </select>
+                  </div>
+                </div> -->
+                                <hr>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>인원x3</span>
+                                    <span>₩36,000</span>
+                                </div>
+
+                                <hr>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="font-weight-bold">총합계</span>
+                                    <span class="primary-color font-weight-bold">₩120,000</span>
+                                </div>
+                            </div>
+                            <div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 book-form-content">
+                        <!-- 예약자정보 -->
+                        <div>
+                            <h5 class="title">예약자 정보</h5>
+                            <ul class="user-info">
+                                <li>
+                                    <input type="text" class="form-control" placeholder="이름">
+                                </li>
+                                <li>
+                                    <input type="text" class="form-control" placeholder="연락처">
+                                </li>
+                                <li>
+                                    <input type="text" class="form-control" placeholder="이메일">
+                                </li>
+                            </ul>
+                            <!-- 비회원 -->
+                            <ul class="user-info">
+                                <li>
+                                    <input type="text" class="form-control" placeholder="이름">
+                                </li>
+                                <li>
+                                    <input type="text" class="form-control" placeholder="연락처">
+                                </li>
+                                <li>
+                                    <input type="text" class="form-control" placeholder="이메일">
+                                </li>
+                                <li>
+                                    <input type="placeholder" class="form-control" placeholder="예약조회 비밀번호">
+                                </li>
+                                <li>
+                                    <input type="placeholder" class="form-control" placeholder="예약조회 비밀번호 확인">
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- 결제방법 -->
+                        <div class="mt-5">
+                            <h5 class="title">결제방법</h5>
+                            <ul class="pay-way">
+                                <li class="list">
+                                    <div class="checks">
+                                        <input type="radio" id="ex_rd2" name="pay-type"> <label for="ex_rd2">현장 결제</label>
+                                    </div>
+                                </li>
+                                <li class="list">
+                                    <div class="checks">
+                                        <input type="radio" id="ex_rd3" name="pay-type"> <label for="ex_rd3">온라인 선결제 및 현장결제</label>
+                                    </div>
+                                    <div class="list-detail">온라인으로 10% 금액 선결제 후 90% 금액은 오프라인 현장결제</div>
+                                </li>
+                                <li class="list">
+                                    <div class="checks">
+                                        <input type="radio" id="ex_rd4" name="pay-type"> <label for="ex_rd4">온라인 결제</label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- 결제수단 -->
+                        <div class="mt-5">
+                            <h5 class="title">결제수단</h5>
+                            <ul class="pay-type">
+                                <li class="pay-list checkbox-container">
+                                    <button type="button" class="btn pay-btn active">
+                                        <img class="sm-icon" srcset="/images/icon-kakao-black.png 400w,
+                                                /images/icon-kakao-black@2x.png 700w,
+                                                /images/icon-kakao-black@3x.png 1000w" src="/images/icon-kakao-black.png" alt="카카오로결제" />
+                                        <span>카카오페이</span>
+                                    </button>
+                                </li>
+                                <li class="pay-list checkbox-container">
+                                    <button type="button" class="btn pay-btn">
+                                        <img class="sm-icon" srcset="/images/icon-phone-black.png 400w,
+                                                /images/icon-phone-black@2x.png 700w,
+                                                /images/icon-phone-black@3x.png 1000w" src="/images/icon-phone-black@3x.png" alt="핸드폰으로결제" />
+                                        <span>휴대폰결제</span>
+                                    </button>
+                                </li>
+                                <li class="pay-list checkbox-container">
+                                    <button type="button" class="btn pay-btn">
+                                        <img class="sm-icon" srcset="/images/icon-pay-black.png 400w,
+                                                /images/icon-pay-black@2x.png 700w,
+                                                /images/icon-pay-black@3x.png 1000w" src="/images/icon-pay-black.png" alt="신용카드결제" />
+                                        <span>신용카드 결제</span>
+                                    </button>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-primary book-btn">예약하기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- 푸터 -->
+        ${ require('../partials/footer.html') }
+    </div>
+
+    <!-- JS -->
+    <script>
+        $(function () {
+            let payBtn = $('.pay-btn');
+
+            //date picker
+            $('input[name="daterange"]').daterangepicker({
+                defaultDate: "",
+                opens: 'center',
+                // autoUpdateInput: false,
+                autoApply: true,
+                singleDatePicker: true,
+                "locale": {
+                    "format": "YYYY.MM.DD",
+                    "separator": "-",
+                    "applyLabel": "적용",
+                    "cancelLabel": "취소",
+                    "fromLabel": "From",
+                    "toLabel": "To",
+                    "customRangeLabel": "Custom",
+                    "daysOfWeek": [
+                        "월",
+                        "화",
+                        "수",
+                        "목",
+                        "금",
+                        "토",
+                        "일"
+                    ],
+                    "monthNames": [
+                        "1월",
+                        "2월",
+                        "3월",
+                        "4월",
+                        "5월",
+                        "6월",
+                        "7월",
+                        "8월",
+                        "9월",
+                        "10월",
+                        "11월",
+                        "12월"
+                    ]
+                },
+                "parentEl": ".book-ui-content",
+            }, function (start, end, label) {
+                console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+            });
+
+            //dropdown menu
+            $('.dropdown-menu').click(function (e) {
+                // console.log(e);
+                e.stopPropagation();
+            })
+
+            //dropdown menu close
+            $('.dropdown-close').click(function () {
+                $('.dropdown-menu').removeClass('show');
+            })
+
+            payBtn.click(function () {
+                $('.pay-btn').removeClass('active');
+                $(this).addClass('active');
+            })
+
+        })
+    </script>
+</body>
+
+</html>
