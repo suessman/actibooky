@@ -211,7 +211,7 @@
       color:$dark;
       font-weight: bold;
       display: inline-block;
-      min-width: 71px;
+      min-width: 105px;
       font-size: 18px;
       @include media-breakpoint-down(xs){
         font-size: 14px;
@@ -543,7 +543,7 @@
 
   @include media-breakpoint-only(xl) { 
       position: absolute;
-      top: 698px;
+      top: 674px;
       background: $white;
       left: calc(50% + 486px);
       width: 218px;
