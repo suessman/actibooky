@@ -9593,9 +9593,20 @@ a.text-dark:hover, a.text-dark:focus {
   opacity: 1; }
 
 .no-content {
-  padding: 5rem 0;
+  padding: 30vh 0;
   border-bottom: none !important;
   text-align: center; }
+  @media (max-width: 575.98px) {
+    .no-content h3 {
+      font-size: 18px; } }
+
+.list-title {
+  font-size: 24px;
+  margin-top: 40px; }
+  @media (max-width: 575.98px) {
+    .list-title {
+      font-size: 18px;
+      margin-top: 16px; } }
 
 .in_scroll {
   opacity: 0;
@@ -10484,10 +10495,14 @@ select.form-control.filter-select {
         height: 100%; }
         @media (max-width: 575.98px) {
           .carousel .carousel-inner.promotion .carousel-item img.xs-up-promotion {
-            display: none !important; } }
+            display: none !important; }
+          .carousel .carousel-inner.promotion .carousel-item.pc {
+            display: none; } }
         @media (min-width: 576px) {
           .carousel .carousel-inner.promotion .carousel-item img.xs-down-promotion {
-            display: none !important; } }
+            display: none !important; }
+          .carousel .carousel-inner.promotion .carousel-item.mobile {
+            display: none; } }
     .carousel .carousel-inner .carousel-item {
       height: 100%; }
       .carousel .carousel-inner .carousel-item img {
@@ -11392,6 +11407,9 @@ main .section-body.card-ui ul.popular-card-body {
         @media (max-width: 575.98px) {
           main .section-body.card-ui ul.popular-card-body li.popular-card.h-auto.promotion .content {
             min-height: 188px; } }
+      main .section-body.card-ui ul.popular-card-body li.popular-card.h-auto.promotion .term {
+        color: #868e96;
+        text-align: right; }
     main .section-body.card-ui ul.popular-card-body li.popular-card .title-bg {
       width: 100%;
       position: absolute;
@@ -11862,8 +11880,6 @@ main .section-body.card-ui-video .area {
       border-bottom: none; } }
   .detail-info-sec .tab-content-list section.list-detail.top-area {
     margin-top: 64px; }
-  .detail-info-sec .tab-content-list section:nth-last-of-type(1) {
-    border-bottom: none; }
   .detail-info-sec .tab-content-list section h5 {
     font-size: 18px;
     font-weight: 700; }
@@ -12022,6 +12038,11 @@ main .section-body.card-ui-video .area {
   @media (max-width: 575.98px) {
     .detail-info-sec.near-exp-list {
       padding: 16px 0; } }
+
+.detail-info-sec .list-link {
+  margin-top: 42px; }
+  .detail-info-sec .list-link a {
+    color: #9334ff; }
 
 .book-ui {
   width: 100%;
@@ -12206,6 +12227,36 @@ main .section-body.card-ui-video .area {
   background-position: 14px center;
   background-repeat: no-repeat;
   background-size: 24px auto; }
+
+.inquiry-list {
+  margin-top: 40px; }
+  @media (max-width: 991.98px) {
+    .inquiry-list {
+      margin-top: 24px; } }
+  .inquiry-list .user .id {
+    font-weight: 700;
+    margin-left: 8px; }
+  .inquiry-list .user .state {
+    min-width: 80px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 14px;
+    padding: 4px 0; }
+    .inquiry-list .user .state.ing {
+      background: #f1f3f5; }
+    .inquiry-list .user .state.complete {
+      background: #9334ff;
+      color: #ffffff; }
+  .inquiry-list .date {
+    color: #868e96; }
+  .inquiry-list .content {
+    margin-top: 8px; }
+    .inquiry-list .content .answer {
+      margin-top: 12px; }
+    .inquiry-list .content .qa {
+      color: #9334ff;
+      font-weight: 700;
+      margin-right: 8px; }
 
 .book-form .book-form-card {
   border: 1px solid #f1f3f5;
@@ -12991,7 +13042,6 @@ main .section-body.card-ui-video .area {
       text-align: center;
       border-radius: 14px;
       height: 28px;
-      line-height: 28px;
       vertical-align: middle;
       font-weight: 400; }
       .my-inquiry .inquiry-list .user .state.ing {

@@ -18,9 +18,23 @@
 }
 
 .no-content{
-  padding:5rem 0;
+  padding:30vh 0;
   border-bottom:none !important;
   text-align: center;
+  h3{
+    @include media-breakpoint-down(xs){
+      font-size: 18px;
+    }
+  }
+}
+
+.list-title{
+  font-size: 24px;
+  margin-top: 40px;
+  @include media-breakpoint-down(xs){
+    font-size: 18px;
+    margin-top: 16px;
+  }
 }
 
 .in_scroll{

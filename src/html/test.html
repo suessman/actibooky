@@ -1,121 +1,307 @@
-<!DOCTYPE html>
-<html lang="">
-
-<head>
-  <meta charset="utf-8">
-  <title>로그인</title>
-  <meta name="description" content="">
-
-  ${ require('./partials/head.html') }
-  <style>
-    .custom-radio .custom-control-input:checked~.custom-control-label::before {
-      color: #ffffff;
-      border-color: #9334ff;
-      background-color: #fff;
-    }
-
-    .custom-radio .custom-control-input:checked~.custom-control-label::after {
-      border-color: #9334ff;
-      background-color: #9334ff;
-    }
-
-    .custom-radio .custom-control-label::before {
-      width: 16px;
-      height: 16px;
-    }
-
-    .custom-radio .custom-control-label::after {
-      background-image: none !important;
-      position: absolute;
-      top: 34%;
-      left: -18px;
-      display: block;
-      width: 10px;
-      height: 10px;
-      content: "";
-      background: 50% / 50% 50% no-repeat;
-      background: #fff;
-      border-radius: 50%;
-
-    }
-  </style>
-</head>
-
-<body>
-
-  ${ require('./partials/browserupgrade.html') }
-
-  <div class="d-flex flex-column h-100">
-
-    <main class="d-flex h-100 main main-sub">
-      <!-- 메인 이미지 -->
-
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-12 col-lg-5 m-auto">
-            <!-- <div class="checks">
-              <input type="radio" id="ex_rd2" name="ex_rds"> <label for="ex_rd2">체크박스</label>
-            </div>
-            <div class="checks">
-              <input type="radio" id="ex_rd3" name="ex_rds"> <label for="ex_rd3">체크박스</label>
-            </div> -->
-
-            <form>
-              <div class="custom-control custom-radio">
-                <input type="radio" class="custom-control-input" id="select1" name="category">
-                <label class="custom-control-label" for="select1">Custom radio</label>
+<main class="d-flex flex-column main">
+  <header class="header-title">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="d-flex justify-content-between">
+            <!-- <a href="">
+	                                                  <img src="/images/icon-left-black@3x.png" class="sm-icon" alt="뒤로가기">
+	                                                </a> -->
+            <button class="navbar-toggler collapsed header-main" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-controls="navbarSupportedContent backdropUi" aria-expanded="false" aria-label="Toggle navigation">
+              <div class="acetrnt-toggle" data-click-state="1">
+                <span class="icon-bar line-1"></span>
+                <span class="icon-bar line-2"></span>
+                <span class="icon-bar line-3"></span>
               </div>
-            </form>
-
-            <!-- <form>
-              <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
-                <label class="custom-control-label" for="customCheck">Check this custom checkbox</label>
-              </div>
-            </form> -->
+            </button>
+            <h1 class="title">체험</h1>
           </div>
         </div>
       </div>
-    </main>
+    </div>
+  </header>
+  <section class="card_body grey">
 
-    ${ require('./partials/footer.html') }
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 m-auto filter-picker-ui">
+          <div class="w-100">
+            <div class="d-flex pick-filter-body">
+              <div class="d-flex w-100 xs-down-border">
+                <div class="filter-list pick-filter place">
+                  <button type="button" class="dropdown-filter btn dropdown-toggle filter-place-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    어디로 떠날까요?
+                  </button>
+                  <div class="dropdown-menu w-auto filter-place-half">
+                    <div class="d-flex justify-content-between">
+                      <h1 class="dropdown-title">어디로 떠날까요?</h1>
+                      <button type="button" class="dropdown-close close" data-dismiss="modal" aria-label="Close">
+                        <img class="sm-icon" src="/user/images/icon-cancel-gray@3x.png" alt="닫기">
+                      </button>
+                    </div>
+                    <div class="dropdown-item activity-counter">
+                      <div class="popular-search-word" rel="sido-div-wrapper">
+                        <ul class="d-flex area-group mt-0">
+                          <c:forEach var="sido" items="${sidoList}">
+                            <c:set var="isSelected" value="false" />
+                            <c:forEach var="sidoIdx" items="${sidoIdxList}">
+                              <c:if test="${sidoIdx == sido.sidoIdx}">
+                                <c:set var="isSelected" value="true" />
+                              </c:if>
+                            </c:forEach>
+                            <li class="area-list click-el <c:if test=" ${isSelected}">active</c:if>">
+                              <input type="checkbox" id="${sido.sidoIdx}" value="${sido.sidoIdx}" data-sido-name="${sido.name}" rel="sidoName">
+                              <label for="${sido.sidoIdx}">${sido.name}</label>
+                            </li>
+                          </c:forEach>
+                        </ul>
+                      </div>
+                    </div>
 
+
+                    <div class="text-center apply-btn-wrapper">
+                      <button type="button" class="btn btn-primary apply dropdown-close" rel="apply-sido">적용하기</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="filter-list pick-filter start-d br-0">
+                  <input type="text" class="form-control date br-0" readonly value="${param.endAt}" name="endAt" placeholder="날짜" />
+                </div>
+              </div>
+              <div class="d-flex w-100 xs-down-mt-2 xs-down-border">
+                <div class="filter-list">
+                  <button type="button" class="pick-filter time dropdown-filter btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" rel="btn-apply-time">
+                    시간
+                  </button>
+                  <div class="dropdown-menu">
+                    <div class="d-flex justify-content-between">
+                      <h1 class="dropdown-title">시간</h1>
+                      <button type="button" class="dropdown-close close" data-dismiss="modal" aria-label="Close">
+                        <img class="sm-icon" src="/user/images/icon-cancel-gray@3x.png" alt="닫기">
+                      </button>
+                    </div>
+                    <div class="dropdown-item">
+                      <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input check-box-list" data-experience-time="전체" id="time" name="experienceTime" value="">
+                        <label class="custom-control-label check-list" for="time"><span>전체</span></label>
+                      </div>
+                    </div>
+                    <div class="dropdown-item">
+                      <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input check-box-list" data-experience-time="오전" id="time2" name="experienceTime" value="AM">
+                        <label class="custom-control-label check-list" for="time2">오전</label>
+                      </div>
+                    </div>
+                    <div class="dropdown-item">
+                      <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input check-box-list" data-experience-time="오후" id="time3" name="experienceTime" value="PM">
+                        <label class="custom-control-label check-list" for="time3">오후</label>
+                      </div>
+                    </div>
+
+                    <div class="text-center apply-btn-wrapper">
+                      <button type="button" class="btn btn-primary apply dropdown-close button-list" rel="apply-time">적용하기</button>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="filter-list">
+                  <button type="button" class="pick-filter people-n dropdown-filter btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" rel="btn-quantity">
+                    인원
+                  </button>
+                  <div class="dropdown-menu">
+                    <div class="d-flex justify-content-between">
+                      <h1 class="dropdown-title">인원</h1>
+                      <button type="button" class="dropdown-close close" data-dismiss="modal" aria-label="Close">
+                        <img class="sm-icon" src="/user/images/icon-cancel-gray@3x.png" alt="닫기">
+                      </button>
+                    </div>
+                    <div class="dropdown-item">
+                      <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input check-box-list" data-quantity="전체" id="quantity0" value="" name="quantity">
+                        <label class="custom-control-label check-list" for="quantity0"><span>전체</span></label>
+                      </div>
+                    </div>
+                    <div class="dropdown-item">
+                      <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input check-box-list" data-quantity="6명미만" id="quantity6" value="6" name="quantity">
+                        <label class="custom-control-label check-list" for="quantity6">6명미만</label>
+                      </div>
+                    </div>
+                    <div class="dropdown-item">
+                      <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input check-box-list" data-quantity="6명~11명미만" id="quantity11" value="11" name="quantity">
+                        <label class="custom-control-label check-list" for="quantity11">6명~11명미만</label>
+                      </div>
+                    </div>
+                    <div class="dropdown-item">
+                      <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input check-box-list" data-quantity="11명~16명미만" id="quantity16" value="16" name="quantity">
+                        <label class="custom-control-label check-list" for="quantity16">11명~16명미만</label>
+                      </div>
+                    </div>
+                    <div class="dropdown-item">
+                      <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input check-box-list" data-quantity="16명~21명미만" id="quantity21" value="21" name="quantity">
+                        <label class="custom-control-label check-list" for="quantity21">16명~21명미만</label>
+                      </div>
+                    </div>
+                    <div class="dropdown-item">
+                      <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input check-box-list" data-quantity="21명이상(단체)" id="quantity22" value="22" name="quantity">
+                        <label class="custom-control-label check-list" for="quantity22">21명이상(단체)</label>
+                      </div>
+                    </div>
+
+                    <div class="text-center apply-btn-wrapper">
+                      <button type="button" class="btn btn-primary apply dropdown-close button-list" rel="apply-quantity">적용하기</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Button trigger modal -->
+            <div class="form-group filter-group md-up-d-block main">
+              <div class="md-down-d-flex">
+                <div class="btn-group dropdown-group list">
+                  <button type="button" class="dropdown-filter btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" rel="btn-price">
+                    가격
+                  </button>
+                  <div class="dropdown-menu">
+                    <div class="d-flex justify-content-between">
+                      <h1 class="dropdown-title">가격</h1>
+                      <button type="button" class="dropdown-close close" data-dismiss="modal" aria-label="Close">
+                        <img class="sm-icon" src="/user/images/icon-cancel-gray@3x.png" alt="닫기">
+                      </button>
+                    </div>
+                    <div class="dropdown-item">
+                      <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input check-box-list" data-price="전체" id="price1" name="price" value="">
+                        <label class="custom-control-label check-list" for="price1"><span>전체</span></label>
+                      </div>
+                    </div>
+                    <div class="dropdown-item">
+                      <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input check-box-list" data-price="1만원 미만" id="price2" name="price" value="10000">
+                        <label class="custom-control-label check-list" for="price2">1만원 미만</label>
+                      </div>
+                    </div>
+                    <div class="dropdown-item">
+                      <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input check-box-list" data-price="2만원 미만" id="price3" name="price" value="20000">
+                        <label class="custom-control-label check-list" for="price3">2만원 미만</label>
+                      </div>
+                    </div>
+                    <div class="dropdown-item">
+                      <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input check-box-list" data-price="3만원 미만" id="price4" name="price" value="30000">
+                        <label class="custom-control-label check-list" for="price4">3만원 미만</label>
+                      </div>
+                    </div>
+                    <div class="dropdown-item">
+                      <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input check-box-list" data-price="5만원 이상" id="price5" name="price" value="50000">
+                        <label class="custom-control-label check-list" for="price5">5만원 이상</label>
+                      </div>
+                    </div>
+
+                    <div class="text-center apply-btn-wrapper">
+                      <button type="button" class="btn btn-primary apply dropdown-close button-list" rel="apply-price">적용하기</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="btn-group dropdown-group list">
+                  <button type="button" class="dropdown-filter btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" rel="btn-experience-category">
+                    체험유형
+                  </button>
+                  <div class="dropdown-menu right">
+                    <div class="d-flex justify-content-between">
+                      <h1 class="dropdown-title">체험유형</h1>
+                      <button type="button" class="dropdown-close close" data-dismiss="modal" aria-label="Close">
+                        <img class="sm-icon" src="/user/images/icon-cancel-gray@3x.png" alt="닫기">
+                      </button>
+                    </div>
+                    <div class="dropdown-item">
+                      <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input check-box-list" id="exptype0" value="" data-experience-category-name="전체" name="experienceCategoryIdx">
+                        <label class="custom-control-label check-list" for="exptype0"><span>전체</span></label>
+                      </div>
+                    </div>
+                    <c:forEach var="experienceCategory" items="${experienceCategoryList}">
+                      <div class="dropdown-item">
+                        <div class="custom-control custom-radio">
+                          <input type="radio" class="custom-control-input check-box-list" value="${experienceCategory.experienceCategoryIdx}" data-experience-category-idx="${experienceCategory.experienceCategoryIdx}" data-experience-category-name="${experienceCategory.name}" id="exptype${experienceCategory.experienceCategoryIdx}" name="experienceCategoryIdx">
+                          <label class="custom-control-label check-list" for="exptype${experienceCategory.experienceCategoryIdx}">${experienceCategory.name}</label>
+                        </div>
+                      </div>
+                    </c:forEach>
+                    <div class="text-center apply-btn-wrapper">
+                      <button type="button" class="btn btn-primary apply dropdown-close button-list" rel="apply-experience-category">적용하기</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="btn-primary search top-filter-search">검색</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <div class="container">
+    <!-- <div class="row">
+					<h3 class="col-12 text-center mt-10">해당되는 체험이 없습니다.<br>다시 검색해주세요!</h3>
+				</div> -->
+    <div class="row">
+      <section class="col-12 mt-5 section-body card-ui m-mt">
+        <div class="d-flex justify-content-between top-title">
+          <h3>체험</h3>
+          <select name="sortData" id="" class="form-control">
+            <option value="newList">최신순</option>
+            <option value="popularList">인기순</option>
+            <option value="lowPriceList">낮은가격순</option>
+          </select>
+
+        </div>
+        <ul class="popular-card-body list">
+          <c:forEach var="experience" items="${experienceList.content}">
+            <li class="popular-card">
+
+              <a href="/user/experience/experienceDetail?experienceIdx=${experience.experienceIdx}">
+
+                <!-- Image -->
+                <c:set var="experienceImagePath" value="/user/images/onerror.jpg" />
+                <c:forEach var="experienceFile" items="${experience.experienceFileList }" varStatus="status">
+                  <c:if test="${status.index == 0 }">
+                    <c:set var="experienceImagePath" value="${experienceFile.s3File.cloudFrontPath}" />
+                  </c:if>
+                </c:forEach>
+                <div class="content" style="background-image:url('${experienceImagePath}')">
+                  <span class="address">${experience.farm.dong.sigungu.sido.name } / ${experience.farm.dong.sigungu.name }</span>
+
+                </div>
+
+                <!-- 카테고리 -->
+                <div class="mt-1 sm-text-gray">${experience.experienceCategory.name}</div>
+                <h1 class="title-overflow">${experience.title}</h1>
+                <p>
+                  <span class="price">₩
+                    <fmt:formatNumber value="${experience.price}" type="number" />
+                  </span>
+                  <!--                                         <del class="sale-price">₩44,000</del> -->
+                </p>
+              </a>
+            </li>
+          </c:forEach>
+        </ul>
+      </section>
+
+      <nav aria-label="Page navigation example" class="col-12">
+        <ul class="pagination justify-content-center">
+        </ul>
+      </nav>
+    </div>
   </div>
-
-  <script>
-
-    /*
-          var _hc = [];
-
-    _hc.listLi = document.getElementsByTagName('li');
-
-    console.log(_hc.listLi);
-
-    _hc.listFunction = function () {
-      console.log(this.classList);
-
-      //스위치 변수 하나 만들어줌
-      _hc.listCheck = false;
-      for (var i = 0; i < this.classList.length; i++) {
-        if (this.classList[i] == 'active') {
-          _hc.listCheck = false;
-        }
-      }
-
-      if (this.classList == 'active') {
-        console.log('activeclass 가지고 있습니다.')
-      } else {
-        console.log('active클래스가 없습니다.')
-      }
-    }
-
-    for (var i = 0; i < _hc.listLi.length; i++) {
-      _hc.listLi[i].addEventListener('click', _hc.listFunction);
-    }
-    */
-    var slideIndex = 1;
-    showSlides(slideIndex);
-  </script>
-</body>
-
-</html>
+  </form>
+</main>

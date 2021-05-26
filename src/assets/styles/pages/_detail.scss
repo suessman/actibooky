@@ -253,9 +253,9 @@
           margin-top: 64px;
       }
 
-      &:nth-last-of-type(1){
-        border-bottom: none;
-      }
+      // &:nth-last-of-type(1){
+      //   border-bottom: none;
+      // }
     
       h5{
         font-size: 18px;
@@ -506,6 +506,14 @@
      @include media-breakpoint-down(xs) {
        padding: 16px 0;
      }
+  }
+
+  //더보기 링크
+  .list-link{
+    margin-top: 42px;
+    a{
+      color:$primary;
+    }
   }
 }
 
@@ -778,3 +786,49 @@
       background-size:24px auto;  
     }
 }
+
+//inquiry-list
+        .inquiry-list{
+          margin-top: 40px;
+          @include media-breakpoint-down(md) { 
+            margin-top: 24px;
+          }
+
+          .user{
+            .id{
+              font-weight: $font-weight-bold;
+              margin-left: 8px;
+            }
+            .state{
+              min-width: 80px;
+              display: inline-block;
+              text-align: center;
+              border-radius: 14px;
+              padding:4px 0;
+
+              &.ing{
+                background: $light;
+              }
+
+              &.complete{
+                background: $primary;
+                color:$white;
+              }
+            }
+          }
+          .date{
+            color:$dark;
+          }
+
+          .content{
+            margin-top: 8px;
+            .answer{
+              margin-top: 12px;
+            }
+            .qa{
+              color: $primary;
+              font-weight: $font-weight-bold;
+              margin-right: 8px;
+            }
+          }
+        }

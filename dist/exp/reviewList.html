@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>나의 예약</title>
+    <title>리뷰목록</title>
     <meta name="description" content="">
     <link rel="stylesheet" href="/css/headertitle.css">
     <!-- include -->
@@ -53,7 +53,7 @@
 </div>
 <![endif]-->
 
-    <div class="fm">
+    <div class="fm h-100">
         <!-- 헤더 -->
         <header class="header">
 
@@ -161,107 +161,41 @@
     </nav>
   </div>
 </header>
-        <main class="d-flex flex-column h-100 main main-nav">
+        <main class="d-flex flex-column main main-nav">
             <!-- Content Here -->
             <header class="header-title">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
                             <div class="d-flex justify-content-between">
-                                <!-- <a href="">
-                                  <img src="/images/icon-left-black@3x.png" class="sm-icon" alt="뒤로가기">
-                                </a> -->
-                                <button class="navbar-toggler collapsed header-main" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-controls="navbarSupportedContent backdropUi" aria-expanded="false" aria-label="Toggle navigation">
-                                    <div class="acetrnt-toggle" data-click-state="1">
-                                        <span class="icon-bar line-1"></span>
-                                        <span class="icon-bar line-2"></span>
-                                        <span class="icon-bar line-3"></span>
-                                    </div>
-                                </button>
-                                <h1 class="title">마이페이지</h1>
+                                <a href="#" class="prev">
+                                    <img src="/images/icon-left-black@3x.png" class="sm-icon" alt="뒤로가기">
+                                </a>
+                                <h1 class="title">리뷰</h1>
                             </div>
                         </div>
                     </div>
                 </div>
             </header>
-            <div class="mypage-tab-nav text-center">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 m-p0">
-                            <ul class="nav nav-tabs">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/mypage/myInfo.html">내 정보 수정</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active " href="/mypage/myReview.html">나의리뷰</a>
-                                </li>
-                                <li class="nav-item ">
-                                    <a class="nav-link " href="/mypage/myRequest.html">상품문의</a>
-                                </li>
-                                <li class="nav-item ">
-                                    <a class="nav-link " href="/mypage/myBook.html">예약확인</a>
-                                </li>
-                                <li class="nav-item display-md-down">
-                                    <a class="nav-link" href="/account/terms.html">이용약관</a>
-                                </li>
-                                <li class="nav-item  display-md-down">
-                                    <a class="nav-link" href="/account/policy.html">개인정보 처리방침</a>
-                                </li>
-                            </ul>
-                        </div>
 
-                    </div>
-                </div>
-            </div>
             <!-- 리뷰 -->
             <section class="my-review list-detail">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <div class="review-filter d-flex justify-content-between align-items-center">
-                                <div>
-                                    <select name="" id="" class="form-control filter-select">
-                                        <option value="">전체</option>
-                                        <option value="">체험</option>
-                                        <option value="">숙소</option>
-                                    </select>
-                                    <select class="option form-control ml-2">
-                                        <option value="">최신순</option>
-                                        <option value="">오래된순 </option>
-                                    </select>
-                                </div>
-
-                                <a href="/mypage/myBookPrev.html" class="btn btn-primary insert-review">
-                                    리뷰쓰기(3)
-                                </a>
-                            </div>
+                            <!-- 후기 없을 때 -->
+                            <!-- <div class="no-content">
+                                <h3>
+                                    작성된 후기가 없습니다.
+                                </h3>
+                            </div> -->
+                            <h3 class="list-title">
+                                리뷰 03개
+                            </h3>
                             <div class="review-list">
-                                <a href="/stay/stayDetail.html">
-                                    <h3 class="review-title">안녕하세요, 아엠홈입니다.
-                                        도톰 쉬폰커튼은 이음선이 없는 프리미엄 커튼입니다.</h3>
-                                </a>
                                 <div class="d-flex align-items-center flex-wrap">
                                     <span class="user">
                                         <span class="align-middle">guswlsrjf123</span>
-                                        <span class="rating">
-                                            <img class="sm-icon" srcset="/images/icon-star.png 400w,
-                                                              /images/icon-star@2x.png 700w,
-                                                              /images/icon-star@3x.png 1000w" src="/images/icon-right-white@3x.png" alt="별점" />
-                                            <img class="sm-icon" srcset="/images/icon-star.png 400w,
-                                                              /images/icon-star@2x.png 700w,
-                                                              /images/icon-star@3x.png 1000w" src="/images/icon-right-white@3x.png" alt="별점" />
-                                            <img class="sm-icon" srcset="/images/icon-star.png 400w,
-                                                              /images/icon-star@2x.png 700w,
-                                                              /images/icon-star@3x.png 1000w" src="/images/icon-right-white@3x.png" alt="별점" />
-                                            <img class="sm-icon" srcset="/images/icon-star.png 400w,
-                                                              /images/icon-star@2x.png 700w,
-                                                              /images/icon-star@3x.png 1000w" src="/images/icon-right-white@3x.png" alt="별점" />
-                                            <img class="sm-icon" srcset="/images/icon-star.png 400w,
-                                                              /images/icon-star@2x.png 700w,
-                                                              /images/icon-star@3x.png 1000w" src="/images/icon-right-white@3x.png" alt="별점" />
-                                        </span>
-
-
                                     </span>
                                     <span class="date">2021.03.17</span>
                                 </div>
@@ -271,41 +205,12 @@
                                         기름때인지 뭔지 지워지기나 할지 모르겠네요. 검수를 하고 보내는건지 비닐포장 없이 이불패드 채로 창고에
                                         쌓아놓은거 그냥 비닐 포장만 해서 보내는건지 비닐 포장할 때 상태가 어떤건지 뭔지... 좀 어이가 없네요.
                                     </div>
-                                    <div class="review-form">
-                                        <a href="/mypage/updateMyReviewForm.html" class="btn update-btn btn-outline-primary">수정</a>
-                                        <button type="button" class="btn btn-outline-primary">삭제</button>
-                                    </div>
                                 </div>
                             </div>
-
-
                             <div class="review-list">
-                                <a href="/stay/stayDetail.html">
-                                    <h3 class="review-title">안녕하세요, 아엠홈입니다.
-                                        도톰 쉬폰커튼은 이음선이 없는 프리미엄 커튼입니다.</h3>
-                                </a>
                                 <div class="d-flex align-items-center flex-wrap">
                                     <span class="user">
                                         <span class="align-middle">guswlsrjf123</span>
-                                        <span class="rating">
-                                            <img class="sm-icon" srcset="/images/icon-star.png 400w,
-                                                                            /images/icon-star@2x.png 700w,
-                                                                            /images/icon-star@3x.png 1000w" src="/images/icon-right-white@3x.png" alt="별점" />
-                                            <img class="sm-icon" srcset="/images/icon-star.png 400w,
-                                                                            /images/icon-star@2x.png 700w,
-                                                                            /images/icon-star@3x.png 1000w" src="/images/icon-right-white@3x.png" alt="별점" />
-                                            <img class="sm-icon" srcset="/images/icon-star.png 400w,
-                                                                            /images/icon-star@2x.png 700w,
-                                                                            /images/icon-star@3x.png 1000w" src="/images/icon-right-white@3x.png" alt="별점" />
-                                            <img class="sm-icon" srcset="/images/icon-star.png 400w,
-                                                                            /images/icon-star@2x.png 700w,
-                                                                            /images/icon-star@3x.png 1000w" src="/images/icon-right-white@3x.png" alt="별점" />
-                                            <img class="sm-icon" srcset="/images/icon-star.png 400w,
-                                                                            /images/icon-star@2x.png 700w,
-                                                                            /images/icon-star@3x.png 1000w" src="/images/icon-right-white@3x.png" alt="별점" />
-                                        </span>
-
-
                                     </span>
                                     <span class="date">2021.03.17</span>
                                 </div>
@@ -315,40 +220,12 @@
                                         기름때인지 뭔지 지워지기나 할지 모르겠네요. 검수를 하고 보내는건지 비닐포장 없이 이불패드 채로 창고에
                                         쌓아놓은거 그냥 비닐 포장만 해서 보내는건지 비닐 포장할 때 상태가 어떤건지 뭔지... 좀 어이가 없네요.
                                     </div>
-                                    <div class="review-form">
-                                        <a href="/mypage/updateMyReviewForm.html" class="btn update-btn btn-outline-primary">수정</a>
-                                        <button type="button" class="btn btn-outline-primary">삭제</button>
-                                    </div>
                                 </div>
                             </div>
-
                             <div class="review-list">
-                                <a href="/stay/stayDetail.html">
-                                    <h3 class="review-title">안녕하세요, 아엠홈입니다.
-                                        도톰 쉬폰커튼은 이음선이 없는 프리미엄 커튼입니다.</h3>
-                                </a>
                                 <div class="d-flex align-items-center flex-wrap">
                                     <span class="user">
                                         <span class="align-middle">guswlsrjf123</span>
-                                        <span class="rating">
-                                            <img class="sm-icon" srcset="/images/icon-star.png 400w,
-                                                                                          /images/icon-star@2x.png 700w,
-                                                                                          /images/icon-star@3x.png 1000w" src="/images/icon-right-white@3x.png" alt="별점" />
-                                            <img class="sm-icon" srcset="/images/icon-star.png 400w,
-                                                                                          /images/icon-star@2x.png 700w,
-                                                                                          /images/icon-star@3x.png 1000w" src="/images/icon-right-white@3x.png" alt="별점" />
-                                            <img class="sm-icon" srcset="/images/icon-star.png 400w,
-                                                                                          /images/icon-star@2x.png 700w,
-                                                                                          /images/icon-star@3x.png 1000w" src="/images/icon-right-white@3x.png" alt="별점" />
-                                            <img class="sm-icon" srcset="/images/icon-star.png 400w,
-                                                                                          /images/icon-star@2x.png 700w,
-                                                                                          /images/icon-star@3x.png 1000w" src="/images/icon-right-white@3x.png" alt="별점" />
-                                            <img class="sm-icon" srcset="/images/icon-star.png 400w,
-                                                                                          /images/icon-star@2x.png 700w,
-                                                                                          /images/icon-star@3x.png 1000w" src="/images/icon-right-white@3x.png" alt="별점" />
-                                        </span>
-
-
                                     </span>
                                     <span class="date">2021.03.17</span>
                                 </div>
@@ -358,40 +235,12 @@
                                         기름때인지 뭔지 지워지기나 할지 모르겠네요. 검수를 하고 보내는건지 비닐포장 없이 이불패드 채로 창고에
                                         쌓아놓은거 그냥 비닐 포장만 해서 보내는건지 비닐 포장할 때 상태가 어떤건지 뭔지... 좀 어이가 없네요.
                                     </div>
-                                    <div class="review-form">
-                                        <a href="/mypage/updateMyReviewForm.html" class="btn update-btn btn-outline-primary">수정</a>
-                                        <button type="button" class="btn btn-outline-primary">삭제</button>
-                                    </div>
                                 </div>
                             </div>
-
                             <div class="review-list">
-                                <a href="/stay/stayDetail.html">
-                                    <h3 class="review-title">안녕하세요, 아엠홈입니다.
-                                        도톰 쉬폰커튼은 이음선이 없는 프리미엄 커튼입니다.</h3>
-                                </a>
                                 <div class="d-flex align-items-center flex-wrap">
                                     <span class="user">
                                         <span class="align-middle">guswlsrjf123</span>
-                                        <span class="rating">
-                                            <img class="sm-icon" srcset="/images/icon-star.png 400w,
-                                                                                          /images/icon-star@2x.png 700w,
-                                                                                          /images/icon-star@3x.png 1000w" src="/images/icon-right-white@3x.png" alt="별점" />
-                                            <img class="sm-icon" srcset="/images/icon-star.png 400w,
-                                                                                          /images/icon-star@2x.png 700w,
-                                                                                          /images/icon-star@3x.png 1000w" src="/images/icon-right-white@3x.png" alt="별점" />
-                                            <img class="sm-icon" srcset="/images/icon-star.png 400w,
-                                                                                          /images/icon-star@2x.png 700w,
-                                                                                          /images/icon-star@3x.png 1000w" src="/images/icon-right-white@3x.png" alt="별점" />
-                                            <img class="sm-icon" srcset="/images/icon-star.png 400w,
-                                                                                          /images/icon-star@2x.png 700w,
-                                                                                          /images/icon-star@3x.png 1000w" src="/images/icon-right-white@3x.png" alt="별점" />
-                                            <img class="sm-icon" srcset="/images/icon-star.png 400w,
-                                                                                          /images/icon-star@2x.png 700w,
-                                                                                          /images/icon-star@3x.png 1000w" src="/images/icon-right-white@3x.png" alt="별점" />
-                                        </span>
-
-
                                     </span>
                                     <span class="date">2021.03.17</span>
                                 </div>
@@ -401,40 +250,12 @@
                                         기름때인지 뭔지 지워지기나 할지 모르겠네요. 검수를 하고 보내는건지 비닐포장 없이 이불패드 채로 창고에
                                         쌓아놓은거 그냥 비닐 포장만 해서 보내는건지 비닐 포장할 때 상태가 어떤건지 뭔지... 좀 어이가 없네요.
                                     </div>
-                                    <div class="review-form">
-                                        <a href="/mypage/updateMyReviewForm.html" class="btn update-btn btn-outline-primary">수정</a>
-                                        <button type="button" class="btn btn-outline-primary">삭제</button>
-                                    </div>
                                 </div>
                             </div>
-
                             <div class="review-list">
-                                <a href="/stay/stayDetail.html">
-                                    <h3 class="review-title">안녕하세요, 아엠홈입니다.
-                                        도톰 쉬폰커튼은 이음선이 없는 프리미엄 커튼입니다.</h3>
-                                </a>
                                 <div class="d-flex align-items-center flex-wrap">
                                     <span class="user">
                                         <span class="align-middle">guswlsrjf123</span>
-                                        <span class="rating">
-                                            <img class="sm-icon" srcset="/images/icon-star.png 400w,
-                                                                                          /images/icon-star@2x.png 700w,
-                                                                                          /images/icon-star@3x.png 1000w" src="/images/icon-right-white@3x.png" alt="별점" />
-                                            <img class="sm-icon" srcset="/images/icon-star.png 400w,
-                                                                                          /images/icon-star@2x.png 700w,
-                                                                                          /images/icon-star@3x.png 1000w" src="/images/icon-right-white@3x.png" alt="별점" />
-                                            <img class="sm-icon" srcset="/images/icon-star.png 400w,
-                                                                                          /images/icon-star@2x.png 700w,
-                                                                                          /images/icon-star@3x.png 1000w" src="/images/icon-right-white@3x.png" alt="별점" />
-                                            <img class="sm-icon" srcset="/images/icon-star.png 400w,
-                                                                                          /images/icon-star@2x.png 700w,
-                                                                                          /images/icon-star@3x.png 1000w" src="/images/icon-right-white@3x.png" alt="별점" />
-                                            <img class="sm-icon" srcset="/images/icon-star.png 400w,
-                                                                                          /images/icon-star@2x.png 700w,
-                                                                                          /images/icon-star@3x.png 1000w" src="/images/icon-right-white@3x.png" alt="별점" />
-                                        </span>
-
-
                                     </span>
                                     <span class="date">2021.03.17</span>
                                 </div>
@@ -444,16 +265,26 @@
                                         기름때인지 뭔지 지워지기나 할지 모르겠네요. 검수를 하고 보내는건지 비닐포장 없이 이불패드 채로 창고에
                                         쌓아놓은거 그냥 비닐 포장만 해서 보내는건지 비닐 포장할 때 상태가 어떤건지 뭔지... 좀 어이가 없네요.
                                     </div>
-                                    <div class="review-form">
-                                        <a href="/mypage/updateMyReviewForm.html" class="btn update-btn btn-outline-primary">수정</a>
-                                        <button type="button" class="btn btn-outline-primary">삭제</button>
+                                </div>
+                            </div>
+                            <div class="review-list">
+                                <div class="d-flex align-items-center flex-wrap">
+                                    <span class="user">
+                                        <span class="align-middle">guswlsrjf123</span>
+                                    </span>
+                                    <span class="date">2021.03.17</span>
+                                </div>
+                                <div class="content align-middle d-flex justify-content-between">
+                                    <div>
+                                        비닐 뜯지마자 깜짝 놀랐네요. 새 제품이 너무 더러워서.. 교환하기 귀찮아서 빨아서 사용하긴 하겠지만
+                                        기름때인지 뭔지 지워지기나 할지 모르겠네요. 검수를 하고 보내는건지 비닐포장 없이 이불패드 채로 창고에
+                                        쌓아놓은거 그냥 비닐 포장만 해서 보내는건지 비닐 포장할 때 상태가 어떤건지 뭔지... 좀 어이가 없네요.
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
 
                 <nav aria-label="Page navigation example" class="col-12">
                     <ul class="pagination justify-content-center mb-0">

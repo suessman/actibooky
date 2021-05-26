@@ -48,11 +48,19 @@
           img.xs-up-promotion{
             display: none !important;
           }
+
+          &.pc{
+            display:none;
+          }
         }
 
         @include media-breakpoint-up(sm){
           img.xs-down-promotion{
             display: none !important;
+          }
+
+          &.mobile{
+            display: none;
           }
         }
       }
