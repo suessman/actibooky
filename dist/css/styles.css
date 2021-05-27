@@ -10706,7 +10706,8 @@ main.carousel-body .section-body.card-ui ul.popular-card-body {
 
 @media (min-width: 992px) {
   .app-owl-carousel .owl-stage {
-    width: auto !important; }
+    width: auto !important;
+    transform: translate3d(0, 0, 0) !important; }
   .app-owl-carousel .owl-stage-outer {
     overflow: visible; }
   .app-owl-carousel .owl-item li {

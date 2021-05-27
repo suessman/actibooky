@@ -367,6 +367,7 @@ main.carousel-body .section-body.card-ui ul.popular-card-body {
   .app-owl-carousel{
     .owl-stage{
       width: auto !important;
+      transform: translate3d(0,0,0) !important;
     }
 
     .owl-stage-outer{
@@ -376,8 +377,7 @@ main.carousel-body .section-body.card-ui ul.popular-card-body {
     .owl-item li {
       width: calc(100%) !important;
       margin-left: 0 !important;
-    }
-    
+    }    
   }
 
 
