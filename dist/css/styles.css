@@ -11323,7 +11323,9 @@ main .section-body.card-ui ul.popular-card-body {
         main .section-body.card-ui ul.popular-card-body li.popular-card.four .content {
           min-height: 160px; }
         main .section-body.card-ui ul.popular-card-body li.popular-card.four.product .content {
-          min-height: 220px; } }
+          min-height: 220px; }
+      main .section-body.card-ui ul.popular-card-body li.popular-card.list-four {
+        width: calc(25% - 20px); } }
     @media (max-width: 575.98px) {
       main .section-body.card-ui ul.popular-card-body li.popular-card.four {
         width: 160px;
@@ -11441,6 +11443,8 @@ main .section-body.card-ui ul.popular-card-body {
         background-color: #ffffff;
         padding: 10px 16px;
         min-height: 113px; }
+        main .section-body.card-ui ul.popular-card-body li.popular-card-ui .detail.sm {
+          min-height: 95px; }
         main .section-body.card-ui ul.popular-card-body li.popular-card-ui .detail ul li {
           font-size: 18px;
           margin-bottom: 4px;
@@ -11448,6 +11452,8 @@ main .section-body.card-ui ul.popular-card-body {
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap; }
+          main .section-body.card-ui ul.popular-card-body li.popular-card-ui .detail ul li.sm {
+            font-size: 14px; }
       @media (max-width: 575.98px) {
         main .section-body.card-ui ul.popular-card-body li.popular-card-ui.vertical {
           margin-top: 30px; }
@@ -11533,6 +11539,10 @@ main .section-body.card-ui ul.popular-card-body {
         color: #ffffff;
         font-size: 24px;
         font-weight: 700; }
+        main .section-body.card-ui ul.popular-card-body li.popular-card .content .town.sm {
+          padding: 8px;
+          color: #ffffff;
+          font-size: 18px; }
         @media (max-width: 575.98px) {
           main .section-body.card-ui ul.popular-card-body li.popular-card .content .town {
             padding: 8px; } }
@@ -12400,6 +12410,48 @@ main .section-body.card-ui-video .area {
         background: none;
         color: #9334ff;
         font-weight: 700; }
+
+.ex-company-bg {
+  padding-top: 27%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+  @media (max-width: 767.98px) {
+    .ex-company-bg {
+      display: none; } }
+
+.ex-company-bg-app {
+  padding-top: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+  @media (min-width: 768px) {
+    .ex-company-bg-app {
+      display: none; } }
+
+.ex-company-filter {
+  margin-top: 40px;
+  display: flex; }
+  @media (max-width: 767.98px) {
+    .ex-company-filter {
+      justify-content: flex-end; } }
+  .ex-company-filter select.form-control {
+    width: 220px; }
+    @media (max-width: 767.98px) {
+      .ex-company-filter select.form-control {
+        width: 126px; } }
+  .ex-company-filter input.form-control {
+    width: 380px;
+    border: 1px solid #e9ecef !important; }
+    @media (max-width: 767.98px) {
+      .ex-company-filter input.form-control {
+        display: none; } }
+  .ex-company-filter .search-btn {
+    width: 90px;
+    margin-left: 20px; }
+    @media (max-width: 767.98px) {
+      .ex-company-filter .search-btn {
+        display: none; } }
 
 .company-top-bg {
   position: relative;

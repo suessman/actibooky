@@ -347,6 +347,10 @@ main {
               }   
             }
           }
+
+          &.list-four{
+            width: calc(25% - 20px);
+          }
         }
 
         @include media-breakpoint-down(xs){
@@ -550,6 +554,10 @@ main {
             background-color: $white;
             padding: 10px 16px;
             min-height: 113px;
+
+            &.sm{
+              min-height:95px;
+            }
             ul {
               li {
                 font-size: 18px;
@@ -558,6 +566,9 @@ main {
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
+                &.sm{
+                  font-size: 14px;
+                }
               }
             }
           }
@@ -670,7 +681,11 @@ main {
             color: $white;
             font-size: 24px;
             font-weight: 700;
-
+            &.sm{
+               padding: 8px;
+              color: $white;
+              font-size: 18px;
+            }
             @include media-breakpoint-down(xs){
               padding: 8px;
             }

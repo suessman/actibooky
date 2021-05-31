@@ -53,6 +53,58 @@
   }
 }
 
+.ex-company-bg{
+  padding-top: 27%; 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center;
+  @include media-breakpoint-down(sm){
+    display: none;
+  }
+}
+
+
+.ex-company-bg-app{
+  padding-top: 100%; 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center;
+  @include media-breakpoint-up(md){
+    display: none;
+  }
+}
+
+.ex-company-filter{
+  margin-top: 40px;
+  display: flex;
+   @include media-breakpoint-down(sm){
+      justify-content: flex-end;
+    }
+  select.form-control{
+    width: 220px;
+    @include media-breakpoint-down(sm){
+      width: 126px;    
+    }
+  }
+  
+  input.form-control{
+    width: 380px; 
+    border: 1px solid #e9ecef !important;
+
+    @include media-breakpoint-down(sm){
+      display: none;
+    }
+  }
+
+  .search-btn{
+    width:90px; 
+    margin-left: 20px;
+     @include media-breakpoint-down(sm){
+      display: none;
+    }
+  }
+}
+
 .company-top-bg{
   position:relative; 
   width: 100%; 
