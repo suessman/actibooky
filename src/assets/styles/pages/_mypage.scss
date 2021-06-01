@@ -316,10 +316,61 @@
   }
 }
 
+//예약상세 결제정보
+.book-info-section{
+  display: flex;
+  padding: 16px;
+  border: 1px solid $grey-2;
+  margin-top: 24px;
+  @include media-breakpoint-down(sm){
+    display: block;
+  }
+  .title{
+    font-weight: bold;
+    font-size: 12px;
+  }
+
+  .detail{
+    margin-top: 4px;
+  }
+
+  h3{
+    font-size: 18px;
+
+  }
+  .user-info{
+    width: 50%;
+    @include media-breakpoint-down(sm){
+      width: 100%;
+    }
+    li{
+      margin-top: 24px;
+      &:first-of-type{
+        margin-top: 16px;
+      }
+    }
+  }
+
+  .pay-info{
+    width: 50%;
+    @include media-breakpoint-down(sm){
+      width: 100%;
+      h3{
+        margin-top: 24px;
+      }
+    }
+    li{
+      margin-top: 24px;
+      &:first-of-type{
+        margin-top: 16px;
+      }
+    }
+  }
+}
 //예약 상세 업체 정보
 .book-company-section{
   padding: 16px 24px; 
-  border: 1px solid $light;
+  border: 1px solid $grey-2;
   margin-top: 24px;
 
   @include media-breakpoint-down(xs){
