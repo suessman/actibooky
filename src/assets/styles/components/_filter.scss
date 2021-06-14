@@ -25,7 +25,7 @@ select.form-control.filter-select{
       width: calc(100% / 2);
       background-color: $white;
     }
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(md){
       background-color: transparent;
       border:none;
       padding:0;
@@ -177,6 +177,12 @@ select.form-control.filter-select{
         background-repeat: no-repeat;
         background-size:24px auto;  
         // width: 240px;
+        @include media-breakpoint-up(md){
+          width: 240px;
+        }
+         @include media-breakpoint-up(xl){
+          width:280px;
+        }
       }
 
       &.place{     
@@ -186,6 +192,9 @@ select.form-control.filter-select{
         background-size:24px auto;  
         @include media-breakpoint-up(md){
           width: 240px;
+        }
+         @include media-breakpoint-up(xl){
+          width:280px;
         }
       }
 
@@ -444,6 +453,26 @@ select.form-control.filter-select{
           }
         }
       }
+  }
+
+  .filter-input-text{
+    width:350px;
+    display: inline-block;
+
+    @include media-breakpoint-down(md){
+      width:100%;
+      display: block;
+
+    }
+    input{
+      @include media-breakpoint-down(md){
+        margin-top: 8px;      
+        margin-left: 0;
+      }    
+      border:1px solid $light;
+      padding-left:16px;
+      margin-left: 20px;
+    }
   }
 }
 

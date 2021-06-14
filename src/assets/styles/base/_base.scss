@@ -6,7 +6,7 @@
 // https://github.com/HugoGiraudel/sass-boilerplate/blob/master/stylesheets/base/_base.scss
 
 .container{
-  max-width: 940px;
+  // max-width: 940px;
   @include media-breakpoint-up(lg) {
     padding-left: 0;
     padding-right: 0;
@@ -156,6 +156,9 @@ main{
   }
 }
  @include media-breakpoint-down(sm) {
+    .sm-down-mt-2{
+      margin-top: 8px;
+    }
     .sm-down-outline{
       border:1px solid $light !important;
     }
@@ -172,6 +175,10 @@ main{
 
 
 @include media-breakpoint-down(md) {
+    .md-down-mt-2{
+      margin-top: 8px;
+    }
+
   .m-d-none{
     visibility: hidden;
   }

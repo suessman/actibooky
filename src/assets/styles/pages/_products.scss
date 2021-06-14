@@ -52,7 +52,11 @@
 
 
 .dropdown-filter{
-  width: 220px;
+  width: 240px;
+  
+  @include media-breakpoint-up(xl){
+    width:280px;
+  }
   height: 40px;
   text-align: left;
   position: relative;

@@ -39,7 +39,7 @@
 </script>
     <link rel="stylesheet" href="/css/main-calendar.css">
 
-<link href="./css/styles.css?38676fd11c1a11ea513b" rel="stylesheet"></head>
+<link href="./css/styles.css?66cb4058f0db3169a945" rel="stylesheet"></head>
 
 <body>
     <!-- 브라우저 권장 --> <!--[if IE]>
@@ -162,7 +162,7 @@
 </header>
         <main class="d-flex flex-column h-100 main">
             <!-- 메인 이미지 -->
-            <div class="main-top-body" style="background-image:url('/images/main_top2.jpg');">
+            <div class="main-top-body" style="background-image:url('/images/main__bg.png');">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8 m-auto date-picker-ui">
@@ -232,7 +232,7 @@
                 <div class="row">
                     <section class="col-12 mt-5 m-m-t3 section-body  card-ui">
                         <div class="d-flex justify-content-between align-items-center top-title">
-                            <h3>전라북도 추천 농촌 여행지</h3>
+                            <h3>액티부키's PICK 국내여행</h3>
                             <a href="/recommend/recommendFarmplay.html" class="more">더보기</a>
                         </div>
                         <ul class="category-card-body">
@@ -270,9 +270,67 @@
                             </li>
                         </ul>
                     </section>
+
+                    <section class="col-12 mt-10 m-m-t5 section-body">
+                        <div id="promotionBannerIndicators" class="carousel slide promotion-banner-slide pc" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <a href="">
+                                        <img class="d-block w-100" src="/images/promotion-banner.png" alt="First slide">
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="">
+                                        <img class="d-block w-100" src="/images/promotion-banner.png" alt="second slide">
+                                    </a>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#promotionBannerIndicators" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#promotionBannerIndicators" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+
+                        <div id="promotionBannerIndicatorsMobile" class="carousel slide promotion-banner-slide mobile" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <a href="">
+                                        <img class="d-block w-100" src="/images/promotion-banner-mobile.png" alt="First slide">
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="">
+                                        <img class="d-block w-100" src="/images/promotion-banner-mobile.png" alt="second slide">
+                                    </a>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#promotionBannerIndicatorsMobile" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#promotionBannerIndicatorsMobile" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </section>
                     <section class="col-12 mt-10 m-m-t5 section-body card-ui">
                         <div class="d-flex justify-content-between top-title">
-                            <h3>최근 인기 체험학습</h3>
+                            <h3>HOT 농촌 액티비티</h3>
                         </div>
                         <ul class="popular-card-body">
                             <li class="popular-card slide">
@@ -286,6 +344,21 @@
                                     <!-- 카테고리 -->
                                     <div class="mt-1 sm-text-gray">영농/생활체험</div>
                                     <h1 class="title-overflow strcut strcut-twoline"> 제목길이테스트제목길이테스트제목길이테스트제목길이테스트제목길이테스트제목길이테스트제목길이테스트제목길이테스트</h1>
+                                    <p>
+                                        <span class="price">₩25000</span>
+                                        <del class="sale-price">₩44000</del>
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="popular-card slide">
+                                <a href="/experience/experienceDetail.html">
+                                    <div class="content" style="background-image:url('/images/bread.jpg')">
+                                        <span class="address">전라/전주</span>
+                                        <span class="percent">50%</span>
+                                    </div>
+                                    <!-- 카테고리 -->
+                                    <div class="mt-1 sm-text-gray">영농/생활체험</div>
+                                    <h1 class="title-overflow">제목</h1>
                                     <p>
                                         <span class="price">₩25000</span>
                                         <del class="sale-price">₩44000</del>
@@ -395,6 +468,32 @@
                                         </div>
                                     </a>
                                 </li>
+                                <li class="popular-card popular-card-ui lg-h slide">
+                                    <a href="/company/companyMain.html">
+                                        <div class="content" style="background-image:url('/images/ricecake.jpg')">
+                                            <span class="address">전라/전주</span>
+                                            <div class="town">승곡마을</div>
+                                        </div>
+                                        <div class="detail">
+                                            <ul>
+                                                <li>· 한라봉 수확 체험</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="popular-card popular-card-ui lg-h slide">
+                                    <a href="/company/companyMain.html">
+                                        <div class="content" style="background-image:url('/images/ricecake.jpg')">
+                                            <span class="address">전라/전주</span>
+                                            <div class="town">승곡마을</div>
+                                        </div>
+                                        <div class="detail">
+                                            <ul>
+                                                <li>· 한라봉 수확 체험</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -403,38 +502,86 @@
             <section class="mt-5 mb-5 section-body card-ui card-ui-video">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-4 col-12 ui">
-                            <div>
-                                <h3>액티부키에서 로컬체험을<br>시작해보세요</h3>
-                                <ul class="web-ui">
-                                    <li class="mt-5 list">
-                                        <div>다양한 체험중에서 마음에 드는 체험을 찾아보세요</div>
-                                    </li>
-                                    <li class="mt-3 list">
-                                        <div>여러 옵션을 선택하고 예약을 진행해보세요</div>
-                                    </li>
-                                    <li class="mt-3 list">
-                                        <div>예약 완료창에서 안내하는대로 예약날짜에 체험을 즐겨보세요</div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="area text-right p-position">
-                                <span class="divider">승곡마을</span>
-                                <span class="m-t1">한라봉 수확 체험</span>
-                            </div>
+                        <div class="col-12">
+                            <h3 class="text-center">액티부키에서 로컬체험을 시작해보세요</h3>
                         </div>
-                        <div class="col-lg-8 col-12 m-p0">
+                        <div class="col-lg-4 col-12 pr-lg-0">
+                            <div class="ui">
+                                <div>
+                                    <ul class="web-ui">
+                                        <li class="mt-5 list">
+                                            <div>다양한 체험중에서 마음에 드는 체험을 찾아보세요</div>
+                                        </li>
+                                        <li class="mt-3 list">
+                                            <div>여러 옵션을 선택하고 예약을 진행해보세요</div>
+                                        </li>
+                                        <li class="mt-3 list">
+                                            <div>예약 완료창에서 안내하는대로 예약날짜에 체험을 즐겨보세요</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="area text-right p-position">
+                                    <span class="m-t1">전라북도 공감여행</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-8 col-12 pl-lg-0">
                             <div class="video-body">
                                 <iframe width="100%" height="100%" src="https://www.youtube.com/embed/FAe_JvYcal8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="sns-body mb-5 section-body card-ui">
+                <div class="container">
+                    <div class="row">
                         <div class="col-12">
-                            <div class="area text-right m-position m-t1">
-                                <span class="divider">승곡마을</span>
-                                <span>한라봉 수확 체험</span>
-                            </div>
+                            <ul class="sns-card-group">
+                                <li class="sns-list blog">
+                                    <div class="m-bg"></div>
+                                    <div class="sns-content">
+                                        <h3 class="title">
+                                            액티부키 블로그
+                                        </h3>
+                                        <p class="content">
+                                            나만 알고 싶은 여행지, 비밀스런 여행 레시피를 액티부키 블로그에서
+                                            소개합니다.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="sns-list insta">
+                                    <div class="m-bg"></div>
+
+                                    <div class="sns-content">
+                                        <h3 class="title">
+                                            액티부키 인스타그램
+                                        </h3>
+                                        <p class="content">
+                                            나만 알고 싶은 여행지, 비밀스런 여행 레시피를 액티부키 블로그에서
+                                            소개합니다.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="sns-list youtube">
+                                    <div class="m-bg"></div>
+
+                                    <div class="sns-content">
+                                        <h3 class="title">
+                                            액티부키 유튜브
+                                        </h3>
+                                        <p class="content">
+                                            나만 알고 싶은 여행지, 비밀스런 여행 레시피를 액티부키 블로그에서
+                                            소개합니다.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
+
                 </div>
             </section>
         </main> <!-- Footer -->
@@ -508,7 +655,7 @@
 </footer>
 <!-- Footer -->
     </div>
-<script src="./js/index.bundle.js?38676fd11c1a11ea513b"></script></body>
+<script src="./js/index.bundle.js?66cb4058f0db3169a945"></script></body>
 <script>
     $(function () {
         var listPopup = $('.list-popup');
