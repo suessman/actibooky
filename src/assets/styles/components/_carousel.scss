@@ -513,6 +513,15 @@ main.carousel-body .section-body.card-ui ul.popular-card-body {
       }
     }    
   }
+  .carousel-indicators{
+    bottom:-15%;
+    @include media-breakpoint-down(sm){
+      bottom:-8%;
+    }
+    li{
+      background-color:#9334ff;
+    }
+  }
 }
 
 

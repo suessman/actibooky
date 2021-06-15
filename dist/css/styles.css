@@ -10837,6 +10837,13 @@ main.carousel-body .section-body.card-ui ul.popular-card-body {
       .theme-slide .carousel-item .right-area {
         width: 100%;
         padding-left: 0; } }
+  .theme-slide .carousel-indicators {
+    bottom: -15%; }
+    @media (max-width: 767.98px) {
+      .theme-slide .carousel-indicators {
+        bottom: -8%; } }
+    .theme-slide .carousel-indicators li {
+      background-color: #9334ff; }
 
 ul.theme-card-body {
   margin: 0 0 0 -20px;
