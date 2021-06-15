@@ -43,6 +43,11 @@ hr{
   margin: 16px 0 24px;
 }
 
+//bg
+.bg-yellow{
+  background-color:#fef8e5;
+}
+
 .primary-color{
   color:$primary !important;
 }
@@ -64,6 +69,10 @@ p{margin-bottom:0;}
 //section margin
 .mt-10{
   margin-top:7.5rem
+}
+
+.mb-10{
+  margin-bottom:7.5rem
 }
 
 .navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active{

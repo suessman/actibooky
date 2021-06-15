@@ -114,9 +114,7 @@
       height: 48px;
     }
   }
-}
-  
-  
+}  
 
   .carousel-indicators li{
     width: 8px;
@@ -466,3 +464,265 @@ main.carousel-body .section-body.card-ui ul.popular-card-body {
     }
   }
 }
+
+
+//theme slide
+.theme-slide{
+  height: auto !important;
+
+  .carousel-item{
+    // display: flex;
+    .left-area{
+      display:inline-block;
+      &.theme-main-image{
+        width:250px;
+        height:423px;
+        background-size:cover;
+        background-repeat:no-repeat;
+        background-position:center;
+      }
+
+      @include media-breakpoint-down(md){
+        display:none;
+      }
+    }
+    .right-area{
+      display:inline-block;
+      width:calc(100% - 250px);
+      padding-left:40px;
+      .title{
+        font-size: 24px;
+        font-weight: 700;
+
+        @include media-breakpoint-down(xs){
+          font-size: 14px;
+        }
+      }
+      .content{
+        font-size: 18px;
+        font-weight: 400;
+        
+        @include media-breakpoint-down(xs){
+          font-size: 12px;
+        }
+      }
+
+      @include media-breakpoint-down(md){
+        width:100%;
+        padding-left: 0;
+      }
+    }    
+  }
+}
+
+
+
+
+ul.theme-card-body{
+      margin: 0 0 0 -20px;
+      display: flex;
+      flex-wrap: wrap;
+
+      @include media-breakpoint-down(lg) {
+        margin: 8px 0 0 -20px;
+      }
+
+      @include media-breakpoint-only(xs) {
+        overflow: hidden;
+        flex-wrap: wrap;
+        white-space: nowrap;
+        margin-top: 0;
+        overflow-x: auto;
+        display: block;        
+      }
+
+      li.popular-card {
+        width: calc(33.333% - 20px);
+        display: inline-block;
+        min-height: 304px;
+        vertical-align: top;
+        position: relative;
+
+        margin-left: 20px;
+        margin-top: 40px;
+        @include media-breakpoint-down(xs){
+          width:160px;
+          min-height:245px;
+           &.slide{
+            margin-top: 8px;
+          }
+
+          &.xs-down{
+            width: 160px;
+            min-height: 205px;
+            .content{
+              min-height: 120px;
+              
+              .percent{
+                width: 40px;
+                height: 40px;
+                @include fontSize(14px);
+              }
+            }
+            h1{
+              @include fontSize(14px);
+            }
+          }
+        }          
+
+        h1 {
+          @include fontSize(18px);
+          font-weight: 400;
+          margin-top: 4px;
+          line-height: 1.5;         
+          white-space: normal;
+
+          @include media-breakpoint-down(xs){
+            font-size: 14px;
+          }
+        }
+
+        p {
+          margin-top: 8px;
+          word-break:break-word;
+          span.price {
+            @include fontSize(24px);
+            font-weight: 700;
+
+            @include media-breakpoint-down(xs){
+              font-size: 18px;
+            }
+          }
+          del.sale-price {
+            color: $dark;
+            font-weight: 400;
+            @include fontSize(14px);
+          }
+
+          &+span.percent{
+            color:$primary;
+            font-size: 18px;
+            font-weight: 700;
+            margin-top: 8px;
+          }
+        }
+
+        .content {
+          position: relative;
+          background-size: cover;
+          min-height: 200px;
+          background-position: center;
+          background-repeat: no-repeat;
+          
+          @include media-breakpoint-down(xs){
+            min-height:120px;
+          }
+
+          span.address {
+            text-align: center;
+            background-color: $secondary;
+            color: $white;
+            min-width: 70px;   
+            padding:2px 8px;
+            position: absolute;
+            left:0;
+          }
+
+          span.pr-category{
+            text-align: center;
+            background-color: $pink;
+            color: $white;
+            min-width: 70px;   
+            padding:2px 8px;
+            position: absolute;
+            left:0;
+          }
+
+          span.percent {
+            font-size: 18px;
+            font-weight: 700;
+            width: 48px;
+            height: 48px;
+            background-color: rgba(245, 1, 89, .8);
+            border-radius: 50%;
+            color: $white;
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            @include flex(center, center, row);
+
+            &.stay{
+               background-color: $orange;
+            }
+          }
+
+          .town {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            background-color: rgba(33, 37, 41, 0.4);
+            padding: 16px;
+            color: $white;
+            font-size: 24px;
+            font-weight: 700;
+            &.sm{
+               padding: 8px;
+              color: $white;
+              font-size: 18px;
+            }
+            @include media-breakpoint-down(xs){
+              padding: 8px;
+              
+            }
+          }
+        }
+      }
+    }
+
+    .theme-carousel-control{
+        .carousel-control{
+            &-prev{
+                opacity: 1;
+                position: relative;
+                width: 40px;
+                height: 40px;
+                border: 1px solid $primary;
+                img{
+                width:48px;
+                }
+
+                @include media-breakpoint-down(md) {
+                display: none;
+                }
+
+                &-icon{
+                background-image: url('/src/assets/images/icon-left-primary@3x.png');
+                width: 24px;
+                height: 24px;
+                }
+            }
+
+            &-next{
+                opacity: 1;
+                position: relative;
+                width: 40px;
+                height: 40px;
+                border: 1px solid $primary;
+                border-left: 0;
+                img{
+                width:48px;
+                }
+
+                @include media-breakpoint-down(md) {
+                display: none;
+                }
+
+                &-icon{
+                background-image: url('/src/assets/images/icon-right-primary@3x.png');
+                width: 24px;
+                height: 24px;
+                }
+            }
+        }  
+
+    }
