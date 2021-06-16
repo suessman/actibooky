@@ -22,3 +22,40 @@
    display: none;
   }
 }
+
+
+//navigation bar
+nav.app-nav{
+  border-top: 1px solid #e9ecef;
+  position:fixed;
+  width:100%;
+  height: 56px;
+  bottom:0;
+  left:0;
+  right:0;
+  background-color: #fff;
+  z-index: 9999;
+  ul{
+    display: flex;
+    height: 100%;
+    li{
+      display: flex;
+      flex-direction: column;
+      width:calc(100% / 2);
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+    img.nav-icon{
+      width:24px;
+      height: 24px;
+    }
+    span{
+      color:#868e96;
+      text-align: center;
+      font-size: 12px;
+    }
+  }
+  
+}
+
