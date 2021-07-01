@@ -12469,9 +12469,9 @@ main .section-body.card-ui-video .area {
   @media (min-width: 1200px) {
     .book-ui {
       position: absolute;
-      top: 674px;
+      top: 113px;
       background: #ffffff;
-      left: calc(50% + 520px);
+      left: calc(50% + 486px);
       width: 218px;
       border: 1px solid #f8f9fa;
       padding: 16px;
