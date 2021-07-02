@@ -244,7 +244,7 @@
     }
     section{
       padding:24px 0;
-      border-bottom: 1px solid $light;
+      border-bottom: 1px solid $grey-2;
       @include media-breakpoint-down(xs){
         border-bottom: none;
       }
@@ -259,7 +259,7 @@
     
       h5{
         font-size: 18px;
-        font-weight: $font-weight-bold;
+        font-weight: $font-weight-normal;
       }
 
       &.review{
@@ -788,47 +788,310 @@
 }
 
 //inquiry-list
-        .inquiry-list{
-          margin-top: 40px;
-          @include media-breakpoint-down(md) { 
-            margin-top: 24px;
-          }
+.inquiry-list{
+  margin-top: 40px;
+  @include media-breakpoint-down(md) { 
+    margin-top: 24px;
+  }
 
-          .user{
-            .id{
-              font-weight: $font-weight-bold;
-              margin-left: 8px;
-            }
-            .state{
-              min-width: 80px;
-              display: inline-block;
-              text-align: center;
-              border-radius: 14px;
-              padding:4px 0;
+  .user{
+    .id{
+      font-weight: $font-weight-bold;
+      margin-left: 8px;
+    }
+    .state{
+      min-width: 80px;
+      display: inline-block;
+      text-align: center;
+      border-radius: 14px;
+      padding:4px 0;
 
-              &.ing{
-                background: $light;
-              }
+      &.ing{
+        background: $light;
+      }
 
-              &.complete{
-                background: $primary;
-                color:$white;
-              }
-            }
-          }
-          .date{
-            color:$dark;
-          }
+      &.complete{
+        background: $primary;
+        color:$white;
+      }
+    }
+  }
+  .date{
+    color:$dark;
+  }
 
-          .content{
-            margin-top: 8px;
-            .answer{
-              margin-top: 12px;
-            }
-            .qa{
-              color: $primary;
-              font-weight: $font-weight-bold;
-              margin-right: 8px;
-            }
-          }
+  .content{
+    margin-top: 8px;
+    .answer{
+      margin-top: 12px;
+    }
+    .qa{
+      color: $primary;
+      font-weight: $font-weight-bold;
+      margin-right: 8px;
+    }
+  }
+}
+
+//대표사진 custom
+.representative-photo{
+  width:100%; 
+  padding-top:56.25%; 
+  position:relative;
+  @include media-breakpoint-down(sm){
+    display: none;
+  }
+
+  img{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+  }
+}
+
+.representative-slide-wrapper{
+  position:relative;
+  padding:0 32px;
+
+  @include media-breakpoint-down(sm){
+    padding: 0;
+  }
+
+  .swiper-pagination{
+    display:none;
+    @include media-breakpoint-down(sm){
+      display:block;
+      width:100%;
+      bottom:8px;
+    }
+
+    .swiper-pagination-bullet{
+      background-color:#d8d8d8;
+      opacity: 1;
+      margin:2px;
+    }
+
+    .swiper-pagination-bullet-active{
+      background-color:$white;
+    }
+  }
+}
+
+.representative-slide-list{
+  margin-top: 8px;
+  .swiper-slide{
+ 
+    .wrapper{
+      position:relative;
+      padding-top: 100%;
+      @include media-breakpoint-down(sm){
+        padding-top:56.25%;
+      }
+      img{
+      position:absolute;
+      top:0;
+      left:0;
+      width: 100%;
+      height: 100%;
+      }
+
+      &.active{
+        border: 2px solid #9334ff;
+
+        @include media-breakpoint-down(sm){
+          border: none;
         }
+      }
+    } 
+  }
+}
+
+.representative-slide-prev{
+  &:after{
+    content:'';
+    background-size:cover;
+    width:24px;
+    height: 24px;
+    background-image:url('/src/assets/images/icon-left-black@3x.png');
+  }
+  left:0;
+}
+
+.representative-slide-next{
+  right: 0;
+
+  &:after{
+    content:'';
+    background-size:cover;
+    width:24px;
+    height: 24px;
+    background-image:url('/src/assets/images/icon-right-black@3x.png');
+  } 
+}
+
+
+.room-guide{
+    display:none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0,0,0,.5);
+  .room-guide-box{
+    position: relative;
+    width: 780px;
+    height: auto;
+    margin: 0 auto;
+    background-color: $white;
+    margin-top: 10vh;
+    padding: 40px 60px;
+    .room-guide-close{
+    position:absolute;
+    right:40px;
+    top:40px;
+    background:none;
+    padding:0;
+    border:none;
+    box-shadow:none;
+    }
+    .guide-info{
+      margin-top: 24px;
+    }
+    h5.guide-title{
+      font-size: 14px;
+    }   
+
+    @include media-breakpoint-down(sm){
+      width:90%;
+    }
+  }  
+}
+
+
+
+
+//객실 여러개일 경우 뜨는 popup
+.room-list-view{
+  background-color:#f8f9fa;
+  padding:60px 80px;
+
+  @include media-breakpoint-down(sm){
+    display:none;
+  }
+}
+
+//list toggle
+//faq list
+.list-toggle-body{
+  border: 1px solid $grey-2;
+  padding:16px;
+  margin-top: 16px;
+
+  @include media-breakpoint-down(xs){
+    padding-bottom: 16px;
+    margin-top: 16px;
+  }
+  &:first-of-type{
+    margin-top: 16px;
+    @include media-breakpoint-down(xs){
+      margin-top: 16px;    
+    }
+  }
+
+  h6{
+    font-size:14px;
+  }
+}
+
+.detail-info-list{
+  display:flex; 
+  height: auto;  
+  border-bottom:1px solid #e9ecef; 
+  padding-bottom:24px;
+
+  h1{
+    @include fontSize(18px);
+    @include media-breakpoint-down(xs){
+      @include fontSize(14px);
+    }
+    font-weight: 400;  
+    margin-bottom: 0;
+
+    @include media-breakpoint-down(sm){
+      margin-left: 16px;
+    }
+  }
+
+  span{
+    @include fontSize(18px);
+    @include media-breakpoint-down(xs){
+      @include fontSize(14px);
+    }
+    font-weight: 400;
+  }
+
+  .faq-toggle{
+    background-image:url('/src/assets/images/icon-down-black@3x.png');
+    background-size: 24px 24px;
+    background-position:right;
+    background-repeat: no-repeat;
+
+    width:calc(100% - 10px);
+  }
+
+  .faq-toggle-up{
+    background-image:url('/src/assets/images/icon-up-black@3x.png');
+    background-size: 24px 24px;
+    background-position:right;
+    background-repeat: no-repeat;
+  }
+}
+
+.list-toggle-collapse{
+
+  @include media-breakpoint-down(sm){
+    padding:16px 0 0 0;
+  }
+
+  .amenity{
+    background-color:#f9f5ff;
+    padding: 20px 60px;
+    .amenity-list{
+      position: relative;
+      width: 50%;
+      padding-top:37%;
+      img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }    
+  }
+}
+
+//detail table custom
+.list-detail-table{
+  border-collapse:separate;
+
+  th{
+    border:1px solid #e9ecef;
+    text-align:center;
+    vertical-align: middle !important;
+    border-collapse:separate;
+    font-weight: normal;
+  }
+
+  td{
+    border:1px solid #e9ecef;
+    text-align:center;
+    vertical-align:middle !important;
+    background-color:#f8f9fa;
+    font-weight: normal;
+  }
+}

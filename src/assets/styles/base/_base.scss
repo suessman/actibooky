@@ -21,6 +21,10 @@
   opacity: 1;
 }
 
+.text-gray{
+  color:$dark;
+}
+
 .no-content{
   padding:30vh 0;
   border-bottom:none !important;
@@ -344,4 +348,42 @@ hr{
 .sm-text-gray{
   color:$dark;
   @include fontSize(sm);
+}
+
+//text btn
+.text-btn{
+  padding: 0;
+  border:0;
+  box-shadow: none;
+  background:none;
+}
+
+
+//marker
+ul.marker {
+  list-style-position: outside;
+  li {
+    padding-left: 8px;
+    position: relative;
+    &.md:before {
+      width: 4px;
+      height: 4px;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 2px;
+      height: 2px;
+      border-radius: 50%;
+      background-color: #757575;
+    }
+    &.bgt {
+      color: #f8f9fa;
+      &:before {
+        background-color: #f8f9fa;
+      }
+    }
+  }
 }
