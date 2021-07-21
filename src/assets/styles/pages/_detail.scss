@@ -1,10 +1,5 @@
 .detail-info-sec{
 
-  @include media-breakpoint-down(md) {
-      hr{
-        display: none;
-      } 
-  }
 
   h5{
     @include media-breakpoint-down(xs) {
@@ -246,7 +241,7 @@
       padding:24px 0;
       border-bottom: 1px solid $grey-2;
       @include media-breakpoint-down(xs){
-        border-bottom: none;
+        // border-bottom: none;
       }
 
       &.list-detail.top-area{
@@ -258,7 +253,7 @@
       // }
     
       h5{
-        font-size: 18px;
+        font-size: 24px;
         font-weight: $font-weight-normal;
       }
 
@@ -851,9 +846,20 @@
   }
 }
 
+ .gallery-thumbs .swiper-slide-thumb-active img {
+    border: 3px solid $primary;
+  }
+
 .representative-slide-wrapper{
   position:relative;
   padding:0 32px;
+
+  .gallery-thumbs{
+    margin-top: 8px;
+    @include media-breakpoint-down(sm){
+      display: none;
+    }
+  }
 
   @include media-breakpoint-down(sm){
     padding: 0;
@@ -871,42 +877,36 @@
       background-color:#d8d8d8;
       opacity: 1;
       margin:2px;
+      @include media-breakpoint-down(xs){
+        width:4px;
+        height:4px;
+      }
     }
 
     .swiper-pagination-bullet-active{
       background-color:$white;
     }
   }
-}
 
-.representative-slide-list{
-  margin-top: 8px;
   .swiper-slide{
- 
     .wrapper{
-      position:relative;
+      position: relative;
       padding-top: 100%;
-      @include media-breakpoint-down(sm){
+
+      &.top{
         padding-top:56.25%;
       }
-      img{
-      position:absolute;
-      top:0;
-      left:0;
+    }
+    img{
+      position: absolute;
+      left: 0;
+      top: 0;
       width: 100%;
       height: 100%;
-      }
-
-      &.active{
-        border: 2px solid #9334ff;
-
-        @include media-breakpoint-down(sm){
-          border: none;
-        }
-      }
-    } 
+    }
   }
 }
+
 
 .representative-slide-prev{
   &:after{
@@ -917,6 +917,10 @@
     background-image:url('/src/assets/images/icon-left-black@3x.png');
   }
   left:0;
+
+  @include media-breakpoint-down(xs){
+    display: none;
+  }
 }
 
 .representative-slide-next{
@@ -929,6 +933,10 @@
     height: 24px;
     background-image:url('/src/assets/images/icon-right-black@3x.png');
   } 
+
+  @include media-breakpoint-down(xs){
+    display: none;
+  }
 }
 
 
@@ -949,10 +957,14 @@
     background-color: $white;
     margin-top: 10vh;
     padding: 40px 60px;
+
+    @include media-breakpoint-down(xs){
+      padding:16px;
+    }
     .room-guide-close{
-    position:absolute;
-    right:40px;
-    top:40px;
+    // position:absolute;
+    // right:40px;
+    // top:40px;
     background:none;
     padding:0;
     border:none;
@@ -963,6 +975,7 @@
     }
     h5.guide-title{
       font-size: 14px;
+      font-weight: bold;
     }   
 
     @include media-breakpoint-down(sm){
@@ -979,6 +992,8 @@
   background-color:#f8f9fa;
   padding:60px 80px;
 
+  display:none;
+
   @include media-breakpoint-down(sm){
     display:none;
   }
@@ -992,7 +1007,7 @@
   margin-top: 16px;
 
   @include media-breakpoint-down(xs){
-    padding-bottom: 16px;
+    padding:12px 8px;
     margin-top: 16px;
   }
   &:first-of-type{
@@ -1004,6 +1019,10 @@
 
   h6{
     font-size:14px;
+
+    @include media-breakpoint-down(xs){
+      font-size: 12px;
+    }
   }
 }
 
@@ -1019,11 +1038,7 @@
       @include fontSize(14px);
     }
     font-weight: 400;  
-    margin-bottom: 0;
-
-    @include media-breakpoint-down(sm){
-      margin-left: 16px;
-    }
+    margin-bottom: 0;    
   }
 
   span{
@@ -1035,16 +1050,15 @@
   }
 
   .faq-toggle{
-    background-image:url('/src/assets/images/icon-down-black@3x.png');
+    background-image:url('/src/assets/images/icon-down-gray-@3x.png');
     background-size: 24px 24px;
     background-position:right;
     background-repeat: no-repeat;
-
     width:calc(100% - 10px);
   }
 
   .faq-toggle-up{
-    background-image:url('/src/assets/images/icon-up-black@3x.png');
+    background-image:url('/src/assets/images/icon-up-gray@3x.png');
     background-size: 24px 24px;
     background-position:right;
     background-repeat: no-repeat;
@@ -1052,10 +1066,6 @@
 }
 
 .list-toggle-collapse{
-
-  @include media-breakpoint-down(sm){
-    padding:16px 0 0 0;
-  }
 
   .amenity{
     background-color:#f9f5ff;
@@ -1072,12 +1082,20 @@
         height: 100%;
       }
     }    
+
+    @include media-breakpoint-down(sm){
+      padding:16px;
+    }
   }
 }
 
 //detail table custom
 .list-detail-table{
   border-collapse:separate;
+
+  @include media-breakpoint-down(xs){
+    font-size: 12px;
+  }
 
   th{
     border:1px solid #e9ecef;

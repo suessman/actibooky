@@ -38,6 +38,27 @@ button:focus, button:active{
         padding:0;
     }
 
+    &.lg-fix{
+        min-width:160px;
+        width: 160px;
+        padding:0;
+        @include media-breakpoint-down(xs){
+            min-width:90px;
+            width: 90px;
+        }
+    }
+
+    &.lg-fix-height{
+        min-width:160px;
+        width: 160px;
+        height:40px;
+        padding:0;
+        @include media-breakpoint-down(xs){
+            min-width:90px;
+            width: 90px;
+        }
+    }
+
     &-primary{
         background-color:$primary;
         color:$white;

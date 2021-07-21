@@ -553,14 +553,14 @@ main {
           .detail {
             background-color: $white;
             padding: 10px 16px;
-            min-height: 113px;
+            min-height: 90px;
 
             &.sm{
               min-height:95px;
             }
             ul {
               li {
-                font-size: 18px;
+                font-size: 14px;
                 margin-bottom: 4px;
                 width: 100%;
                 overflow: hidden;
@@ -600,7 +600,7 @@ main {
         }
 
         h1 {
-          @include fontSize(18px);
+          @include fontSize(14px);
           font-weight: 400;
           margin-top: 4px;
           line-height: 1.5;         
@@ -611,7 +611,7 @@ main {
           margin-top: 8px;
           word-break:break-word;
           span.price {
-            @include fontSize(24px);
+            @include fontSize(14px);
             font-weight: 700;
           }
           del.sale-price {
@@ -679,7 +679,7 @@ main {
             background-color: rgba(33, 37, 41, 0.4);
             padding: 16px;
             color: $white;
-            font-size: 24px;
+            font-size: 18px;
             font-weight: 700;
             &.sm{
                padding: 8px;
@@ -732,7 +732,7 @@ main {
      
       
         li{
-          font-size: 18px;
+          font-size: 14px;
           @include media-breakpoint-down(sm) {
             font-size: 14px;
             &:first-of-type{
@@ -877,7 +877,7 @@ main {
       background: none;
     }
     .title{
-      font-size:24px;
+      font-size:18px;
       color:$white;
 
       @include media-breakpoint-down(sm){

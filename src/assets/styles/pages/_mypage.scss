@@ -160,6 +160,10 @@
   margin-top: 40px;
   position:relative;
 
+  &:first-of-type{
+    margin-top: 24px;
+  }
+
   //canceled book
   .canceled-book{
 
@@ -744,4 +748,89 @@
       }
     }
   }
+}
+
+.shopping-cart-price{
+  display: flex;
+  padding: 40px 80px;
+  border: 1px solid #e9ecef;
+
+  @include media-breakpoint-down(sm){
+    padding: 16px;
+  }
+  .left{
+    width: calc(100% - 380px);
+
+    @include media-breakpoint-down(sm){
+      width:70%;
+    }
+  }
+
+  .calculate-area{
+    padding:0 80px;
+
+    @include media-breakpoint-down(sm){
+        padding:0 16px;
+
+    }
+  }
+  .right{
+    width: 380px;
+    border-left:1px solid #e9ecef;
+    @include media-breakpoint-down(sm){
+      width:30%;
+    }
+    .total{
+      font-size: 18px;
+      font-weight: bold;
+      @include media-breakpoint-down(sm){
+        font-size: 14px;
+      }      
+    }
+    .total-price{
+      font-size: 24px;
+      font-weight: bold;
+      color:#9334ff;
+      @include media-breakpoint-down(sm){
+        font-size: 14px;
+      } 
+    }
+  }
+}
+
+.cart-check-wrapper{
+  @include media-breakpoint-down(md){
+    position: absolute;
+    top: 6px;
+    right: 0;
+  }
+}
+
+.cart-check{
+  label{
+    &:before{
+      border: 1px solid #9334ff !important;
+    }
+  }
+}
+
+.custom-control.cart-check{
+  width: 1.5rem;
+}
+
+.custom-control-input{
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.custom-control-label.checkbox:before{
+  width: 1.5rem;
+  height: 1.5rem;
+  top: 0.1rem;
+}
+
+.custom-control-label.checkbox:after{
+  width: 1.5rem;
+  height: 1.5rem;
+  top: 0.1rem;
 }
