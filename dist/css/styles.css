@@ -10033,6 +10033,17 @@ button.btn.filter-btn:hover {
   border: none;
   outline: none; }
 
+.buttons {
+  display: flex;
+  flex-wrap: wrap; }
+  .buttons button {
+    width: calc(100% / 2 - 8px);
+    margin: 0; }
+    .buttons button.list-one {
+      margin-right: 4px; }
+    .buttons button.list-two {
+      margin-left: 4px; }
+
 .date-picker-ui {
   display: flex; }
   .date-picker-ui input.pick-calendar {

@@ -101,3 +101,21 @@ button.btn.filter-btn:hover{
         outline: none;
     }
 }
+
+//button list
+.buttons{
+    display: flex;
+    flex-wrap: wrap;
+    button{
+        width:calc(100% / 2 - 8px);
+        margin: 0;
+
+        &.list-one{
+            margin-right: 4px;
+        }
+
+        &.list-two{
+            margin-left:4px;
+        }
+    }
+}
